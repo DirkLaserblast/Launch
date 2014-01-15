@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1993577196}
+  - 114: {fileID: 1993577197}
   m_Layer: 0
   m_Name: Global Scripts
   m_TagString: Untagged
@@ -100,6 +101,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1993577197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993577195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c7244eedb214270ab0e01da338d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundTexture: {fileID: 2800000, guid: a3ef838b15c294497bd61e20cc595084, type: 3}
+  menuFont: {fileID: 12800000, guid: 4a239fbd5986d430f9fccdb77745a34b, type: 3}
 --- !u!1 &2001406538
 GameObject:
   m_ObjectHideFlags: 0
