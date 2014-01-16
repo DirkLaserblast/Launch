@@ -27,8 +27,9 @@ public class MainMenu : MonoBehaviour {
 	//Should we be fullscreen?
 	private bool fullScreen;
 	private int resolutionIndex;
+	private int qualityIndex;
 
-	private GUIContent[] aspectButtons = new GUIContent[3];
+	private GUIContent[] qualityButtons = new GUIContent[6];
 
 	GUIContent[] resolutionComboBox;
 	private ComboBox comboBoxControl = new ComboBox();
@@ -53,10 +54,14 @@ public class MainMenu : MonoBehaviour {
 //	    listStyle.padding.top =
 //	    listStyle.padding.bottom = 4;
 
+		qualityIndex = QualitySettings.GetQualityLevel();
 
-		aspectButtons[0] = new GUIContent("4:3");
-		aspectButtons[1] =new GUIContent("16:9");
-		aspectButtons[2] =new GUIContent("16:10");
+		qualityButtons[0] = new GUIContent("Fastest");
+		qualityButtons[1] =new GUIContent("Fast");
+		qualityButtons[2] =new GUIContent("Simple");
+		qualityButtons[3] = new GUIContent("Good");
+		qualityButtons[4] =new GUIContent("Beautiful");
+		qualityButtons[5] =new GUIContent("Fantastic");
 	}
 
 	private void OnGUI()
@@ -99,25 +104,28 @@ public class MainMenu : MonoBehaviour {
 			//Fullscreen
 			fullScreen = GUI.Toggle(new Rect(192, 160, 128, 32), fullScreen, "Fullscreen");
 
-			//Aspect Ratio selection (a toolbar with three radio buttons)
-			//GUI.Toolbar(new Rect(192, 192, 160, 32), aspectRatios, aspectButtons);
-
 			//Screen Resolution selection with combo box
 			int resolutionIndex = comboBoxControl.GetSelectedItemIndex();
 			resolutionIndex = comboBoxControl.List(new Rect(192, 192, 128, 32), resolutionComboBox[resolutionIndex].text, resolutionComboBox, listStyle);
-			//GUI.Label( new Rect(192, 192, 400, 21), 
-			          //"You picked " + resolutionComboBox[resolutionIndex].text + "!" );
+
+			//Overall quality selection
+			qualityIndex = GUI.Toolbar(new Rect(192, 256, 500, 32), qualityIndex, qualityButtons);
 
 			//Button to apply all resolution changes
-			if (GUI.Button(new Rect(192, 224, 128, 32), "Apply"))
+			if (GUI.Button(new Rect(128 + buttonSize.x + 64, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Apply"))
 			{
+				if (verticalSync) QualitySettings.vSyncCount = 1;
+				else QualitySettings.vSyncCount = 0;
+
+				QualitySettings.SetQualityLevel(qualityIndex);
+
 				Screen.SetResolution(Screen.resolutions[resolutionIndex].width, Screen.resolutions[resolutionIndex].height, fullScreen);
 			}
 
 			//GUI.HorizontalSlider(new Rect(192, 224, 160, 32), horizontalResolution, 640, Screen.);
 
 			//"Back" button
-			if (GUI.Button(new Rect(128 + buttonSize.x + 64, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Back"))
+			if (GUI.Button(new Rect(160, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Back"))
 			{
 				currentMenu = "main";
 			}
