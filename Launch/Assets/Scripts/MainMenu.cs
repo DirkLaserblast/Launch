@@ -20,29 +20,46 @@ public class MainMenu : MonoBehaviour {
 
 	//Size of standard button
 	private Vector2 buttonSize = new Vector2(128, 64);
-
 	//Which menu we're on
 	private string currentMenu = "main";
-
 	//Should VSync be on?
 	private bool verticalSync;
-
 	//Should we be fullscreen?
 	private bool fullScreen;
-
-	//0 = 4:3, 1 = 16:9, 2 = 16:10
-	private int aspectRatios = 1;
+	private int resolutionIndex;
 
 	private GUIContent[] aspectButtons = new GUIContent[3];
 
-	void Start()
+	GUIContent[] resolutionComboBox;
+	private ComboBox comboBoxControl = new ComboBox();
+	private GUIStyle listStyle = new GUIStyle();
+
+	private void Start()
 	{
+		int i = 0;
+		resolutionComboBox = new GUIContent[Screen.resolutions.Length];
+
+		foreach (Resolution res in Screen.resolutions)
+		{
+			resolutionComboBox[i] = new GUIContent(res.width + " x " + res.height);
+			i++;
+		}
+
+//	    listStyle.normal.textColor = Color.white; 
+//	    listStyle.onHover.background =
+//	    listStyle.hover.background = new Texture2D(2, 2);
+//	    listStyle.padding.left =
+//	    listStyle.padding.right =
+//	    listStyle.padding.top =
+//	    listStyle.padding.bottom = 4;
+
+
 		aspectButtons[0] = new GUIContent("4:3");
 		aspectButtons[1] =new GUIContent("16:9");
 		aspectButtons[2] =new GUIContent("16:10");
 	}
 
-	void OnGUI()
+	private void OnGUI()
 	{
 		//GUIStyle myStyle = new GUIStyle();
 		//myStyle.font = menuFont;
@@ -80,12 +97,23 @@ public class MainMenu : MonoBehaviour {
 			verticalSync = GUI.Toggle(new Rect(192, 128, 128, 32), verticalSync, "Vertical Sync");
 
 			//Fullscreen
-			Screen.fullScreen = GUI.Toggle(new Rect(192, 160, 128, 32), Screen.fullScreen, "Fullscreen");
+			fullScreen = GUI.Toggle(new Rect(192, 160, 128, 32), fullScreen, "Fullscreen");
 
 			//Aspect Ratio selection (a toolbar with three radio buttons)
 			//GUI.Toolbar(new Rect(192, 192, 160, 32), aspectRatios, aspectButtons);
 
-			//Screen Resolution Slider (multiplies width by aspect)
+			//Screen Resolution selection with combo box
+			int resolutionIndex = comboBoxControl.GetSelectedItemIndex();
+			resolutionIndex = comboBoxControl.List(new Rect(192, 192, 128, 32), resolutionComboBox[resolutionIndex].text, resolutionComboBox, listStyle);
+			//GUI.Label( new Rect(192, 192, 400, 21), 
+			          //"You picked " + resolutionComboBox[resolutionIndex].text + "!" );
+
+			//Button to apply all resolution changes
+			if (GUI.Button(new Rect(192, 224, 128, 32), "Apply"))
+			{
+				Screen.SetResolution(Screen.resolutions[resolutionIndex].width, Screen.resolutions[resolutionIndex].height, fullScreen);
+			}
+
 			//GUI.HorizontalSlider(new Rect(192, 224, 160, 32), horizontalResolution, 640, Screen.);
 
 			//"Back" button
