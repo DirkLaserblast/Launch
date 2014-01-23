@@ -45,25 +45,27 @@ public class PauseScript : MonoBehaviour {
 		if (paused)
 		{
 			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "PAUSED");
+			GUILayout.BeginArea(new Rect (Screen.width/2 - 64, Screen.height/2, 128, 500));
 
 			//"Unpause" button
-			if (GUI.Button(new Rect(128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Resume"))
+			if (GUILayout.Button("Resume"))
 			{
 				paused = false;
 			}
 
 			//"Settings" button
-			if (GUI.Button(new Rect(128 + buttonSize.x + 64, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Settings"))
+			if (GUILayout.Button("Settings"))
 			{
 				//Change to settings menu
 			}
 
 			//"Quit" button
-			if (GUI.Button(new Rect(Screen.width - buttonSize.x - 128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Quit"))
+			if (GUILayout.Button("Quit"))
 			{
 				//Quit the game
 				Application.Quit();
 			}
+			GUILayout.EndArea();
 		}
 	}
 }
