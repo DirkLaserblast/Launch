@@ -11,12 +11,15 @@ public class ItemLogScript : MonoBehaviour {
 	//Adds an item to the log and returns the index
 	public int addItem(string title, string description)
 	{
-		string[] newItem = new string[2](title, description);
+		string[] newItem = new string[2];
+		newItem[0] = title;
+		newItem[1] = description;
+
 		logItems.Add(newItem);
 		return (logItems.Count - 1);
 	}
 
-	public ArrayList[] logArray()
+	public ArrayList logArray()
 	{
 		return logItems;
 	}
