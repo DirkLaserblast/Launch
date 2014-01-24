@@ -16,10 +16,13 @@ public class ItemLogScript : MonoBehaviour {
 		newItem[1] = description;
 
 		logItems.Add(newItem);
+
+		print ("Recorded " + title + " to logbook.");
+
 		return (logItems.Count - 1);
 	}
 
-	public ArrayList logArray()
+	public ArrayList getLogArray()
 	{
 		return logItems;
 	}

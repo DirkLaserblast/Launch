@@ -13,6 +13,15 @@ public class InfoBoxScript : MonoBehaviour {
 
 	private bool boxOpen;
 	private Vector2 position;
+	private GameObject globalScriptsObject;
+	private ItemLogScript itemLog;
+	private bool recordedToLog;
+
+	void Start()
+	{
+		globalScriptsObject = GameObject.Find("Global Scripts");
+		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
+	}
 
 	void triggerInfoBox()
 	{
@@ -21,6 +30,14 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
+		recordedToLog = false;
+		foreach (string[] itemString in itemLog.getLogArray())
+		{
+			if (itemString[0] == title)
+			{
+				recordedToLog = true;
+			}
+		}
 		boxOpen = true;
 		position.x = Input.mousePosition.x;
 		position.y = Screen.height - Input.mousePosition.y;
@@ -42,8 +59,17 @@ public class InfoBoxScript : MonoBehaviour {
 			GUILayout.TextArea(content);
 
 			GUILayout.BeginHorizontal();
-			GUILayout.Button("Record to Logbook");
-			if (GUILayout.Button("Close")) boxOpen = false;
+			//Show the log record button if object wasn't already logged
+			if (GUILayout.Button("Close", GUILayout.Width(64))) boxOpen = false;
+
+			if (!recordedToLog)
+			{
+				if (GUILayout.Button("Record to Logbook"))
+				{
+					itemLog.addItem(title, content);
+					recordedToLog = true;
+				}
+			}
 			GUILayout.EndHorizontal();
 
 			GUILayout.EndArea();
