@@ -241,7 +241,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993577195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c7244eedb214270ab0e01da338d8ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 0caaf471151a04b70b40d3db7d5eb9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1993577198
@@ -252,10 +252,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993577195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f248f4c997acb4a7c8cf36c7e11eba54, type: 3}
+  m_Script: {fileID: 11500000, guid: de750abfb50ba41a8b07cf1937cf0c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseKey: 27
 --- !u!1 &2001406538
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +267,7 @@ GameObject:
   - 92: {fileID: 2001406542}
   - 124: {fileID: 2001406541}
   - 81: {fileID: 2001406540}
+  - 114: {fileID: 2001406544}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -336,6 +336,17 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!114 &2001406544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001406538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c7244eedb214270ab0e01da338d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2066628523
 GameObject:
   m_ObjectHideFlags: 0
