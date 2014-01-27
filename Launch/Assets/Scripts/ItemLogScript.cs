@@ -17,8 +17,6 @@ public class ItemLogScript : MonoBehaviour {
 
 		logItems.Add(newItem);
 
-		print ("Recorded " + title + " to logbook.");
-
 		return (logItems.Count - 1);
 	}
 
