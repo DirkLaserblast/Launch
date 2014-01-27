@@ -17,7 +17,7 @@ public class PauseScript : MonoBehaviour {
 	private int i;
 
 	//Size of standard button
-	private Vector2 buttonSize = new Vector2(128, 64);
+//	private Vector2 buttonSize = new Vector2(128, 64);
 
 	// Use this for initialization
 	void Start()

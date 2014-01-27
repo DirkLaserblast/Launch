@@ -9,7 +9,8 @@ public class InfoBoxScript : MonoBehaviour {
 	
 	public string title;
 	public string content;
-	public bool triggerOnClick;
+	public bool triggerOnClick = true;
+	public bool recordable = true;
 
 	private bool boxOpen;
 	private Vector2 position;
@@ -31,6 +32,9 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
+		title = boxTitle;
+		content = boxContent;
+
 		recordedToLog = false;
 		foreach (string[] itemString in itemLog.getLogArray())
 		{
@@ -46,7 +50,7 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		triggerInfoBox();
+		if(triggerOnClick) triggerInfoBox();
 	}
 
 	void InfoWindow(int ID)
@@ -57,7 +61,7 @@ public class InfoBoxScript : MonoBehaviour {
 		//Show the log record button if object wasn't already logged
 		if (GUILayout.Button("Close", GUILayout.Width(64))) boxOpen = false;
 		
-		if (!recordedToLog)
+		if (!recordedToLog && recordable)
 		{
 			if (GUILayout.Button("Record to Logbook"))
 			{
@@ -73,12 +77,11 @@ public class InfoBoxScript : MonoBehaviour {
 	{
 		Event e = Event.current;
 
-
 		if (boxOpen)
 		{
 			Time.timeScale = 0;
 
-			Rect infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));
+			infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));
 			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
 			{
 				boxOpen = false;
