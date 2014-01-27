@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
 {
 	
 	public Transform[] waypoints;
-	public float waypointRadius = 0.01f;//cirlce around each node
+	public float waypointRadius = 3.0f;//cirlce around each node
 	public float damping = 10.0f;
 	public bool loop = false;
 	public float speed = 2.0f;

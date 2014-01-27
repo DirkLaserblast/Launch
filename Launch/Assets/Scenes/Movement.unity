@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51533919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.09524727, y: -1.03760624, z: 0}
+  m_LocalPosition: {x: -1.52523017, y: -2.39011145, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 772082463}
@@ -203,7 +203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178686221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .028822422, y: 0, z: -10}
+  m_LocalPosition: {x: .028822422, y: .591720581, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -229,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551844562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.03686666, y: 2.99752855, z: 0}
+  m_LocalPosition: {x: 6.88276386, y: 1.16601181, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 772082463}
@@ -311,7 +311,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 923364343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.83969498, y: .80702734, z: 0}
+  m_LocalPosition: {x: 3.66946816, y: -1.24990702, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 772082463}
@@ -376,6 +376,7 @@ GameObject:
   - 4: {fileID: 1897914350}
   - 212: {fileID: 1897914349}
   - 114: {fileID: 1897914348}
+  - 50: {fileID: 1897914351}
   m_Layer: 0
   m_Name: Espurr
   m_TagString: Untagged
@@ -399,7 +400,7 @@ MonoBehaviour:
   - {fileID: 51533920}
   - {fileID: 923364344}
   - {fileID: 551844563}
-  waypointRadius: .00999999978
+  waypointRadius: 1
   damping: 5
   loop: 1
   speed: 2
@@ -437,3 +438,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1837753255}
+--- !u!50 &1897914351
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897914347}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
