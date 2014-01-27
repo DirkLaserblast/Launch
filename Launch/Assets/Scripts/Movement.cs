@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 	
 	public Transform[] waypoints;
 	public float waypointRadius = 0.01f;//cirlce around each node
-	public float damping = 10.0f; // bouncing time
+	public float damping = 10.0f;
 	public bool loop = false;
 	public float speed = 2.0f;
 
@@ -15,8 +15,10 @@ public class Movement : MonoBehaviour
 	private Transform xform;
 	private bool useRigidbody;
 	private Rigidbody2D rigid;
-	
+	bool mouseUsed;
 	private object[] obj;
+	Vector3 pz;
+
 
 	
 	// Use this for initialization
@@ -40,61 +42,38 @@ public class Movement : MonoBehaviour
 		{
 			useRigidbody = false;
 		}
-		/*
-		// i tagged them in unity. finds all the waypoints
-		obj = GameObject.FindGameObjectsWithTag("hi");
-		foreach (object o in obj)
-		{
-			GameObject g = (GameObject) o;
-			Debug.Log(g.name);
-		}
-		*/
 	}
 	
 	
 	// calculates a new heading
 	protected void FixedUpdate ()
 	{
-		// this moves the guy
-		// target head is current location, current heading is heading location derp
-		
+		// this is the actual move portion of the game
 		targetHeading = waypoints[targetwaypoint].position - xform.position;
+		Debug.Log (currentHeading + " T: "+targetHeading + " and targetwaypoint: " + waypoints [targetwaypoint].position);
 		currentHeading = Vector3.Lerp(currentHeading,targetHeading,damping*Time.deltaTime);
-		//Debug.Log ("tgt head: " + targetHeading);
-		//Debug.Log ("curr tgt: " + currentHeading);
 		
 	}
-	
-	// moves us along current heading
-	protected void Update()
+		protected void Update()
 	{
-		//if mouse is pressed and held
-		if (Input.GetMouseButton (0) && GUIUtility.hotControl == 0) 
+		// if the mouse is pressed toggle boolean
+		if (Input.GetMouseButtonUp (0)) 
 		{
-			/*
-			//raycast taht shit
-			Plane playerPlane = new Plane(Vector3.up, xform.position);
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			float hitdist = 0.0f;
-			if(playerPlane.Raycast(ray, out hitdist))
-			{
-				Vector3 targetPoint = ray.GetPoint(hitdist);
-				mousePos = Input.mousePosition;
-				Debug.Log(mousePos);
-
-			}*/
-			// mouse position based on camera
-			Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition );
-			//Debug.Log(pz);
+			mouseUsed = !mouseUsed;
+			pz = Camera.main.ScreenToWorldPoint(Input.mousePosition );
+		}
+		if(mouseUsed)
+		{
 			int savePos = -1;
 
 			if (useRigidbody)// havent really test lol
 				rigid.velocity = currentHeading * speed;
 			else // we only ever use this
-				xform.position +=currentHeading * Time.deltaTime * speed;
-			//Debug.Log(Input.mousePosition);
+				xform.position += currentHeading* Time.deltaTime * speed;
+
 			float save = Mathf.Infinity;
 
+			// finds the closest waypoint to mouse.
 			foreach(Transform t in waypoints)
 			{
 				//Debug.Log(t.position);
@@ -107,19 +86,19 @@ public class Movement : MonoBehaviour
 				}
 				
 			}
-			//if(waypoints[savePos] > waypoints[targetwaypoint])
-			//targetwaypoint = savePos;
+			// find the next waypoint in list
 			if(Vector3.Distance(xform.position,waypoints[targetwaypoint].position)<=waypointRadius)
-			if(savePos<targetwaypoint)
+			if(targetwaypoint == waypoints.Length && savePos == 0)
+				targetwaypoint--;
+			else if(savePos<targetwaypoint)
 				targetwaypoint--;
 			else if(savePos> targetwaypoint)
 				targetwaypoint++;
-			Debug.Log(targetwaypoint);
 
-			
+			// see if the player is withing the radius of the waypoint
 			if(Vector3.Distance(xform.position,waypoints[targetwaypoint].position)<=waypointRadius)
 			{
-				targetwaypoint++;
+				//targetwaypoint++;
 				if(targetwaypoint>=waypoints.Length)
 				{
 					targetwaypoint = 0;
