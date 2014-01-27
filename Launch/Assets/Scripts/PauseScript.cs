@@ -52,6 +52,7 @@ public class PauseScript : MonoBehaviour {
 	{
 		if (paused)
 		{
+
 			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), ""); //Darkened background
 
 			GUI.Box(new Rect(0, 0, 256, Screen.height), ""); //Left sidebar
@@ -84,7 +85,7 @@ public class PauseScript : MonoBehaviour {
 			}
 			GUILayout.EndArea();
 
-			GUI.Box(new Rect(Screen.width - 256, 0, 256, Screen.height), ""); //Right sidebar
+			GUI.Box(new Rect(Screen.width - 256, 0, 256, Screen.height), ""); //Right sidebar (logbook)
 
 			GUILayout.BeginArea(new Rect(Screen.width - 256, 0, 256, Screen.height), "");
 			GUILayout.BeginHorizontal();
@@ -92,7 +93,7 @@ public class PauseScript : MonoBehaviour {
 			GUILayout.Label("Mission Logbook");
 			GUILayout.FlexibleSpace();
 			GUILayout.EndHorizontal();
-			scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(256), GUILayout.Height(2000));
+			scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(256), GUILayout.Height(Screen.height - 64));
 
 			i = 0;
 			foreach (string[] item in itemLog.getLogArray())
