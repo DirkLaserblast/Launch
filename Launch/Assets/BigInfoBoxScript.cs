@@ -7,7 +7,7 @@ using System.Collections;
 public class BigInfoBoxScript : MonoBehaviour {
 
 	public string title;
-	public Texture2D content;
+	public Texture content;
 	public bool triggerOnClick = true;
 	public bool hasText;
 	public Vector2 textPosition = new Vector2 (50, 50);
@@ -31,7 +31,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 		triggerInfoBox(title, content);
 	}
 	
-	void triggerInfoBox(string boxTitle, Texture2D boxContent)
+	void triggerInfoBox(string boxTitle, Texture boxContent)
 	{
 		title = boxTitle;
 		content = boxContent;

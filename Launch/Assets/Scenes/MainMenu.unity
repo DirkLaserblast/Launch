@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Espurr
-  content: {fileID: 2800000, guid: 3e532381fa8e34f6a91dde68474af33f, type: 3}
+  content: {fileID: 8400000, guid: ad1f9b185f9ab4ed2a863656f8639258, type: 2}
   triggerOnClick: 1
   hasText: 0
   textPosition: {x: 50, y: 50}
@@ -314,7 +314,112 @@ Transform:
   m_LocalPosition: {x: -3.44128752, y: -.812282085, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1828560893}
+--- !u!1 &1035502928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1035502935}
+  - 20: {fileID: 1035502934}
+  - 92: {fileID: 1035502933}
+  - 124: {fileID: 1035502932}
+  - 81: {fileID: 1035502931}
+  - 114: {fileID: 1035502930}
+  - 114: {fileID: 1035502929}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1035502929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f248f4c997acb4a7c8cf36c7e11eba54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseKey: 27
+--- !u!114 &1035502930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c7244eedb214270ab0e01da338d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!81 &1035502931
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+--- !u!124 &1035502932
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+--- !u!92 &1035502933
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+--- !u!20 &1035502934
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 0
+  m_OcclusionCulling: 1
+--- !u!4 &1035502935
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035502928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.592124283, y: 5.86586332, z: 12.6037598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2066628524}
 --- !u!1 &1674808691
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +584,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1828560893}
     m_Modifications:
     - target: {fileID: 6000000, guid: 7ee497387e7d84d2aaa3bced34f388e6, type: 2}
       propertyPath: m_Poly.m_Paths.Array.size
@@ -1169,7 +1274,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 7ee497387e7d84d2aaa3bced34f388e6, type: 2}
       propertyPath: content
       value: 
-      objectReference: {fileID: 2800000, guid: 3e532381fa8e34f6a91dde68474af33f, type: 3}
+      objectReference: {fileID: 8400000, guid: ad1f9b185f9ab4ed2a863656f8639258, type: 2}
     - target: {fileID: 11400000, guid: 7ee497387e7d84d2aaa3bced34f388e6, type: 2}
       propertyPath: textBoxSize.x
       value: 50
@@ -1208,6 +1313,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 710669883}
   - {fileID: 1674808695}
   m_Father: {fileID: 476062511}
 --- !u!1 &1965439329
@@ -1298,11 +1404,10 @@ GameObject:
   - 20: {fileID: 2001406543}
   - 92: {fileID: 2001406542}
   - 124: {fileID: 2001406541}
-  - 81: {fileID: 2001406540}
   - 114: {fileID: 2001406544}
   - 114: {fileID: 2001406545}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Texture Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1319,13 +1424,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2066628524}
---- !u!81 &2001406540
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2001406538}
-  m_Enabled: 1
 --- !u!124 &2001406541
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1366,7 +1464,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: ad1f9b185f9ab4ed2a863656f8639258, type: 2}
   m_HDR: 0
   m_OcclusionCulling: 1
 --- !u!114 &2001406544
@@ -1418,4 +1516,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2001406539}
+  - {fileID: 1035502935}
   m_Father: {fileID: 0}
