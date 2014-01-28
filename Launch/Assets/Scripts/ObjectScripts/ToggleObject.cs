@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ToggleObject : MonoBehaviour {
-	
+
 	/*
 	*	ToggledObject is dragged in via the GUI.
 	*	toggle() calls the ToggledObject's own method.
@@ -11,13 +11,13 @@ public class ToggleObject : MonoBehaviour {
 	
 	public bool toggled = false;
 	public ToggledObject toggledObject;
-	
+
 	void OnMouseDown() {
-		toggle();
+		Toggle();
 	}
 	
-	
-	void toggle() {
+
+	void Toggle() {
 		toggledObject.toggle();
 		if (toggled) {
 			toggled = false;
