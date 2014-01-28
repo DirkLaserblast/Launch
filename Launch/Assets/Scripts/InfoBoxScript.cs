@@ -9,13 +9,15 @@ public class InfoBoxScript : MonoBehaviour {
 	
 	public string title;
 	public string content;
-	public bool triggerOnClick;
+	public bool triggerOnClick = true;
+	public bool recordable = true;
 
 	private bool boxOpen;
 	private Vector2 position;
 	private GameObject globalScriptsObject;
 	private ItemLogScript itemLog;
 	private bool recordedToLog;
+	private Rect infoRect;
 
 	void Start()
 	{
@@ -30,6 +32,9 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
+		title = boxTitle;
+		content = boxContent;
+
 		recordedToLog = false;
 		foreach (string[] itemString in itemLog.getLogArray())
 		{
@@ -45,34 +50,43 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		triggerInfoBox();
+		if(triggerOnClick) triggerInfoBox();
 	}
 
+	void InfoWindow(int ID)
+	{
+		GUILayout.Label(content);
+		
+		GUILayout.BeginHorizontal();
+		//Show the log record button if object wasn't already logged
+		if (GUILayout.Button("Close", GUILayout.Width(64))) boxOpen = false;
+		
+		if (!recordedToLog && recordable)
+		{
+			if (GUILayout.Button("Record to Logbook"))
+			{
+				itemLog.addItem(title, content);
+				recordedToLog = true;
+			}
+		}
+		GUILayout.EndHorizontal();
+
+	}
+	
 	void OnGUI()
 	{
+		Event e = Event.current;
+
 		if (boxOpen)
 		{
 			Time.timeScale = 0;
 
-			GUILayout.BeginArea(new Rect(position.x, position.y, 256, 400));
-			GUILayout.Box(title);
-			GUILayout.TextArea(content);
-
-			GUILayout.BeginHorizontal();
-			//Show the log record button if object wasn't already logged
-			if (GUILayout.Button("Close", GUILayout.Width(64))) boxOpen = false;
-
-			if (!recordedToLog)
+			infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));
+			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
 			{
-				if (GUILayout.Button("Record to Logbook"))
-				{
-					itemLog.addItem(title, content);
-					recordedToLog = true;
-				}
+				boxOpen = false;
 			}
-			GUILayout.EndHorizontal();
 
-			GUILayout.EndArea();
 		}
 		else Time.timeScale = 1;
 	}
