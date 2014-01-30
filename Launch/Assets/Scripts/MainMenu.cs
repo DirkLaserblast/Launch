@@ -35,15 +35,49 @@ public class MainMenu : MonoBehaviour {
 			i++;
 		}
 
-//	    listStyle.normal.textColor = Color.white; 
-//	    listStyle.onHover.background =
-//	    listStyle.hover.background = new Texture2D(2, 2);
-//	    listStyle.padding.left =
-//	    listStyle.padding.right =
-//	    listStyle.padding.top =
-//	    listStyle.padding.bottom = 4;
+		//If there are saved settings already, use them
+		if (PlayerPrefs.HasKey("VerticalSync"))
+		{
+			verticalSync = (PlayerPrefs.GetInt("VerticalSync") > 0) ? true : false;
+		}
+		else
+		{
+			verticalSync = false;
+		}
 
-		qualityIndex = QualitySettings.GetQualityLevel();
+		if (PlayerPrefs.HasKey("FullScreen")) 
+		{
+			fullScreen = (PlayerPrefs.GetInt("FullScreen") > 0) ? true : false;
+		}
+		else
+		{
+			fullScreen = false;
+		}
+
+		if (PlayerPrefs.HasKey("ResolutionIndex"))
+		{
+			resolutionIndex = Screen.resolutions.Length - 1;
+		}
+		else
+		{
+			resolutionIndex = Screen.resolutions.Length - 1;
+		}
+		if (PlayerPrefs.HasKey("QualityIndex"))
+		{
+			qualityIndex = PlayerPrefs.GetInt("QualityIndex");
+		}
+		else
+		{
+			qualityIndex = QualitySettings.GetQualityLevel();
+		}
+		if (PlayerPrefs.HasKey("Volume"))
+		{
+			volume = PlayerPrefs.GetFloat("Volume");
+		}
+		else 
+		{
+			volume = AudioListener.volume;
+		}
 
 		qualityButtons[0] = new GUIContent("Fastest");
 		qualityButtons[1] =new GUIContent("Fast");
@@ -51,8 +85,6 @@ public class MainMenu : MonoBehaviour {
 		qualityButtons[3] = new GUIContent("Good");
 		qualityButtons[4] =new GUIContent("Beautiful");
 		qualityButtons[5] =new GUIContent("Fantastic");
-
-		volume = AudioListener.volume;
 	}
 
 	public void mainMenu()
@@ -61,6 +93,7 @@ public class MainMenu : MonoBehaviour {
 		if (GUI.Button(new Rect(128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Launch"))
 		{
 			//Start / resume the game
+			Application.LoadLevel("Casey's Testing");
 		}
 		
 		//"Settings" button
@@ -70,12 +103,12 @@ public class MainMenu : MonoBehaviour {
 			currentMenu = "settings";
 		}
 		
-		//"Quit" button
-		if (GUI.Button(new Rect(Screen.width - buttonSize.x - 128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Quit"))
-		{
-			//Quit the game
-			Application.Quit();
-		}
+//		//"Quit" button
+//		if (GUI.Button(new Rect(Screen.width - buttonSize.x - 128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Quit"))
+//		{
+//			//Quit the game
+//			Application.Quit();
+//		}
 	}
 
 	public void settingsMenu()
@@ -90,9 +123,10 @@ public class MainMenu : MonoBehaviour {
 		fullScreen = GUI.Toggle(new Rect(192, 160, 128, 32), fullScreen, "Fullscreen");
 		
 		//Screen Resolution selection with combo box
-		int resolutionIndex = comboBoxControl.GetSelectedItemIndex();
+		//int resolutionIndex = comboBoxControl.GetSelectedItemIndex();
 		resolutionIndex = comboBoxControl.List(new Rect(192, 192, 128, 32), resolutionComboBox[resolutionIndex].text, resolutionComboBox, listStyle);
-		
+		//resolutionIndex = comboBoxControl.GetSelectedItemIndex();
+
 		//Overall quality selection
 		GUI.Label(new Rect(192, 240, 128, 32), "Graphics Quality");
 		qualityIndex = GUI.Toolbar(new Rect(192, 256, 500, 32), qualityIndex, qualityButtons);
@@ -102,17 +136,31 @@ public class MainMenu : MonoBehaviour {
 		GUI.Label(new Rect(192, 304, 256, 32), "Volume");
 		volume = GUI.HorizontalSlider(new Rect(192, 320, 256, 32), volume, 0f, 1f);
 		
-		//Button to apply all changes
+		//Button to apply all changes, also records them to PlayerPrefs
 		if (GUI.Button(new Rect(128 + buttonSize.x + 64, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Apply"))
 		{
-			if (verticalSync) QualitySettings.vSyncCount = 1;
-			else QualitySettings.vSyncCount = 0;
+			if (verticalSync) 
+			{
+				QualitySettings.vSyncCount = 1;
+				PlayerPrefs.SetInt("VerticalSync", 1);
+			}
+			else 
+			{
+				QualitySettings.vSyncCount = 0;
+				PlayerPrefs.SetInt("VerticalSync", 0);
+			}
 			
 			QualitySettings.SetQualityLevel(qualityIndex);
+			PlayerPrefs.SetInt("QualityIndex", qualityIndex);
 			
 			Screen.SetResolution(Screen.resolutions[resolutionIndex].width, Screen.resolutions[resolutionIndex].height, fullScreen);
-			
+			PlayerPrefs.SetInt("ResolutionIndex", resolutionIndex);
+
 			AudioListener.volume = volume;
+			PlayerPrefs.SetFloat("Volume", volume);
+
+			//Save settings
+			PlayerPrefs.Save();
 		}
 		
 		//"Back" button
