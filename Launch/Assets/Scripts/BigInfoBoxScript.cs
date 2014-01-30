@@ -39,7 +39,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 		boxOpen = true;
 	}
 
-	void OnMouseDown()
+	void OnMouseUp()
 	{
 		if (triggerOnClick) triggerInfoBox();
 	}

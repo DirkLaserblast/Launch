@@ -48,7 +48,7 @@ public class InfoBoxScript : MonoBehaviour {
 		position.y = Screen.height - Input.mousePosition.y;
 	}
 
-	void OnMouseDown()
+	void OnMouseUp()
 	{
 		if(triggerOnClick) triggerInfoBox();
 	}

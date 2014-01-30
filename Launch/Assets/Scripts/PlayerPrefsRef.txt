@@ -1,0 +1,4 @@
+//PlayerPrefs cheat sheet, here’s all the PlayerPrefs values so far
+
+PlayerCurrentScene
+PlayerCurrentNode
