@@ -3,6 +3,15 @@ using System.Collections;
 
 public class MoveableObject : MonoBehaviour {
 
+	/* Object that will spawn arrows for movement.
+	 * Movement of the object is based on the angle of the arrows.
+	 * Any number of arrows can be spawned (for any number of directions),
+	 * and the code show is simply an example script for an object that 
+	 * can move in the 4 cardinal directions.
+	 * 
+	 * Note: Arrows are children of this object and thus inheret active/inactive properties, and the rotation.
+	 *  */
+
 	public Transform leftPrefab;
 	public Transform rightPrefab;
 	public Transform upPrefab;
@@ -49,7 +58,7 @@ public class MoveableObject : MonoBehaviour {
 
 	void OnMouseDown() {
 		if(leftArrow == null && canMoveLeft) {
-			leftArrow = (Transform) Instantiate(leftPrefab, transform.position + leftOffset, transform.rotation);
+			leftArrow = (Transform) Instantiate(leftPrefab, transform.position + leftOffset, transform.rotation * Quaternion.Euler(0, 0, 180));
 			leftArrow.transform.parent = this.transform;
 		}
 		if(rightArrow == null && canMoveRight) {
@@ -57,41 +66,44 @@ public class MoveableObject : MonoBehaviour {
 			rightArrow.transform.parent = this.transform;
 		}
 		if(upArrow == null && canMoveUp) {
-			upArrow = (Transform) Instantiate(upPrefab, transform.position + upOffset, transform.rotation);
+			upArrow = (Transform) Instantiate(upPrefab, transform.position + upOffset, transform.rotation * Quaternion.Euler(0, 0, 90));
 			upArrow.transform.parent = this.transform;
 		}
 		if(downArrow == null && canMoveDown) {
-			downArrow = (Transform) Instantiate(downPrefab, transform.position + downOffset, transform.rotation);
+			downArrow = (Transform) Instantiate(downPrefab, transform.position + downOffset, transform.rotation * Quaternion.Euler(0, 0, 270));
 			downArrow.transform.parent = this.transform;
 		}
+		//transform.Rotate (Vector3.forward, 12f); //For testing/showing off rotation
+
 		timer = 200;
 	}
 
 
+
 	//Deactivates an arrow if the object isn't allowed to move past that point in that direction.
 	void CheckAnchors() {
-		if(leftArrow != null) {
+		if(leftArrow != null && leftAnchor != null) {
 			if(transform.position.x <= leftAnchor.transform.position.x) {
 				leftArrow.transform.gameObject.SetActive(false);
 			} else {
 				leftArrow.transform.gameObject.SetActive(true);
 			}
 		}
-		if(rightArrow != null) {
+		if(rightArrow != null && rightAnchor != null) {
 			if(transform.position.x >= rightAnchor.transform.position.x) {
 				rightArrow.transform.gameObject.SetActive(false);
 			} else {
 				rightArrow.transform.gameObject.SetActive(true);
 			}
 		}
-		if(upArrow != null) {
+		if(upArrow != null && upAnchor != null) {
 			if(transform.position.y >= upAnchor.transform.position.y) {
 				upArrow.transform.gameObject.SetActive(false);
 			} else {
 				upArrow.transform.gameObject.SetActive(true);
 			}
 		}
-		if(downArrow != null) {
+		if(downArrow != null && downAnchor != null) {
 			if(transform.position.y <= downAnchor.transform.position.y) {
 				downArrow.transform.gameObject.SetActive(false);
 			} else {

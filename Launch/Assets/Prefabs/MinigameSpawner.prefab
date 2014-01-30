@@ -13,7 +13,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: MoveableTile
+  m_Name: MinigameSpawner
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.83398581, y: -.0283557177, z: 0}
+  m_LocalPosition: {x: 9.84227943, y: 4.28838301, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,26 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 857590b7a5fa14510a015651c8cddf7d, type: 3}
+  m_Script: {fileID: 11500000, guid: e5d0d148edc9942cdac8b72c3fbf1962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPrefab: {fileID: 400000, guid: 7dd2691762b05465da140ff7ca42ddd5, type: 2}
-  rightPrefab: {fileID: 400000, guid: 7dd2691762b05465da140ff7ca42ddd5, type: 2}
-  upPrefab: {fileID: 400000, guid: 7dd2691762b05465da140ff7ca42ddd5, type: 2}
-  downPrefab: {fileID: 400000, guid: 7dd2691762b05465da140ff7ca42ddd5, type: 2}
-  leftAnchor: {fileID: 400000, guid: 1351575eb04c643f19c0e8ad8ffbd25e, type: 2}
-  rightAnchor: {fileID: 400000, guid: ccf6fb02a63d14b15a616f5395770e65, type: 2}
-  upAnchor: {fileID: 400000, guid: b60b27bfb666341fdb84662db6cc3c3f, type: 2}
-  downAnchor: {fileID: 400000, guid: 222d13eab46514f6eb7302a83a88b715, type: 2}
-  leftOffset: {x: -1.5, y: 0, z: 0}
-  rightOffset: {x: 1.5, y: 0, z: 0}
-  upOffset: {x: 0, y: 1.5, z: 0}
-  downOffset: {x: 0, y: -1.5, z: 0}
-  canMoveLeft: 1
-  canMoveRight: 1
-  canMoveUp: 1
-  canMoveDown: 1
-  timer: 0
+  minigame: {fileID: 100000, guid: a8b9f019edaf542a8953a15e7fbd643d, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
