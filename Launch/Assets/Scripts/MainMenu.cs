@@ -93,7 +93,7 @@ public class MainMenu : MonoBehaviour {
 		if (GUI.Button(new Rect(128, Screen.height * 0.8f, buttonSize.x, buttonSize.y), "Launch"))
 		{
 			//Start / resume the game
-			Application.LoadLevel("Casey's Testing");
+			Application.LoadLevel("Movement");
 		}
 		
 		//"Settings" button

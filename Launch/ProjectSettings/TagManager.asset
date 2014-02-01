@@ -4,6 +4,8 @@
 TagManager:
   tags:
   - 
+  - Ground
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -12,8 +14,8 @@ TagManager:
   Builtin Layer 5: 
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
-  User Layer 9: 
+  User Layer 8: background
+  User Layer 9: middleground
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -37,6 +39,14 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: background
+    userID: 1
+    uniqueID: 441613165
+    locked: 0
+  - name: middleground
+    userID: 2
+    uniqueID: 2935791393
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0

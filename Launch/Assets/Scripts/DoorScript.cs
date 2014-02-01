@@ -27,4 +27,8 @@ public class DoorScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void unlock() {
+		locked = false;
+	}
 }

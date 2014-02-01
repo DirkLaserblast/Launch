@@ -6,7 +6,7 @@ public class MoveArrow : MonoBehaviour {
 	public int cameraZ = 15; //camera distance for ScreenToWorldPoint to work.
 	
 	void Start () {
-		
+		print ("hi");
 	}
 	
 	void Update () {
@@ -16,11 +16,11 @@ public class MoveArrow : MonoBehaviour {
 	}
 	
 	void OnMouseDown() {
-		transform.parent.transform.GetComponent<MoveableObject>().timer = 200;
+		transform.parent.transform.GetComponent<MoveableObject>().timer = 500;
 	}
 	
 	void OnMouseDrag() {
-		transform.parent.transform.GetComponent<MoveableObject>().timer = 200;
+		transform.parent.transform.GetComponent<MoveableObject>().timer = 500;
 
 		/*	Explanation: 
 		 *  The clicked point is projected onto the line defined by the

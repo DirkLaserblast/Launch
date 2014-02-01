@@ -53,7 +53,7 @@ public class MoveableObject : MonoBehaviour {
 	
 	void Update () {
 		timer--;
-		CheckAnchors ();
+		//CheckAnchors ();
 	}
 
 	void OnMouseDown() {
@@ -73,9 +73,9 @@ public class MoveableObject : MonoBehaviour {
 			downArrow = (Transform) Instantiate(downPrefab, transform.position + downOffset, transform.rotation * Quaternion.Euler(0, 0, 270));
 			downArrow.transform.parent = this.transform;
 		}
-		//transform.Rotate (Vector3.forward, 12f); //For testing/showing off rotation
+		transform.Rotate (Vector3.forward, 12f); //For testing/showing off rotation
 
-		timer = 200;
+		timer = 500;
 	}
 
 

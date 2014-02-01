@@ -50,11 +50,12 @@ public class Movement : MonoBehaviour
 	{
 		// this is the actual move portion of the game
 		targetHeading = waypoints[targetwaypoint].position - xform.position;
-		Debug.Log (currentHeading + " T: "+targetHeading + " and targetwaypoint: " + waypoints [targetwaypoint].position);
+		//Debug.Log (currentHeading + " T: "+targetHeading + " and targetwaypoint: " + waypoints [targetwaypoint].position);
 		currentHeading = Vector3.Lerp(currentHeading,targetHeading,damping*Time.deltaTime);
 		
 	}
-		protected void Update()
+		
+	protected void Update()
 	{
 		// if the mouse is pressed toggle boolean
 		if (Input.GetMouseButtonUp (0)) 
