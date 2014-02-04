@@ -32,7 +32,11 @@ public class MouseLook : MonoBehaviour {
 	public int activationRangeX = 300;
 	public int activationRangeY = 40;
 
+	private GameObject globalScriptsObject;
+	private PersistantGlobalScript globalScript;
+
 	float rotationY = 0F;
+
 
 	//From http://answers.unity3d.com/questions/425712/how-can-i-move-the-camera-when-the-mouse-reaches-t.html
 	Vector2 MouseScreenEdge( Vector2 margin ) {
@@ -104,46 +108,49 @@ public class MouseLook : MonoBehaviour {
 	void Update ()
 	{
 
-		Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
-
-		if (axes == RotationAxes.MouseXAndY)
+		if (globalScript.mouseLookEnabled)
 		{
-			if (Input.GetMouseButton(0))
+			Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
+			
+			if (axes == RotationAxes.MouseXAndY)
 			{
-				float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+				if (Input.GetMouseButton(0))
+				{
+					float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+					
+					rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+					rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+					
+					transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+				}
+				//			else
+				//			{
+				//				verticalTurn(mouseEdge);
+				//				horizontalTurn(mouseEdge);
+				//			}
 				
-				rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-				rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-				
-				transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 			}
-//			else
-//			{
-//				verticalTurn(mouseEdge);
-//				horizontalTurn(mouseEdge);
-//			}
-
-		}
-		else if (axes == RotationAxes.MouseX)
-		{
-			if (Input.GetMouseButton(0))
+			else if (axes == RotationAxes.MouseX)
 			{
-				transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
-			}
-//			else horizontalTurn(mouseEdge);
-
-		}
-		else
-		{
-			if (Input.GetMouseButton(0))
-			{
-				rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-				rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+				if (Input.GetMouseButton(0))
+				{
+					transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+				}
+				//			else horizontalTurn(mouseEdge);
 				
-				transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 			}
-//			else verticalTurn(mouseEdge);
-
+			else
+			{
+				if (Input.GetMouseButton(0))
+				{
+					rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+					rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+					
+					transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+				}
+				//			else verticalTurn(mouseEdge);
+				
+			}
 		}
 	}
 	
@@ -152,5 +159,7 @@ public class MouseLook : MonoBehaviour {
 		// Make the rigid body not change rotation
 		if (rigidbody)
 			rigidbody.freezeRotation = true;
+		globalScriptsObject = GameObject.Find("Global Scripts");
+		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 }

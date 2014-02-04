@@ -70,7 +70,7 @@ enum MovementTransferOnJump {
 // We will contain all the jumping related variables in one helper class for clarity.
 class CharacterMotorJumping {
 	// Can the character jump?
-	var enabled : boolean = true;
+	var enabled : boolean = false;
 
 	// How high do we jump when pressing jump and letting go immediately
 	var baseHeight : float = 1.0;
@@ -388,13 +388,13 @@ private function ApplyInputVelocityChange (velocity : Vector3) {
 
 private function ApplyGravityAndJumping (velocity : Vector3) {
 	
-	if (!inputJump || !canControl) {
-		jumping.holdingJumpButton = false;
-		jumping.lastButtonDownTime = -100;
-	}
-	
-	if (inputJump && jumping.lastButtonDownTime < 0 && canControl)
-		jumping.lastButtonDownTime = Time.time;
+//	if (!inputJump || !canControl) {
+//		jumping.holdingJumpButton = false;
+//		jumping.lastButtonDownTime = -100;
+//	}
+//	
+//	if (inputJump && jumping.lastButtonDownTime < 0 && canControl)
+//		jumping.lastButtonDownTime = Time.time;
 	
 	if (grounded)
 		velocity.y = Mathf.Min(0, velocity.y) - movement.gravity * Time.deltaTime;

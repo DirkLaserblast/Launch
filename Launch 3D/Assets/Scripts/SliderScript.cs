@@ -8,11 +8,15 @@ public class SliderScript : MonoBehaviour {
 	public bool guiOn = false;
 	private Vector2 position;
 
+	private GameObject globalScriptsObject;
+	private PersistantGlobalScript globalScript;
+
 	public bool triggerOnClick = true;
 
 	// Use this for initialization
 	void Start () {
-	
+		globalScriptsObject = GameObject.Find("Global Scripts");
+		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
 	// Update is called once per frame
@@ -27,6 +31,9 @@ public class SliderScript : MonoBehaviour {
 
 	void OnMouseUp () {
 		//SliderTypeObject();
+
+		globalScript.mouseLookEnabled = false;
+
 		guiOn = true;
 		position.x = Input.mousePosition.x;
 		position.y = Screen.height - Input.mousePosition.y;
@@ -38,7 +45,7 @@ public class SliderScript : MonoBehaviour {
 		
 		if (guiOn)
 		{
-//			Time.timeScale = 0;
+			//Time.timeScale = 0;
 
 			//sets the value to a string so it can be displayed and displays it
 			sliderString = sliderValue.ToString ();
@@ -52,10 +59,11 @@ public class SliderScript : MonoBehaviour {
 			if (e.type == EventType.MouseDown && !new Rect(position.x, position.y, 40, 120).Contains(e.mousePosition))
 			{
 				guiOn = false;
+				globalScript.mouseLookEnabled = true;
 			}
 			
 		}
-//		else Time.timeScale = 1;
+		//else Time.timeScale = 1;
 
 
 	}

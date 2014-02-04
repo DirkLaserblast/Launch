@@ -14,11 +14,17 @@ public class BigInfoBoxScript : MonoBehaviour {
 	public Vector2 textBoxSize = new Vector2 (50, 50);
 	public string textContent;
 
+	private GameObject globalScriptsObject;
+	private PersistantGlobalScript globalScript;
+
 	private bool boxOpen;
 	private Rect windowRect;
 
 	void Start()
 	{
+		globalScriptsObject = GameObject.Find("Global Scripts");
+		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
+
 		float windowHeight = Screen.height - 128;
 		float windowWidth = windowHeight * ((float) content.width / (float) content.height);
 		Vector2 windowPosition = new Vector2((Screen.width - windowWidth)/2, (Screen.height - windowHeight)/2);
@@ -37,6 +43,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 		content = boxContent;
 
 		boxOpen = true;
+		globalScript.mouseLookEnabled = false;
 	}
 
 	void OnMouseUp()
@@ -61,6 +68,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 		if (GUI.Button(new Rect(windowRect.width/2 - 32, windowRect.height - 40, 64, 32), "Close"))
 		{
 			boxOpen = false;
+			globalScript.mouseLookEnabled = true;
 		}
 	}
 
@@ -76,6 +84,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 			if (e.type == EventType.MouseDown && !windowRect.Contains(e.mousePosition))
 			{
 				boxOpen = false;
+				globalScript.mouseLookEnabled = true;
 			}
 		}
 		else Time.timeScale = 1;

@@ -16,6 +16,7 @@ public class InfoBoxScript : MonoBehaviour {
 	private Vector2 position;
 	private GameObject globalScriptsObject;
 	private ItemLogScript itemLog;
+	private PersistantGlobalScript globalScript;
 	private bool recordedToLog;
 	private Rect infoRect;
 
@@ -23,6 +24,7 @@ public class InfoBoxScript : MonoBehaviour {
 	{
 		globalScriptsObject = GameObject.Find("Global Scripts");
 		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
+		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
 	void triggerInfoBox()
@@ -32,6 +34,9 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
+		//Disabled mouselook while box open
+		globalScript.mouseLookEnabled = false;
+
 		title = boxTitle;
 		content = boxContent;
 
@@ -59,7 +64,11 @@ public class InfoBoxScript : MonoBehaviour {
 		
 		GUILayout.BeginHorizontal();
 		//Show the log record button if object wasn't already logged
-		if (GUILayout.Button("Close", GUILayout.Width(64))) boxOpen = false;
+		if (GUILayout.Button("Close", GUILayout.Width(64)))
+		{
+			boxOpen = false;
+			globalScript.mouseLookEnabled = true;
+		}
 		
 		if (!recordedToLog && recordable)
 		{
@@ -85,9 +94,13 @@ public class InfoBoxScript : MonoBehaviour {
 			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
 			{
 				boxOpen = false;
+				globalScript.mouseLookEnabled = true;
 			}
 
 		}
-		else Time.timeScale = 1;
+		else
+		{
+			Time.timeScale = 1;
+		}
 	}
 }
