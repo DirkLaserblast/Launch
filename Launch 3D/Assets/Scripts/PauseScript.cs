@@ -12,8 +12,11 @@ public class PauseScript : MonoBehaviour {
 
 	private bool paused;
 	private Vector2 scrollPosition;
+
 	private GameObject globalScriptsObject;
 	private ItemLogScript itemLog;
+	private PersistantGlobalScript globalScript;
+
 	private int i;
 
 	//Size of standard button
@@ -27,6 +30,7 @@ public class PauseScript : MonoBehaviour {
 		//Find the Global Scripts object
 		globalScriptsObject = GameObject.Find("Global Scripts");
 		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
+		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
 	void pause()
@@ -42,8 +46,13 @@ public class PauseScript : MonoBehaviour {
 			if (paused)
 			{
 				Time.timeScale = 0;
+				globalScript.mouseLookEnabled = false;
 			}
-			else Time.timeScale = 1;
+			else
+			{
+				Time.timeScale = 1;
+				globalScript.mouseLookEnabled = true;
+			}
 		}
 	}
 
@@ -99,14 +108,13 @@ public class PauseScript : MonoBehaviour {
 			foreach (string[] item in itemLog.getLogArray())
 			{
 				GUILayout.BeginHorizontal();
-				GUILayout.Label("---Log Item [" + item[0] + "]---");
+				GUILayout.Label("[" + item[0] + "]");
 				if (GUILayout.Button("Delete"))
 				{
 					itemLog.deleteByIndex(i);
 				}
 				GUILayout.EndHorizontal();
 				GUILayout.Label(item[1]);
-				GUILayout.Label("---End Log---");
 				i++;
 			}
 

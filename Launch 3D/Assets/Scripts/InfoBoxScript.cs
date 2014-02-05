@@ -72,11 +72,8 @@ public class InfoBoxScript : MonoBehaviour {
 		
 		if (!recordedToLog && recordable)
 		{
-			if (GUILayout.Button("Record to Logbook"))
-			{
-				itemLog.addItem(title, content);
-				recordedToLog = true;
-			}
+			itemLog.addItem(title, content);
+			recordedToLog = true;
 		}
 		GUILayout.EndHorizontal();
 
