@@ -14,16 +14,16 @@ public class BigInfoBoxScript : MonoBehaviour {
 	public Vector2 textBoxSize = new Vector2 (50, 50);
 	public string textContent;
 
-	private GameObject globalScriptsObject;
-	private PersistantGlobalScript globalScript;
+//	private GameObject globalScriptsObject;
+//	private PersistantGlobalScript globalScript;
 
 	private bool boxOpen;
 	private Rect windowRect;
 
 	void Start()
 	{
-		globalScriptsObject = GameObject.Find("Global Scripts");
-		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
+//		globalScriptsObject = GameObject.Find("Global Scripts");
+//		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 
 		float windowHeight = Screen.height - 128;
 		float windowWidth = windowHeight * ((float) content.width / (float) content.height);
@@ -43,12 +43,12 @@ public class BigInfoBoxScript : MonoBehaviour {
 		content = boxContent;
 
 		boxOpen = true;
-		globalScript.mouseLookEnabled = false;
+		PersistantGlobalScript.mouseLookEnabled = false;
 	}
 
 	void OnMouseUp()
 	{
-		if (triggerOnClick) triggerInfoBox();
+		if (triggerOnClick && PersistantGlobalScript.interactionEnabled) triggerInfoBox();
 	}
 
 	void BigWindow(int ID)
@@ -68,7 +68,7 @@ public class BigInfoBoxScript : MonoBehaviour {
 		if (GUI.Button(new Rect(windowRect.width/2 - 32, windowRect.height - 40, 64, 32), "Close"))
 		{
 			boxOpen = false;
-			globalScript.mouseLookEnabled = true;
+			PersistantGlobalScript.mouseLookEnabled = true;
 		}
 	}
 
@@ -78,24 +78,20 @@ public class BigInfoBoxScript : MonoBehaviour {
 
 		if (boxOpen)
 		{
-			Time.timeScale = 0;
+			Time.timeScale = 0.0f;
 			windowRect = GUI.Window(0, windowRect, BigWindow, title);
 
 			if (e.type == EventType.MouseDown && !windowRect.Contains(e.mousePosition))
 			{
 				boxOpen = false;
-				globalScript.mouseLookEnabled = true;
+				PersistantGlobalScript.mouseLookEnabled = true;
 			}
 		}
-		else Time.timeScale = 1;
+		else Time.timeScale = 1.0f;
 	}
 
 	void Update()
 	{
-		if (boxOpen)
-		{
-			Time.timeScale = 0.0f;
-		}
-		else Time.timeScale = 1.0f;
+
 	}
 }

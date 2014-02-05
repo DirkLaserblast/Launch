@@ -14,17 +14,17 @@ public class InfoBoxScript : MonoBehaviour {
 
 	private bool boxOpen;
 	private Vector2 position;
-	private GameObject globalScriptsObject;
-	private ItemLogScript itemLog;
-	private PersistantGlobalScript globalScript;
+//	private GameObject globalScriptsObject;
+//	private ItemLogScript itemLog;
+//	private PersistantGlobalScript globalScript;
 	private bool recordedToLog;
 	private Rect infoRect;
 
 	void Start()
 	{
-		globalScriptsObject = GameObject.Find("Global Scripts");
-		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
-		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
+//		globalScriptsObject = GameObject.Find("Global Scripts");
+//		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
+//		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
 	void triggerInfoBox()
@@ -35,13 +35,13 @@ public class InfoBoxScript : MonoBehaviour {
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
 		//Disabled mouselook while box open
-		globalScript.mouseLookEnabled = false;
+		PersistantGlobalScript.mouseLookEnabled = false;
 
 		title = boxTitle;
 		content = boxContent;
 
 		recordedToLog = false;
-		foreach (string[] itemString in itemLog.getLogArray())
+		foreach (string[] itemString in ItemLogScript.getLogArray())
 		{
 			if (itemString[0] == title)
 			{
@@ -55,7 +55,7 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void OnMouseUp()
 	{
-		if(triggerOnClick) triggerInfoBox();
+		if(triggerOnClick && PersistantGlobalScript.interactionEnabled) triggerInfoBox();
 	}
 
 	void InfoWindow(int ID)
@@ -67,12 +67,12 @@ public class InfoBoxScript : MonoBehaviour {
 		if (GUILayout.Button("Close", GUILayout.Width(64)))
 		{
 			boxOpen = false;
-			globalScript.mouseLookEnabled = true;
+			PersistantGlobalScript.mouseLookEnabled = true;
 		}
 		
 		if (!recordedToLog && recordable)
 		{
-			itemLog.addItem(title, content);
+			ItemLogScript.addItem(title, content);
 			recordedToLog = true;
 		}
 		GUILayout.EndHorizontal();
@@ -91,7 +91,7 @@ public class InfoBoxScript : MonoBehaviour {
 			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
 			{
 				boxOpen = false;
-				globalScript.mouseLookEnabled = true;
+				PersistantGlobalScript.mouseLookEnabled = true;
 			}
 
 		}

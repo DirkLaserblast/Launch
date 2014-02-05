@@ -13,9 +13,9 @@ public class PauseScript : MonoBehaviour {
 	private bool paused;
 	private Vector2 scrollPosition;
 
-	private GameObject globalScriptsObject;
-	private ItemLogScript itemLog;
-	private PersistantGlobalScript globalScript;
+//	private GameObject globalScriptsObject;
+//	private ItemLogScript itemLog;
+//	private PersistantGlobalScript globalScript;
 
 	private int i;
 
@@ -28,9 +28,9 @@ public class PauseScript : MonoBehaviour {
 		paused = false;
 
 		//Find the Global Scripts object
-		globalScriptsObject = GameObject.Find("Global Scripts");
-		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
-		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
+//		globalScriptsObject = GameObject.Find("Global Scripts");
+//		itemLog = globalScriptsObject.GetComponent<ItemLogScript>();
+//		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
 	void pause()
@@ -46,12 +46,12 @@ public class PauseScript : MonoBehaviour {
 			if (paused)
 			{
 				Time.timeScale = 0;
-				globalScript.mouseLookEnabled = false;
+				PersistantGlobalScript.mouseLookEnabled = false;
 			}
 			else
 			{
 				Time.timeScale = 1;
-				globalScript.mouseLookEnabled = true;
+				PersistantGlobalScript.mouseLookEnabled = true;
 			}
 		}
 	}
@@ -105,13 +105,13 @@ public class PauseScript : MonoBehaviour {
 			scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(256), GUILayout.Height(Screen.height - 64));
 
 			i = 0;
-			foreach (string[] item in itemLog.getLogArray())
+			foreach (string[] item in ItemLogScript.getLogArray())
 			{
 				GUILayout.BeginHorizontal();
 				GUILayout.Label("[" + item[0] + "]");
 				if (GUILayout.Button("Delete"))
 				{
-					itemLog.deleteByIndex(i);
+					ItemLogScript.deleteByIndex(i);
 				}
 				GUILayout.EndHorizontal();
 				GUILayout.Label(item[1]);

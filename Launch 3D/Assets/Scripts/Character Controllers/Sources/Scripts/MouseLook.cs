@@ -32,12 +32,12 @@ public class MouseLook : MonoBehaviour {
 	public int activationRangeX = 300;
 	public int activationRangeY = 40;
 
-	private GameObject globalScriptsObject;
-	private PersistantGlobalScript globalScript;
+//	private GameObject globalScriptsObject;
+//	private PersistantGlobalScript globalScript;
 
 	float rotationY = 0F;
 
-
+	//Currently unused code for Wii-style aiming
 	//From http://answers.unity3d.com/questions/425712/how-can-i-move-the-camera-when-the-mouse-reaches-t.html
 	Vector2 MouseScreenEdge( Vector2 margin ) {
 		//Margin is calculated in px from the edge of the screen
@@ -108,7 +108,7 @@ public class MouseLook : MonoBehaviour {
 	void Update ()
 	{
 
-		if (globalScript.mouseLookEnabled)
+		if (PersistantGlobalScript.mouseLookEnabled)
 		{
 			Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
 			
@@ -159,7 +159,7 @@ public class MouseLook : MonoBehaviour {
 		// Make the rigid body not change rotation
 		if (rigidbody)
 			rigidbody.freezeRotation = true;
-		globalScriptsObject = GameObject.Find("Global Scripts");
-		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
+//		globalScriptsObject = GameObject.Find("Global Scripts");
+//		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 }

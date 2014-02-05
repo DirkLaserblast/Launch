@@ -6,10 +6,10 @@ using System.Collections;
 /// </summary>
 public class ItemLogScript : MonoBehaviour {
 
-	private ArrayList logItems = new ArrayList();
+	private static ArrayList logItems = new ArrayList();
 
 	//Adds an item to the log and returns the index
-	public int addItem(string title, string description)
+	public static int addItem(string title, string description)
 	{
 		string[] newItem = new string[2];
 		newItem[0] = title;
@@ -20,12 +20,12 @@ public class ItemLogScript : MonoBehaviour {
 		return (logItems.Count - 1);
 	}
 
-	public ArrayList getLogArray()
+	public static ArrayList getLogArray()
 	{
 		return logItems;
 	}
 
-	public void deleteByIndex(int index)
+	public static void deleteByIndex(int index)
 	{
 		logItems.RemoveAt(index);
 	}

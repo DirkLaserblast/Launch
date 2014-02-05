@@ -21,9 +21,13 @@ public class OnOffObject : MonoBehaviour {
 //		}
 	}
 
-	void OnMouseUp () {
-		toggleOnOff = !toggleOnOff;
-		if (audioComponent) audioComponent.mute = !audioComponent.mute;
-		if (lightComponent) lightComponent.enabled = !lightComponent.enabled;
+	void OnMouseUp ()
+	{
+		if (PersistantGlobalScript.interactionEnabled)
+		{
+			toggleOnOff = !toggleOnOff;
+			if (audioComponent) audioComponent.mute = !audioComponent.mute;
+			if (lightComponent) lightComponent.enabled = !lightComponent.enabled;
+		}
 	}
 }
