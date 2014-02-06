@@ -17,6 +17,10 @@ public class PersistantGlobalScript : MonoBehaviour
 	/// How long is the player allowed to hold the mouse button on an object before assuming they are dragging it
 	/// </summary>
 	public static float dragThreshold = 0.3f;
+	/// <summary>
+	/// Turn camera when mouse reaches an edge
+	/// </summary>
+	public static bool edgeTurnEnabled = false;
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
 

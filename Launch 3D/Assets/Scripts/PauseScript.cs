@@ -45,6 +45,7 @@ public class PauseScript : MonoBehaviour {
 			paused = !paused;
 			if (paused)
 			{
+				GUI.enabled = true;
 				Time.timeScale = 0;
 				PersistantGlobalScript.mouseLookEnabled = false;
 			}

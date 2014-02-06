@@ -81,7 +81,11 @@ public class DragObjectScript : MonoBehaviour
 			{
 				PersistantGlobalScript.interactionEnabled = true;
 			}
-			else PersistantGlobalScript.interactionEnabled = false;
+			else
+			{
+				PersistantGlobalScript.interactionEnabled = false;
+				PersistantGlobalScript.edgeTurnEnabled = true;
+			}
 
 			elapsedTime += Time.deltaTime;
 
@@ -90,6 +94,7 @@ public class DragObjectScript : MonoBehaviour
 
 		PersistantGlobalScript.mouseLookEnabled = true;
 		PersistantGlobalScript.interactionEnabled = true;
+		PersistantGlobalScript.edgeTurnEnabled = false;
 
 		if(springJoint.connectedBody)
 		{

@@ -73,7 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-  m_NavMesh: {fileID: 19400000, guid: db0a32eee6fce41d68b58cf9a58d646e, type: 2}
+  m_NavMesh: {fileID: 0}
 --- !u!1 &124635408
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_PrefabInternal: {fileID: 1296434206}
   m_GameObject: {fileID: 424006820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .331628948, y: -6.93552271e-10, z: -3.50166474e-09, w: .943409979}
   m_LocalPosition: {x: 0, y: .907083511, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -714,7 +714,8 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -60
   maximumY: 60
-  turnSpeed: 5
+  turnSensitivity: 5
+  maxTurnSpeed: 20
   activationRangeX: 10
   activationRangeY: 40
 --- !u!124 &424006824
@@ -1275,6 +1276,7 @@ GameObject:
   - 82: {fileID: 762561710}
   - 114: {fileID: 762561714}
   - 108: {fileID: 762561716}
+  - 54: {fileID: 762561715}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -1313,7 +1315,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1446,6 +1448,21 @@ MonoBehaviour:
   toggleOnOff: 1
   audioComponent: {fileID: 762561710}
   lightComponent: {fileID: 762561716}
+--- !u!54 &762561715
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762561708}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 1
+  m_AngularDrag: .100000001
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 2
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!108 &762561716
 Light:
   m_ObjectHideFlags: 0
@@ -2778,6 +2795,26 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: movement.maxGroundAcceleration
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .331628948
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -6.93552271e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .943409979
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -3.50166474e-09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 2106505542}
@@ -2946,7 +2983,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359248934}
-  m_LocalRotation: {x: .580878675, y: -.40321216, z: .580878675, w: .40321213}
+  m_LocalRotation: {x: .580878615, y: -.4032121, z: .580878615, w: .40321207}
   m_LocalPosition: {x: .843259811, y: 4.15126657, z: 3.3665309}
   m_LocalScale: {x: 1.46424401, y: 1.39286745, z: .105825014}
   m_Children: []
@@ -3653,87 +3690,6 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
---- !u!1 &1857812927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1857812932}
-  - 33: {fileID: 1857812931}
-  - 65: {fileID: 1857812930}
-  - 23: {fileID: 1857812929}
-  - 208: {fileID: 1857812928}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!208 &1857812928
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857812927}
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 1
-  m_MoveThreshold: 0
-  m_Carve: 0
---- !u!23 &1857812929
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857812927}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
---- !u!65 &1857812930
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857812927}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1857812931
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857812927}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1857812932
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857812927}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.77863598, y: -.25889802, z: 9.55223846}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &1982600872
 GameObject:
   m_ObjectHideFlags: 0
@@ -4166,7 +4122,7 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    maxGroundAcceleration: 20
+    maxGroundAcceleration: 1000
     maxAirAcceleration: 15
     gravity: 12.1999998
     maxFallSpeed: 20
@@ -4203,7 +4159,8 @@ MonoBehaviour:
   maximumX: 360
   minimumY: 0
   maximumY: 0
-  turnSpeed: 5
+  turnSensitivity: 5
+  maxTurnSpeed: 20
   activationRangeX: 300
   activationRangeY: 40
 --- !u!143 &2106505547
@@ -4227,7 +4184,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2106505542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: .899999976
   m_Speed: 3.5
   m_Acceleration: 10
@@ -4254,7 +4211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 10
   spring: 100
-  damper: 5
+  damper: 10
   drag: 10
   angularDrag: 20
   distance: 0
@@ -4266,7 +4223,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2106505542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a3c1bab603114ff09653424c8184c2c, type: 3}
   m_Name: 
@@ -4316,8 +4273,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2119644596}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
+  m_Mass: 5
+  m_Drag: .0500000007
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0

@@ -28,16 +28,17 @@ public class MouseLook : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
-	public float turnSpeed = 5.0f;
+	public float turnSensitivity = 5.0f;
+	public float maxTurnSpeed = 20.0f;
 	public int activationRangeX = 300;
 	public int activationRangeY = 40;
 
 //	private GameObject globalScriptsObject;
 //	private PersistantGlobalScript globalScript;
 
-	float rotationY = 0F;
+	float camXRotation = 0F;
 
-	//Currently unused code for Wii-style aiming
+	//Code for Wii-style aiming
 	//From http://answers.unity3d.com/questions/425712/how-can-i-move-the-camera-when-the-mouse-reaches-t.html
 	Vector2 MouseScreenEdge( Vector2 margin ) {
 		//Margin is calculated in px from the edge of the screen
@@ -67,50 +68,78 @@ public class MouseLook : MonoBehaviour {
 		return new Vector2( x, y );
 	}
 
-	void horizontalTurn(Vector2 mouseEdge)
+	void turnCamera(Vector2 mouseEdge)
 	{
-		if(!(Mathf.Approximately( mouseEdge.x, 0f)))
+		if (!(Mathf.Approximately(mouseEdge.x, 0f)) && !(Mathf.Approximately( mouseEdge.y, 0f)))
+		{
+			float camYRotation = transform.localEulerAngles.y + Mathf.Clamp(turnSensitivity*(mouseEdge.x/activationRangeX), -turnSensitivity, turnSensitivity);
+
+			camXRotation += Mathf.Clamp(turnSensitivity*(mouseEdge.y/activationRangeY), -turnSensitivity, turnSensitivity);
+			camXRotation = Mathf.Clamp (camXRotation, minimumY, maximumY);
+
+			transform.localEulerAngles = new Vector3(-camXRotation, camYRotation, 0);
+		}
+		else if(!(Mathf.Approximately(mouseEdge.x, 0f)))
 		{
 			//Move your camera depending on the sign of mouse.Edge.x
-			
-			if(mouseEdge.x < 0)
-			{
-				//Move Left
-				transform.Rotate(new Vector3(0, turnSpeed*(mouseEdge.x/activationRangeX), 0));
-			}
-			else
-			{
-				//Move Right
-				transform.Rotate(new Vector3(0, turnSpeed*(mouseEdge.x/activationRangeX), 0));
-			}
-		}
-	}
 
-	void verticalTurn(Vector2 mouseEdge)
-	{
-		if(!(Mathf.Approximately( mouseEdge.y, 0f)))
+			//float turnAmount = Mathf.Clamp(turnSensitivity*(mouseEdge.x/activationRangeX), -turnSensitivity, turnSensitivity);
+
+			float camYRotation = transform.localEulerAngles.y + Mathf.Clamp(turnSensitivity*(mouseEdge.x/activationRangeX), -turnSensitivity, turnSensitivity);
+
+			//transform.Rotate(0, turnAmount, 0);
+
+			transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, camYRotation, 0);
+		}
+		else if(!(Mathf.Approximately( mouseEdge.y, 0f)))
 		{
 			//Move your camera depending on the sign of mouse.Edge.y
 			//print (transform.localEulerAngles.x + " " + transform.localEulerAngles.y);
-			if(mouseEdge.y < 0 && transform.localEulerAngles.x > minimumY)
-			{
-				//Move Down
-				transform.Rotate(new Vector3(-turnSpeed*(mouseEdge.y/activationRangeY), 0, 0));
-			}
-			else if(transform.localEulerAngles.y < maximumY)
-			{
-				//Move Up
-				transform.Rotate(new Vector3(-turnSpeed*(mouseEdge.y/activationRangeY), 0, 0));
-			}
+			//			if(mouseEdge.y < 0 && transform.localEulerAngles.x > minimumY)
+			//			{
+			//				//Move Down
+			//				transform.Rotate(new Vector3(-turnSensitivity*(mouseEdge.y/activationRangeY), 0, 0));
+			//			}
+			//			else if(transform.localEulerAngles.y < maximumY)
+			//			{
+			//				//Move Up
+			//				transform.Rotate(new Vector3(-turnSensitivity*(mouseEdge.y/activationRangeY), 0, 0));
+			//			}
+			
+			camXRotation += Mathf.Clamp(turnSensitivity*(mouseEdge.y/activationRangeY), -turnSensitivity, turnSensitivity);
+			camXRotation = Mathf.Clamp (camXRotation, minimumY, maximumY);
+			
+			transform.localEulerAngles = new Vector3(-camXRotation, transform.localEulerAngles.y, 0);
 		}
 	}
+
+//	void verticalTurn(Vector2 mouseEdge)
+//	{
+//		if(!(Mathf.Approximately( mouseEdge.y, 0f)))
+//		{
+//			//Move your camera depending on the sign of mouse.Edge.y
+//			//print (transform.localEulerAngles.x + " " + transform.localEulerAngles.y);
+//			if(mouseEdge.y < 0 && transform.localEulerAngles.x > minimumY)
+//			{
+//				//Move Down
+//				transform.Rotate(new Vector3(-turnSensitivity*(mouseEdge.y/activationRangeY), 0, 0));
+//			}
+//			else if(transform.localEulerAngles.y < maximumY)
+//			{
+//				//Move Up
+//				transform.Rotate(new Vector3(-turnSensitivity*(mouseEdge.y/activationRangeY), 0, 0));
+//			}
+//
+//
+//		}
+//	}
 
 	void Update ()
 	{
 
 		if (PersistantGlobalScript.mouseLookEnabled)
 		{
-			Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
+			//Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
 			
 			if (axes == RotationAxes.MouseXAndY)
 			{
@@ -118,16 +147,16 @@ public class MouseLook : MonoBehaviour {
 				{
 					float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 					
-					rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-					rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+					camXRotation += Input.GetAxis("Mouse Y") * sensitivityY;
+					camXRotation = Mathf.Clamp (camXRotation, minimumY, maximumY);
 					
-					transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+					transform.localEulerAngles = new Vector3(-camXRotation, rotationX, 0);
 				}
-				//			else
-				//			{
-				//				verticalTurn(mouseEdge);
-				//				horizontalTurn(mouseEdge);
-				//			}
+//				else
+//				{
+//					verticalTurn(mouseEdge);
+//					horizontalTurn(mouseEdge);
+//				}
 				
 			}
 			else if (axes == RotationAxes.MouseX)
@@ -136,21 +165,27 @@ public class MouseLook : MonoBehaviour {
 				{
 					transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
 				}
-				//			else horizontalTurn(mouseEdge);
+//				else horizontalTurn(mouseEdge);
 				
 			}
-			else
+			else if (axes == RotationAxes.MouseY)
 			{
 				if (Input.GetMouseButton(0))
 				{
-					rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-					rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+					camXRotation += Input.GetAxis("Mouse Y") * sensitivityY;
+					camXRotation = Mathf.Clamp (camXRotation, minimumY, maximumY);
 					
-					transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+					transform.localEulerAngles = new Vector3(-camXRotation, transform.localEulerAngles.y, 0);
 				}
-				//			else verticalTurn(mouseEdge);
+//				else verticalTurn(mouseEdge);
 				
 			}
+		}
+		else if (PersistantGlobalScript.edgeTurnEnabled)
+		{
+			Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
+			//verticalTurn(mouseEdge);
+			turnCamera(mouseEdge);
 		}
 	}
 	
