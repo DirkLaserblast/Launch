@@ -332,8 +332,11 @@ function FixedUpdate () {
 }
 
 function Update () {
-	if (!useFixedUpdate)
-		UpdateFunction();
+	if (PersistantGlobalScript.movementEnabled) {
+		if (!useFixedUpdate) {
+			UpdateFunction();
+		}
+	}
 }
 
 private function ApplyInputVelocityChange (velocity : Vector3) {	

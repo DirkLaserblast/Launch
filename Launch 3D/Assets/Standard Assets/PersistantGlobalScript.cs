@@ -16,6 +16,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	/// <summary>
 	/// How long is the player allowed to hold the mouse button on an object before assuming they are dragging it
 	/// </summary>
+	public static bool movementEnabled = true;
 	public static float dragThreshold = 0.3f;
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
@@ -31,7 +32,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(0))
 		{
-			interactionEnabled = true;
+			//interactionEnabled = true; //Disabled to make minigames work
 			clickTime += Time.deltaTime;
 		}
 		if(Input.GetMouseButtonUp(0))
