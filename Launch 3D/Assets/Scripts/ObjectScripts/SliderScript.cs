@@ -44,11 +44,10 @@ public class SliderScript : MonoBehaviour {
 	}
 
 	private void OnGUI() {
-
-		Event e = Event.current;
 		
 		if (guiOn)
 		{
+			Event e = Event.current;
 			//Time.timeScale = 0;
 
 			//sets the value to a string so it can be displayed and displays it

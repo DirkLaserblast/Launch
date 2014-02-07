@@ -81,10 +81,10 @@ public class InfoBoxScript : MonoBehaviour {
 	
 	void OnGUI()
 	{
-		Event e = Event.current;
 
 		if (boxOpen)
 		{
+			Event e = Event.current;
 			Time.timeScale = 0;
 
 			infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));

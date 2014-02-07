@@ -18,6 +18,10 @@ public class PersistantGlobalScript : MonoBehaviour
 	/// </summary>
 	public static bool movementEnabled = true;
 	public static float dragThreshold = 0.3f;
+	/// <summary>
+	/// Turn camera when mouse reaches an edge
+	/// </summary>
+	public static bool edgeTurnEnabled = false;
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
 

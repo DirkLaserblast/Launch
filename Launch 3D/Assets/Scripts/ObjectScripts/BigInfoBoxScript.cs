@@ -74,10 +74,11 @@ public class BigInfoBoxScript : MonoBehaviour {
 
 	void OnGUI()
 	{
-		Event e = Event.current;
+
 
 		if (boxOpen)
 		{
+			Event e = Event.current;
 			Time.timeScale = 0.0f;
 			windowRect = GUI.Window(0, windowRect, BigWindow, title);
 
@@ -89,9 +90,5 @@ public class BigInfoBoxScript : MonoBehaviour {
 		}
 		else Time.timeScale = 1.0f;
 	}
-
-	void Update()
-	{
-
-	}
+	
 }
