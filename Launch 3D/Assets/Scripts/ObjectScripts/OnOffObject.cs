@@ -26,8 +26,8 @@ public class OnOffObject : MonoBehaviour {
 		if (PersistantGlobalScript.interactionEnabled)
 		{
 			toggleOnOff = !toggleOnOff;
-			if (audioComponent) audioComponent.mute = !audioComponent.mute;
-			if (lightComponent) lightComponent.enabled = !lightComponent.enabled;
+			if (audioComponent) audioComponent.mute = !toggleOnOff;
+			if (lightComponent) lightComponent.enabled = toggleOnOff;
 		}
 	}
 }
