@@ -104,7 +104,10 @@ public class FirstPersonCharacter : MonoBehaviour
 //		}
 
 		// Set the rigidbody's velocity according to the ground angle and desired move
-		rigidbody.velocity = desiredMove + Vector3.up * yv;
+		if (PersistantGlobalScript.movementEnabled)
+		{
+			rigidbody.velocity = desiredMove + Vector3.up * yv;
+		}
 
         // Use low/high friction depending on whether we're moving or not
         if (desiredMove.magnitude > 0 || !grounded)
