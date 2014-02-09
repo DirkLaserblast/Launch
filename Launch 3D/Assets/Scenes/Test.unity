@@ -89,6 +89,7 @@ GameObject:
   - 114: {fileID: 113594718}
   - 114: {fileID: 113594717}
   - 114: {fileID: 113594716}
+  - 114: {fileID: 113594724}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -142,6 +143,8 @@ MonoBehaviour:
   autoZeroVerticalOnMobile: 0
   autoZeroHorizontalOnMobile: 0
   relative: 1
+  activationRangeX: 350
+  activationRangeY: 1
 --- !u!114 &113594718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +240,25 @@ Transform:
   m_Children:
   - {fileID: 535892886}
   m_Father: {fileID: 0}
+--- !u!114 &113594724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113594715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48716c023d7984317a214018b6a2ca29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 10
+  spring: 50
+  damper: 5
+  drag: 10
+  angularDrag: 5
+  distance: 0
+  attachToCenterOfMass: 0
+  interactTimeLimit: .100000001
 --- !u!1001 &116036810
 Prefab:
   m_ObjectHideFlags: 0
@@ -303,6 +325,18 @@ Prefab:
     - target: {fileID: 11400006, guid: 7508e6819507cd94787dd4fe05201376, type: 2}
       propertyPath: relative
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7508e6819507cd94787dd4fe05201376, type: 2}
+      propertyPath: activationRangeX
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 7508e6819507cd94787dd4fe05201376, type: 2}
+      propertyPath: activationRangeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7508e6819507cd94787dd4fe05201376, type: 2}
+      propertyPath: activationRangeY
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7508e6819507cd94787dd4fe05201376, type: 2}
@@ -1954,6 +1988,8 @@ MonoBehaviour:
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
   relative: 1
+  activationRangeX: 300
+  activationRangeY: 30
 --- !u!81 &1083525477
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3458,7 +3494,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359248934}
-  m_LocalRotation: {x: .580878615, y: -.4032121, z: .580878615, w: .40321207}
+  m_LocalRotation: {x: .580878675, y: -.40321216, z: .580878675, w: .40321213}
   m_LocalPosition: {x: .843259811, y: 4.15126657, z: 3.3665309}
   m_LocalScale: {x: 1.46424401, y: 1.39286745, z: .105825014}
   m_Children: []
