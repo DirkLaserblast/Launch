@@ -13,6 +13,7 @@ public class DragObjectScript : MonoBehaviour
 	public bool attachToCenterOfMass = false;
 	
 	private SpringJoint springJoint;
+	private GameObject draggedObject;
 	/// <summary>
 	/// How long to wait before a click is handled as a drag instead of opening the GUI
 	/// </summary>
@@ -55,7 +56,9 @@ public class DragObjectScript : MonoBehaviour
 		springJoint.damper = damper;
 		springJoint.maxDistance = distance;
 		springJoint.connectedBody = hit.rigidbody;
-		
+
+		draggedObject = hit.collider.gameObject;
+
 		StartCoroutine(DragObject(hit.distance));
 	}
 	
@@ -67,7 +70,7 @@ public class DragObjectScript : MonoBehaviour
 		springJoint.connectedBody.angularDrag     = this.angularDrag;
 		Camera cam = FindCamera();
 
-
+		
 
 		float elapsedTime = 0.0f;
 		while(Input.GetMouseButton(0))
@@ -83,6 +86,18 @@ public class DragObjectScript : MonoBehaviour
 			}
 			else
 			{
+//				Vector3 n = Camera.main.transform.position - draggedObject.transform.position;
+//				draggedObject.transform.rotation = Quaternion.LookRotation(n) * Quaternion.Euler(0, 180, 0);
+
+				Vector3 cameraPos = Camera.main.transform.position;
+				cameraPos.y = draggedObject.transform.position.y;
+
+				draggedObject.transform.LookAt(cameraPos);
+				draggedObject.transform.rotation *= Quaternion.Euler(0, 180, 0);
+
+//				Quaternion newRotation = Quaternion.LookRotation(n) * Quaternion.Euler(0, 90, 0);
+//				draggedObject.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, newRotation, Time.deltaTime * 1.0f);
+
 				PersistantGlobalScript.interactionEnabled = false;
 				PersistantGlobalScript.edgeTurnEnabled = true;
 			}
