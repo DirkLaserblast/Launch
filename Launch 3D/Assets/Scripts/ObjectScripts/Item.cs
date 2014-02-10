@@ -1,14 +1,15 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class Item : MonoBehaviour {
-	public bool isMoveable = false;
+public class Item : Inventory {
+	public bool isMoveable = true;
 	public bool isLight = true;
-	public float weight = 100;
+	public float weight = 50;
 	public AudioSource audioComponent;
 	public AudioClip pickUpSound;
 	public AudioClip placeSound;
 	public AudioClip useSound;
+	public string description;
 	private bool invis = false;
 	
 	// Use this for initialization
@@ -27,7 +28,7 @@ public class Item : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	
 	void OnMouseOver(){ // plays all the soudns
@@ -36,16 +37,21 @@ public class Item : MonoBehaviour {
 		if(PersistantGlobalScript.interactionEnabled && !invis){
 			if (Input.GetMouseButtonUp (1)) {// as in inventory
 				audioComponent.clip = pickUpSound;
-				print(audioComponent.audio.clip.name);
 				gameObject.renderer.enabled = false;
-				
+				if(gameObject.rigidbody)
+					gameObject.rigidbody.isKinematic = true;
+				gameObject.transform.parent = null;
+				GameObject go = GameObject.Find("Player");
+				go.transform.parent = gameObject.transform;
 				audioComponent.Play();
-			} else if (Input.GetMouseButtonDown (0)) {// drag
+				inv.Add(gameObject);
+
+			} else if (Input.GetMouseButtonDown (0) && gameObject.renderer.enabled && !invis) {// drag
 				audioComponent.clip = useSound;
 				print(audioComponent.audio.clip.name);
 				audioComponent.Play();
 				
-			} else if (Input.GetMouseButtonUp (0)) {
+			} else if (Input.GetMouseButtonUp (0) && gameObject.renderer.enabled && !invis) {
 				audioComponent.clip = placeSound;
 				print(audioComponent.audio.clip.name);
 				audioComponent.Play();
