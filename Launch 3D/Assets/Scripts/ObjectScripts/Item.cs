@@ -4,7 +4,8 @@ using System.Collections;
 public class Item : Inventory {
 	public bool isMoveable = true;
 	public bool isLight = true;
-	public float weight = 50;
+	public bool isPickable = true;
+	public float weight = 100;
 	public AudioSource audioComponent;
 	public AudioClip pickUpSound;
 	public AudioClip placeSound;
@@ -34,7 +35,8 @@ public class Item : Inventory {
 	void OnMouseOver(){ // plays all the soudns
 		if (gameObject.renderer.enabled == false)
 			invis = true;
-		if(PersistantGlobalScript.interactionEnabled && !invis){
+
+		if(PersistantGlobalScript.interactionEnabled && !invis && isPickable){
 			if (Input.GetMouseButtonUp (1)) {// as in inventory
 				audioComponent.clip = pickUpSound;
 				gameObject.renderer.enabled = false;
@@ -46,12 +48,12 @@ public class Item : Inventory {
 				audioComponent.Play();
 				inv.Add(gameObject);
 
-			} else if (Input.GetMouseButtonDown (0) && gameObject.renderer.enabled && !invis) {// drag
+			} else if (Input.GetMouseButtonDown (0) && gameObject.renderer.enabled) {// drag
 				audioComponent.clip = useSound;
 				print(audioComponent.audio.clip.name);
 				audioComponent.Play();
 				
-			} else if (Input.GetMouseButtonUp (0) && gameObject.renderer.enabled && !invis) {
+			} else if (Input.GetMouseButtonUp (0) && gameObject.renderer.enabled) {
 				audioComponent.clip = placeSound;
 				print(audioComponent.audio.clip.name);
 				audioComponent.Play();
