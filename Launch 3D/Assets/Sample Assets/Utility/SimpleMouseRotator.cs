@@ -70,6 +70,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		// we make initial calculations from the original local rotation
 		transform.localRotation = originalRotation;
 
@@ -149,8 +150,6 @@ public class SimpleMouseRotator : MonoBehaviour {
 
 
 		}
-
-
 
 		// smoothly interpolate current values to target angles
 		followAngles = Vector3.SmoothDamp( followAngles, targetAngles, ref followVelocity, dampingTime );

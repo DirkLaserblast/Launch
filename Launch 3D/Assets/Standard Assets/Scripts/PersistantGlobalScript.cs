@@ -34,15 +34,20 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	void Update ()
 	{
-		if(Input.GetMouseButtonDown(0))
-		{
-			//interactionEnabled = true; //Disabled to make minigames work
-			clickTime += Time.deltaTime;
-		}
 		if(Input.GetMouseButtonUp(0))
 		{
-			if (clickTime > dragThreshold) interactionEnabled = false;
+			if (clickTime > dragThreshold)
+			{
+				interactionEnabled = false;
+				//print ("Click timeout");
+			}
 			clickTime = 0.0f;
+		}
+		else if(Input.GetMouseButton(0))
+		{
+			interactionEnabled = true; //Disabled to make minigames work
+			clickTime += Time.deltaTime;
+			//print ("Clicktime: " + clickTime);
 		}
 	}
 }
