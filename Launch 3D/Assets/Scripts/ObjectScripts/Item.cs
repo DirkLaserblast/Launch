@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Item : Inventory {
+	public Texture2D itemIcon;
 	public bool isMoveable = true;
 	public bool isLight = true;
 	public bool isPickable = true;
@@ -11,10 +12,15 @@ public class Item : Inventory {
 	public AudioClip placeSound;
 	public AudioClip useSound;
 	public string description;
-	private bool invis = false;
-	
+	public float pickUpDistance = 3.0f;
+
 	// Use this for initialization
-	
+	private Transform thePlayer;
+	private float dist = 9999999.9f;
+	private bool canPickUp; // to see if the player is close enough to pick up
+	//private Item theItem;
+	//static Inventory playerInv;
+
 	void Start () {
 		if (gameObject.rigidbody) {
 			gameObject.rigidbody.mass = weight;
@@ -26,38 +32,81 @@ public class Item : Inventory {
 			gameObject.light.enabled = false;
 		}
 	}
+
+	void RetrievePlayer (){// Inventory theInv  
+		thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
+		//print (thePlayer.transform.position.x);
+	}
 	
 	// Update is called once per frame
 	void Update () {
+		RetrievePlayer ();
+		dist = Vector3.Distance(thePlayer.position, gameObject.transform.position);
+		// drop item
+		if (Input.GetKeyUp ("e")) {
+			print ("dropping");
+			DropItem();
+		}
+		if (dist <= pickUpDistance)
+		{
+			canPickUp = true;
+		}
+		else
+		{
+			canPickUp = false;
+			//theItem.PickUpItem();
+		}
 
 	}
-	
-	void OnMouseOver(){ // plays all the soudns
-		if (gameObject.renderer.enabled == false)
-			invis = true;
 
-		if(PersistantGlobalScript.interactionEnabled && !invis && isPickable){
-			if (Input.GetMouseButtonUp (1)) {// as in inventory
-				audioComponent.clip = pickUpSound;
-				gameObject.renderer.enabled = false;
-				if(gameObject.rigidbody)
-					gameObject.rigidbody.isKinematic = true;
-				gameObject.transform.parent = null;
-				GameObject go = GameObject.Find("Player");
-				go.transform.parent = gameObject.transform;
-				audioComponent.Play();
-				inv.Add(gameObject);
 
-			} else if (Input.GetMouseButtonDown (0) && gameObject.renderer.enabled) {// drag
-				audioComponent.clip = useSound;
-				print(audioComponent.audio.clip.name);
-				audioComponent.Play();
-				
-			} else if (Input.GetMouseButtonUp (0) && gameObject.renderer.enabled) {
-				audioComponent.clip = placeSound;
-				print(audioComponent.audio.clip.name);
-				audioComponent.Play();
-			}
+	void OnMouseOver(){
+		if(Input.GetMouseButtonUp(1) && canPickUp && gameObject.renderer.enabled){
+			PickUpItem();
+			print ("Mouse UP");
+		
 		}
 	}
-}
+	
+	public void PickUpItem(){
+		if (isPickable) {
+			if(canPickUp){
+				Inventory.addItem(gameObject.transform);
+				gameObject.renderer.enabled = false;
+				if (gameObject.rigidbody)
+					gameObject.rigidbody.isKinematic = true;
+				gameObject.light.enabled = true;
+				MoveToPlayer(thePlayer.transform);
+			}		
+		}		
+		
+	}
+	public void MoveToPlayer(Transform itemHolderObject){// parent to player
+		canPickUp = false;
+		Physics.IgnoreCollision(gameObject.collider,thePlayer.collider,true);
+		//gameObject.SetActive(false);// when deactivate the whole gameobject will not do anything
+		transform.parent = itemHolderObject;
+		transform.localPosition = Vector3.zero;
+
+	}
+
+	public void DropItem(){// drop the item
+		canPickUp = true;
+		gameObject.light.enabled = true;
+		//gameObject.SetActive(true);
+		gameObject.renderer.enabled = true;
+		if (gameObject.rigidbody)
+			gameObject.rigidbody.isKinematic = false;
+		gameObject.transform.parent = null;
+
+		print ("Item Dropped: " + Inventory.inv.Count);
+		Inventory.dropItem (gameObject.transform);
+		Physics.IgnoreCollision(gameObject.collider,thePlayer.collider,false);
+
+		
+	}
+	
+}/*
+audioComponent.clip = placeSound;
+print(audioComponent.audio.clip.name);
+audioComponent.Play();*/
