@@ -14,11 +14,12 @@ public class Item : Inventory {
 	public string description;
 	public float pickUpDistance = 3.0f;
 
+
 	// Use this for initialization
 	private Transform thePlayer;
 	private float dist = 9999999.9f;
 	private bool canPickUp; // to see if the player is close enough to pick up
-	//private Item theItem;
+
 	//static Inventory playerInv;
 
 	void Start () {
@@ -28,6 +29,7 @@ public class Item : Inventory {
 				gameObject.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 			}
 		}
+
 		if (isLight == false) {
 			gameObject.light.enabled = false;
 		}
@@ -42,11 +44,7 @@ public class Item : Inventory {
 	void Update () {
 		RetrievePlayer ();
 		dist = Vector3.Distance(thePlayer.position, gameObject.transform.position);
-		// drop item
-		if (Input.GetKeyUp ("e")) {
-			print ("dropping");
-			DropItem();
-		}
+
 		if (dist <= pickUpDistance)
 		{
 			canPickUp = true;
