@@ -58,7 +58,7 @@ public class DrillMachineScript : MonoBehaviour {
 				minigameCamera.SetActive(true);
 				
 				minigameCamera.transform.position = transform.position + offset;
-				minigameCamera.transform.rotation = transform.rotation;
+				minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 				minigameActive = true;
 			}
 		}

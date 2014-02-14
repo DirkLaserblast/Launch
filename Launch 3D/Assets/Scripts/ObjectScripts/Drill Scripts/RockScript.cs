@@ -8,18 +8,24 @@ public class RockScript : MonoBehaviour {
 	 * the drill is currently resting on top of the rock.
 	 *  */
 
-
+	public GameObject MainDrill;
+	public GameObject DrillButton;
 
 	void Start() {
 		transform.collider.isTrigger = true;
 	}
 
 	void OnTriggerEnter(Collider trigger) {
-		trigger.gameObject.GetComponent<DrillScript>().onRock = true;
+		if (MainDrill.GetComponent<DrillMachineScript> ().minigameActive) {
+			trigger.gameObject.GetComponent<DrillScript> ().onRock = true;
+			DrillButton.GetComponent<DrillButtonDown>().duration = 0f;
+		}
 	}
 
 	void OnTriggerExit(Collider trigger) {
-		trigger.gameObject.GetComponent<DrillScript>().onRock = false;
+		if (MainDrill.GetComponent<DrillMachineScript> ().minigameActive) {
+			trigger.gameObject.GetComponent<DrillScript> ().onRock = false;
+		}
 	}
 
 

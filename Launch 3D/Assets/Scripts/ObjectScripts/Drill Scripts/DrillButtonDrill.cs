@@ -5,9 +5,9 @@ public class DrillButtonDrill : MonoBehaviour {
 
 	public GameObject DrillObj;
 	public GameObject MainDrill;
-	public DrillMachineScript DMS;
+	private DrillMachineScript DMS;
 	public bool inMotion = false;
-	private float duration = 0f;
+	public float duration = 0f;
 	private Vector3 step = new Vector3(0f, -500f, 0f);
 	
 	void Start() {
@@ -16,7 +16,7 @@ public class DrillButtonDrill : MonoBehaviour {
 	
 	void Update() {
 		if (inMotion) {
-			DrillObj.transform.Rotate(step * Time.deltaTime);
+			DrillObj.transform.Rotate(step * Time.deltaTime, Space.World);
 			duration -= Time.deltaTime;
 			if(duration <= 0f) {
 				inMotion = false;
