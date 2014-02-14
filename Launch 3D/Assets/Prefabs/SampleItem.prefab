@@ -14,8 +14,9 @@ GameObject:
   - 114: {fileID: 11400000}
   - 108: {fileID: 10800000}
   - 82: {fileID: 8200000}
+  - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: SampleItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.33555126, y: 1.09446621, z: 28.3868999}
+  m_LocalPosition: {x: 1.83475518, y: 2.12265348, z: 3.49975538}
   m_LocalScale: {x: .445928246, y: .445928246, z: .445928246}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,6 +61,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -164,13 +180,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c175fa558a3ab464f8da27d587144ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveable: 0
+  isMoveable: 1
   isLight: 1
+  isPickable: 1
   weight: 100
   audioComponent: {fileID: 8200000}
   pickUpSound: {fileID: 8300000, guid: 89dc4550619145e46ba045945141ae07, type: 3}
   placeSound: {fileID: 8300000, guid: 89dc4550619145e46ba045945141ae07, type: 3}
   useSound: {fileID: 8300000, guid: 89dc4550619145e46ba045945141ae07, type: 3}
+  description: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
