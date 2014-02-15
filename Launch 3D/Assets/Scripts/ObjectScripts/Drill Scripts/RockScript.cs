@@ -2,29 +2,29 @@
 using System.Collections;
 
 public class RockScript : MonoBehaviour {
+	
+	/*
+	 * A trigger to check if the drill has hit the rock
+	 * */
 
-	/* The rock isn't really a collider, but rather just a trigger that
-	 * will stop the drill from moving down and that will check if
-	 * the drill is currently resting on top of the rock.
-	 *  */
-
-	public GameObject MainDrill;
-	public GameObject DrillButton;
+	public GameObject drillMove;
+	private DrillMove drillMoveScript;
 
 	void Start() {
 		transform.collider.isTrigger = true;
+		drillMoveScript = drillMove.GetComponent<DrillMove> ();
 	}
 
 	void OnTriggerEnter(Collider trigger) {
-		if (MainDrill.GetComponent<DrillMachineScript> ().minigameActive) {
-			trigger.gameObject.GetComponent<DrillScript> ().onRock = true;
-			DrillButton.GetComponent<DrillButtonDown>().duration = 0f;
+		if (PersistantGlobalScript.minigameActive) {
+			//Some kind of rock flag needs to be set
+			drillMoveScript.Stop();
 		}
 	}
 
 	void OnTriggerExit(Collider trigger) {
-		if (MainDrill.GetComponent<DrillMachineScript> ().minigameActive) {
-			trigger.gameObject.GetComponent<DrillScript> ().onRock = false;
+		if (PersistantGlobalScript.minigameActive) {
+			//Some kind of rock flag needs to be unset
 		}
 	}
 

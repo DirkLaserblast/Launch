@@ -104,7 +104,7 @@ public class FirstPersonCharacter : MonoBehaviour
 //		}
 
 		// Set the rigidbody's velocity according to the ground angle and desired move
-		if (PersistantGlobalScript.movementEnabled)
+		if (PersistantGlobalScript.movementEnabled && grounded)
 		{
 			rigidbody.velocity = desiredMove + Vector3.up * yv;
 		}

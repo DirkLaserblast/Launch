@@ -6,9 +6,19 @@ using System.Collections;
 /// Stops time and opens the pause menu.
 /// </summary>
 public class PauseScript : MonoBehaviour {
-
+	
 	//Which key should pause / unpause
 	public KeyCode pauseKey;
+	public dfPanel pausePanel;
+	public dfButton resumeButton;
+	public dfButton settingsButton;
+	public dfButton saveButton;
+	public dfButton quitButton;
+
+	public dfPanel quitDialog;
+	public dfPanel confirmQuitButton;
+	public dfPanel cancelQuitButton;
+
 
 	private bool paused;
 	private Vector2 scrollPosition;
@@ -93,7 +103,7 @@ public class PauseScript : MonoBehaviour {
 		{
 			volume = PlayerPrefs.GetFloat("Volume");
 		}
-		else 
+		else
 		{
 			volume = AudioListener.volume;
 		}
@@ -123,15 +133,25 @@ public class PauseScript : MonoBehaviour {
 			paused = !paused;
 			if (paused)
 			{
-				GUI.enabled = true;
-				Time.timeScale = 0;
+				pausePanel.IsVisible = true;
+				pausePanel.IsInteractive = true;
+			
+				//GUI.enabled = true;
+				Time.timeScale = 0.0f;
 				PersistantGlobalScript.mouseLookEnabled = false;
 			}
 			else
 			{
-				Time.timeScale = 1;
+				pausePanel.IsVisible = false;
+				pausePanel.IsInteractive = false;
+				Time.timeScale = 1.0f;
 				PersistantGlobalScript.mouseLookEnabled = true;
 			}
+		}
+
+		if (paused)
+		{
+
 		}
 	}
 
@@ -195,77 +215,77 @@ public class PauseScript : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void OnGUI()
-	{
-		if (paused)
-		{
-			if (currentMenu == "pause")
-			{
-				GUI.Box(new Rect(0, 0, Screen.width, Screen.height), ""); //Darkened background
-				
-				GUI.Box(new Rect(0, 0, 256, Screen.height), ""); //Left sidebar
-				
-				GUILayout.BeginArea(new Rect (0, 0, 256, Screen.height));
-				
-				GUILayout.BeginHorizontal();
-				GUILayout.FlexibleSpace();
-				GUILayout.Label("...Paused...");
-				GUILayout.FlexibleSpace();
-				GUILayout.EndHorizontal();
-				
-				//"Unpause" button
-				if (GUILayout.Button("Resume"))
-				{
-					paused = false;
-				}
-				
-				//"Settings" button
-				if (GUILayout.Button("Settings"))
-				{
-					//Change to settings menu
-					currentMenu = "settings";
-				}
-				
-				//"Quit" button
-				if (GUILayout.Button("Quit"))
-				{
-					//Quit the game
-					Application.Quit();
-				}
-				GUILayout.EndArea();
-				
-				GUI.Box(new Rect(Screen.width - 256, 0, 256, Screen.height), ""); //Right sidebar (logbook)
-				
-				GUILayout.BeginArea(new Rect(Screen.width - 256, 0, 256, Screen.height), "");
-				GUILayout.BeginHorizontal();
-				GUILayout.FlexibleSpace();
-				GUILayout.Label("Mission Logbook");
-				GUILayout.FlexibleSpace();
-				GUILayout.EndHorizontal();
-				scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(256), GUILayout.Height(Screen.height - 64));
-				
-				i = 0;
-				foreach (string[] item in ItemLogScript.getLogArray())
-				{
-					GUILayout.BeginHorizontal();
-					GUILayout.Label("[" + item[0] + "]");
-					if (GUILayout.Button("Delete"))
-					{
-						ItemLogScript.deleteByIndex(i);
-					}
-					GUILayout.EndHorizontal();
-					GUILayout.Label(item[1]);
-					i++;
-				}
-				
-				GUILayout.EndScrollView();
-				GUILayout.EndArea();
-			}
-			else if (currentMenu == "settings")
-			{
-				settingsMenu();
-			}
-
-		}
-	}
+//	void OnGUI()
+//	{
+//		if (paused)
+//		{
+//			if (currentMenu == "pause")
+//			{
+//				GUI.Box(new Rect(0, 0, Screen.width, Screen.height), ""); //Darkened background
+//				
+//				GUI.Box(new Rect(0, 0, 256, Screen.height), ""); //Left sidebar
+//				
+//				GUILayout.BeginArea(new Rect (0, 0, 256, Screen.height));
+//				
+//				GUILayout.BeginHorizontal();
+//				GUILayout.FlexibleSpace();
+//				GUILayout.Label("...Paused...");
+//				GUILayout.FlexibleSpace();
+//				GUILayout.EndHorizontal();
+//				
+//				//"Unpause" button
+//				if (GUILayout.Button("Resume"))
+//				{
+//					paused = false;
+//				}
+//				
+//				//"Settings" button
+//				if (GUILayout.Button("Settings"))
+//				{
+//					//Change to settings menu
+//					currentMenu = "settings";
+//				}
+//				
+//				//"Quit" button
+//				if (GUILayout.Button("Quit"))
+//				{
+//					//Quit the game
+//					Application.Quit();
+//				}
+//				GUILayout.EndArea();
+//				
+//				GUI.Box(new Rect(Screen.width - 256, 0, 256, Screen.height), ""); //Right sidebar (logbook)
+//				
+//				GUILayout.BeginArea(new Rect(Screen.width - 256, 0, 256, Screen.height), "");
+//				GUILayout.BeginHorizontal();
+//				GUILayout.FlexibleSpace();
+//				GUILayout.Label("Mission Logbook");
+//				GUILayout.FlexibleSpace();
+//				GUILayout.EndHorizontal();
+//				scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(256), GUILayout.Height(Screen.height - 64));
+//				
+//				i = 0;
+//				foreach (string[] item in ItemLogScript.getLogArray())
+//				{
+//					GUILayout.BeginHorizontal();
+//					GUILayout.Label("[" + item[0] + "]");
+//					if (GUILayout.Button("Delete"))
+//					{
+//						ItemLogScript.deleteByIndex(i);
+//					}
+//					GUILayout.EndHorizontal();
+//					GUILayout.Label(item[1]);
+//					i++;
+//				}
+//				
+//				GUILayout.EndScrollView();
+//				GUILayout.EndArea();
+//			}
+//			else if (currentMenu == "settings")
+//			{
+//				settingsMenu();
+//			}
+//
+//		}
+//	}
 }

@@ -79,7 +79,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 		inputV = 0;
 		if (relative)
 		{
-			if (PersistantGlobalScript.mouseLookEnabled && Input.GetMouseButton(0))
+			if (PersistantGlobalScript.mouseLookEnabled && Input.GetMouseButton(1))
 			{
 				inputH = CrossPlatformInput.GetAxis("Mouse X");
 				inputV = CrossPlatformInput.GetAxis("Mouse Y");

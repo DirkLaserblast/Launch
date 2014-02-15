@@ -72,23 +72,22 @@ public class BigInfoBoxScript : MonoBehaviour {
 		}
 	}
 
-	void OnGUI()
-	{
-
-
-		if (boxOpen)
-		{
-			Event e = Event.current;
-			Time.timeScale = 0.0f;
-			windowRect = GUI.Window(0, windowRect, BigWindow, title);
-
-			if (e.type == EventType.MouseDown && !windowRect.Contains(e.mousePosition))
-			{
-				boxOpen = false;
-				PersistantGlobalScript.mouseLookEnabled = true;
-			}
-		}
-		else Time.timeScale = 1.0f;
-	}
+//	void OnGUI()
+//	{
+//
+//		if (boxOpen)
+//		{
+//			Event e = Event.current;
+//			Time.timeScale = 0.0f;
+//			windowRect = GUI.Window(0, windowRect, BigWindow, title);
+//
+//			if (e.type == EventType.MouseDown && !windowRect.Contains(e.mousePosition))
+//			{
+//				boxOpen = false;
+//				PersistantGlobalScript.mouseLookEnabled = true;
+//			}
+//		}
+		//else Time.timeScale = 1.0f;
+//	}
 	
 }

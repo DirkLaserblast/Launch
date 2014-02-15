@@ -17,6 +17,12 @@ public class PersistantGlobalScript : MonoBehaviour
 	/// How long is the player allowed to hold the mouse button on an object before assuming they are dragging it
 	/// </summary>
 	public static bool movementEnabled = true;
+
+	public static bool minigameActive = false;
+	public static bool minigameMouseover = false;
+
+	public bool mActive = false;
+
 	public static float dragThreshold = 0.3f;
 	/// <summary>
 	/// Turn camera when mouse reaches an edge
@@ -25,15 +31,41 @@ public class PersistantGlobalScript : MonoBehaviour
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
 
+//	public bool allowMouseLook {get; set;}
+//	public bool allowInteraction {get; set;}
+//	public bool allowMovement {get; set;}
+
+	private static bool freezeWorldForMenu;
+
+	//If on, disables all interaction and stops time
+	public static bool FreezeWorldForMenu
+	{
+		get{ return freezeWorldForMenu; }
+		set
+		{
+			mouseLookEnabled = !value;
+			interactionEnabled = !value;
+			movementEnabled = !value;
+
+			if (value)
+			{
+				Time.timeScale = 0.0f;
+			}
+			else Time.timeScale = 1.0f;
+		}
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
 		//Prevent the Global Script object from being deleted when you leave the main menu
-		Object.DontDestroyOnLoad(this.gameObject);
+		//Object.DontDestroyOnLoad(this.gameObject);
 	}
 
 	void Update ()
 	{
+		//print (Time.timeScale);
+
 		if(Input.GetMouseButtonUp(0))
 		{
 			if (clickTime > dragThreshold)
@@ -49,5 +81,14 @@ public class PersistantGlobalScript : MonoBehaviour
 			clickTime += Time.deltaTime;
 			//print ("Clicktime: " + clickTime);
 		}
+		mActive = minigameActive; //Silliness to deal with DFGUI
+	}
+
+	public void MinigameEventHanlder() {
+		minigameMouseover = false;
+	}
+
+	public void bar() {
+
 	}
 }

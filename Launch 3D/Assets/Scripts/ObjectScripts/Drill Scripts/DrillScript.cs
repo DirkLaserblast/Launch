@@ -3,37 +3,63 @@ using System.Collections;
 
 public class DrillScript : MonoBehaviour {
 
-	/* Script for the actual physical drill.
-	 * 
-	 * 
-	 * 
-	 * 
+	/*
+	 * Script for the drill heads themselves
 	 * */
-
 	
-	public GameObject MainDrill;
-	public GameObject DrillButton;
-	public GameObject DownButton;
-	public bool onRock = false;
 	public bool correctDrill = true;
-	private DrillButtonDown DownButtonScript;
-	private DrillButtonDrill DrillButtonScript;
+	public bool completed = false;
+	private float drillDuration = 0f;
+	private float moveDuration = 0f;
 	private bool drilled = false;
+	private bool down = false;
+	private Vector3 step = new Vector3(0f, 1200f, 0f);
 
-	void Start() {
-		DownButtonScript = DownButton.GetComponent<DrillButtonDown>();
-		DrillButtonScript = DrillButton.GetComponent<DrillButtonDrill>();
-
-	}
 
 	void Update() {
-		if(onRock && correctDrill) {
-			if(DrillButtonScript.inMotion) {
-				drilled = true;
+		CheckForWin();
+		if(drillDuration > 0f) {
+			Spin();
+		}
+		if(moveDuration > 0f) {
+			if(down) {
+				MoveDown();
+			} else {
+				MoveUp();
 			}
 		}
-		if (drilled && onRock) {
-			MainDrill.GetComponent<DrillMachineScript>().completed = true;
+	}
+
+	private void CheckForWin() {
+		if(correctDrill && drilled) {
+			completed = true;
 		}
 	}
+
+	private void Spin() {
+		transform.Rotate(step * Time.deltaTime, Space.World);
+		drillDuration -= Time.deltaTime;
+	}
+
+	private void MoveDown() {
+		transform.Translate(step * Time.deltaTime, Space.World);
+		moveDuration -= Time.deltaTime;
+	}
+	
+	private void MoveUp() {
+		//Both will need anchors
+		transform.Translate(-step * Time.deltaTime, Space.World);
+		//transform.position = Vector3.MoveTowards(transform.position, anchor, Time.deltaTime);
+		moveDuration -= Time.deltaTime;
+	}
+
+	public void Move(float duration, bool down) {
+		moveDuration = duration;
+		this.down = down;
+	}
+
+	public void Drill(float duration) {
+		drillDuration = duration;
+	}
+
 }

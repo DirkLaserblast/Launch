@@ -35,11 +35,22 @@ public class Inventory : MonoBehaviour {
 				return;
 			}
 		}
+	}
 
+	public static void RemoveAt(int index) {
+		inv.RemoveAt (index);
 	}
 
 	public static void dropItem(Transform item){// drop
 		RemoveItem (item.transform);
+	}
+
+	public static bool checkItem(int index) {
+		return inv.Count > index;
+	}
+
+	public static Transform getItem(int index) {
+		return inv[index];
 	}
 
 }
