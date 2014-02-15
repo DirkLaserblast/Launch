@@ -25,15 +25,41 @@ public class PersistantGlobalScript : MonoBehaviour
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
 
+//	public bool allowMouseLook {get; set;}
+//	public bool allowInteraction {get; set;}
+//	public bool allowMovement {get; set;}
+
+	private static bool freezeWorldForMenu;
+
+	//If on, disables all interaction and stops time
+	public static bool FreezeWorldForMenu
+	{
+		get{ return freezeWorldForMenu; }
+		set
+		{
+			mouseLookEnabled = !value;
+			interactionEnabled = !value;
+			movementEnabled = !value;
+
+			if (value)
+			{
+				Time.timeScale = 0.0f;
+			}
+			else Time.timeScale = 1.0f;
+		}
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
 		//Prevent the Global Script object from being deleted when you leave the main menu
-		Object.DontDestroyOnLoad(this.gameObject);
+		//Object.DontDestroyOnLoad(this.gameObject);
 	}
 
 	void Update ()
 	{
+		//print (Time.timeScale);
+
 		if(Input.GetMouseButtonUp(0))
 		{
 			if (clickTime > dragThreshold)

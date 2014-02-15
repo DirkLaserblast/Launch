@@ -79,25 +79,25 @@ public class InfoBoxScript : MonoBehaviour {
 
 	}
 	
-	void OnGUI()
-	{
-
-		if (boxOpen)
-		{
-			Event e = Event.current;
-			Time.timeScale = 0;
-
-			infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));
-			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
-			{
-				boxOpen = false;
-				PersistantGlobalScript.mouseLookEnabled = true;
-			}
-
-		}
-		else
-		{
-			Time.timeScale = 1;
-		}
-	}
+//	void OnGUI()
+//	{
+//
+//		if (boxOpen)
+//		{
+//			Event e = Event.current;
+//			Time.timeScale = 0;
+//
+//			infoRect = GUILayout.Window(0, new Rect(position.x, position.y, 256, 64), InfoWindow, title, GUILayout.Width(256));
+//			if (e.type == EventType.MouseDown && !infoRect.Contains(e.mousePosition))
+//			{
+//				boxOpen = false;
+//				PersistantGlobalScript.mouseLookEnabled = true;
+//			}
+//
+//		}
+//		else
+//		{
+//			//Time.timeScale = 1;
+//		}
+//	}
 }

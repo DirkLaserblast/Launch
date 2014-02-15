@@ -19,11 +19,6 @@ public class SliderScript : MonoBehaviour {
 //		globalScript = globalScriptsObject.GetComponent<PersistantGlobalScript>();
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void triggerSlider()
 	{
 		guiOn = true;
@@ -43,31 +38,31 @@ public class SliderScript : MonoBehaviour {
 		}
 	}
 
-	private void OnGUI() {
-		
-		if (guiOn)
-		{
-			Event e = Event.current;
-			//Time.timeScale = 0;
-
-			//sets the value to a string so it can be displayed and displays it
-			sliderString = sliderValue.ToString ();
-			if (showValue) GUI.Label (new Rect (position.x + 10, position.y, 100, 100), sliderString);
-			//only display if clicked
-			if (guiOn) {
-				GUI.Box(new Rect(position.x, position.y, 40, 120), "\t");
-				sliderValue = GUI.VerticalSlider (new Rect (position.x+14, position.y+14, 50, 100), sliderValue, 1f, 0f);
-			}
-
-			if (e.type == EventType.MouseDown && !new Rect(position.x, position.y, 40, 120).Contains(e.mousePosition))
-			{
-				guiOn = false;
-				PersistantGlobalScript.mouseLookEnabled = true;
-			}
-			
-		}
+//	private void OnGUI() {
+//		
+//		if (guiOn)
+//		{
+//			Event e = Event.current;
+//			//Time.timeScale = 0;
+//
+//			//sets the value to a string so it can be displayed and displays it
+//			sliderString = sliderValue.ToString ();
+//			if (showValue) GUI.Label (new Rect (position.x + 10, position.y, 100, 100), sliderString);
+//			//only display if clicked
+//			if (guiOn) {
+//				GUI.Box(new Rect(position.x, position.y, 40, 120), "\t");
+//				sliderValue = GUI.VerticalSlider (new Rect (position.x+14, position.y+14, 50, 100), sliderValue, 1f, 0f);
+//			}
+//
+//			if (e.type == EventType.MouseDown && !new Rect(position.x, position.y, 40, 120).Contains(e.mousePosition))
+//			{
+//				guiOn = false;
+//				PersistantGlobalScript.mouseLookEnabled = true;
+//			}
+//			
+//		}
 		//else Time.timeScale = 1;
-
-
-	}
+//
+//
+//	}
 }
