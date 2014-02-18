@@ -82,6 +82,11 @@ public class PersistantGlobalScript : MonoBehaviour
 			//print ("Clicktime: " + clickTime);
 		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
+
+		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
+		{
+			mouseLookEnabled = !mouseLookEnabled;
+		}
 	}
 
 	public void MinigameEventHanlder() {

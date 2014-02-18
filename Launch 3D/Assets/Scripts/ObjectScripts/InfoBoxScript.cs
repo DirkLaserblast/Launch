@@ -41,7 +41,7 @@ public class InfoBoxScript : MonoBehaviour {
 		content = boxContent;
 
 		recordedToLog = false;
-		foreach (string[] itemString in ItemLogScript.getLogArray())
+		foreach (string[] itemString in ItemLogScript.LogArray)
 		{
 			if (itemString[0] == title)
 			{

@@ -4,6 +4,29 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {  
 	protected static List<Transform> inv = new List<Transform>();
+
+	public static ArrayList inventoryObjects
+	{
+		get
+		{
+			ArrayList inventory = new ArrayList();
+			foreach (Transform trans in inv)
+			{
+				inventory.Add(trans.gameObject);
+			}
+			return inventory;
+		}
+		set
+		{
+			List<Transform> inventory = new List<Transform>();
+			foreach (GameObject go in value)
+			{
+				inventory.Add(go.GetComponent<Transform>());
+			}
+			inv = inventory;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 	

@@ -79,13 +79,15 @@ public class SimpleMouseRotator : MonoBehaviour {
 		inputV = 0;
 		if (relative)
 		{
-			if (PersistantGlobalScript.mouseLookEnabled && Input.GetMouseButton(1))
+			if (PersistantGlobalScript.mouseLookEnabled)
 			{
+				Screen.lockCursor = true;
 				inputH = CrossPlatformInput.GetAxis("Mouse X");
 				inputV = CrossPlatformInput.GetAxis("Mouse Y");
 			}
 			else if (PersistantGlobalScript.edgeTurnEnabled)
 			{
+				Screen.lockCursor = false;
 				Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
 
 				//print((mouseEdge.x/activationRangeX) + ", " + (mouseEdge.y/activationRangeY));
@@ -106,6 +108,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 			}
 			else
 			{
+				Screen.lockCursor = false;
 				inputH = 0;
 				inputV = 0;
 			}

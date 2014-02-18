@@ -20,9 +20,16 @@ public class ItemLogScript : MonoBehaviour {
 		return (logItems.Count - 1);
 	}
 
-	public static ArrayList getLogArray()
+	public static ArrayList LogArray
 	{
-		return logItems;
+		get
+		{
+			return logItems;
+		}
+		set
+		{
+			logItems = value;
+		}
 	}
 
 	public static void deleteByIndex(int index)
