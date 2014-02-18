@@ -74,6 +74,115 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 19400000, guid: db0a32eee6fce41d68b58cf9a58d646e, type: 2}
+--- !u!1 &3198059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 3198060}
+  - 114: {fileID: 3198063}
+  - 65: {fileID: 3198062}
+  - 114: {fileID: 3198061}
+  m_Layer: 12
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3198060
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3198059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00111436634, y: -.859996617, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1948931031}
+--- !u!114 &3198061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3198059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4b6d41893ad6e499d2ffcefa532575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataSource:
+    Component: {fileID: 3198063}
+    MemberName: Click
+  DataTarget:
+    Component: {fileID: 1948931033}
+    MemberName: Hide
+--- !u!65 &3198062
+BoxCollider:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3198059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.20000005, y: 2, z: .00100000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3198063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3198059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e0e5854c8aa374597bb28d9adf228a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorStyle: 15
+  isEnabled: 1
+  isVisible: 1
+  isInteractive: 1
+  tooltip: 
+  pivot: 4
+  zindex: 0
+  color:
+    serializedVersion: 2
+    rgba: 4294967295
+  disabledColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  size: {x: 1440, y: 900}
+  minSize: {x: 0, y: 0}
+  maxSize: {x: 0, y: 0}
+  clipChildren: 0
+  tabIndex: -1
+  canFocus: 0
+  layout:
+    anchorStyle: 15
+    margins:
+      left: -534.003906
+      top: -50.0039062
+      right: -532.996094
+      bottom: -823.996094
+    owner: {fileID: 3198063}
+  renderOrder: 13
+  isLocalized: 0
+  hotZoneScale: {x: 1, y: 1}
+  atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
+  backgroundSprite: 
+  backgroundColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
 --- !u!1 &60801779
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +727,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &141587103
 Renderer:
   m_ObjectHideFlags: 0
@@ -777,7 +887,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210337020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1801771440}
@@ -1020,6 +1130,7 @@ MonoBehaviour:
   content: Lights operating in low-power emergency mode.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &275411926
 Renderer:
   m_ObjectHideFlags: 0
@@ -2069,6 +2180,7 @@ MonoBehaviour:
     healthy vegitable in martian conditions.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1 &675948228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,7 +2328,7 @@ MonoBehaviour:
       right: 1292
       bottom: 763.003906
     owner: {fileID: 681514500}
-  renderOrder: 4
+  renderOrder: 3
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -3713,7 +3825,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1041768723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52111053, y: .948890686, z: 0}
+  m_LocalPosition: {x: -1.52333069, y: -.939994812, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1801771440}
@@ -3774,7 +3886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d87d87d0197634796d0454f524dd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anchorStyle: 15
+  anchorStyle: 6
   isEnabled: 1
   isVisible: 1
   isInteractive: 1
@@ -3794,14 +3906,14 @@ MonoBehaviour:
   tabIndex: -1
   canFocus: 0
   layout:
-    anchorStyle: 15
+    anchorStyle: 6
     margins:
-      left: 1
-      top: 0
-      right: 1370
-      bottom: 854
+      left: 0
+      top: 850
+      right: 1371
+      bottom: 4
     owner: {fileID: 1041768728}
-  renderOrder: 1
+  renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -4093,6 +4205,7 @@ MonoBehaviour:
   content: Lights operating in low-power emergency mode.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &1109443794
 Renderer:
   m_ObjectHideFlags: 0
@@ -4643,6 +4756,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &1168913399
 Renderer:
   m_ObjectHideFlags: 0
@@ -5158,7 +5272,7 @@ MonoBehaviour:
       right: 7
       bottom: 5
     owner: {fileID: 1219467011}
-  renderOrder: 2
+  renderOrder: 1
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -5258,6 +5372,7 @@ MonoBehaviour:
   content: These lamps simulate the color and temperature of sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1 &1244065250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5672,6 +5787,7 @@ MonoBehaviour:
     left.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1001 &1331575477
 Prefab:
   m_ObjectHideFlags: 0
@@ -5929,6 +6045,7 @@ MonoBehaviour:
     healthy vegitable in martian conditions.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1 &1359248934
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,6 +6131,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1 &1391849058
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,7 +6212,7 @@ MonoBehaviour:
       right: 1292
       bottom: 663
     owner: {fileID: 1391849061}
-  renderOrder: 5
+  renderOrder: 4
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -6583,6 +6701,7 @@ MonoBehaviour:
   content: These lights help simulate the color and temperature of sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
 --- !u!1 &1650309213
 GameObject:
   m_ObjectHideFlags: 0
@@ -6775,6 +6894,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &1672094903
 Renderer:
   m_ObjectHideFlags: 0
@@ -6974,7 +7094,7 @@ MonoBehaviour:
       right: 1292
       bottom: 813
     owner: {fileID: 1713582870}
-  renderOrder: 3
+  renderOrder: 2
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -7249,6 +7369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1135853608}
+  - {fileID: 1948931031}
   - {fileID: 1041768724}
   - {fileID: 1219467009}
   - {fileID: 210337023}
@@ -7364,6 +7485,7 @@ GameObject:
   - 65: {fileID: 1829763330}
   - 23: {fileID: 1829763329}
   - 114: {fileID: 1829763332}
+  - 114: {fileID: 1829763333}
   m_Layer: 0
   m_Name: Asparaglass
   m_TagString: Untagged
@@ -7437,6 +7559,19 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 1948931033}
+--- !u!114 &1829763333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1829763327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f44a67111154a6083075e519b3f109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 113594715}
 --- !u!1 &1856240688
 GameObject:
   m_ObjectHideFlags: 0
@@ -7772,6 +7907,195 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .055555556, y: 1.72666669, z: .00100000005}
   m_Center: {x: .027777778, y: -.863333344, z: 0}
+--- !u!1 &1948931030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1948931031}
+  - 114: {fileID: 1948931033}
+  - 65: {fileID: 1948931032}
+  - 114: {fileID: 1948931036}
+  - 114: {fileID: 1948931035}
+  - 114: {fileID: 1948931034}
+  - 114: {fileID: 1948931037}
+  m_Layer: 12
+  m_Name: Description Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948931031
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00110673695, y: .860004246, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3198060}
+  m_Father: {fileID: 1801771440}
+--- !u!65 &1948931032
+BoxCollider:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .828888893, y: .0577777773, z: .00100000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1948931033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e3359ffaefe124a992e17c8830875c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorStyle: 65
+  isEnabled: 1
+  isVisible: 1
+  isInteractive: 1
+  tooltip: 
+  pivot: 4
+  zindex: 5
+  color:
+    serializedVersion: 2
+    rgba: 4294967295
+  disabledColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  size: {x: 373, y: 26}
+  minSize: {x: 0, y: 0}
+  maxSize: {x: 0, y: 0}
+  clipChildren: 0
+  tabIndex: -1
+  canFocus: 0
+  layout:
+    anchorStyle: 65
+    margins:
+      left: 534
+      top: 50
+      right: 533
+      bottom: 824
+    owner: {fileID: 1948931033}
+  renderOrder: 12
+  isLocalized: 0
+  hotZoneScale: {x: 1, y: 1}
+  atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
+  font: {fileID: 11400000, guid: 5a5e0c230ac62a04f8a31145e6ab7bc0, type: 2}
+  backgroundSprite: 
+  backgroundColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  autoSize: 1
+  autoHeight: 0
+  wordWrap: 0
+  text: 'This is where item descriptions will display.
+
+'
+  bottomColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  align: 1
+  vertAlign: 1
+  textScale: 1
+  textScaleMode: 1
+  charSpacing: 0
+  colorizeSymbols: 0
+  processMarkup: 0
+  outline: 0
+  outlineWidth: 1
+  enableGradient: 0
+  outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  shadow: 1
+  shadowColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  shadowOffset: {x: 1, y: -1}
+  padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  tabSize: 48
+  tabStops: 
+--- !u!114 &1948931034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4b6d41893ad6e499d2ffcefa532575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataSource:
+    Component: {fileID: 1948931033}
+    MemberName: ControlHidden
+  DataTarget:
+    Component: {fileID: 1948931036}
+    MemberName: startTime
+--- !u!114 &1948931035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4b6d41893ad6e499d2ffcefa532575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataSource:
+    Component: {fileID: 1948931033}
+    MemberName: ControlShown
+  DataTarget:
+    Component: {fileID: 1948931036}
+    MemberName: stopTime
+--- !u!114 &1948931036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f44a67111154a6083075e519b3f109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!114 &1948931037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948931030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4b6d41893ad6e499d2ffcefa532575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataSource:
+    Component: {fileID: 1948931033}
+    MemberName: MouseUp
+  DataTarget:
+    Component: {fileID: 1948931033}
+    MemberName: Hide
 --- !u!1 &1955868208
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,7 +8393,7 @@ MonoBehaviour:
       right: 1292
       bottom: 713
     owner: {fileID: 2014446977}
-  renderOrder: 6
+  renderOrder: 5
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -8229,6 +8553,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &2029307565
 Renderer:
   m_ObjectHideFlags: 0
@@ -8375,6 +8700,7 @@ MonoBehaviour:
   content: These warm ceiling lights simulate Earth's sunlight.
   triggerOnClick: 1
   recordable: 1
+  textLabel: {fileID: 0}
 --- !u!23 &2099387686
 Renderer:
   m_ObjectHideFlags: 0
