@@ -13,12 +13,18 @@ public class DrillMachineScript : MonoBehaviour {
 	public Transform player;
 	public GameObject mainCamera;
 	public GameObject minigameCamera;
+	public GameObject drill; 
+	private DrillScript drillScript;
 	
 	public bool completed = false;
 
+	void Start() {
+		drillScript = drill.GetComponent<DrillScript>();
+	}
+
 	
 	void Update() {
-		CheckForCompletion ();
+		CheckForCompletion();
 		CheckMinigameEnd();
 	}
 	
@@ -72,7 +78,11 @@ public class DrillMachineScript : MonoBehaviour {
 
 	private void CheckForCompletion() {
 		if(PersistantGlobalScript.minigameActive) {
-
+			if(drill.activeSelf) {
+				if(drillScript.drilled) {
+					completed = true;
+				}
+			}
 		}
 	}
 	

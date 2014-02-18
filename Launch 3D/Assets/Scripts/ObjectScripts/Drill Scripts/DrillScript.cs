@@ -8,18 +8,29 @@ public class DrillScript : MonoBehaviour {
 	 * */
 	
 	public bool correctDrill = true;
-	public bool completed = false;
+	public GameObject rock;
+	private RockScript rockScript;
 	private float drillDuration = 0f;
 	private float moveDuration = 0f;
-	private bool drilled = false;
+	private bool drilling = false;
+	public bool drilled = false;
 	private bool down = false;
 	private Vector3 step = new Vector3(0f, 1200f, 0f);
 
+	void Start() {
+		rockScript = rock.GetComponent<RockScript>();
+		if(correctDrill) {
+			gameObject.SetActive(false);
+		}
+	}
 
 	void Update() {
-		CheckForWin();
 		if(drillDuration > 0f) {
 			Spin();
+		} else {
+			if(rockScript.onRock && drilling) {
+				drilled = true;
+			}
 		}
 		if(moveDuration > 0f) {
 			if(down) {
@@ -27,12 +38,6 @@ public class DrillScript : MonoBehaviour {
 			} else {
 				MoveUp();
 			}
-		}
-	}
-
-	private void CheckForWin() {
-		if(correctDrill && drilled) {
-			completed = true;
 		}
 	}
 
@@ -60,6 +65,9 @@ public class DrillScript : MonoBehaviour {
 
 	public void Drill(float duration) {
 		drillDuration = duration;
+		if (rockScript.onRock && correctDrill) {
+			drilling = true;
+		}
 	}
 
 }

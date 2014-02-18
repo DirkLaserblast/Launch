@@ -8,6 +8,7 @@ public class RockScript : MonoBehaviour {
 	 * */
 
 	public GameObject drillMove;
+	public bool onRock = false;
 	private DrillMove drillMoveScript;
 
 	void Start() {
@@ -17,14 +18,14 @@ public class RockScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider trigger) {
 		if (PersistantGlobalScript.minigameActive) {
-			//Some kind of rock flag needs to be set
+			onRock = true;
 			drillMoveScript.Stop();
 		}
 	}
 
 	void OnTriggerExit(Collider trigger) {
 		if (PersistantGlobalScript.minigameActive) {
-			//Some kind of rock flag needs to be unset
+			onRock = false;
 		}
 	}
 
