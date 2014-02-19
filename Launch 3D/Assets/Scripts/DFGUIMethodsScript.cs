@@ -41,8 +41,10 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		}
 
 		//print (closestNode.name);
-		PlayerPrefs.SetString("ClosestDoorNode", closestNode.name);
+		PlayerPrefs.SetString("ClosestSaveNode", closestNode.name);
 		PlayerPrefsX.SetVector3("PlayerPosition", player.transform.position);
+		PlayerPrefsX.SetVector3("PlayerRotation", player.transform.eulerAngles);
+		print ("Rotation saved: " + player.transform.eulerAngles.x + " " + player.transform.eulerAngles.y + " " + player.transform.eulerAngles.z);
 
 		//Save logbook
 		string[] itemLogStringArray = (string[])ItemLogScript.LogArray.ToArray(typeof(string));

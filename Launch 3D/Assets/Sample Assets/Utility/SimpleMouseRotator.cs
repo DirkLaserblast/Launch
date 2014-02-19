@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class SimpleMouseRotator : MonoBehaviour {
 	
@@ -62,21 +63,31 @@ public class SimpleMouseRotator : MonoBehaviour {
 		return new Vector2( x, y );
 	}
 
+	IEnumerator UnlockMouseLook()
+	{
+		yield return 0;
+		PersistantGlobalScript.mouseLookEnabled = true;
+	}
+
 	// Use this for initialization
 	void Start () {
+
+		PersistantGlobalScript.mouseLookEnabled = false;
+		Screen.lockCursor = true;
+		StartCoroutine("UnlockMouseLook");
 		originalRotation = transform.localRotation;
+		//print ("Original Rotation = " + originalRotation.y);
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-
 		// we make initial calculations from the original local rotation
 		transform.localRotation = originalRotation;
 
 		// read input from mouse or mobile controls
-		inputH = 0;
-		inputV = 0;
+		//inputH = 0;
+		//inputV = 0;
 		if (relative)
 		{
 			if (PersistantGlobalScript.mouseLookEnabled)
