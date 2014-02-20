@@ -86,8 +86,8 @@ public class SimpleMouseRotator : MonoBehaviour {
 		transform.localRotation = originalRotation;
 
 		// read input from mouse or mobile controls
-		//inputH = 0;
-		//inputV = 0;
+		inputH = 0;
+		inputV = 0;
 		if (relative)
 		{
 			if (PersistantGlobalScript.mouseLookEnabled)

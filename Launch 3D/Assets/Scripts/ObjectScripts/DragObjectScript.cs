@@ -107,7 +107,7 @@ public class DragObjectScript : MonoBehaviour
 			yield return null;
 		}
 
-		PersistantGlobalScript.mouseLookEnabled = true;
+		//PersistantGlobalScript.mouseLookEnabled = true;
 		PersistantGlobalScript.interactionEnabled = true;
 		PersistantGlobalScript.edgeTurnEnabled = false;
 

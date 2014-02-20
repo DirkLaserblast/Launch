@@ -13,7 +13,10 @@ public class LoadGameScript : MonoBehaviour {
 		//print(closestNode);
 		try
 		{
-			player.transform.position = GameObject.Find(closestNode).transform.position;
+			GameObject node = GameObject.Find(closestNode);
+			player.transform.position = node.transform.position;
+			player.transform.rotation = node.transform.rotation;
+			player.GetComponent<SimpleMouseRotator>().enabled = true;
 		}
 		catch (System.NullReferenceException ex)
 		{
@@ -21,21 +24,21 @@ public class LoadGameScript : MonoBehaviour {
 		}
 
 
-		Vector3 playerRotation = PlayerPrefsX.GetVector3("PlayerRotation");
-
-		try
-		{
-//			player.transform.LookAt (playerPosition);
-//			player.transform.rotation = Quaternion.Euler (new Vector3 (0, player.transform.rotation.eulerAngles.y, 0));
-
-			print ("Rotating player to " + playerRotation);
-			player.transform.eulerAngles = new Vector3 (0, playerRotation.y, 0);
-			player.GetComponent<SimpleMouseRotator>().enabled = true;
-		}
-		catch (System.NullReferenceException ex)
-		{
-			//print ("No save data for playerRotation");
-		}
+//		Vector3 playerRotation = PlayerPrefsX.GetVector3("PlayerRotation");
+//
+//		try
+//		{
+////			player.transform.LookAt (playerPosition);
+////			player.transform.rotation = Quaternion.Euler (new Vector3 (0, player.transform.rotation.eulerAngles.y, 0));
+//
+//			//print ("Rotating player to " + playerRotation);
+//			player.transform.eulerAngles = new Vector3 (0, playerRotation.y, 0);
+//			player.GetComponent<SimpleMouseRotator>().enabled = true;
+//		}
+//		catch (System.NullReferenceException ex)
+//		{
+//			//print ("No save data for playerRotation");
+//		}
 
 		string[] logbookArray = PlayerPrefsX.GetStringArray("Logbook");
 

@@ -13,8 +13,8 @@ public class InfoBoxScript : MonoBehaviour {
 	public bool recordable = true;
 	public dfLabel textLabel;
 
-	private bool boxOpen;
-	private Vector2 position;
+//	private bool boxOpen;
+//	private Vector2 position;
 //	private GameObject globalScriptsObject;
 //	private ItemLogScript itemLog;
 //	private PersistantGlobalScript globalScript;
@@ -46,7 +46,7 @@ public class InfoBoxScript : MonoBehaviour {
 				recordedToLog = true;
 			}
 		}
-		boxOpen = true;
+//		boxOpen = true;
 //		position.x = Input.mousePosition.x;
 //		position.y = Screen.height - Input.mousePosition.y;
 

@@ -43,7 +43,7 @@ public class PersistantGlobalScript : MonoBehaviour
 		get{ return freezeWorldForMenu; }
 		set
 		{
-			mouseLookEnabled = !value;
+			//mouseLookEnabled = !value;
 			interactionEnabled = !value;
 			movementEnabled = !value;
 
