@@ -56,6 +56,11 @@ public class DrillMove : MonoBehaviour {
 		}
 	}
 
+	public void InterruptMove(float duration) {
+		moveDuration = duration;
+		ChangeDirection(); //swap direction each time button is pressed
+	}
+
 	public void Stop() {
 		moveDuration = 0;
 	}

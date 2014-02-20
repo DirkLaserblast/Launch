@@ -10,9 +10,9 @@ public class DrillButtonSwap : MonoBehaviour {
 
 	public GameObject Receptical;
 	public GameObject DrillButton;
+	public bool swapped = false;
 	private ItemReceive itemScript;
 	private DrillButtonDrill drillScript;
-	private bool swapped = false;
 
 	void Start() {
 		drillScript = DrillButton.GetComponent<DrillButtonDrill> ();
@@ -29,10 +29,12 @@ public class DrillButtonSwap : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (!itemScript.received) {
-			Receptical.SetActive (true);
-		} else {
-			Receptical.SetActive (false);
+		if (PersistantGlobalScript.minigameActive) {
+			if (!itemScript.received) {
+				Receptical.SetActive (true);
+			} else {
+				Receptical.SetActive (false);
+			}
 		}
 	}
 }
