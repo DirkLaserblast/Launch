@@ -6,15 +6,22 @@ public class InventorySlotScript : MonoBehaviour {
 	public bool on = false;
 	public int slotNumber = 0;
 	private Vector3 originalPosition;
+	private dfSlicedSprite spriteScript;
 
 	void Start() {
 		originalPosition = transform.localPosition;
+		spriteScript = gameObject.GetComponent<dfSlicedSprite>();
 	}
 
 
 	void Update() {
 		on = Inventory.checkItem(slotNumber);
 		//a little inefficient, will fix later on.
+		if(on) {
+			Item itemScript = Inventory.getItem(slotNumber).gameObject.GetComponent<Item>();
+			string s = itemScript.spriteName;
+			spriteScript.SpriteName = s;
+		}
 	}
 
 	void OnMouseDown() {

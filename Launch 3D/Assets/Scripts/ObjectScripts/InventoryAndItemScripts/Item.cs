@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Item : Inventory {
-	public Texture2D itemIcon;
+	public string spriteName;
 	public bool isMoveable = true;
 	public bool isLight = true;
 	public bool isPickable = true;
