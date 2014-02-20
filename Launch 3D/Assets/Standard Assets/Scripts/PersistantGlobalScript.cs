@@ -20,7 +20,7 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public static bool minigameActive = false;
 	public static bool minigameMouseover = false;
-
+	
 	public bool mActive = false;
 
 	public static float dragThreshold = 0.3f;
@@ -86,6 +86,7 @@ public class PersistantGlobalScript : MonoBehaviour
 		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
 		{
 			mouseLookEnabled = !mouseLookEnabled;
+			
 		}
 	}
 
