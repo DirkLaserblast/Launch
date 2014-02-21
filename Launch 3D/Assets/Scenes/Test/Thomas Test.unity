@@ -927,7 +927,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 505489081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.97285461, y: .987945557, z: 0}
+  m_LocalPosition: {x: 1.72007751, y: .987945557, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193030117}
@@ -976,9 +976,9 @@ MonoBehaviour:
   layout:
     anchorStyle: 5
     margins:
-      left: 1270
+      left: 1173
       top: 5
-      right: -339
+      right: -242
       bottom: 729
     owner: {fileID: 505489084}
   renderOrder: 1
@@ -1136,7 +1136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 781320981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.97135162, y: .9140625, z: 0}
+  m_LocalPosition: {x: 1.71857452, y: .9140625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1996042476}
@@ -1191,9 +1191,9 @@ MonoBehaviour:
   layout:
     anchorStyle: 15
     margins:
-      left: 1269
+      left: 1172
       top: 33
-      right: -341
+      right: -244
       bottom: 484
     owner: {fileID: 781320985}
   renderOrder: 2
@@ -2557,7 +2557,6 @@ GameObject:
   - 114: {fileID: 1996042478}
   - 65: {fileID: 1996042477}
   - 114: {fileID: 1996042480}
-  - 114: {fileID: 1996042479}
   - 114: {fileID: 1996042481}
   m_Layer: 15
   m_Name: Slot1
@@ -2684,18 +2683,6 @@ MonoBehaviour:
   shadowOffset: {x: 1, y: -1}
   autoSize: 0
   clickWhenSpacePressed: 1
---- !u!114 &1996042479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1996042475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe204dc3dc7ae943bcb41cf7197c045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 0}
 --- !u!114 &1996042480
 MonoBehaviour:
   m_ObjectHideFlags: 0

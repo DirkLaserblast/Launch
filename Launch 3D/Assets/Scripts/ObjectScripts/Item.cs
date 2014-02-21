@@ -96,9 +96,7 @@ public class Item : Inventory {
 		if (gameObject.rigidbody)
 			gameObject.rigidbody.isKinematic = false;
 		gameObject.transform.parent = null;
-
-		print ("Item Dropped: " + Inventory.inv.Count);
-		Inventory.dropItem (gameObject.transform);
+				Inventory.dropItem (gameObject.transform);
 		Physics.IgnoreCollision(gameObject.collider,thePlayer.collider,false);
 
 		
