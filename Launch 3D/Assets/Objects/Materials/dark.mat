@@ -25,8 +25,4 @@ Material:
       data:
         first:
           name: _Color
-<<<<<<< HEAD:Launch 3D/Assets/Materials/DARk.mat
-        second: {r: .61991781, g: .711095035, b: .860294104, a: 1}
-=======
         second: {r: .326000005, g: .326000005, b: .326000005, a: 1}
->>>>>>> 0fc5d992037ae43e046fc06e2755128eb0c67323:Launch 3D/Assets/Objects/Materials/dark.mat
