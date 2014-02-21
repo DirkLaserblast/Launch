@@ -22,6 +22,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 	public bool autoZeroVerticalOnMobile = true;
 	public bool autoZeroHorizontalOnMobile = false;
 	public bool relative = true;
+	public dfSprite crosshair;
 	Vector3 targetAngles;
 	Vector3 followAngles;
 	Vector3 followVelocity;
@@ -71,7 +72,6 @@ public class SimpleMouseRotator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		PersistantGlobalScript.mouseLookEnabled = false;
 		Screen.lockCursor = true;
 		StartCoroutine("UnlockMouseLook");
@@ -93,12 +93,17 @@ public class SimpleMouseRotator : MonoBehaviour {
 			if (PersistantGlobalScript.mouseLookEnabled)
 			{
 				Screen.lockCursor = true;
+				//crosshair.Position = new Vector3(Input.mousePosition.x - Screen.width/2 - crosshair.Width/2, Input.mousePosition.y - Screen.height/2 + crosshair.Height/2);
+				crosshair.IsVisible = true;
 				inputH = CrossPlatformInput.GetAxis("Mouse X");
 				inputV = CrossPlatformInput.GetAxis("Mouse Y");
 			}
 			else if (PersistantGlobalScript.edgeTurnEnabled)
 			{
 				Screen.lockCursor = false;
+//				Screen.showCursor = false;
+//				crosshair.Position = new Vector3(Input.mousePosition.x - Screen.width/2 - crosshair.Width/2, Input.mousePosition.y - Screen.height/2 + crosshair.Height/2);
+				crosshair.IsVisible = false;
 				Vector2 mouseEdge = MouseScreenEdge(new Vector2(activationRangeX, activationRangeY));
 
 				//print((mouseEdge.x/activationRangeX) + ", " + (mouseEdge.y/activationRangeY));
@@ -120,6 +125,9 @@ public class SimpleMouseRotator : MonoBehaviour {
 			else
 			{
 				Screen.lockCursor = false;
+//				Screen.showCursor = false;
+				//crosshair.Position = new Vector3(Input.mousePosition.x - Screen.width/2 - crosshair.Width/2, Input.mousePosition.y - Screen.height/2 + crosshair.Height/2);
+				crosshair.IsVisible = false;
 				inputH = 0;
 				inputV = 0;
 			}
