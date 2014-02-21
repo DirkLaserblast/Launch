@@ -18,20 +18,21 @@ public class DFGUIMethodsScript : MonoBehaviour {
 	public void saveGame()
 	{
 		//Find nearest door node to player
-		GameObject[] doorNodes = GameObject.FindGameObjectsWithTag("Door Node");
+		GameObject[] saveNodes = GameObject.FindGameObjectsWithTag("Save Node");
 
-		//print (doorNodes.Length);
+		//print (saveNodes.Length);
 
-		GameObject closestNode = doorNodes[0];
+		GameObject closestNode = saveNodes[0];
 		float closestDist = Vector3.Distance(closestNode.transform.position, player.transform.position);
 
-		foreach (GameObject node in doorNodes)
+		foreach (GameObject node in saveNodes)
 		{
 			//print (node.name + " is " + Vector3.Distance(node.transform.position, player.transform.position) + " from the player.");
 
 			float nodeDist = Vector3.Distance(node.transform.position, player.transform.position);
+			SaveNodeScript saveScript = node.GetComponent<SaveNodeScript>();
 
-			if (nodeDist < closestDist)
+			if (nodeDist < closestDist && saveScript.nodeActive)
 			{
 				//print ("Saving " + node.name + " as closest node.");
 				closestNode = node;
@@ -40,8 +41,18 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		}
 
 		//print (closestNode.name);
-		PlayerPrefs.SetString("ClosestDoorNode", closestNode.name);
+		PlayerPrefs.SetString("ClosestSaveNode", closestNode.name);
 		PlayerPrefsX.SetVector3("PlayerPosition", player.transform.position);
+		PlayerPrefsX.SetVector3("PlayerRotation", player.transform.eulerAngles);
+		print ("Rotation saved: " + player.transform.eulerAngles.x + " " + player.transform.eulerAngles.y + " " + player.transform.eulerAngles.z);
+
+		//Save logbook
+		string[] itemLogStringArray = (string[])ItemLogScript.LogArray.ToArray(typeof(string));
+		PlayerPrefsX.SetStringArray("Logbook", itemLogStringArray);
+
+		//Save inventory
+		string[] invetoryStringArray = (string[])Inventory.inventoryObjects.ToArray(typeof(string));
+		PlayerPrefsX.SetStringArray("Inventory", invetoryStringArray);
 
 		PlayerPrefs.Save();
 	}

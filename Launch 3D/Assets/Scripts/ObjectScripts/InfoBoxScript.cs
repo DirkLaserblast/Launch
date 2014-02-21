@@ -11,9 +11,10 @@ public class InfoBoxScript : MonoBehaviour {
 	public string content;
 	public bool triggerOnClick = true;
 	public bool recordable = true;
+	public dfLabel textLabel;
 
-	private bool boxOpen;
-	private Vector2 position;
+//	private bool boxOpen;
+//	private Vector2 position;
 //	private GameObject globalScriptsObject;
 //	private ItemLogScript itemLog;
 //	private PersistantGlobalScript globalScript;
@@ -34,23 +35,23 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void triggerInfoBox(string boxTitle, string boxContent)
 	{
-		//Disabled mouselook while box open
-		PersistantGlobalScript.mouseLookEnabled = false;
-
 		title = boxTitle;
 		content = boxContent;
 
 		recordedToLog = false;
-		foreach (string[] itemString in ItemLogScript.getLogArray())
+		foreach (string[] itemString in ItemLogScript.LogArray)
 		{
 			if (itemString[0] == title)
 			{
 				recordedToLog = true;
 			}
 		}
-		boxOpen = true;
-		position.x = Input.mousePosition.x;
-		position.y = Screen.height - Input.mousePosition.y;
+//		boxOpen = true;
+//		position.x = Input.mousePosition.x;
+//		position.y = Screen.height - Input.mousePosition.y;
+
+		textLabel.Text = boxContent;
+		textLabel.IsVisible = true;
 	}
 
 	void OnMouseUp()
@@ -60,22 +61,24 @@ public class InfoBoxScript : MonoBehaviour {
 
 	void InfoWindow(int ID)
 	{
-		GUILayout.Label(content);
-		
-		GUILayout.BeginHorizontal();
-		//Show the log record button if object wasn't already logged
-		if (GUILayout.Button("Close", GUILayout.Width(64)))
-		{
-			boxOpen = false;
-			PersistantGlobalScript.mouseLookEnabled = true;
-		}
-		
-		if (!recordedToLog && recordable)
-		{
-			ItemLogScript.addItem(title, content);
-			recordedToLog = true;
-		}
-		GUILayout.EndHorizontal();
+//		GUILayout.Label(content);
+//		
+//		GUILayout.BeginHorizontal();
+//		//Show the log record button if object wasn't already logged
+//		if (GUILayout.Button("Close", GUILayout.Width(64)))
+//		{
+//			boxOpen = false;
+//			PersistantGlobalScript.mouseLookEnabled = true;
+//		}
+//		
+//		if (!recordedToLog && recordable)
+//		{
+//			ItemLogScript.addItem(title, content);
+//			recordedToLog = true;
+//		}
+//		GUILayout.EndHorizontal();
+
+
 
 	}
 	
