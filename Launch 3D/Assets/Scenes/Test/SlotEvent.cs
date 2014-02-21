@@ -8,8 +8,10 @@ public class SlotEvent : Inventory
 	public void OnClick( dfControl control, dfMouseEventArgs mouseEvent )
 	{
 		// Add event handler code here
-
-		Inventory.inv[slotNumber].gameObject.SendMessage ("DropItem");
+		if (Inventory.inv [slotNumber] != null && Inventory.inv.Count != 0 && slotNumber+1 <= Inventory.inv.Count)
+						Inventory.inv [slotNumber].gameObject.SendMessage ("DropItem");
+				else
+						print ("NO OBJ");
 
 	}
 

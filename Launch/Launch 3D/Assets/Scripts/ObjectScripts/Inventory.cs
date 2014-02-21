@@ -26,14 +26,16 @@ public class Inventory : MonoBehaviour {
 	public static void RemoveItem(Transform item){// does not drop
 		int index = 0;bool finished = false;
 		foreach (Transform i in inv) {
-			if(i == item){
+			if(i == item && inv.Count != 0){
 				inv.RemoveAt(index);
 				finished = true;
 			}
-			index ++;
+
 			if(finished){
 				return;
 			}
+			if(index < inv.Count && inv.Count!=0)
+			index ++;
 		}
 	}
 
