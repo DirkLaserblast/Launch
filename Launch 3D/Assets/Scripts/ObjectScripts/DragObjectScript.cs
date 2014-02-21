@@ -23,7 +23,12 @@ public class DragObjectScript : MonoBehaviour
 	{
 		if(!Input.GetMouseButtonDown(0))
 			return;
-		
+
+		if (!PersistantGlobalScript.dragEnabled) {
+			return;
+		}
+
+
 		Camera mainCamera = FindCamera();
 		
 		RaycastHit hit;

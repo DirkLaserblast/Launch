@@ -39,6 +39,8 @@ public class DrillMachineScript : MonoBehaviour {
 
 	private void StartMinigame() {
 		PersistantGlobalScript.interactionEnabled = false;
+		PersistantGlobalScript.dragEnabled = false;
+
 		PersistantGlobalScript.mouseLookEnabled = false;
 		PersistantGlobalScript.movementEnabled = false; 
 		PersistantGlobalScript.minigameMouseover = true;
@@ -62,6 +64,7 @@ public class DrillMachineScript : MonoBehaviour {
 			PersistantGlobalScript.interactionEnabled = true;
 			PersistantGlobalScript.mouseLookEnabled = true;
 			PersistantGlobalScript.movementEnabled = true;
+			PersistantGlobalScript.dragEnabled = true;
 			
 			SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
 			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)

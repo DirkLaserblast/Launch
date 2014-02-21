@@ -21,6 +21,8 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool minigameActive = false;
 	public static bool minigameMouseover = false;
 
+	public static bool dragEnabled = true;
+
 	public bool mActive = false;
 
 	public static float dragThreshold = 0.3f;

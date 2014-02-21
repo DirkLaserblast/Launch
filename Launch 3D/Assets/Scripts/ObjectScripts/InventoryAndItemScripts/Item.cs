@@ -59,7 +59,7 @@ public class Item : Inventory {
 	
 	
 	void OnMouseOver(){
-		if(Input.GetMouseButtonUp(1) && canPickUp && gameObject.renderer.enabled){
+		if(Input.GetMouseButtonUp(0) && canPickUp && gameObject.renderer.enabled){
 			PickUpItem();
 		}
 	}
