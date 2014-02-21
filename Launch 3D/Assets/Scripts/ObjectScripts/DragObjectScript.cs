@@ -30,10 +30,19 @@ public class DragObjectScript : MonoBehaviour
 
 
 		Camera mainCamera = FindCamera();
-		
+
 		RaycastHit hit;
-		if(!Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hit, maxDistance))
-			return;
+		if (Screen.lockCursor)
+		{
+			if(!Physics.Raycast(mainCamera.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2)), out hit, maxDistance))
+				return;
+		}
+		else
+		{
+			if(!Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hit, maxDistance))
+				return;
+		}
+
 		if(!hit.rigidbody || hit.rigidbody.isKinematic)
 			return;
 		
@@ -74,16 +83,24 @@ public class DragObjectScript : MonoBehaviour
 		springJoint.connectedBody.drag             = this.drag;
 		springJoint.connectedBody.angularDrag     = this.angularDrag;
 		Camera cam = FindCamera();
-
+		Ray ray;
 		
 
 		float elapsedTime = 0.0f;
 		while(Input.GetMouseButton(0))
 		{
-			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+			if (Screen.lockCursor)
+			{
+				ray = cam.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 0f));
+			}
+			else
+			{
+				ray = cam.ScreenPointToRay(Input.mousePosition);
+			}
 			springJoint.transform.position = ray.GetPoint(distance);
+			draggedObject.rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 
-			PersistantGlobalScript.mouseLookEnabled = false;
+			//PersistantGlobalScript.mouseLookEnabled = false;
 
 			if (elapsedTime < interactTimeLimit)
 			{
@@ -111,6 +128,8 @@ public class DragObjectScript : MonoBehaviour
 
 			yield return null;
 		}
+
+		draggedObject.rigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
 
 		//PersistantGlobalScript.mouseLookEnabled = true;
 		PersistantGlobalScript.interactionEnabled = true;

@@ -13,6 +13,7 @@ public class AeroplaneUserControl : MonoBehaviour
 
     void Awake ()
     {
+		Screen.lockCursor = true;
         // Set up the reference to the aeroplane controller.
         aeroplane = GetComponent<AeroplaneController>();
     }
