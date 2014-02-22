@@ -336,7 +336,7 @@ Light:
   m_SpotAngle: 125
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0599999987
@@ -1570,7 +1570,7 @@ Transform:
   m_PrefabInternal: {fileID: 1942949471}
   m_GameObject: {fileID: 233238422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300819076}
@@ -1983,7 +1983,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -2034,7 +2034,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -2119,6 +2119,10 @@ Prefab:
     - target: {fileID: 6500000, guid: 3c81163b314e94e199979a5be9727656, type: 2}
       propertyPath: m_Size.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 3c81163b314e94e199979a5be9727656, type: 2}
+      propertyPath: isLight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c81163b314e94e199979a5be9727656, type: 2}
@@ -4255,7 +4259,7 @@ Light:
   m_SpotAngle: 140
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .75
     m_Bias: .0599999987
@@ -9611,7 +9615,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -11009,7 +11013,7 @@ Light:
   m_SpotAngle: 151
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .75
     m_Bias: .0599999987
@@ -12638,7 +12642,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -12697,7 +12701,8 @@ Prefab:
       propertyPath: pickUpDistance
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 10800000, guid: 6ea42cc94ec844597aad25f1de0e61a2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6ea42cc94ec844597aad25f1de0e61a2, type: 2}
   m_RootGameObject: {fileID: 2060661625}
   m_IsPrefabParent: 0
@@ -13131,7 +13136,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -13719,7 +13724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteName: drillBit
   isMoveable: 1
-  isLight: 1
+  isLight: 0
   isPickable: 1
   weight: 100
   audioComponent: {fileID: 0}
@@ -14076,7 +14081,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -15104,7 +15109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: .00111111114
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_Mesh
@@ -15124,7 +15129,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .00111111114
       objectReference: {fileID: 0}
     - target: {fileID: 11400082, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: pixelPerfectMode
@@ -15504,7 +15509,7 @@ Light:
   m_SpotAngle: 129
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_Strength: .5
     m_Bias: .0599999987
@@ -16497,10 +16502,10 @@ GameObject:
   - 4: {fileID: 2060661632}
   - 33: {fileID: 2060661631}
   - 23: {fileID: 2060661630}
-  - 108: {fileID: 2060661629}
   - 114: {fileID: 2060661628}
   - 54: {fileID: 2060661627}
   - 65: {fileID: 2060661626}
+  - 108: {fileID: 2060661629}
   m_Layer: 0
   m_Name: CleanAirFilterItem
   m_TagString: Untagged
@@ -16563,9 +16568,8 @@ MonoBehaviour:
 --- !u!108 &2060661629
 Light:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 10800000, guid: 6ea42cc94ec844597aad25f1de0e61a2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1674323078}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060661625}
   m_Enabled: 1
   serializedVersion: 3
