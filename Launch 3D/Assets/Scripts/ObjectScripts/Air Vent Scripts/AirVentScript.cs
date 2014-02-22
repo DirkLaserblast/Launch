@@ -8,6 +8,7 @@ public class AirVentScript : MonoBehaviour {
 	public float dirtyFilterDuration = 2f;
 	public float cleanFilterDuration = 2f;
 	public float transitionDuration = 0.5f;
+	public bool completed = false;
 	private ItemReceive itemReceive;
 	private Vector3 dirtyStep = new Vector3(0f, 0f, -0.172f);
 	private Vector3 cleanStep = new Vector3(0f, 0f, 0.172f);
@@ -46,6 +47,9 @@ public class AirVentScript : MonoBehaviour {
 		} else {
 			cleanFilterDuration -= Time.deltaTime;
 			cleanAirFilter.transform.Translate (cleanStep * Time.deltaTime);
+			if(cleanFilterDuration <= 0) {
+				completed = true;
+			}
 		}	
 	}
 }

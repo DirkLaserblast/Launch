@@ -43,13 +43,13 @@ public class BigInfoBoxScript : MonoBehaviour {
 	
 	void triggerInfoBox(string boxTitle, Texture boxContent)
 	{
-		title = boxTitle;
+		//title = boxTitle;
 		content = boxContent;
 
 //		boxOpen = true;
 		PersistantGlobalScript.mouseLookEnabled = false;
 
-		bigBoxLabel.Text = title;
+		bigBoxTextContent.Text = textContent;
 		bigBoxImage.Texture = content;
 		float aspectRatio = content.height / content.width;
 		bigBoxImage.Size = new Vector2 (bigBoxImage.Width * aspectRatio, bigBoxImage.Height);
