@@ -29,6 +29,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	/// <summary>
 	/// Turn camera when mouse reaches an edge
 	/// </summary>
+
 	public static bool edgeTurnEnabled = false;
 	//How long the left mouse button has been held down
 	private static float clickTime = 0.0f;
@@ -37,7 +38,7 @@ public class PersistantGlobalScript : MonoBehaviour
 //	public bool allowInteraction {get; set;}
 //	public bool allowMovement {get; set;}
 
-	private static bool freezeWorldForMenu;
+	private static bool freezeWorldForMenu = false;
 
 	//If on, disables all interaction and stops time
 	public static bool FreezeWorldForMenu
@@ -45,7 +46,12 @@ public class PersistantGlobalScript : MonoBehaviour
 		get{ return freezeWorldForMenu; }
 		set
 		{
-			//mouseLookEnabled = !value;
+			if (value)
+			{
+				print ("Freezing world");
+			}
+			else print ("Unfreezing world");
+			mouseLookEnabled = !value;
 			interactionEnabled = !value;
 			movementEnabled = !value;
 
@@ -57,6 +63,15 @@ public class PersistantGlobalScript : MonoBehaviour
 		}
 	}
 
+	public static void StopAllAudio()
+	{
+		AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+		foreach(AudioSource audioS in allAudioSources)
+		{
+			audioS.Stop();
+		}
+	}
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -67,6 +82,8 @@ public class PersistantGlobalScript : MonoBehaviour
 	void Update ()
 	{
 		//print (Time.timeScale);
+
+		//print ("Interaction: " + interactionEnabled);
 
 		if(Input.GetMouseButtonUp(0))
 		{

@@ -6,6 +6,8 @@ public class WalkOverTextScript : MonoBehaviour {
 	public string textContent;
 	public dfPanel bigBoxPanel;
 	public dfLabel bigBoxTextContent;
+	public bool playSound;
+	public bool cancelAllSound;
 	private bool triggered = false;
 	private float timer = 6f;
 	
@@ -25,9 +27,18 @@ public class WalkOverTextScript : MonoBehaviour {
 
 
 	void OnTriggerEnter() {
-		if (!triggered) {
+		if (!triggered)
+		{
 			triggerInfoBox ();
-			print("foo");
+			//print("foo");
+			if (playSound)
+			{
+				audio.Play();
+			}
+			if (cancelAllSound)
+			{
+				PersistantGlobalScript.StopAllAudio();
+			}
 			StartCoroutine("TurnOff", timer);
 		}
 	}

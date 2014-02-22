@@ -7,11 +7,13 @@ public class DFGUIMethodsScript : MonoBehaviour {
 
 	public void stopTime()
 	{
+		print ("Stopping Time");
 		PersistantGlobalScript.FreezeWorldForMenu = true;
 	}
 
 	public void startTime()
 	{
+		print ("Starting Time");
 		PersistantGlobalScript.FreezeWorldForMenu = false;
 	}
 

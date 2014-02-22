@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DrillButtonDown : MonoBehaviour {
-	
+
 	public GameObject MoveObj;
 	public GameObject SwapButton;
 	public float moveDuration = 2f;

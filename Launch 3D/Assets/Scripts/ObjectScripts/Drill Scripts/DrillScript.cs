@@ -6,7 +6,9 @@ public class DrillScript : MonoBehaviour {
 	/*
 	 * Script for the drill heads themselves
 	 * */
-	
+
+	public AudioClip drillSound;
+
 	public bool correctDrill = true;
 	public GameObject rock;
 	private RockScript rockScript;
@@ -70,6 +72,7 @@ public class DrillScript : MonoBehaviour {
 			audio.Play ();
 			drilling = true;
 		}
+		else {audio.PlayOneShot(drillSound);}
 	}
 
 }

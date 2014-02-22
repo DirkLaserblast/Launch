@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class AirVentScript : MonoBehaviour {
-	
+
+	public AudioClip fanPowerUp;
+
 	public GameObject cleanAirFilter;
 	public GameObject dirtyAirFilter;
 	public float dirtyFilterDuration = 2f;
@@ -26,6 +28,8 @@ public class AirVentScript : MonoBehaviour {
 		}
 		if(dirtyFilterDuration <= 0 && cleanFilterDuration >= 0) {
 			AnimateCleanFilter();
+			audio.PlayOneShot(fanPowerUp);
+			audio.PlayDelayed(fanPowerUp.length);
 		}
 	}
 

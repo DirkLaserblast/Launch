@@ -7,6 +7,7 @@ public class DrillMove : MonoBehaviour {
 	 * Script for the game object that is moved by the movement button.
 	 *  */
 
+	public AudioClip servo;
 
 	private float moveDuration = 0f;
 	private bool down = false;
@@ -30,6 +31,7 @@ public class DrillMove : MonoBehaviour {
 	private void MoveDown() {
 		transform.Translate(step * Time.deltaTime, Space.World);
 		moveDuration -= Time.deltaTime;
+		audio.PlayOneShot(servo);
 	}
 	
 	private void MoveUp() {
