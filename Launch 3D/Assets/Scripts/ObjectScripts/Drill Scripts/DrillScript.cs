@@ -29,6 +29,7 @@ public class DrillScript : MonoBehaviour {
 			Spin();
 		} else {
 			if(rockScript.onRock && drilling) {
+				audio.Stop();
 				drilled = true;
 			}
 		}
@@ -66,6 +67,7 @@ public class DrillScript : MonoBehaviour {
 	public void Drill(float duration) {
 		drillDuration = duration;
 		if (rockScript.onRock && correctDrill) {
+			audio.Play ();
 			drilling = true;
 		}
 	}

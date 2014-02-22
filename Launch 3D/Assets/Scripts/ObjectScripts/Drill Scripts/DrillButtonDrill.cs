@@ -14,6 +14,7 @@ public class DrillButtonDrill : MonoBehaviour {
 	
 	void OnMouseDown() {
 		if (Input.GetMouseButton (0) && PersistantGlobalScript.minigameActive) {
+			audio.Play ();
 			drillScript.Drill(drillDuration);
 		}
 	}

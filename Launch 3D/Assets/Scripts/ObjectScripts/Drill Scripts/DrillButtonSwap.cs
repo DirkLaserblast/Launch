@@ -30,6 +30,7 @@ public class DrillButtonSwap : MonoBehaviour {
 
 	void OnMouseDown() {
 		if (PersistantGlobalScript.minigameActive) {
+			audio.Play();
 			if (!itemScript.received) {
 				Receptical.SetActive (true);
 			} else {

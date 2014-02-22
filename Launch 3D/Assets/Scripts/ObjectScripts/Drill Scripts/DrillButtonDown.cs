@@ -21,13 +21,14 @@ public class DrillButtonDown : MonoBehaviour {
 			timer -= Time.deltaTime;
 			if(timer <= 0f) {
 				moveScript.InterruptMove(brokenMoveDuration);
-				audio.Play();
+				//drill ENH
 			}
 		}
 	}
 
 	void OnMouseDown() {
 		if (Input.GetMouseButton (0) && PersistantGlobalScript.minigameActive) {
+			audio.Play ();
 			if(!swapScript.swapped) {
 				moveScript.Move(brokenMoveDuration);
 				timer = brokenMoveDuration/2 + Time.deltaTime;

@@ -37,6 +37,7 @@ public class DrillMove : MonoBehaviour {
 		transform.Translate(-step * Time.deltaTime, Space.World);
 		moveDuration -= Time.deltaTime;
 		if(transform.position.y > anchor.y) {
+			audio.Stop ();
 			Stop();
 		}
 	}
@@ -57,6 +58,7 @@ public class DrillMove : MonoBehaviour {
 	}
 
 	public void InterruptMove(float duration) {
+		audio.Play ();
 		moveDuration = duration;
 		ChangeDirection(); //swap direction each time button is pressed
 	}
