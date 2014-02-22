@@ -7,7 +7,7 @@ public class WalkOverTextScript : MonoBehaviour {
 	public dfPanel bigBoxPanel;
 	public dfLabel bigBoxTextContent;
 	private bool triggered = false;
-	private float timer = 5f;
+	private float timer = 6f;
 	
 	void triggerInfoBox()
 	{
@@ -27,6 +27,7 @@ public class WalkOverTextScript : MonoBehaviour {
 	void OnTriggerEnter() {
 		if (!triggered) {
 			triggerInfoBox ();
+			print("foo");
 			StartCoroutine("TurnOff", timer);
 		}
 	}
@@ -34,7 +35,6 @@ public class WalkOverTextScript : MonoBehaviour {
 	IEnumerator TurnOff(float t) {
 		yield return new WaitForSeconds(t);
 		triggerInfoBoxOff();
-		//triggerInfoBoxOff();
 	}
 
 }
