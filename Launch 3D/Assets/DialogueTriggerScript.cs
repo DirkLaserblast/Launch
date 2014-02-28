@@ -15,7 +15,7 @@ public class DialogueTriggerScript : MonoBehaviour {
 	public AudioClip radioSound;
 
 	private int position = 1;
-	private bool read = false;
+	public bool read = false;
 
 	void OnTriggerEnter (Collider other)
 	{

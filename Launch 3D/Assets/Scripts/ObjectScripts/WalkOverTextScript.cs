@@ -10,12 +10,24 @@ public class WalkOverTextScript : MonoBehaviour {
 	public bool cancelAllSound;
 	private bool triggered = false;
 	private float timer = 6f;
+	private float firstTimer = 24f;
+	public AudioClip FourMonths;
+	public GameObject lights;
 	
+	void triggerStartLog() {
+		audio.PlayOneShot(FourMonths);
+		lights.SetActive(false);
+		//PersistantGlobalScript.FreezeWorldForMenu = true;
+	}
+
 	void triggerInfoBox()
 	{
+		lights.SetActive(true);
+		PersistantGlobalScript.FreezeWorldForMenu = false;
 		bigBoxTextContent.Text = textContent;
 		bigBoxTextContent.IsVisible = true;
 		bigBoxPanel.IsVisible = true;
+		StartCoroutine("TurnOff", timer);
 	}
 
 	void triggerInfoBoxOff()
@@ -29,7 +41,7 @@ public class WalkOverTextScript : MonoBehaviour {
 	void OnTriggerEnter() {
 		if (!triggered)
 		{
-			triggerInfoBox ();
+			triggerStartLog();
 			//print("foo");
 			if (playSound)
 			{
@@ -39,13 +51,18 @@ public class WalkOverTextScript : MonoBehaviour {
 			{
 				PersistantGlobalScript.StopAllAudio();
 			}
-			StartCoroutine("TurnOff", timer);
+			StartCoroutine("TurnOn", firstTimer);
 		}
 	}
 
 	IEnumerator TurnOff(float t) {
 		yield return new WaitForSeconds(t);
 		triggerInfoBoxOff();
+	}
+
+	IEnumerator TurnOn(float t) {
+		yield return new WaitForSeconds(t);
+		triggerInfoBox();
 	}
 
 }
