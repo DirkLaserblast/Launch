@@ -17243,8 +17243,8 @@ MonoBehaviour:
   triggerOnClick: 1
   hasText: 1
   textContent: "Hey Cassandra, here\u2019s a list of tasks that need to be completed
-    this shift:\n1. Start drilling the specimen that\u2019s in the AEIOU FOOTBALL
-    JOHN MADDEN\n2. Replace the air filter in the drill room with 999999999999 erbrbrbrbr"
+    this shift:\n1. Start drilling the specimen that's in the geology lab.\n2. Replace
+    the air filter in the drill room with a clean one."
   bigBoxPanel: {fileID: 908572784}
   bigBoxLabel: {fileID: 327374929}
   bigBoxImage: {fileID: 1580842808}
