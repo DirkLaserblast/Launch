@@ -46,11 +46,11 @@ public class PersistantGlobalScript : MonoBehaviour
 		get{ return freezeWorldForMenu; }
 		set
 		{
-			if (value)
-			{
-				print ("Freezing world");
-			}
-			else print ("Unfreezing world");
+//			if (value)
+//			{
+//				print ("Freezing world");
+//			}
+//			else print ("Unfreezing world");
 			mouseLookEnabled = !value;
 			interactionEnabled = !value;
 			movementEnabled = !value;
@@ -102,11 +102,11 @@ public class PersistantGlobalScript : MonoBehaviour
 		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
-		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
-		{
-			mouseLookEnabled = !mouseLookEnabled;
-			
-		}
+//		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
+//		{
+//			mouseLookEnabled = !mouseLookEnabled;
+//			
+//		}
 	}
 
 	public void MinigameEventHanlder() {

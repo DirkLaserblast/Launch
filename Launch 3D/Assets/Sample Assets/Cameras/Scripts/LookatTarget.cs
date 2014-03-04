@@ -17,10 +17,11 @@ public class LookatTarget : AbstractTargetFollower {
 
 	// to have no constraints on an axis, set the rotationRange greater than 360.
 	
-	public Vector2 rotationRange; 
-	public float followSpeed = 1;
+	[SerializeField] Vector2 rotationRange; 
+	[SerializeField] float followSpeed = 1;
+
 	Vector3 followAngles;
-	Vector3 followVelocity;
+	protected Vector3 followVelocity;
 	Quaternion originalRotation;
 
 	// Use this for initialization
@@ -49,6 +50,7 @@ public class LookatTarget : AbstractTargetFollower {
 
 		// smoothly interpolate the current angles to the target angles
 		followAngles = Vector3.SmoothDamp( followAngles, targetAngles, ref followVelocity, followSpeed );
+
 
 		// and update the gameobject itself
 		transform.localRotation = originalRotation * Quaternion.Euler( -followAngles.x, followAngles.y, 0 );

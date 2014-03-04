@@ -44,7 +44,7 @@ public class PlatformSpecificContent : MonoBehaviour {
 
     void CheckEnableContent()
 	{
-		#if (UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 )
+		#if (UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY )
 		if (showOnlyOn == BuildTargetGroup.Mobile)
 		{
 			EnableContent(true);
@@ -53,7 +53,7 @@ public class PlatformSpecificContent : MonoBehaviour {
 		}
 		#endif
 		
-		#if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 )
+		#if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY )
 		if (showOnlyOn == BuildTargetGroup.Mobile)
 		{
             EnableContent(false);

@@ -10,7 +10,7 @@ public class AutoMobileShaderSwitch : MonoBehaviour {
 	
 	// Use this for initialization
 	void OnEnable () {
-#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8
+#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
 			var renderers = FindObjectsOfType<Renderer>();
 			Debug.Log (renderers.Length+" renderers");
 			var oldMaterials = new List<Material>();

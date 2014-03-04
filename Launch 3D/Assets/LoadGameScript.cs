@@ -5,10 +5,18 @@ public class LoadGameScript : MonoBehaviour {
 
 	public GameObject player;
 
+	IEnumerator unlockMouseLook ()
+	{
+		yield return new WaitForSeconds(1.0f);
+		player.GetComponent<SimpleMouseRotator>().enabled = true;
+	}
+
 	// Load player and item positions
 	void Start ()
 	{
 		string closestNode = PlayerPrefs.GetString("ClosestSaveNode");
+
+		StartCoroutine("unlockMouseLook");
 
 		//print(closestNode);
 		try
@@ -16,7 +24,6 @@ public class LoadGameScript : MonoBehaviour {
 			GameObject node = GameObject.Find(closestNode);
 			player.transform.position = node.transform.position;
 			player.transform.rotation = node.transform.rotation;
-			player.GetComponent<SimpleMouseRotator>().enabled = true;
 		}
 		catch (System.NullReferenceException ex)
 		{
@@ -51,20 +58,8 @@ public class LoadGameScript : MonoBehaviour {
 			
 		}
 
-		string[] inventoryArray = PlayerPrefsX.GetStringArray("Inventory");
-		//Disable items that are in the inventory
-		try
-		{
-			foreach (string item in inventoryArray)
-			{
-				GameObject current = GameObject.Find(item);
-				Inventory.inventoryObjects.Add(current);
-				current.SetActive(false);
-			}
-		}
-		catch (System.NullReferenceException ex) {
 
-		}
+
 	}
 
 }

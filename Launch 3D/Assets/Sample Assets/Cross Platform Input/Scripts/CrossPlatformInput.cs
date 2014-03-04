@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 
+
+
 public static class CrossPlatformInput {
 
 	private static VirtualInput virtualInput;
 
     static CrossPlatformInput () {
-#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8
+		#if MOBILE_INPUT
         virtualInput = new MobileInput ();
-#elif UNITY_STANDALONE || UNITY_WEBPLAYER
+		#else
         virtualInput = new StandaloneInput();
-#endif
+		#endif
     }
 
 	static void RegisterVirtualAxis(VirtualAxis axis) {

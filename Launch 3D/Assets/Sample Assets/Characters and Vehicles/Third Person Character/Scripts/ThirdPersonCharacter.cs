@@ -32,7 +32,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	public Transform lookTarget { get; set; }               // The point where the character will be looking at
 
 	bool onGround;                                          // Is the character on the ground
-	Vector3 lookPos;                                      // The position where the character is looking at
+	Vector3 currentLookPos;                                 // The current position where the character is looking
 	float originalHeight;                                   // Used for tracking the original height of the characters capsule collider
 	Animator animator;                                      // The animator for the character
 	float lastAirTime;                                      // USed for checking when the character was last in the air for controlling jumps
@@ -44,6 +44,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	float turnAmount;
 	float forwardAmount;
 	Vector3 velocity;
+	IComparer rayHitComparer;
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +58,9 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	    } else {
             Debug.LogError(" collider cannot be cast to CapsuleCollider");
 	    }
+
+		rayHitComparer = new RayHitComparer ();
+
 	    SetUpAnimator();
 	}
 	
@@ -65,11 +69,13 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	// based on User input, or an AI control script
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
 
+		if (move.magnitude > 1) move.Normalize();
+
 		// transfer input parameters to member variables.
 		this.moveInput = move;
 		this.crouchInput = crouch;
 		this.jumpInput = jump;
-		this.lookPos = lookPos;
+		this.currentLookPos = lookPos;
  
 		// grab current velocity, we will be changing it.
 		velocity = rigidbody.velocity;
@@ -118,7 +124,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		// automatically turn to face camera direction,
 		// when not moving, and beyond the specified angle threshold
 		if (Mathf.Abs (forwardAmount) < .01f) {
-			Vector3 lookDelta = transform.InverseTransformDirection (lookPos - transform.position);
+			Vector3 lookDelta = transform.InverseTransformDirection (currentLookPos - transform.position);
 			float lookAngle = Mathf.Atan2 (lookDelta.x, lookDelta.z) * Mathf.Rad2Deg;
 
 			// are we beyond the threshold of where need to turn to face the camera?
@@ -167,7 +173,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	{
 		Ray ray = new Ray (transform.position + Vector3.up * .1f, -Vector3.up);
 		RaycastHit[] hits = Physics.RaycastAll (ray, .5f);
-		System.Array.Sort (hits, new RayHitComparer ());
+		System.Array.Sort (hits, rayHitComparer);
         
 		if (velocity.y < jumpPower * .5f) {
 			onGround = false;
@@ -256,9 +262,6 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		// only use root motion when on ground:
 		animator.applyRootMotion = onGround;
 
-		// update the current head-look position
-		lookPos = Vector3.Lerp (lookPos, lookPos, Time.deltaTime * advancedSettings.headLookResponseSpeed);
-
 		// update the animator parameters
 		animator.SetFloat ("Forward", forwardAmount, 0.1f, Time.deltaTime);
 		animator.SetFloat ("Turn", turnAmount, 0.1f, Time.deltaTime);
@@ -296,11 +299,11 @@ public class ThirdPersonCharacter : MonoBehaviour {
 		
 		// if a transform is assigned as a look target, it overrides the vector lookPos value
 		if (lookTarget != null) {
-		    lookPos = lookTarget.position;
+			currentLookPos = lookTarget.position;
 		}
 
 		// Used for the head look feature.
-		animator.SetLookAtPosition( lookPos );
+		animator.SetLookAtPosition( currentLookPos );
 	}
 	
 	

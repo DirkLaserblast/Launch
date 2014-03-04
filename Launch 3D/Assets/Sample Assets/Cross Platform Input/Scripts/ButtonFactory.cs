@@ -5,7 +5,7 @@ public class ButtonFactory
 	public static AbstractButton GetPlatformSpecificButtonImplementation()
 	{
 		
-		#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8
+		#if MOBILE_INPUT
 		return new TouchButton();
 		#else
 		// click button always works as a tap button
@@ -15,13 +15,16 @@ public class ButtonFactory
 	
 }
 
-internal class TouchButton : AbstractButton
+internal class TouchButton : ClickButton
 {
-	
+	// touch button inherits from click button, and calls its base.Update
+	// so that touchbuttons are always clickable in the editor with the mouse too!
+
 	bool m_Pressed;			// whether the button is currently pressed
 	
 	public override void Update () {
-		
+		base.Update();
+
 		for (int i = 0; i < Input.touchCount; i++) {
 			Touch touch = Input.GetTouch (i);
 			

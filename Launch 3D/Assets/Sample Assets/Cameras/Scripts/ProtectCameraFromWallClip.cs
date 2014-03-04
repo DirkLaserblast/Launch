@@ -91,7 +91,10 @@ public class ProtectCameraFromWallClip : MonoBehaviour
 	    }
 
 		// visualise the cam clip effect in the editor
-		Debug.DrawRay(ray.origin, -pivot.forward * (targetDist + sphereCastRadius), hitSomething ? Color.red : Color.green);
+		if (hitSomething)
+		{
+			Debug.DrawRay(ray.origin, -pivot.forward * (targetDist + sphereCastRadius),Color.red );
+		}
 
         // hit something so move the camera to a better position
 	    protecting = hitSomething;

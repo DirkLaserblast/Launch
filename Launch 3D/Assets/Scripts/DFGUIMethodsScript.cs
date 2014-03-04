@@ -53,8 +53,8 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		PlayerPrefsX.SetStringArray("Logbook", itemLogStringArray);
 
 		//Save inventory
-		string[] invetoryStringArray = (string[])Inventory.inventoryObjects.ToArray(typeof(string));
-		PlayerPrefsX.SetStringArray("Inventory", invetoryStringArray);
+//		string[] invetoryStringArray = (string[])Inventory.inventoryObjects.ToArray(typeof(string));
+//		PlayerPrefsX.SetStringArray("Inventory", invetoryStringArray);
 
 		PlayerPrefs.Save();
 	}

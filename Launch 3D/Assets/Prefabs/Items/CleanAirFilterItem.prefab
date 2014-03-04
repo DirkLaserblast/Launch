@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 108: {fileID: 10800000}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
   m_Layer: 0
@@ -123,28 +122,6 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c175fa558a3ab464f8da27d587144ebb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteName: cleanAirFilter
-  isMoveable: 1
-  isLight: 1
-  isPickable: 1
-  weight: 100
-  audioComponent: {fileID: 0}
-  pickUpSound: {fileID: 0}
-  placeSound: {fileID: 0}
-  useSound: {fileID: 0}
-  description: 
-  pickUpDistance: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,6 +1,10 @@
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
-public class AutoCam : AbstractTargetFollower
+[ExecuteInEditMode]
+public class AutoCam : PivotBasedCameraRig
 {
     [SerializeField] private float moveSpeed = 3;           		// How fast the rig will move to keep up with target's position
     [SerializeField] private float turnSpeed = 1;           		// How fast the rig will turn to keep up with target's rotation
@@ -16,7 +20,6 @@ public class AutoCam : AbstractTargetFollower
 	private float turnSpeedVelocityChange;                  // The change in the turn speed velocity
 	private Vector3 rollUp = Vector3.up;                    // The roll of the camera around the z axis ( generally this will always just be up )
 
-
 	protected override void Start() {
 		base.Start();
 	}
@@ -24,7 +27,7 @@ public class AutoCam : AbstractTargetFollower
 	protected override void FollowTarget(float deltaTime)
 	{	
 
-        // if no target then early out as there is nothing to do
+        // if no target, or no time passed then we quit early, as there is nothing to do
 	    if (!(deltaTime > 0) || target == null) {
 	        return;
 	    }
@@ -35,7 +38,7 @@ public class AutoCam : AbstractTargetFollower
 	    var targetUp = target.up;
 
 
-	    if (followVelocity){
+	    if (followVelocity && Application.isPlaying){
 			// in follow velocity mode, the camera's rotation is aligned towards the object's velocity direction
 			// but only if the object is traveling faster than a given threshold.
 
@@ -63,7 +66,12 @@ public class AutoCam : AbstractTargetFollower
 	            var targetSpinSpeed = Mathf.Abs (Mathf.DeltaAngle(lastFlatAngle,currentFlatAngle)) / deltaTime;
 	            var desiredTurnAmount = Mathf.InverseLerp(spinTurnLimit, spinTurnLimit*0.75f, targetSpinSpeed );
 	            var turnReactSpeed = (currentTurnAmount > desiredTurnAmount ? .1f : 1f);
-	            currentTurnAmount = Mathf.SmoothDamp( currentTurnAmount, desiredTurnAmount, ref turnSpeedVelocityChange, turnReactSpeed);
+				if (Application.isPlaying) {
+		            currentTurnAmount = Mathf.SmoothDamp( currentTurnAmount, desiredTurnAmount, ref turnSpeedVelocityChange, turnReactSpeed);
+				} else {
+					// for editor mode, smoothdamp won't work because it uses deltaTime internally
+					currentTurnAmount = desiredTurnAmount;
+				}
 
 	        } else {
 	            currentTurnAmount = 1;
@@ -85,7 +93,9 @@ public class AutoCam : AbstractTargetFollower
 	    var rollRotation = Quaternion.LookRotation(targetForward, rollUp);
 
 	    // and aligning with the target object's up direction (i.e. its 'roll')
-	    rollUp = rollSpeed > 0 ? Vector3.Slerp(rollUp, targetUp, rollSpeed * Time.deltaTime) : Vector3.up;
-	    transform.rotation = Quaternion.Lerp(transform.rotation, rollRotation, turnSpeed*currentTurnAmount*Time.smoothDeltaTime);
+		rollUp = rollSpeed > 0 ? Vector3.Slerp(rollUp, targetUp, rollSpeed * deltaTime) : Vector3.up;
+		transform.rotation = Quaternion.Lerp(transform.rotation, rollRotation, turnSpeed*currentTurnAmount*deltaTime);
 	}
+
+
 }

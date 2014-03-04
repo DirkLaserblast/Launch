@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: CleanAirFilter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,6 @@ GameObject:
   - 23: {fileID: 2300002}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
-  - 114: {fileID: 11400000}
   - 108: {fileID: 10800000}
   m_Layer: 14
   m_Name: DirtyAirFilter
@@ -48,10 +47,8 @@ GameObject:
   - 4: {fileID: 400004}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
-  - 114: {fileID: 11400004}
   - 54: {fileID: 5400002}
   - 65: {fileID: 6500002}
-  - 114: {fileID: 11400002}
   - 82: {fileID: 8200000}
   m_Layer: 14
   m_Name: Vent
@@ -88,8 +85,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -8.92001534, y: -.199450374, z: 11.5030365}
+  m_LocalRotation: {x: 0, y: -.70710516, z: 0, w: .707108378}
+  m_LocalPosition: {x: 25.8651161, y: -1.06068373, z: -18.6837158}
   m_LocalScale: {x: .0299999993, y: .0299999993, z: .0299999993}
   m_Children:
   - {fileID: 400000}
@@ -245,11 +242,11 @@ AudioSource:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: e2b91c40debf547f8a6d66f6cf74af27, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -330,57 +327,6 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c175fa558a3ab464f8da27d587144ebb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteName: dirtyAirFilter
-  isMoveable: 1
-  isLight: 1
-  isPickable: 0
-  weight: 100
-  audioComponent: {fileID: 0}
-  pickUpSound: {fileID: 0}
-  placeSound: {fileID: 0}
-  useSound: {fileID: 0}
-  description: 
-  pickUpDistance: 5
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d4deeff436f4f0f943698ad5e36dfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cleanAirFilter: {fileID: 100000}
-  dirtyAirFilter: {fileID: 100002}
-  dirtyFilterDuration: 2
-  cleanFilterDuration: 2
-  transitionDuration: .5
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c892da307703436d9d3de4ffcecf58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receiveable: {fileID: 0}
-  received: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
