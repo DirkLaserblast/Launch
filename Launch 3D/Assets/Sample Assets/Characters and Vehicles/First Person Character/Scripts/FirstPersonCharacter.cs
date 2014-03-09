@@ -11,7 +11,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[SerializeField] private float walkSpeed = 3f;                                      // The speed at which we want the character to move
 	#endif
 	[SerializeField] private AdvancedSettings advanced = new AdvancedSettings();        // The container for the advanced settings ( done this way so that the advanced setting are exposed under a foldout
-	[SerializeField] private bool lockCursor = true;
+	[SerializeField] public bool lockCursor = true;
 
 	[System.Serializable]
 	public class AdvancedSettings                                                       // The advanced settings

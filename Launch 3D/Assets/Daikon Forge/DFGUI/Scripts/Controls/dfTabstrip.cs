@@ -164,7 +164,7 @@ public class dfTabstrip : dfControl
 			if( !RectOffset.Equals( value, this.layoutPadding ) )
 			{
 				this.layoutPadding = value;
-				arrangeTabs();
+				//arrangeTabs();
 			}
 		}
 	}
@@ -262,7 +262,7 @@ public class dfTabstrip : dfControl
 			pageContainer.AddTabPage();
 		}
 
-		arrangeTabs();
+		//arrangeTabs();
 		Invalidate();
 
 		return tab;
@@ -347,14 +347,14 @@ public class dfTabstrip : dfControl
 	{
 		base.OnControlAdded( child );
 		attachEvents( child );
-		arrangeTabs();
+		//arrangeTabs();
 	}
 
 	protected internal override void OnControlRemoved( dfControl child )
 	{
 		base.OnControlRemoved( child );
 		detachEvents( child );
-		arrangeTabs();
+		//arrangeTabs();
 	}
 
 	public override void OnEnable()
@@ -381,7 +381,7 @@ public class dfTabstrip : dfControl
 
 		if( isControlInvalidated )
 		{
-			arrangeTabs();
+			//arrangeTabs();
 		}
 
 		showSelectedTab();
@@ -573,7 +573,7 @@ public class dfTabstrip : dfControl
 		if( IsLayoutSuspended )
 			return;
 
-		arrangeTabs();
+		//arrangeTabs();
 		Invalidate();
 
 	}
