@@ -52,26 +52,24 @@ public class PowerLevelStart : MonoBehaviour {
 		FPCscript.lockCursor = false;
 		Screen.lockCursor = false;
 	}
-	
-	private void CheckMinigameEnd() {
-		if ((PersistantGlobalScript.minigameActive && !PersistantGlobalScript.minigameMouseover) || (PersistantGlobalScript.minigameActive)) {
-			PersistantGlobalScript.interactionEnabled = true;
-			PersistantGlobalScript.mouseLookEnabled = true;
-			PersistantGlobalScript.movementEnabled = true;
-			
-			SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
-			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
-			{
-				mouseLookScript.enabled = true;
-			}
-			
-			mainCamera.SetActive(true);
-			minigameCamera.SetActive(false);
-			
-			PersistantGlobalScript.minigameActive = false;
-			puzzleGUI.SetActive (false);
-			FPCscript.lockCursor = true;
+
+	public void EndMinigame() {
+		PersistantGlobalScript.interactionEnabled = true;
+		PersistantGlobalScript.mouseLookEnabled = true;
+		PersistantGlobalScript.movementEnabled = true;
+		
+		SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
+		foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
+		{
+			mouseLookScript.enabled = true;
 		}
+		
+		mainCamera.SetActive(true);
+		minigameCamera.SetActive(false);
+		
+		PersistantGlobalScript.minigameActive = false;
+		puzzleGUI.SetActive (false);
+		FPCscript.lockCursor = true;
 	}
-	
+
 }
