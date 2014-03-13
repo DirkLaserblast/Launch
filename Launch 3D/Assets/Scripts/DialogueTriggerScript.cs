@@ -17,23 +17,29 @@ public class DialogueTriggerScript : MonoBehaviour {
 	private int position = 1;
 	public bool read = false;
 
+	private float timer = 24f;
+	public AudioClip OhShitConversation;
+
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.tag == "Player" && !read)
 		{
-			PersistantGlobalScript.FreezeWorldForMenu = true;
+			audio.PlayOneShot(OhShitConversation);
+			//PersistantGlobalScript.FreezeWorldForMenu = true;
 
-			window.IsVisible = true;
+			/*window.IsVisible = true;
 			title.Text = titles[0];
 			name.Text = names[0];
-			content.Text = contents[0];
-			audio.PlayOneShot(radioSound);
+			content.Text = contents[0];*/
+			//audio.PlayOneShot(radioSound);
+		
+			StartCoroutine("TurnOff", timer);
 		}
 	}
 
-	void OnMouseUp ()
+	void EndVoice ()
 	{
-		if (position < contents.Length)
+		/*if (position < contents.Length)
 		{
 			title.Text = titles[position];
 			name.Text = names[position];
@@ -42,11 +48,16 @@ public class DialogueTriggerScript : MonoBehaviour {
 			audio.PlayOneShot(radioSound);
 		}
 		else if (!read)
-		{
-			window.IsVisible = false;
-			PersistantGlobalScript.FreezeWorldForMenu = false;
+		{*/
+			//window.IsVisible = false;
+			//PersistantGlobalScript.FreezeWorldForMenu = false;
 			read = true;
 			gameObject.SetActive(false);
-		}
+		//}
+	}
+
+	IEnumerator TurnOff(float t) {
+		yield return new WaitForSeconds(t);
+		EndVoice();
 	}
 }
