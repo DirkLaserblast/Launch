@@ -1060,7 +1060,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &80885086
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1181,7 +1180,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &83833451
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2809,7 +2807,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 5282754970c194df3baca063d2903cf4, type: 2}
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4935,7 +4933,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &318716914
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6004,7 +6001,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &393778046
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7836,7 +7832,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &464156656
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10466,7 +10461,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 693840168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.64003608e-09, y: -.0139389038, z: .711323261}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1045709049}
@@ -10647,7 +10642,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &705120665
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11888,6 +11882,7 @@ Transform:
   - {fileID: 171293916}
   - {fileID: 1476039978}
   - {fileID: 1046448755}
+  - {fileID: 1873027163}
   - {fileID: 1471517303}
   - {fileID: 1485015525}
   - {fileID: 1472243879}
@@ -13944,7 +13939,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &909163454
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14205,7 +14199,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &937165124
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14338,7 +14331,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &937511169
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14950,7 +14942,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &980729844
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16015,7 +16006,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1045709048}
-  m_LocalRotation: {x: -1.62920685e-07, y: 1.62920685e-07, z: 1, w: 2.65431496e-14}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16129,7 +16120,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   - {fileID: 2100000, guid: b879dc0f3cf1a22429b5616c1db7e149, type: 2}
   - {fileID: 2100000, guid: 347442e0c61e64853b48390fe7fbcc7d, type: 2}
   m_SubsetIndices: 
@@ -19344,7 +19335,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1302335521
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19540,7 +19530,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1303104694
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20717,7 +20706,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1422849673
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20947,19 +20935,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 779237549}
     m_Modifications:
     - target: {fileID: 400000, guid: 20abf96e936264a4aaca568405df87b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -17.1342163
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20abf96e936264a4aaca568405df87b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.177084446
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20abf96e936264a4aaca568405df87b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 34.8287888
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20abf96e936264a4aaca568405df87b2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -21801,7 +21789,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 5282754970c194df3baca063d2903cf4, type: 2}
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21890,7 +21878,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   - {fileID: 2100000, guid: 5282754970c194df3baca063d2903cf4, type: 2}
   - {fileID: 2100000, guid: 638642fe132d247c1bdb512f94d6dda1, type: 2}
   m_SubsetIndices: 
@@ -22027,7 +22015,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   - {fileID: 2100000, guid: 5282754970c194df3baca063d2903cf4, type: 2}
   - {fileID: 2100000, guid: 347442e0c61e64853b48390fe7fbcc7d, type: 2}
   m_SubsetIndices: 
@@ -23282,7 +23270,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1597561595
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25173,7 +25160,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1712811845
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25514,6 +25500,7 @@ MonoBehaviour:
   started: 0
   lockedDoor: {fileID: 1994626520}
   unlockedDoor: {fileID: 1597561592}
+  leverSound: {fileID: 0}
 --- !u!54 &1769266240
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26499,7 +26486,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1863961808
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26586,7 +26572,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d4756c865b7ce4a38bbe8f88d0b80c76, type: 2}
+  - {fileID: 2100000, guid: cbb5fb94080bf4ac28b101f8f3e47f83, type: 2}
   - {fileID: 2100000, guid: 5282754970c194df3baca063d2903cf4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -26611,10 +26597,10 @@ Transform:
   m_PrefabInternal: {fileID: 1438713283}
   m_GameObject: {fileID: 1873027158}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -17.1342163, y: -.177084446, z: 34.8287888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 779237549}
 --- !u!1 &1886478922
 GameObject:
   m_ObjectHideFlags: 0
@@ -26909,7 +26895,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1907538484
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28075,7 +28060,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1994626524
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28184,7 +28168,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &1995388111
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28727,7 +28710,6 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 0}
-  receptacle: {fileID: 0}
 --- !u!135 &2027451174
 SphereCollider:
   m_ObjectHideFlags: 0
