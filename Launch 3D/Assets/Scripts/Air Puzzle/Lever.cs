@@ -22,9 +22,9 @@ public class Lever : MonoBehaviour {
 		if (started && timeLeft > 0) {
 			timeLeft -= Time.deltaTime;
 			if(!flipped) {
-				transform.Rotate(0, 0, 60*Time.deltaTime);
+				transform.parent.transform.Rotate(0, 0, 90*Time.deltaTime);
 			} else {
-				transform.Rotate(0, 0, -60*Time.deltaTime);
+				transform.parent.transform.Rotate(0, 0, -90*Time.deltaTime);
 			}
 		}
 		if (timeLeft <= 0) {
