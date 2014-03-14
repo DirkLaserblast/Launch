@@ -10,9 +10,11 @@ public class DoorScript : MonoBehaviour {
 //	public Animation anim;
 	public Animator doorAnimator;
 	public bool locked;
+	public bool lowPower;
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
-
+	public AudioClip lowPowerSound;
+	public GameObject receptacle;
 
 	public bool isLocked
 	{
@@ -34,18 +36,43 @@ public class DoorScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		doorAnimator.SetBool ("Locked", locked);
+		doorAnimator.SetBool("Locked", locked);
+		doorAnimator.SetBool("lowPower", lowPower);
 	}
 
 	void OnTriggerExit (Collider other)
 	{
-		doorAnimator.SetBool("Open", false);
-		audio.PlayOneShot(doorCloseSound);
+		if (other.tag == "Player")
+		{
+			doorAnimator.SetBool("lowPower", lowPower);
+			doorAnimator.SetBool("Open", false);
+			if (!locked)
+			{
+				audio.Stop();
+				if (!lowPower) audio.PlayOneShot(doorCloseSound);
+				else audio.PlayOneShot(lowPowerSound);
+			}
+		}
+
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
-		doorAnimator.SetBool("Open", true);
-		if (!locked) audio.PlayOneShot(doorOpenSound);
+		if (receptacle != null)
+		{
+			isLocked = !receptacle.GetComponent<ReceptacleScript>().isPowered();
+		}
+
+		if (other.tag == "Player")
+		{
+			doorAnimator.SetBool("lowPower", lowPower);
+			doorAnimator.SetBool("Open", true);
+			if (!locked)
+			{
+				audio.Stop();
+				if (!lowPower) audio.PlayOneShot(doorOpenSound);
+				else audio.PlayOneShot(lowPowerSound);
+			}
+		}
 	}
 }

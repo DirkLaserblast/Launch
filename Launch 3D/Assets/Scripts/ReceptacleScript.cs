@@ -12,46 +12,59 @@ public class ReceptacleScript : MonoBehaviour {
 	/// </summary>
 	public GameObject hiddenReceptacleItem;
 	public GameObject indicator;
-	public bool enabled = true;
+	//public bool enabled = true;
+	public AudioClip engaged;
+	public AudioClip ejecting;
 
-	private bool powered;
+	private bool powered = false;
 
-	bool isPowered ()
+	public bool isPowered ()
 	{
+		//print (powered);
 		return powered;
 	}
-
+	
 	void OnTriggerEnter (Collider other)
 	{
-		print ("Triggered");
-		if (other.gameObject == receptacleItem && enabled)
+		//print ("Triggered");
+		//Cell engaged
+		if (other.gameObject == receptacleItem)
 		{
 			receptacleItem.transform.position = hiddenReceptacleItem.transform.position;
 			receptacleItem.SetActive(false);
 			hiddenReceptacleItem.SetActive(true);
-			indicator.GetComponent<MeshRenderer>().material.color = Color.green;
-			powered = true;
+			StartCoroutine("engage", 1.0f);
+			audio.PlayOneShot(engaged);
 		}
 	}
 
 	void OnMouseDown ()
 	{
-		print ("Eject");
-		if (powered)
-		{
+		//print ("Eject");
+		//Cell ejected
+//		if (powered)
+//		{
 			GetComponent<CapsuleCollider>().enabled = false;
 			hiddenReceptacleItem.SetActive(false);
 			receptacleItem.SetActive(true);
 			powered=false;
 			indicator.GetComponent<MeshRenderer>().material.color = Color.yellow;
-			StartCoroutine("wait", 3.0f);
-		}
+			audio.PlayOneShot(ejecting);
+			StartCoroutine("eject", 3.0f);
+//		}
 	}
 
-	IEnumerator wait (float time)
+	IEnumerator eject (float time)
 	{
 		yield return new WaitForSeconds(time);
 		GetComponent<CapsuleCollider>().enabled = true;
 		indicator.GetComponent<MeshRenderer>().material.color = Color.red;
+	}
+
+	IEnumerator engage (float time)
+	{
+		yield return new WaitForSeconds(time);
+		powered = true;
+		indicator.GetComponent<MeshRenderer>().material.color = Color.green;
 	}
 }
