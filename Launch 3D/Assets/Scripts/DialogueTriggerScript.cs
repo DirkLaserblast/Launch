@@ -17,8 +17,22 @@ public class DialogueTriggerScript : MonoBehaviour {
 	private int position = 1;
 	public bool read = false;
 
-	private float timer = 24f;
+	public float timer = 24f;
+	private bool playing = false;
+	public GameObject player;
+	private Rigidbody playerRB;
 	public AudioClip OhShitConversation;
+	public bool lockPlayer;
+
+	void Start() {
+		playerRB = player.GetComponent<Rigidbody>();
+	}
+
+	void Update() {
+		if (playing) {
+			transform.position = player.transform.position;
+		}
+	}
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -32,7 +46,12 @@ public class DialogueTriggerScript : MonoBehaviour {
 			name.Text = names[0];
 			content.Text = contents[0];*/
 			//audio.PlayOneShot(radioSound);
-		
+			playing = true;
+			if(lockPlayer) {
+				PersistantGlobalScript.mouseLookEnabled = false;
+				PersistantGlobalScript.movementEnabled = false;
+				playerRB.velocity = Vector3.zero;
+			}
 			StartCoroutine("TurnOff", timer);
 		}
 	}
@@ -52,6 +71,10 @@ public class DialogueTriggerScript : MonoBehaviour {
 			//window.IsVisible = false;
 			//PersistantGlobalScript.FreezeWorldForMenu = false;
 			read = true;
+			if(lockPlayer) {
+				PersistantGlobalScript.mouseLookEnabled = true;
+				PersistantGlobalScript.movementEnabled = true;
+			}
 			gameObject.SetActive(false);
 		//}
 	}

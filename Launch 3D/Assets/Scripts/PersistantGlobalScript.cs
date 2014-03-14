@@ -24,7 +24,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool dragEnabled = true;
 
 	public bool mActive = false;
-
+	
 	public static float dragThreshold = 0.3f;
 	/// <summary>
 	/// Turn camera when mouse reaches an edge
@@ -111,9 +111,5 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public void MinigameEventHanlder() {
 		minigameMouseover = false;
-	}
-
-	public void bar() {
-
 	}
 }
