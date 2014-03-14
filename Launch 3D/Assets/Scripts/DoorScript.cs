@@ -2,20 +2,20 @@
 using System.Collections;
 
 public class DoorScript : MonoBehaviour {
-
-//	public bool locked = false;
-//	public bool open = false;
-//	public AnimationClip openAnimation;
-//	public AnimationClip closeAnimation;
-//	public Animation anim;
+	
+	//	public bool locked = false;
+	//	public bool open = false;
+	//	public AnimationClip openAnimation;
+	//	public AnimationClip closeAnimation;
+	//	public Animation anim;
 	public Animator doorAnimator;
 	public bool locked;
 	public bool lowPower;
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
 	public AudioClip lowPowerSound;
-	public GameObject receptacle;
-
+	//public GameObject receptacle;
+	
 	public bool isLocked
 	{
 		get
@@ -30,16 +30,16 @@ public class DoorScript : MonoBehaviour {
 		}
 	}
 	
-
+	
 	private Animator anim;
-
-
+	
+	
 	// Use this for initialization
 	void Start () {
 		doorAnimator.SetBool("Locked", locked);
 		doorAnimator.SetBool("lowPower", lowPower);
 	}
-
+	
 	void OnTriggerExit (Collider other)
 	{
 		if (other.tag == "Player")
@@ -53,16 +53,12 @@ public class DoorScript : MonoBehaviour {
 				else audio.PlayOneShot(lowPowerSound);
 			}
 		}
-
+		
 	}
-
+	
 	void OnTriggerEnter (Collider other)
 	{
-		if (receptacle != null)
-		{
-			isLocked = !receptacle.GetComponent<ReceptacleScript>().isPowered();
-		}
-
+		
 		if (other.tag == "Player")
 		{
 			doorAnimator.SetBool("lowPower", lowPower);

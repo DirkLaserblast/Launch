@@ -11,8 +11,8 @@ public class Lever : MonoBehaviour {
 	public AudioClip leverSound;
 	private DoorScript lockedDoorScript;
 	private DoorScript unlockedDoorScript;
-	
-	
+
+
 	void Start () {
 		lockedDoorScript = lockedDoor.GetComponent<DoorScript> ();
 		unlockedDoorScript = unlockedDoor.GetComponent<DoorScript> ();
@@ -37,7 +37,7 @@ public class Lever : MonoBehaviour {
 	void OnMouseDown() {
 		started = true;
 	}
-	
+
 	void Toggle() {
 		audio.PlayOneShot(leverSound);
 		if (flipped) {

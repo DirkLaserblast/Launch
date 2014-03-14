@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ReceptacleScript : MonoBehaviour {
-	
+
 	/// <summary>
 	/// The item that should be placed in the receptacle
 	/// </summary>
@@ -16,9 +16,9 @@ public class ReceptacleScript : MonoBehaviour {
 	//public bool enabled = true;
 	public AudioClip engaged;
 	public AudioClip ejecting;
-	
+
 	private bool powered = false;
-	
+
 	public bool isPowered ()
 	{
 		//print (powered);
@@ -38,13 +38,13 @@ public class ReceptacleScript : MonoBehaviour {
 			audio.PlayOneShot(engaged);
 		}
 	}
-	
+
 	void OnMouseDown ()
 	{
 		//print ("Eject");
 		//Cell ejected
-		//		if (powered)
-		//		{
+//		if (powered)
+//		{
 		GetComponent<CapsuleCollider>().enabled = false;
 		hiddenReceptacleItem.SetActive(false);
 		receptacleItem.SetActive(true);
@@ -53,16 +53,16 @@ public class ReceptacleScript : MonoBehaviour {
 		indicator.GetComponent<MeshRenderer>().material.color = Color.yellow;
 		audio.PlayOneShot(ejecting);
 		StartCoroutine("eject", 3.0f);
-		//		}
+//		}
 	}
-	
+
 	IEnumerator eject (float time)
 	{
 		yield return new WaitForSeconds(time);
 		GetComponent<CapsuleCollider>().enabled = true;
 		indicator.GetComponent<MeshRenderer>().material.color = Color.red;
 	}
-	
+
 	IEnumerator engage (float time)
 	{
 		yield return new WaitForSeconds(time);
