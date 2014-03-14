@@ -3559,8 +3559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500024}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3574,8 +3577,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500004}
   locked: 1
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3589,8 +3595,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500016}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3604,8 +3613,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500028}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3619,8 +3631,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500038}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3634,8 +3649,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500010}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3649,8 +3667,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500020}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3664,8 +3685,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500032}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3679,8 +3703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500036}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3694,8 +3721,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500026}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3709,8 +3739,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500014}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3724,8 +3757,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500030}
   locked: 1
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3739,8 +3775,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500000}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3754,8 +3793,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500018}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3769,8 +3811,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500012}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3784,8 +3829,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500034}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3799,8 +3847,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500002}
   locked: 1
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3814,8 +3865,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500006}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3829,8 +3883,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500022}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3844,8 +3901,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500008}
   locked: 0
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 0}
+  receptacle: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3976,7 +4036,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13500022
 SphereCollider:
