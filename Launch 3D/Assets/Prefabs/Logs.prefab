@@ -81,6 +81,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 135: {fileID: 13500006}
   - 82: {fileID: 8200006}
+  - 114: {fileID: 11400016}
   m_Layer: 0
   m_Name: Log1Trigger
   m_TagString: Untagged
@@ -154,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.2563515, y: -2.4766283, z: -48.618206}
+  m_LocalPosition: {x: 15.9905214, y: -1.89515483, z: -48.1559944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -171,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8196888, y: -1.44024134, z: -9.28959274}
+  m_LocalPosition: {x: -1.8196888, y: -1.67280447, z: -9.28959274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -193,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.8024044, y: -2.21842051, z: -32.6224251}
+  m_LocalPosition: {x: -11.8024044, y: -3.23685789, z: -34.2180824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -204,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.38414764, y: -.0639910698, z: 7.50339127}
+  m_LocalPosition: {x: 9.38414669, y: -.336801171, z: 7.50339127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -724,6 +725,21 @@ MonoBehaviour:
   player: {fileID: 0}
   OhShitConversation: {fileID: 8300000, guid: a974ec9e85ada4cfdbccd2d7d00d33b5, type: 3}
   lockPlayer: 0
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a167ca8aca1495ca1d7e17ac38d2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights: {fileID: 0}
+  redLights: {fileID: 0}
+  flashlight: {fileID: 0}
+  pointlight: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
