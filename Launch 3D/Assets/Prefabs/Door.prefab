@@ -43,9 +43,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -2.83122034e-07}
-  m_LocalPosition: {x: 23.0995369, y: -2.12608242, z: -32}
-  m_LocalScale: {x: .658978939, y: .879115164, z: .225474507}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -5.00080109, y: -.328420877, z: -41.0320206}
+  m_LocalScale: {x: .658978939, y: .879115164, z: .225474522}
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
@@ -187,9 +187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 9500000}
-  locked: 0
+  locked: 1
+  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

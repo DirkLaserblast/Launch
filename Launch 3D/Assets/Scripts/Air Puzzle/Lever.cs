@@ -8,6 +8,7 @@ public class Lever : MonoBehaviour {
 	public bool started = false;
 	public GameObject lockedDoor;
 	public GameObject unlockedDoor;
+	public AudioClip leverSound;
 	private DoorScript lockedDoorScript;
 	private DoorScript unlockedDoorScript;
 
@@ -38,6 +39,7 @@ public class Lever : MonoBehaviour {
 	}
 
 	void Toggle() {
+		audio.PlayOneShot(leverSound);
 		if (flipped) {
 			flipped = false;
 			lockedDoorScript.isLocked = true;
