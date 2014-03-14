@@ -24,10 +24,15 @@ public class ReceptacleScript : MonoBehaviour {
 		//print (powered);
 		return powered;
 	}
-	
+
+	void Start ()
+	{
+		door.GetComponent<DoorScript>().isLocked = !powered;
+	}
+
 	void OnTriggerEnter (Collider other)
 	{
-		//print ("Triggered");
+		print ("Triggered");
 		//Cell engaged
 		if (other.gameObject == receptacleItem)
 		{
@@ -41,7 +46,7 @@ public class ReceptacleScript : MonoBehaviour {
 	
 	void OnMouseDown ()
 	{
-		//print ("Eject");
+		print ("Eject");
 		//Cell ejected
 		//		if (powered)
 		//		{
