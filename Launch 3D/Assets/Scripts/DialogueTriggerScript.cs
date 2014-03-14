@@ -21,7 +21,8 @@ public class DialogueTriggerScript : MonoBehaviour {
 	private bool playing = false;
 	public GameObject player;
 	private Rigidbody playerRB;
-	public AudioClip OhShitConversation;
+	public AudioClip voiceOver;
+	public AudioClip music;
 	public bool lockPlayer;
 
 	void Start() {
@@ -38,7 +39,8 @@ public class DialogueTriggerScript : MonoBehaviour {
 	{
 		if (other.tag == "Player" && !read)
 		{
-			audio.PlayOneShot(OhShitConversation);
+			audio.PlayOneShot(voiceOver);
+			if (music != null) Camera.main.audio.PlayOneShot(music);
 			//PersistantGlobalScript.FreezeWorldForMenu = true;
 
 			/*window.IsVisible = true;

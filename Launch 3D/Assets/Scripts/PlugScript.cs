@@ -10,6 +10,8 @@ public class PlugScript : MonoBehaviour {
 	private DoorScript doorScript;
 	private PlugScript otherPlugScript;
 	public bool pluggedIn;
+	public AudioClip pluggedSound;
+	public AudioClip successSound;
 
 	void Start() {
 		otherPlugScript = otherPlug.GetComponent<PlugScript> ();
@@ -22,8 +24,10 @@ public class PlugScript : MonoBehaviour {
 			duration -= Time.deltaTime;
 			if(duration <= 0) {
 				pluggedIn = true;
+				audio.PlayOneShot(pluggedSound);
 				if(otherPlugScript.pluggedIn) {
 					doorScript.isLocked = false;
+					audio.PlayOneShot(successSound);
 				}
 			}
 		}
