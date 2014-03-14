@@ -4,6 +4,7 @@ using System.Collections;
 public class Panel : MonoBehaviour {
 	public double timeLeft = 1f;
 	public bool started = false;
+	public AudioClip openPanel;
 
 	void Start () {
 
@@ -18,5 +19,6 @@ public class Panel : MonoBehaviour {
 
 	void OnMouseDown() {
 		started = true;
+		audio.PlayOneShot(openPanel);
 	}
 }

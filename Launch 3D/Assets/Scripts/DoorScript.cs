@@ -25,7 +25,7 @@ public class DoorScript : MonoBehaviour {
 		}
 		set
 		{
-			print (value);
+			//print (value);
 			locked = value;
 			doorAnimator.SetBool("Locked", locked);
 		}
