@@ -44,15 +44,18 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
+		if(PersistantGlobalScript.movementEnabled) {
 		if (Input.GetMouseButtonUp(0))
 		{
 			Screen.lockCursor = lockCursor;
+		}
 		}
 	}
 	
 	
 	public void FixedUpdate ()
 	{
+		if(PersistantGlobalScript.movementEnabled) {
 		float speed = runSpeed;
 
 		// Read input
@@ -147,7 +150,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 	}
 
-	
+	}
 	//used for comparing distances
 	class RayHitComparer: IComparer
 	{

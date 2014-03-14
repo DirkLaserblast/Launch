@@ -332,10 +332,10 @@ function FixedUpdate () {
 }
 
 function Update () {
-	if (PersistantGlobalScript.movementEnabled) {
+//	if (PersistantGlobalScript.movementEnabled) {
 		if (!useFixedUpdate) {
 			UpdateFunction();
-		}
+//		}
 	}
 }
 

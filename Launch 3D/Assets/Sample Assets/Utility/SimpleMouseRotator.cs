@@ -34,7 +34,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(PersistantGlobalScript.mouseLookEnabled) {
 		// we make initial calculations from the original local rotation
 		transform.localRotation = originalRotation;
 
@@ -103,6 +103,8 @@ public class SimpleMouseRotator : MonoBehaviour {
 		transform.localRotation = originalRotation * Quaternion.Euler( -followAngles.x, followAngles.y, 0 );
 		
 	}
+	}
+
 
 
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Panel : MonoBehaviour {
-	public double timeLeft = 3f;
+	public double timeLeft = 1f;
 	public bool started = false;
 
 	void Start () {
@@ -12,7 +12,7 @@ public class Panel : MonoBehaviour {
 	void Update () {
 		if (started && timeLeft > 0) {
 			timeLeft -= Time.deltaTime;
-			transform.Rotate(0, 110*Time.deltaTime, 0);
+			transform.parent.transform.Rotate(0, 120*Time.deltaTime, 0);
 		}
 	}
 
