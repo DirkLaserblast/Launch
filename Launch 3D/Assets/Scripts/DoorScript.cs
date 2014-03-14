@@ -14,7 +14,7 @@ public class DoorScript : MonoBehaviour {
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
 	public AudioClip lowPowerSound;
-	//public GameObject receptacle;
+	public GameObject receptacle;
 
 	public bool isLocked
 	{
@@ -58,6 +58,10 @@ public class DoorScript : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
+		if (receptacle != null)
+		{
+			isLocked = !receptacle.GetComponent<ReceptacleScript>().isPowered();
+		}
 
 		if (other.tag == "Player")
 		{

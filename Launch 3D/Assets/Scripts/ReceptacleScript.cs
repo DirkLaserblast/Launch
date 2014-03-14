@@ -12,7 +12,6 @@ public class ReceptacleScript : MonoBehaviour {
 	/// </summary>
 	public GameObject hiddenReceptacleItem;
 	public GameObject indicator;
-	public GameObject door;
 	//public bool enabled = true;
 	public AudioClip engaged;
 	public AudioClip ejecting;
@@ -45,14 +44,13 @@ public class ReceptacleScript : MonoBehaviour {
 		//Cell ejected
 //		if (powered)
 //		{
-		GetComponent<CapsuleCollider>().enabled = false;
-		hiddenReceptacleItem.SetActive(false);
-		receptacleItem.SetActive(true);
-		powered=false;
-		door.GetComponent<DoorScript>().isLocked = true;
-		indicator.GetComponent<MeshRenderer>().material.color = Color.yellow;
-		audio.PlayOneShot(ejecting);
-		StartCoroutine("eject", 3.0f);
+			GetComponent<CapsuleCollider>().enabled = false;
+			hiddenReceptacleItem.SetActive(false);
+			receptacleItem.SetActive(true);
+			powered=false;
+			indicator.GetComponent<MeshRenderer>().material.color = Color.yellow;
+			audio.PlayOneShot(ejecting);
+			StartCoroutine("eject", 3.0f);
 //		}
 	}
 
@@ -67,7 +65,6 @@ public class ReceptacleScript : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(time);
 		powered = true;
-		door.GetComponent<DoorScript>().isLocked = false;
 		indicator.GetComponent<MeshRenderer>().material.color = Color.green;
 	}
 }

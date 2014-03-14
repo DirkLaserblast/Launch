@@ -261,7 +261,7 @@ GameObject:
   - 114: {fileID: 83208997}
   - 82: {fileID: 83208996}
   m_Layer: 0
-  m_Name: Receptacle Door
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,11 +353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 414340691}
   locked: 1
-  lowPower: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
-  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
-  receptacle: {fileID: 264936029}
 --- !u!135 &83208998
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -647,8 +644,7 @@ MonoBehaviour:
   receptacleItem: {fileID: 1850509475}
   hiddenReceptacleItem: {fileID: 1745075091}
   indicator: {fileID: 599233234}
-  engaged: {fileID: 0}
-  ejecting: {fileID: 0}
+  enabled: 1
 --- !u!136 &264936032
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3121,18 +3117,6 @@ Prefab:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c4faba882371948a4974ddb0a86d0cc3, type: 2}
-      propertyPath: m_Name
-      value: Receptacle Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: c4faba882371948a4974ddb0a86d0cc3, type: 2}
-      propertyPath: lowPowerSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
-    - target: {fileID: 11400000, guid: c4faba882371948a4974ddb0a86d0cc3, type: 2}
-      propertyPath: receptacle
-      value: 
-      objectReference: {fileID: 264936029}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4faba882371948a4974ddb0a86d0cc3, type: 2}
   m_RootGameObject: {fileID: 83208994}
@@ -3842,7 +3826,7 @@ Transform:
   m_PrefabInternal: {fileID: 1937417894}
   m_GameObject: {fileID: 1291267316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1109653421}
@@ -5500,7 +5484,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .00111111114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -5512,7 +5496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .00111111114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 4fcfef1441d2048f69d5cd39461af241, type: 2}
       propertyPath: m_IsActive
