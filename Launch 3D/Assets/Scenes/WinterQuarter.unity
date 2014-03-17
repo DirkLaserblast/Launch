@@ -12083,7 +12083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aaa3f5f2d574f228e4a21aa38b61e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
+  mode: 1
   showGeneratedNormals: 0
   offsetScale: .200000003
   blurRadius: 18
@@ -21559,7 +21559,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e773281c06b5e024db5e1a4f549afe5d, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23783,7 +23783,25 @@ Prefab:
       propertyPath: ventsPowerDown
       value: 
       objectReference: {fileID: 8300000, guid: e409d6b0d12dc45bc84a26826408e0a8, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: log1
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ec9aa008d01b4208928c5aba258714f, type: 3}
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: timeout
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 354c126c9dbf44b508acd126b44c2c2a, type: 3}
+    - target: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400004, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+    - {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
   m_RootGameObject: {fileID: 1555749458}
   m_IsPrefabParent: 0
@@ -25701,7 +25719,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569362025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1301321015}
@@ -26505,7 +26523,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1622125312}
-  - 114: {fileID: 1622125315}
   - 135: {fileID: 1622125314}
   - 82: {fileID: 1622125313}
   - 114: {fileID: 1622125316}
@@ -26599,32 +26616,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1622125315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240,
-    type: 2}
-  m_PrefabInternal: {fileID: 1433031442}
-  m_GameObject: {fileID: 1622125311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c966cf7fcc824d86b5c12d20f9d95ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
-  title: {fileID: 0}
-  name: {fileID: 0}
-  content: {fileID: 0}
-  titles: []
-  names: []
-  contents: []
-  radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
-  read: 0
-  timer: 32
-  player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: 5ec9aa008d01b4208928c5aba258714f, type: 3}
-  music: {fileID: 8300000, guid: 8d5e142209f894e9aa2776ee5d64c789, type: 3}
-  lockPlayer: 0
 --- !u!114 &1622125316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26644,6 +26635,9 @@ MonoBehaviour:
   ventsPowerDown: {fileID: 8300000, guid: e409d6b0d12dc45bc84a26826408e0a8, type: 3}
   flashlight: {fileID: 1045709048}
   pointlight: {fileID: 787281533}
+  log1: {fileID: 8300000, guid: 5ec9aa008d01b4208928c5aba258714f, type: 3}
+  music: {fileID: 8300000, guid: 354c126c9dbf44b508acd126b44c2c2a, type: 3}
+  timeout: 32
 --- !u!1 &1626989808
 GameObject:
   m_ObjectHideFlags: 0
@@ -28990,9 +28984,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1791858111}
-  - 114: {fileID: 1791858114}
   - 135: {fileID: 1791858113}
   - 82: {fileID: 1791858112}
+  - 114: {fileID: 1791858114}
   m_Layer: 0
   m_Name: Log2Trigger
   m_TagString: Untagged
@@ -29086,9 +29080,8 @@ SphereCollider:
 --- !u!114 &1791858114
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 9ad84f292e1c5415b939769eabeaa240,
-    type: 2}
-  m_PrefabInternal: {fileID: 1433031442}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791858110}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -29104,7 +29097,7 @@ MonoBehaviour:
   contents: []
   radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
   read: 0
-  timer: 25
+  timer: 29
   player: {fileID: 2060966092}
   voiceOver: {fileID: 8300000, guid: ce5417e4d30b44ab8b3b9a35ac89ce17, type: 3}
   music: {fileID: 0}
