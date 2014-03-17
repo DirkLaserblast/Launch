@@ -9,6 +9,7 @@ public class PuzzleComplete : MonoBehaviour {
 	public GameObject redLights;
 	public GameObject flashlight;
 	public GameObject pointlight;
+	public GameObject doors;
 	
 	// Update is called once per frame
 	void Awake () {
@@ -18,5 +19,12 @@ public class PuzzleComplete : MonoBehaviour {
 		lights.SetActive (true);
 		flashlight.SetActive (false);
 		pointlight.SetActive (false);
+
+		
+
+		foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
+		{
+			dscript.lowPower = false;
+		}
 	}
 }
