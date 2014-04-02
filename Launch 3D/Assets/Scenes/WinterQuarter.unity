@@ -725,7 +725,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 39281722}
-  renderOrder: 66
+  renderOrder: 62
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -921,7 +921,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 68564761}
-  renderOrder: 40
+  renderOrder: 36
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
       right: .797169805
       bottom: .458333343
     owner: {fileID: 70043815}
-  renderOrder: 91
+  renderOrder: 15
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -1124,7 +1124,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1244,7 +1244,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Water
   textAlign: 1
@@ -3233,7 +3233,7 @@ MonoBehaviour:
       right: 520
       bottom: -55
     owner: {fileID: 182840005}
-  renderOrder: 85
+  renderOrder: 9
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -3462,7 +3462,7 @@ MonoBehaviour:
       right: 335
       bottom: 336
     owner: {fileID: 198681850}
-  renderOrder: 74
+  renderOrder: 70
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -3919,7 +3919,7 @@ MonoBehaviour:
       right: 262
       bottom: 630
     owner: {fileID: 250228267}
-  renderOrder: 70
+  renderOrder: 66
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -4264,7 +4264,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 273825565}
-  renderOrder: 67
+  renderOrder: 63
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -4406,7 +4406,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 275616622}
-  renderOrder: 61
+  renderOrder: 57
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -4606,7 +4606,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 279853200}
-  renderOrder: 33
+  renderOrder: 29
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -4844,7 +4844,7 @@ MonoBehaviour:
   read: 0
   timer: 29
   player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: bdc531a095f8f488db8b9255b7a74217, type: 3}
+  voiceOver: {fileID: 8300000, guid: db3e71a8d49494f94ae59dc13f8a9d6e, type: 3}
   music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
   lockPlayer: 0
 --- !u!1 &286449390
@@ -5081,7 +5081,7 @@ MonoBehaviour:
       right: 286.996094
       bottom: 630
     owner: {fileID: 290672354}
-  renderOrder: 49
+  renderOrder: 45
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -5367,7 +5367,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 312567805}
-  renderOrder: 25
+  renderOrder: 21
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -5577,7 +5577,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6305,7 +6305,7 @@ MonoBehaviour:
       right: 208.996094
       bottom: 630
     owner: {fileID: 355793491}
-  renderOrder: 42
+  renderOrder: 38
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -6763,7 +6763,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 393114540}
-  renderOrder: 75
+  renderOrder: 71
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -6833,7 +6833,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7004,7 +7004,7 @@ MonoBehaviour:
       right: 19.2307739
       bottom: 13
     owner: {fileID: 399706568}
-  renderOrder: 82
+  renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -7190,7 +7190,7 @@ MonoBehaviour:
       right: 268.5
       bottom: 644
     owner: {fileID: 406384179}
-  renderOrder: 28
+  renderOrder: 24
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -7467,7 +7467,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Heating
   textAlign: 1
@@ -7951,7 +7951,7 @@ MonoBehaviour:
       right: 575
       bottom: 72
     owner: {fileID: 425841947}
-  renderOrder: 78
+  renderOrder: 2
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -8102,7 +8102,7 @@ MonoBehaviour:
   read: 0
   timer: 35
   player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: 0227b089147c1df4a91a88456ed9e47b, type: 3}
+  voiceOver: {fileID: 8300000, guid: 6af659089fa694faea4fbd50ed9cca5f, type: 3}
   music: {fileID: 0}
   lockPlayer: 1
 --- !u!1 &439452712
@@ -8185,7 +8185,7 @@ MonoBehaviour:
       right: 316.449219
       bottom: -2.00390625
     owner: {fileID: 439452715}
-  renderOrder: 58
+  renderOrder: 54
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -8589,7 +8589,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Lighting
   textAlign: 1
@@ -8665,7 +8665,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9036,7 +9036,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 470669695}
-  renderOrder: 68
+  renderOrder: 64
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -9264,7 +9264,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 502364280}
-  renderOrder: 31
+  renderOrder: 27
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -9565,7 +9565,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 552893087}
-  renderOrder: 36
+  renderOrder: 32
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -9728,7 +9728,7 @@ MonoBehaviour:
       right: 508
       bottom: 384
     owner: {fileID: 553674422}
-  renderOrder: 90
+  renderOrder: 14
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -10299,7 +10299,7 @@ MonoBehaviour:
       right: .938688457
       bottom: .840938687
     owner: {fileID: 615414892}
-  renderOrder: 93
+  renderOrder: 17
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -10497,7 +10497,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 616832516}
-  renderOrder: 57
+  renderOrder: 53
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -10755,7 +10755,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Communications
   textAlign: 1
@@ -10949,7 +10949,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 621970775}
-  renderOrder: 62
+  renderOrder: 58
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -11215,7 +11215,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 649147283}
-  renderOrder: 71
+  renderOrder: 67
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -11405,7 +11405,7 @@ MonoBehaviour:
       right: 82.9960938
       bottom: 72.453125
     owner: {fileID: 663010193}
-  renderOrder: 77
+  renderOrder: 73
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -11570,7 +11570,7 @@ MonoBehaviour:
   read: 0
   timer: 29
   player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: a974ec9e85ada4cfdbccd2d7d00d33b5, type: 3}
+  voiceOver: {fileID: 8300000, guid: fc88b8b1cb8f14f66884de97cc0c1a4c, type: 3}
   music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
   lockPlayer: 0
 --- !u!1 &693840168
@@ -12205,7 +12205,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12533,7 +12533,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Analysis Equipment
   textAlign: 1
@@ -13231,7 +13231,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 761732357}
-  renderOrder: 46
+  renderOrder: 42
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -13509,7 +13509,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 1
+  state: 4
   group: {fileID: 0}
   text: Diagnostics
   textAlign: 1
@@ -13651,6 +13651,96 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &788786978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 788786983}
+  - 33: {fileID: 788786982}
+  - 136: {fileID: 788786981}
+  - 23: {fileID: 788786980}
+  - 54: {fileID: 788786979}
+  m_Layer: 0
+  m_Name: Power Cell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &788786979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995,
+    type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  m_GameObject: {fileID: 788786978}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &788786980
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995,
+    type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  m_GameObject: {fileID: 788786978}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!136 &788786981
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13600000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995,
+    type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  m_GameObject: {fileID: 788786978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &788786982
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995,
+    type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  m_GameObject: {fileID: 788786978}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &788786983
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+  m_PrefabInternal: {fileID: 1931721850}
+  m_GameObject: {fileID: 788786978}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.8541279, y: -5.08129025, z: -81.772522}
+  m_LocalScale: {x: .228432015, y: .228432015, z: .228431985}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &796446329
 GameObject:
   m_ObjectHideFlags: 0
@@ -14660,7 +14750,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 851813932}
-  renderOrder: 32
+  renderOrder: 28
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -14785,7 +14875,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 851823167}
-  renderOrder: 34
+  renderOrder: 30
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -14905,7 +14995,7 @@ MonoBehaviour:
       right: .973466396
       bottom: .949999988
     owner: {fileID: 868459921}
-  renderOrder: 80
+  renderOrder: 4
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   texture: {fileID: 2800000, guid: f3116b3a3391f41b6b17ce5a02e72a05, type: 3}
@@ -15125,7 +15215,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 891745821}
-  renderOrder: 47
+  renderOrder: 43
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -15391,13 +15481,14 @@ GameObject:
   - 114: {fileID: 900178207}
   - 114: {fileID: 900178209}
   - 114: {fileID: 900178208}
+  - 82: {fileID: 900178210}
   m_Layer: 12
   m_Name: PowerLevelPuzzleGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &900178204
 Transform:
   m_ObjectHideFlags: 0
@@ -15516,6 +15607,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerLabel: {fileID: 1226016441}
   soundEffect: {fileID: 8300000, guid: cc3f9d9633adb4ff493f074b04bcfc38, type: 3}
+--- !u!82 &900178210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900178203}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &905574798
 GameObject:
   m_ObjectHideFlags: 0
@@ -15583,7 +15732,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 905574800}
-  renderOrder: 45
+  renderOrder: 41
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -15746,7 +15895,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.003906
     owner: {fileID: 907805424}
-  renderOrder: 64
+  renderOrder: 60
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -15808,7 +15957,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16030,7 +16179,7 @@ MonoBehaviour:
       right: .777777791
       bottom: .833333313
     owner: {fileID: 936726162}
-  renderOrder: 87
+  renderOrder: 11
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   texture: {fileID: 0}
@@ -16068,7 +16217,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16200,7 +16349,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16557,7 +16706,7 @@ MonoBehaviour:
       right: 665
       bottom: 127
     owner: {fileID: 947001065}
-  renderOrder: 81
+  renderOrder: 5
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -16751,7 +16900,7 @@ MonoBehaviour:
       right: 370
       bottom: 200
     owner: {fileID: 965934920}
-  renderOrder: 89
+  renderOrder: 13
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -16957,7 +17106,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17060,6 +17209,7 @@ GameObject:
   - 65: {fileID: 981794669}
   - 23: {fileID: 981794668}
   - 114: {fileID: 981794667}
+  - 82: {fileID: 981794671}
   m_Layer: 11
   m_Name: Front
   m_TagString: Untagged
@@ -17136,6 +17286,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1953193621}
   m_GameObject: {fileID: 981794665}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &981794671
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 981794665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &983508059
 GameObject:
   m_ObjectHideFlags: 0
@@ -17509,7 +17717,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 1005695632}
-  renderOrder: 29
+  renderOrder: 25
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -17723,7 +17931,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 1019919623}
-  renderOrder: 52
+  renderOrder: 48
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -17863,7 +18071,7 @@ MonoBehaviour:
       right: .747641504
       bottom: .840909064
     owner: {fileID: 1029673108}
-  renderOrder: 94
+  renderOrder: 18
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -18118,7 +18326,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 1035114039}
-  renderOrder: 50
+  renderOrder: 46
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -18672,7 +18880,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 1102731691}
-  renderOrder: 69
+  renderOrder: 65
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -18895,7 +19103,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 1127552141}
-  renderOrder: 27
+  renderOrder: 23
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -18988,7 +19196,7 @@ MonoBehaviour:
       right: 226.996094
       bottom: 644
     owner: {fileID: 1132297645}
-  renderOrder: 56
+  renderOrder: 52
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -19368,7 +19576,7 @@ MonoBehaviour:
       right: 0
       bottom: 672
     owner: {fileID: 1154026163}
-  renderOrder: 84
+  renderOrder: 8
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -19492,7 +19700,7 @@ MonoBehaviour:
       right: 669.958679
       bottom: 16
     owner: {fileID: 1159622546}
-  renderOrder: 79
+  renderOrder: 3
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -19600,8 +19808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 1
   started: 0
-  lockedDoor: {fileID: 1863961805}
-  unlockedDoor: {fileID: 1994626520}
+  lockedDoor: {fileID: 1994626520}
+  unlockedDoor: {fileID: 1597561592}
   leverSound: {fileID: 8300000, guid: e420c4ed8d976451991f1de363da733f, type: 3}
 --- !u!65 &1169631944
 BoxCollider:
@@ -19972,7 +20180,7 @@ MonoBehaviour:
       right: 537
       bottom: -2.00390625
     owner: {fileID: 1194037720}
-  renderOrder: 72
+  renderOrder: 68
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -20132,7 +20340,7 @@ MonoBehaviour:
   read: 0
   timer: 29
   player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: 5e780153b7c234f0ca32e231cad1c8e0, type: 3}
+  voiceOver: {fileID: 8300000, guid: 6b9e0ee6b5efc4b38a0c95d96012175a, type: 3}
   music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
   lockPlayer: 0
 --- !u!1 &1217918576
@@ -20762,7 +20970,7 @@ MonoBehaviour:
     margins:
       left: 121.003906
       top: 307.246094
-      right: 120.996094
+      right: 93.9960938
       bottom: 532.753906
     owner: {fileID: 1226016441}
   renderOrder: 23
@@ -21126,7 +21334,7 @@ MonoBehaviour:
       right: 481.449219
       bottom: -2.00390625
     owner: {fileID: 1242352587}
-  renderOrder: 30
+  renderOrder: 26
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -21152,7 +21360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1272937949
 Transform:
   m_ObjectHideFlags: 0
@@ -21249,7 +21457,7 @@ MonoBehaviour:
   redLights: {fileID: 1669396250}
   flashlight: {fileID: 1045709048}
   pointlight: {fileID: 787281533}
-  doors: {fileID: 0}
+  doors: {fileID: 1482881261}
 --- !u!1 &1283352524
 GameObject:
   m_ObjectHideFlags: 0
@@ -21334,7 +21542,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 1283352527}
-  renderOrder: 55
+  renderOrder: 51
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -21494,7 +21702,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 1290716250}
-  renderOrder: 41
+  renderOrder: 37
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -21662,31 +21870,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: e773281c06b5e024db5e1a4f549afe5d, type: 2}
-  - {fileID: 2100000, guid: 5ddffabbcdbcb3240b185e41f59b6f69, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21848,7 +22031,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 1301364122}
-  renderOrder: 38
+  renderOrder: 34
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -21899,7 +22082,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22094,7 +22277,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22392,7 +22575,7 @@ MonoBehaviour:
       right: 50
       bottom: 49.9960938
     owner: {fileID: 1332580996}
-  renderOrder: 26
+  renderOrder: 22
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -22546,7 +22729,7 @@ MonoBehaviour:
       right: 206.449219
       bottom: -2.00390625
     owner: {fileID: 1337761149}
-  renderOrder: 65
+  renderOrder: 61
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -22897,7 +23080,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: button-normal
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Exit
   textAlign: 0
@@ -23377,7 +23560,7 @@ MonoBehaviour:
       right: 52.4960938
       bottom: 268.839844
     owner: {fileID: 1414522758}
-  renderOrder: 54
+  renderOrder: 50
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -23585,7 +23768,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23873,7 +24056,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
-      objectReference: {fileID: 8300000, guid: 0227b089147c1df4a91a88456ed9e47b, type: 3}
+      objectReference: {fileID: 8300000, guid: 6af659089fa694faea4fbd50ed9cca5f, type: 3}
     - target: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
@@ -23881,19 +24064,19 @@ Prefab:
     - target: {fileID: 11400004, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
-      objectReference: {fileID: 8300000, guid: ce5417e4d30b44ab8b3b9a35ac89ce17, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b49f15a79729450ebc5bc20668e4d8f, type: 3}
     - target: {fileID: 11400014, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
-      objectReference: {fileID: 8300000, guid: a974ec9e85ada4cfdbccd2d7d00d33b5, type: 3}
+      objectReference: {fileID: 8300000, guid: fc88b8b1cb8f14f66884de97cc0c1a4c, type: 3}
     - target: {fileID: 11400010, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
-      objectReference: {fileID: 8300000, guid: 5e780153b7c234f0ca32e231cad1c8e0, type: 3}
+      objectReference: {fileID: 8300000, guid: 6b9e0ee6b5efc4b38a0c95d96012175a, type: 3}
     - target: {fileID: 11400006, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: voiceOver
       value: 
-      objectReference: {fileID: 8300000, guid: bdc531a095f8f488db8b9255b7a74217, type: 3}
+      objectReference: {fileID: 8300000, guid: db3e71a8d49494f94ae59dc13f8a9d6e, type: 3}
     - target: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
       propertyPath: music
       value: 
@@ -23926,7 +24109,32 @@ Prefab:
       propertyPath: music
       value: 
       objectReference: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: log1
+      value: 
+      objectReference: {fileID: 8300000, guid: 92ea70f18eaa74326aafc18de5be458e, type: 3}
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: timeout
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2060966092}
+    m_RemovedComponents:
+    - {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9ad84f292e1c5415b939769eabeaa240, type: 2}
   m_RootGameObject: {fileID: 1555749458}
   m_IsPrefabParent: 0
@@ -24055,7 +24263,7 @@ MonoBehaviour:
       right: .62951386
       bottom: .074444443
     owner: {fileID: 1445984612}
-  renderOrder: 88
+  renderOrder: 12
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -24241,7 +24449,7 @@ MonoBehaviour:
       right: 288
       bottom: 630
     owner: {fileID: 1452692772}
-  renderOrder: 63
+  renderOrder: 59
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -24519,7 +24727,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Ventilation
   textAlign: 1
@@ -26029,7 +26237,7 @@ MonoBehaviour:
       right: 316.449219
       bottom: -2.00390625
     owner: {fileID: 1570674794}
-  renderOrder: 37
+  renderOrder: 33
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -26236,7 +26444,7 @@ MonoBehaviour:
       right: 316.5
       bottom: 126.289062
     owner: {fileID: 1580404171}
-  renderOrder: 76
+  renderOrder: 72
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -26246,7 +26454,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: button-normal
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Run Diagnostics
   textAlign: 0
@@ -26375,7 +26583,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -26627,7 +26835,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 1616451005}
-  renderOrder: 48
+  renderOrder: 44
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -26648,7 +26856,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1622125312}
-  - 114: {fileID: 1622125315}
   - 135: {fileID: 1622125314}
   - 82: {fileID: 1622125313}
   - 114: {fileID: 1622125316}
@@ -26742,32 +26949,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1622125315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 9ad84f292e1c5415b939769eabeaa240,
-    type: 2}
-  m_PrefabInternal: {fileID: 1433031442}
-  m_GameObject: {fileID: 1622125311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c966cf7fcc824d86b5c12d20f9d95ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
-  title: {fileID: 0}
-  name: {fileID: 0}
-  content: {fileID: 0}
-  titles: []
-  names: []
-  contents: []
-  radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
-  read: 0
-  timer: 32
-  player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: 5ec9aa008d01b4208928c5aba258714f, type: 3}
-  music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
-  lockPlayer: 0
 --- !u!114 &1622125316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26787,6 +26968,10 @@ MonoBehaviour:
   ventsPowerDown: {fileID: 8300000, guid: e409d6b0d12dc45bc84a26826408e0a8, type: 3}
   flashlight: {fileID: 1045709048}
   pointlight: {fileID: 787281533}
+  log1: {fileID: 8300000, guid: 92ea70f18eaa74326aafc18de5be458e, type: 3}
+  music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
+  timeout: 32
+  player: {fileID: 2060966092}
 --- !u!1 &1626989808
 GameObject:
   m_ObjectHideFlags: 0
@@ -26867,7 +27052,7 @@ MonoBehaviour:
       right: 638.097656
       bottom: 174.972656
     owner: {fileID: 1626989811}
-  renderOrder: 83
+  renderOrder: 7
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -27120,7 +27305,7 @@ MonoBehaviour:
   focusSprite: 
   font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: 
-  state: 0
+  state: 4
   group: {fileID: 0}
   text: Systems
   textAlign: 1
@@ -27371,7 +27556,7 @@ MonoBehaviour:
       right: 426.449219
       bottom: -2.00390625
     owner: {fileID: 1652616873}
-  renderOrder: 51
+  renderOrder: 47
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -27659,7 +27844,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 1678873655}
-  renderOrder: 59
+  renderOrder: 55
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -27748,7 +27933,7 @@ MonoBehaviour:
       right: 219
       bottom: 630
     owner: {fileID: 1680321483}
-  renderOrder: 35
+  renderOrder: 31
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -28214,7 +28399,7 @@ MonoBehaviour:
       right: 145
       bottom: 436.007812
     owner: {fileID: 1691698908}
-  renderOrder: 43
+  renderOrder: 39
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -28543,7 +28728,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -29249,7 +29434,7 @@ MonoBehaviour:
   read: 0
   timer: 25
   player: {fileID: 2060966092}
-  voiceOver: {fileID: 8300000, guid: ce5417e4d30b44ab8b3b9a35ac89ce17, type: 3}
+  voiceOver: {fileID: 8300000, guid: 7b49f15a79729450ebc5bc20668e4d8f, type: 3}
   music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
   lockPlayer: 0
 --- !u!1 &1803184051
@@ -29577,6 +29762,86 @@ Prefab:
       propertyPath: lowPowerSound
       value: 
       objectReference: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
+    - target: {fileID: 8200020, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200034, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200002, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200004, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200006, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200008, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200010, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200012, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200014, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200016, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200018, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200022, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200024, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200026, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200028, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200030, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200032, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200036, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200038, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bc4a59fb99f04daa8c79afcd947d788, type: 2}
   m_RootGameObject: {fileID: 1482881261}
@@ -29730,7 +29995,7 @@ MonoBehaviour:
     anchorStyle: 5
     margins:
       left: 0
-      top: 0
+      top: -0
       right: 0
       bottom: 0
     owner: {fileID: 1823961037}
@@ -30022,7 +30287,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 1852129392}
-  renderOrder: 60
+  renderOrder: 56
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -30092,7 +30357,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -30743,7 +31008,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -30902,7 +31167,7 @@ MonoBehaviour:
       right: .620283008
       bottom: .220200047
     owner: {fileID: 1915075544}
-  renderOrder: 92
+  renderOrder: 16
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -31098,7 +31363,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 1916539300}
-  renderOrder: 53
+  renderOrder: 49
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -31338,6 +31603,46 @@ Transform:
   - {fileID: 983631408}
   - {fileID: 524279116}
   m_Father: {fileID: 0}
+--- !u!1001 &1931721850
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 20.8541279
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.08129025
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -81.772522
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9efe6bb7abf2f41d78c457a6b1d5f995, type: 2}
+  m_RootGameObject: {fileID: 788786978}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1935158345
 GameObject:
   m_ObjectHideFlags: 0
@@ -32003,7 +32308,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32111,7 +32416,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32815,7 +33120,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32974,7 +33279,7 @@ MonoBehaviour:
       right: 426.449219
       bottom: -2.00390625
     owner: {fileID: 2030851924}
-  renderOrder: 44
+  renderOrder: 40
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -33200,7 +33505,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 2036222263}
-  renderOrder: 86
+  renderOrder: 10
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -33907,7 +34212,7 @@ MonoBehaviour:
       right: 355
       bottom: 336
     owner: {fileID: 2076508125}
-  renderOrder: 39
+  renderOrder: 35
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
@@ -34289,7 +34594,7 @@ MonoBehaviour:
       right: -4
       bottom: -4
     owner: {fileID: 2087234698}
-  renderOrder: 73
+  renderOrder: 69
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
