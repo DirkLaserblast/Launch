@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 2
+  m_CurrentQuality: 5
   m_QualitySettings:
   - serializedVersion: 2
     name: Fastest
@@ -55,10 +55,10 @@ QualitySettings:
     blendWeights: 2
     textureQuality: 0
     anisotropicTextures: 1
-    antiAliasing: 8
+    antiAliasing: 0
     softParticles: 0
     softVegetation: 0
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: .699999988
     maximumLODLevel: 0
     particleRaycastBudget: 64
@@ -121,11 +121,8 @@ QualitySettings:
     particleRaycastBudget: 4096
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 2
-    BlackBerry: 2
-    FlashPlayer: 2
-    Standalone: 4
-    WP8: 2
-    Web: 3
-    Windows Store Apps: 4
-    iPhone: 2
+    Android: 0
+    BlackBerry: 0
+    Standalone: 0
+    Web: 0
+    iPhone: 0

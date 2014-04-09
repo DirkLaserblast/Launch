@@ -68,7 +68,7 @@ public class FirstPersonHeadBob : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if(PersistantGlobalScript.mouseLookEnabled) {
+
 		// we use the actual distance moved as the velocity since last frame, rather than reading
 		//the rigidbody's velocity, because this prevents the 'running against a wall' effect.
 		Vector3 velocity = (rigidbody.position - prevPosition) / Time.deltaTime;
@@ -165,6 +165,5 @@ public class FirstPersonHeadBob : MonoBehaviour {
 			}
 			prevGrounded = false;
 		}
-	}
 	}
 }

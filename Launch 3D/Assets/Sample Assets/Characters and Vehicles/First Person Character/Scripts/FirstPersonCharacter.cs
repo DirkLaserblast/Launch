@@ -11,7 +11,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[SerializeField] private float walkSpeed = 3f;                                      // The speed at which we want the character to move
 	#endif
 	[SerializeField] private AdvancedSettings advanced = new AdvancedSettings();        // The container for the advanced settings ( done this way so that the advanced setting are exposed under a foldout
-	[SerializeField] public bool lockCursor = true;
+	[SerializeField] private bool lockCursor = true;
 
 	[System.Serializable]
 	public class AdvancedSettings                                                       // The advanced settings
@@ -44,18 +44,15 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
-		if(PersistantGlobalScript.movementEnabled) {
 		if (Input.GetMouseButtonUp(0))
 		{
 			Screen.lockCursor = lockCursor;
-		}
 		}
 	}
 	
 	
 	public void FixedUpdate ()
 	{
-		if(PersistantGlobalScript.movementEnabled) {
 		float speed = runSpeed;
 
 		// Read input
@@ -150,7 +147,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 	}
 
-	}
+	
 	//used for comparing distances
 	class RayHitComparer: IComparer
 	{

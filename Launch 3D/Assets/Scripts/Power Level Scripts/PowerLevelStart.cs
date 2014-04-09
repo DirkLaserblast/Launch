@@ -49,7 +49,7 @@ public class PowerLevelStart : MonoBehaviour {
 		minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 		PersistantGlobalScript.minigameActive = true;
 		puzzleGUI.SetActive (true);
-		FPCscript.lockCursor = false;
+		//FPCscript.lockCursor = false;
 		Screen.lockCursor = false;
 	}
 
@@ -69,7 +69,7 @@ public class PowerLevelStart : MonoBehaviour {
 		
 		PersistantGlobalScript.minigameActive = false;
 		puzzleGUI.SetActive (false);
-		FPCscript.lockCursor = true;
+		//FPCscript.lockCursor = true;
 	}
 
 }
