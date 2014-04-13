@@ -27,6 +27,10 @@ public class CarController : MonoBehaviour
     [SerializeField] private float adjustCentreOfMass = 0.25f;                      // vertical offset for the centre of mass
     [SerializeField] private Advanced advanced;                                     // container for the advanced setting which will expose as a foldout in the inspector
 	[SerializeField] bool preserveDirectionWhileInAir = false;                      // flag for if the direction of travel to be preserved in the air (helps cars land in the right direction if doing huge jumps!)
+	[SerializeField] private float defaultFOV = 60f;
+	[SerializeField] private float zoomFactor = 1.0f;
+	private Vector3 previousVelocity;
+	private float acceleration;
 
     [System.Serializable]
     public class Advanced                                                           // the advanced settings for the car controller
@@ -159,6 +163,8 @@ public class CarController : MonoBehaviour
 		// lose control of engine if immobilized
 		if (immobilized) accelBrakeInput = 0;
 
+		//acceleration = rigidbody.velocity.magnitude;
+
 		ConvertInputToAccelerationAndBraking (accelBrakeInput);
 		CalculateSpeedValues ();
 		HandleGearChanging ();
@@ -168,6 +174,8 @@ public class CarController : MonoBehaviour
 		CalculateRevs();
 		PreserveDirectionInAir();
 
+		//Camera.main.fieldOfView = defaultFOV + acceleration * zoomFactor;
+		previousVelocity = rigidbody.velocity;
 	}
 
 	void ConvertInputToAccelerationAndBraking (float accelBrakeInput)

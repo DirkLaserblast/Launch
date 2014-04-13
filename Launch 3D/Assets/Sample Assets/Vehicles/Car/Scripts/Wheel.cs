@@ -21,11 +21,13 @@ public class Wheel : MonoBehaviour
 	public float springMultiplier = 1;
 	public AudioClip suspensionSound;
 	public float springSoundPercent = 0.4f;
+	public float springMin = 1.0f;
+	public float grip;
     [SerializeField]
     private float particleRate = 3;
     [SerializeField]
     private float slideThreshold = 10f;
-  
+
 	
 	public float suspensionSpringPos { get; private set; }
 
@@ -109,11 +111,11 @@ public class Wheel : MonoBehaviour
 			suspensionSoundPlayed = false;
 		}
 
-		//Set spring stiffness based on speed
-		JointSpring suspension = wheelCollider.suspensionSpring;
-		suspension.spring = 0.5f + Mathf.Abs (springMultiplier * (car.CurrentSpeed / car.MaxSpeed));
-
-		wheelCollider.suspensionSpring = suspension;
+		//Set spring damper based on speed
+//		JointSpring suspension = wheelCollider.suspensionSpring;
+//		suspension.damper = springMin + Mathf.Abs (springMultiplier * (car.CurrentSpeed / car.MaxSpeed));
+//
+//		wheelCollider.suspensionSpring = suspension;
 
         // calculate if the wheel is sliding sideways
         relativeVelocity = transform.InverseTransformDirection(rb.velocity);
@@ -142,7 +144,7 @@ public class Wheel : MonoBehaviour
         minGrip = Mathf.Min(burnoutGrip, spinoutGrip);
         minGrip = Mathf.Min(sideSlideGrip, minGrip);
 
-        springCompressionGripModifier = springCompression + 0.6f;
+        springCompressionGripModifier = springCompression + grip;
         springCompressionGripModifier *= springCompressionGripModifier;
 
         sidewaysFriction.stiffness = sidewaysStiffness * minGrip * springCompressionGripModifier;
