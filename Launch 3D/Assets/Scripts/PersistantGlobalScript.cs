@@ -75,6 +75,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
 		//Prevent the Global Script object from being deleted when you leave the main menu
 		//Object.DontDestroyOnLoad(this.gameObject);
 	}
@@ -102,6 +103,10 @@ public class PersistantGlobalScript : MonoBehaviour
 		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
+		if (mouseLookEnabled) { //Moves the cursor to the center of the screen. Still not sure why it won't start there.
+			Screen.lockCursor = false;
+			Screen.lockCursor = true;
+		}
 //		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
 //		{
 //			mouseLookEnabled = !mouseLookEnabled;

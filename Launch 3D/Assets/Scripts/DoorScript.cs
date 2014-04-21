@@ -11,6 +11,7 @@ public class DoorScript : MonoBehaviour {
 	public Animator doorAnimator;
 	public bool locked;
 	public bool lowPower;
+	public int locks = 0;
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
 	public AudioClip lowPowerSound;
@@ -34,7 +35,7 @@ public class DoorScript : MonoBehaviour {
 	
 	private Animator anim;
 	
-	
+
 	// Use this for initialization
 	void Start () {
 		doorAnimator.SetBool("Locked", locked);

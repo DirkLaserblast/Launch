@@ -1187,6 +1187,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 453008510}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -1307,6 +1308,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1508069631}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -5640,6 +5642,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 412713134}
   locked: 1
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -6896,6 +6899,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1234304591}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -8728,6 +8732,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1735541295}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -12268,6 +12273,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 2069702034}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -16020,6 +16026,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 172824425}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -16280,6 +16287,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1431780658}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -16412,6 +16420,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1905094994}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -17169,6 +17178,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 2020012551}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -22145,6 +22155,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1511394880}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -22340,6 +22351,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1181987777}
   locked: 1
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -23831,6 +23843,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1755393995}
   locked: 1
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -26646,6 +26659,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 223228824}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -28791,6 +28805,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1362993058}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -29318,6 +29333,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1791858111}
+  - 114: {fileID: 1791858115}
   - 135: {fileID: 1791858113}
   - 82: {fileID: 1791858112}
   - 114: {fileID: 1791858114}
@@ -29432,6 +29448,32 @@ MonoBehaviour:
   radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
   read: 0
   timer: 29
+  player: {fileID: 2060966092}
+  voiceOver: {fileID: 8300000, guid: 7b49f15a79729450ebc5bc20668e4d8f, type: 3}
+  music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
+  lockPlayer: 0
+--- !u!114 &1791858115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 9ad84f292e1c5415b939769eabeaa240,
+    type: 2}
+  m_PrefabInternal: {fileID: 1433031442}
+  m_GameObject: {fileID: 1791858110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c966cf7fcc824d86b5c12d20f9d95ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  window: {fileID: 0}
+  title: {fileID: 0}
+  name: {fileID: 0}
+  content: {fileID: 0}
+  titles: []
+  names: []
+  contents: []
+  radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
+  read: 0
+  timer: 25
   player: {fileID: 2060966092}
   voiceOver: {fileID: 8300000, guid: 7b49f15a79729450ebc5bc20668e4d8f, type: 3}
   music: {fileID: 8300000, guid: bf25101153dd34a749caecb005d2ac73, type: 3}
@@ -30419,6 +30461,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 892511528}
   locked: 1
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -31070,6 +31113,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1991605187}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -32370,6 +32414,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 286449391}
   locked: 1
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -32478,6 +32523,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1490906033}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
@@ -33182,6 +33228,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 800021802}
   locked: 0
   lowPower: 0
+  locks: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
   lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}

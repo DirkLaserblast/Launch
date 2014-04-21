@@ -10,15 +10,58 @@ public class Cell : MonoBehaviour {
 	public dfSprite light;
 	public dfSprite sink;
 	public dfSprite fan;
+	private bool hasLight;
+	private bool hasFan;
+	private bool hasSink; 
+
+	public bool HasLight {
+		get { return hasLight; }
+		set {
+			if(value && !hasLight) {
+				light.IsVisible = true;
+			}
+			if(!value && hasLight) {
+				light.IsVisible = false;
+			}
+			hasLight = value;
+		}
+	}
+
+	public bool HasFan {
+		get { return hasFan; }
+		set {
+			if(value && !hasFan) {
+				fan.IsVisible = true;
+			}
+			if(!value && hasFan) {
+				fan.IsVisible = false;
+			}
+			hasFan = value;
+		}
+	}
+	public bool HasSink {
+		get { return hasSink; }
+		set {
+			if(value && !hasSink) {
+				sink.IsVisible = true;
+			}
+			if(!value && hasSink) {
+				sink.IsVisible = false;
+			}
+			hasSink = value;
+		}
+	}
 
 	void Start () {
-		//print ("foo");
+		sprite = transform.GetComponent<dfSprite> ();
+		if (Random.value > 0.9) {
+			hasFan = true;
+			fan.IsVisible = true;
+		}
 		sprite.RelativePosition = new Vector3 (x, y, 0);
+		sprite.PerformLayout ();
 	}
-	
-	void Update () {
 
-	}
 
 	public void MoveTo(int x, int y) {
 		this.x = x;
@@ -27,4 +70,5 @@ public class Cell : MonoBehaviour {
 		sprite.RelativePosition = new Vector3 (x, y, 0);
 		moved = true;
 	}
+
 }

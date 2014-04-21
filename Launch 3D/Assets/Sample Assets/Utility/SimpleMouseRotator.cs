@@ -30,6 +30,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		originalRotation = transform.localRotation;
+		Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
