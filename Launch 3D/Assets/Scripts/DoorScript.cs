@@ -11,11 +11,27 @@ public class DoorScript : MonoBehaviour {
 	public Animator doorAnimator;
 	public bool locked;
 	public bool lowPower;
+	public bool jammed;
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
 	public AudioClip lowPowerSound;
 	//public GameObject receptacle;
-	
+
+	public bool isJammed
+	{
+		get
+		{
+			jammed = doorAnimator.GetBool("Jammed");
+			return locked;
+		}
+		set
+		{
+			//print (value);
+			jammed = value;
+			doorAnimator.SetBool("Jammed", jammed);
+		}
+	}
+
 	public bool isLocked
 	{
 		get

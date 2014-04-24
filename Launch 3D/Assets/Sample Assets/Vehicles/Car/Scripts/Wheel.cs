@@ -19,6 +19,7 @@ public class Wheel : MonoBehaviour
 	public float steerPercentage = 1.0f;
     public bool powered = false;
 	public float springMultiplier = 1;
+	public bool playAudio = false;
 	public AudioClip suspensionSound;
 	public float springSoundPercent = 0.4f;
 	public float springMin = 1.0f;
@@ -95,20 +96,18 @@ public class Wheel : MonoBehaviour
     // called in sync with the physics system
     void FixedUpdate()
     {
-
-		//Play spring compression sound if spring compressed far enough
-		if(!audio.isPlaying && !suspensionSoundPlayed)
+		if (playAudio)
 		{
-			if ((springCompression / wheelCollider.suspensionDistance) > springSoundPercent)
-			{
-				audio.pitch = ((float) Random.Range(80, 100) / 100.0f);
-				audio.Play();
-				suspensionSoundPlayed = true;
+			//Play spring compression sound if spring compressed far enough
+			if (!audio.isPlaying && !suspensionSoundPlayed) {
+					if ((springCompression / wheelCollider.suspensionDistance) > springSoundPercent) {
+							audio.pitch = ((float)Random.Range (80, 100) / 100.0f);
+							audio.Play ();
+							suspensionSoundPlayed = true;
+					}
+			} else if (suspensionSoundPlayed && !((springCompression / wheelCollider.suspensionDistance) > springSoundPercent)) {
+					suspensionSoundPlayed = false;
 			}
-		}
-		else if (suspensionSoundPlayed && !((springCompression / wheelCollider.suspensionDistance) > springSoundPercent))
-		{
-			suspensionSoundPlayed = false;
 		}
 
 		//Set spring damper based on speed

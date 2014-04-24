@@ -32,6 +32,10 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public static bool edgeTurnEnabled = false;
 	//How long the left mouse button has been held down
+
+	public dfPanel pauseMenu;
+	private static GameObject player;
+
 	private static float clickTime = 0.0f;
 
 //	public bool allowMouseLook {get; set;}
@@ -39,6 +43,7 @@ public class PersistantGlobalScript : MonoBehaviour
 //	public bool allowMovement {get; set;}
 
 	private static bool freezeWorldForMenu = false;
+	
 
 	//If on, disables all interaction and stops time
 	public static bool FreezeWorldForMenu
@@ -46,14 +51,17 @@ public class PersistantGlobalScript : MonoBehaviour
 		get{ return freezeWorldForMenu; }
 		set
 		{
-//			if (value)
-//			{
-//				print ("Freezing world");
-//			}
-//			else print ("Unfreezing world");
+			if (value)
+			{
+				print ("Freezing world");
+			}
+			else print ("Unfreezing world");
 			mouseLookEnabled = !value;
 			interactionEnabled = !value;
 			movementEnabled = !value;
+
+			Screen.showCursor = value;
+			Screen.lockCursor = !value;
 
 			if (value)
 			{
@@ -77,6 +85,8 @@ public class PersistantGlobalScript : MonoBehaviour
 	{
 		//Prevent the Global Script object from being deleted when you leave the main menu
 		//Object.DontDestroyOnLoad(this.gameObject);
+
+		player = GameObject.FindWithTag("Player");
 	}
 
 	void Update ()
@@ -84,6 +94,16 @@ public class PersistantGlobalScript : MonoBehaviour
 		//print (Time.timeScale);
 
 		//print ("Interaction: " + interactionEnabled);
+
+		if (Input.GetKeyDown(KeyCode.Tab))
+		{
+			//print ("Pause Menu Open");
+			pauseMenu.IsVisible = true;
+//			movementEnabled = false;
+//			mouseLookEnabled = false;
+//			interactionEnabled = false;
+			PersistantGlobalScript.FreezeWorldForMenu = true;
+		}
 
 		if(Input.GetMouseButtonUp(0))
 		{

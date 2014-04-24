@@ -43,6 +43,6 @@ public class CarSelfRighting : MonoBehaviour
     {
         // set the correct orientation for the car, and lift it off the ground a little
 		transform.position = transform.position + Vector3.up * 2;
-		transform.rotation = Quaternion.LookRotation(transform.forward);
+		transform.rotation = Quaternion.LookRotation(transform.up);
     }
 }
