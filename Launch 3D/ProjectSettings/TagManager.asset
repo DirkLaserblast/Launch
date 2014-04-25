@@ -11,6 +11,8 @@ TagManager:
   - LS
   - 
   - 
+  - Save Node
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -24,7 +26,7 @@ TagManager:
   User Layer 10: Floor
   User Layer 11: NoCollideDefault
   User Layer 12: Life Support
-  User Layer 13: 
+  User Layer 13: GUI
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 
