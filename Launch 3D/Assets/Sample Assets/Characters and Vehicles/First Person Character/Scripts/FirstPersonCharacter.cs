@@ -54,7 +54,6 @@ public class FirstPersonCharacter : MonoBehaviour
 		{
 			Screen.lockCursor = lockCursor;
 		}
-		print (lockCursor);
 	}
 	
 	
