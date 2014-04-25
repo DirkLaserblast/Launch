@@ -12995,6 +12995,22 @@ Prefab:
       propertyPath: minigameCamera
       value: 
       objectReference: {fileID: 1412439720}
+    - target: {fileID: 11400002, guid: e198b0953e823494f928afe00f2516c9, type: 2}
+      propertyPath: maxDistance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500004, guid: e198b0953e823494f928afe00f2516c9, type: 2}
+      propertyPath: m_Size.x
+      value: .129999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: e198b0953e823494f928afe00f2516c9, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500004, guid: e198b0953e823494f928afe00f2516c9, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e198b0953e823494f928afe00f2516c9, type: 2}
   m_RootGameObject: {fileID: 1359343489}
@@ -23754,7 +23770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: -1}
-  maxDistance: 3
+  maxDistance: 500
   player: {fileID: 2060966093}
   mainCamera: {fileID: 693840168}
   minigameCamera: {fileID: 1412439720}
@@ -23767,10 +23783,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 739379623}
   m_GameObject: {fileID: 1359343489}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .100000001, y: 2.29999995, z: 3.9000001}
+  m_Size: {x: .129999995, y: 2.29999995, z: 3.9000001}
   m_Center: {x: -.0599999987, y: 0, z: .0199999996}
 --- !u!95 &1359343495
 Animator:
@@ -23780,7 +23796,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 739379623}
   m_GameObject: {fileID: 1359343489}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: c03e5c0df2aa4c24d91c852cf2ba376b, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -26876,7 +26892,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569362025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .00111111114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1301321015}

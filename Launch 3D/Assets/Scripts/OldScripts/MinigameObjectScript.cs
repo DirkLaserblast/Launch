@@ -25,6 +25,8 @@ public class MinigameObjectScript : MonoBehaviour {
 	private RoverPuzzle RoverPuzzleScript;
 
 	void Start() {
+		//print ("Starting up MinigameObj script.");
+		PersistantGlobalScript.interactionEnabled = true;
 		FPCscript = player.GetComponent<FirstPersonCharacter> ();
 		RoverPuzzleScript = RoverPuzzleObject.GetComponent<RoverPuzzle> ();
 	}
@@ -42,6 +44,7 @@ public class MinigameObjectScript : MonoBehaviour {
 				mouseLookScript.enabled = true;
 			}
 
+			print ("This should not be happening after change camera.");
 			RoverPuzzleObject.collider.enabled=true;
 			RoverPuzzleScript.enabled=false;
 			mainCamera.SetActive(true);
@@ -53,6 +56,7 @@ public class MinigameObjectScript : MonoBehaviour {
 	}
 
 	void OnMouseUp() {
+		//print ("CLICKY");
 		if (PersistantGlobalScript.interactionEnabled) {
 			float distance = Mathf.Abs((transform.position - player.position).magnitude);
 			if (distance < maxDistance && !minigameActive) {
@@ -66,10 +70,12 @@ public class MinigameObjectScript : MonoBehaviour {
 	//				mouseLookScript.enabled = false;
 	//			}
 
-				RoverPuzzleObject.collider.enabled=false;
-				RoverPuzzleScript.enabled=true;
+
+				print ("Changing cameras.");
 				mainCamera.SetActive(false);
 				minigameCamera.SetActive(true);
+				RoverPuzzleObject.collider.enabled=false;
+				RoverPuzzleScript.enabled=true;
 
 	//			minigameCamera.transform.position = transform.position + offset;
 	//			minigameCamera.transform.rotation = transform.rotation;

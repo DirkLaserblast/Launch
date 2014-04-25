@@ -168,7 +168,7 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == SpiritRover) {
 							if (OpportunityAlive == true) {
 								float distance = Vector3.Distance (SpiritRover.transform.position, OpportunityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SpiritTree > (OpportunityTree + 1))
 										SpiritTree = (OpportunityTree + 1);
 									SpiritRover.transform.position = hit.point;
@@ -177,7 +177,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}
 							if (SojournerAlive == true) {
 								float distance = Vector3.Distance (SpiritRover.transform.position, SojournerRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SpiritTree > (SojournerTree + 1))
 										SpiritTree = (SojournerTree + 1);
 									SpiritRover.transform.position = hit.point;
@@ -186,7 +186,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}		
 							if (FifthAlive == true) {
 								float distance = Vector3.Distance (SpiritRover.transform.position, FifthRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SpiritTree > (FifthTree + 1))
 										SpiritTree = (FifthTree + 1);
 									SpiritRover.transform.position = hit.point;
@@ -195,7 +195,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}
 							if (CuriosityAlive == true) {
 								float distance = Vector3.Distance (SpiritRover.transform.position, CuriosityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SpiritTree > (CuriosityTree + 1))
 										SpiritTree = (CuriosityTree + 1);
 									SpiritRover.transform.position = hit.point;
@@ -221,7 +221,7 @@ public class RoverPuzzle : MonoBehaviour {
 							if (SelectedRover == OpportunityRover) {
 								if (SpiritAlive == true) {
 									float distance = Vector3.Distance (OpportunityRover.transform.position, SpiritRover.transform.position);
-									if (distance <0.5) {
+									if (distance <0.45) {
 										if (OpportunityTree > (SpiritTree + 1))
 											OpportunityTree = (SpiritTree + 1);
 										OpportunityRover.transform.position = hit.point;
@@ -230,7 +230,7 @@ public class RoverPuzzle : MonoBehaviour {
 								}
 								if (SojournerAlive == true) {
 									float distance = Vector3.Distance (OpportunityRover.transform.position, SojournerRover.transform.position);
-									if (distance <0.5) {
+									if (distance <0.45) {
 										if (OpportunityTree > (SojournerTree + 1))
 											OpportunityTree = (SojournerTree + 1);
 										OpportunityRover.transform.position = hit.point;
@@ -239,7 +239,7 @@ public class RoverPuzzle : MonoBehaviour {
 								}		
 								if (FifthAlive == true) {
 									float distance = Vector3.Distance (OpportunityRover.transform.position, FifthRover.transform.position);
-									if (distance <0.5) {
+									if (distance <0.45) {
 										if (OpportunityTree > (FifthTree + 1))
 											OpportunityTree = (FifthTree + 1);
 										OpportunityRover.transform.position = hit.point;
@@ -248,7 +248,7 @@ public class RoverPuzzle : MonoBehaviour {
 								}	
 								if (CuriosityAlive == true) {
 									float distance = Vector3.Distance (OpportunityRover.transform.position, CuriosityRover.transform.position);
-									if (distance <0.5) {
+									if (distance <0.45) {
 										if (OpportunityTree > (CuriosityTree + 1))
 											OpportunityTree = (CuriosityTree + 1);
 										OpportunityRover.transform.position = hit.point;
@@ -274,7 +274,7 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == SojournerRover) {
 							if (SpiritAlive == true) {
 								float distance = Vector3.Distance (SojournerRover.transform.position, SpiritRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SojournerTree > (SpiritTree + 1))
 										SojournerTree = (SpiritTree + 1);
 									SojournerRover.transform.position = hit.point;
@@ -283,7 +283,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}
 							if (OpportunityAlive == true) {
 								float distance = Vector3.Distance (SojournerRover.transform.position, OpportunityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SojournerTree > (OpportunityTree + 1))
 										SojournerTree = (OpportunityTree + 1);
 									SojournerRover.transform.position = hit.point;
@@ -292,7 +292,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}		
 							if (FifthAlive == true) {
 								float distance = Vector3.Distance (SojournerRover.transform.position, FifthRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SojournerTree > (FifthTree + 1))
 										SojournerTree = (FifthTree + 1);
 									SojournerRover.transform.position = hit.point;
@@ -301,7 +301,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}
 							if (CuriosityAlive == true) {
 								float distance = Vector3.Distance (SojournerRover.transform.position, CuriosityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (SojournerTree > (CuriosityTree + 1))
 										SojournerTree = (CuriosityTree + 1);
 									SojournerRover.transform.position = hit.point;
@@ -327,7 +327,7 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == FifthRover) {
 							if (SpiritAlive == true) {
 								float distance = Vector3.Distance (FifthRover.transform.position, SpiritRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (FifthTree > (SpiritTree + 1))
 										FifthTree = (SpiritTree + 1);
 									FifthRover.transform.position = hit.point;
@@ -336,7 +336,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}
 							if (SojournerAlive == true) {
 								float distance = Vector3.Distance (FifthRover.transform.position, SojournerRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (FifthTree > (SojournerTree + 1))
 										FifthTree = (SojournerTree + 1);
 									FifthRover.transform.position = hit.point;
@@ -345,7 +345,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}		
 							if (OpportunityAlive == true) {
 								float distance = Vector3.Distance (FifthRover.transform.position, OpportunityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (FifthTree > (OpportunityTree + 1))
 										FifthTree = (OpportunityTree + 1);
 									FifthRover.transform.position = hit.point;
@@ -354,7 +354,7 @@ public class RoverPuzzle : MonoBehaviour {
 							}	
 							if (CuriosityAlive == true) {
 								float distance = Vector3.Distance (FifthRover.transform.position, CuriosityRover.transform.position);
-								if (distance <0.5) {
+								if (distance <0.45) {
 									if (FifthTree > (CuriosityTree + 1))
 										FifthTree = (CuriosityTree + 1);
 									FifthRover.transform.position = hit.point;
@@ -379,18 +379,20 @@ public class RoverPuzzle : MonoBehaviour {
 				}
 				//if it isn't a rover and isn't valid ground and it isn't invalid ground then it's offscreen
 				else {
-					PersistantGlobalScript.interactionEnabled = true;
-					PersistantGlobalScript.mouseLookEnabled = true;
-					PersistantGlobalScript.movementEnabled = true;
+					if (SelectedRover != null) {
+						PersistantGlobalScript.interactionEnabled = true;
+						PersistantGlobalScript.mouseLookEnabled = true;
+						PersistantGlobalScript.movementEnabled = true;
 					
-					FPCscript.lockCursor = true;
-					PersistantGlobalScript.minigameActive = false;
-					RoverPuzzleObject.collider.enabled=true;
-					mainCamera.SetActive(true);
-					miniCam.SetActive(false);
-					print ("Do the thing.");
-					Screen.lockCursor = true;
-					RoverPuzzleScript.enabled=false;
+						FPCscript.lockCursor = true;
+						PersistantGlobalScript.minigameActive = false;
+						RoverPuzzleObject.collider.enabled=true;
+						mainCamera.SetActive(true);
+						miniCam.SetActive(false);
+						//print ("Do the thing.");
+						Screen.lockCursor = true;
+						RoverPuzzleScript.enabled=false;
+					}
 				}
 			}
 		}
@@ -400,7 +402,7 @@ public class RoverPuzzle : MonoBehaviour {
 		//check alive and "tree" position for spirit
 		if (OpportunityAlive == true) {
 			float distance = Vector3.Distance (SpiritRover.transform.position, OpportunityRover.transform.position);
-			if (distance <0.5) {
+			if (distance < 0.45) {
 				SpiritAlive = true;
 				if(SpiritTree > (OpportunityTree+1))
 					SpiritTree = (OpportunityTree+1);
@@ -408,7 +410,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (SojournerAlive == true) {
  			float distance = Vector3.Distance (SpiritRover.transform.position, SojournerRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SpiritAlive = true;
 				if(SpiritTree > (SojournerTree+1))
 					SpiritTree = (SojournerTree+1);
@@ -416,7 +418,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (CuriosityAlive == true) {
 			float distance = Vector3.Distance (SpiritRover.transform.position, CuriosityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SpiritAlive = true;
 				if(SpiritTree > (CuriosityTree+1))
 					SpiritTree = (CuriosityTree+1);
@@ -424,7 +426,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (FifthAlive == true) {
 			float distance = Vector3.Distance (SpiritRover.transform.position, FifthRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SpiritAlive = true;
 				if(SpiritTree > (FifthTree+1))
 					SpiritTree = (FifthTree+1);
@@ -433,7 +435,7 @@ public class RoverPuzzle : MonoBehaviour {
 		//check alive and "tree" position for opportunity 
 		if (SpiritAlive == true) {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, SpiritRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				OpportunityAlive = true;
 				if(OpportunityTree > (SpiritTree+1))
 					OpportunityTree = (SpiritTree+1);
@@ -441,7 +443,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (SojournerAlive == true) {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, SojournerRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				OpportunityAlive = true;
 				if(OpportunityTree > (SojournerTree+1))
 					OpportunityTree = (SojournerTree+1);
@@ -449,7 +451,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (CuriosityAlive == true) {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, CuriosityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				OpportunityAlive = true;
 				if(OpportunityTree > (CuriosityTree+1))
 					OpportunityTree = (CuriosityTree+1);
@@ -457,7 +459,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (FifthAlive == true) {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, FifthRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				OpportunityAlive = true;
 				if(OpportunityTree > (FifthTree+1))
 					OpportunityTree = (FifthTree+1);
@@ -466,7 +468,7 @@ public class RoverPuzzle : MonoBehaviour {
 		//check alive and "tree" position and win condition for sojourner
 		if (SpiritAlive == true) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, SpiritRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SojournerAlive = true;
 				if(SojournerTree > (SpiritTree + 1))
 					SojournerTree = (SpiritTree + 1);
@@ -474,7 +476,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (OpportunityAlive == true) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, OpportunityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SojournerAlive = true;
 				if(SojournerTree > (OpportunityTree + 1))
 					SojournerTree = (OpportunityTree + 1);
@@ -482,7 +484,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (CuriosityAlive == true) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, CuriosityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SojournerAlive = true;
 				if(SojournerTree > (CuriosityTree + 1))
 					SojournerTree = (CuriosityTree + 1);
@@ -490,7 +492,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (FifthAlive == true) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, FifthRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				SojournerAlive = true;
 				if(SojournerTree > (FifthTree+1))
 					SojournerTree = (FifthTree+1);
@@ -523,7 +525,7 @@ public class RoverPuzzle : MonoBehaviour {
 		//check alive and "tree" position for fifth
 		if (SpiritAlive == true) {
 			float distance = Vector3.Distance (FifthRover.transform.position, SpiritRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				FifthAlive = true;
 				if(FifthTree > (SpiritTree + 1))
 					FifthTree = (SpiritTree + 1);
@@ -531,7 +533,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (OpportunityAlive == true) {
 			float distance = Vector3.Distance (FifthRover.transform.position, OpportunityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				FifthAlive = true;
 				if(FifthTree > (OpportunityTree + 1))
 					FifthTree = (OpportunityTree + 1);
@@ -539,7 +541,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (CuriosityAlive == true) {
 			float distance = Vector3.Distance (FifthRover.transform.position, CuriosityRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				FifthAlive = true;
 				if(FifthTree > (CuriosityTree + 1))
 					FifthTree = (CuriosityTree + 1);
@@ -547,7 +549,7 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (SojournerAlive == true) {
 			float distance = Vector3.Distance (FifthRover.transform.position, SojournerRover.transform.position);
-			if (distance <0.5) {
+			if (distance <0.45) {
 				FifthAlive = true;
 				if(FifthTree > (SojournerTree+1))
 					FifthTree = (SojournerTree+1);
