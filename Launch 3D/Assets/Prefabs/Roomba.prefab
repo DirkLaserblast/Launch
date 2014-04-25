@@ -603,7 +603,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectAvoidRange: 1
-  feelerAngle: 50
+  feelerAngle: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,10 +19,16 @@ public class MinigameObjectScript : MonoBehaviour {
 	private Vector3 oldCameraPosition;
 	public GameObject mainCamera;
 	public GameObject minigameCamera;
+	private FirstPersonCharacter FPCscript;
 
-	void Start()
-	{
+	public GameObject RoverPuzzleObject;
+	private RoverPuzzle RoverPuzzleScript;
 
+	void Start() {
+		//print ("Starting up MinigameObj script.");
+		PersistantGlobalScript.interactionEnabled = true;
+		FPCscript = player.GetComponent<FirstPersonCharacter> ();
+		RoverPuzzleScript = RoverPuzzleObject.GetComponent<RoverPuzzle> ();
 	}
 
 	void Update() {
@@ -34,39 +40,45 @@ public class MinigameObjectScript : MonoBehaviour {
 			//Camera.main.transform.rotation = oldCameraDirection;
 
 			SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
-			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
-			{
+			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts) {
 				mouseLookScript.enabled = true;
 			}
 
+			print ("This should not be happening after change camera.");
+			RoverPuzzleObject.collider.enabled=true;
+			RoverPuzzleScript.enabled=false;
 			mainCamera.SetActive(true);
 			minigameCamera.SetActive(false);
 
-			minigameActive = false;
+	//		minigameActive = false;
 			//Camera.main.transform.LookAt (this.transform.position);
 		}
 	}
 
 	void OnMouseUp() {
-		if (PersistantGlobalScript.interactionEnabled)
-		{
+		//print ("CLICKY");
+		if (PersistantGlobalScript.interactionEnabled) {
 			float distance = Mathf.Abs((transform.position - player.position).magnitude);
 			if (distance < maxDistance && !minigameActive) {
 				PersistantGlobalScript.interactionEnabled = false;
 				PersistantGlobalScript.mouseLookEnabled = false;
 				PersistantGlobalScript.movementEnabled = false; 
 
-				SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
-				foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
-				{
-					mouseLookScript.enabled = false;
-				}
+	//			SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
+	//			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
+	//			{
+	//				mouseLookScript.enabled = false;
+	//			}
 
+
+				print ("Changing cameras.");
 				mainCamera.SetActive(false);
 				minigameCamera.SetActive(true);
+				RoverPuzzleObject.collider.enabled=false;
+				RoverPuzzleScript.enabled=true;
 
-				minigameCamera.transform.position = transform.position + offset;
-				minigameCamera.transform.rotation = transform.rotation;
+	//			minigameCamera.transform.position = transform.position + offset;
+	//			minigameCamera.transform.rotation = transform.rotation;
 
 	//			newCameraPosition = transform.position;
 	//			newCameraPosition += offset;
@@ -74,7 +86,10 @@ public class MinigameObjectScript : MonoBehaviour {
 	//			oldCameraDirection = Camera.main.transform.rotation;
 	//			Camera.main.transform.position = newCameraPosition;
 	//			Camera.main.transform.LookAt (this.transform.position);
-				minigameActive = true;
+
+				FPCscript.lockCursor = false;
+				Screen.lockCursor = false;
+				PersistantGlobalScript.minigameActive = true; 
 			}
 		}
 	}
