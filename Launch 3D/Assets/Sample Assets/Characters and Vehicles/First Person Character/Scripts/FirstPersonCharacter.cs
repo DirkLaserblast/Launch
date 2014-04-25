@@ -27,7 +27,13 @@ public class FirstPersonCharacter : MonoBehaviour
 	public bool grounded { get; private set; }
 	private Vector2 input;
 	private IComparer rayHitComparer;
-	
+
+
+	void Start ()
+	{
+
+	}
+
 	void Awake ()
 	{
 		// Set up a reference to the capsule collider.
@@ -44,113 +50,114 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
-		if(PersistantGlobalScript.movementEnabled) {
 		if (Input.GetMouseButtonUp(0))
 		{
 			Screen.lockCursor = lockCursor;
 		}
-		}
+		print (lockCursor);
 	}
 	
 	
 	public void FixedUpdate ()
 	{
-		if(PersistantGlobalScript.movementEnabled) {
-		float speed = runSpeed;
-
-		// Read input
-#if CROSS_PLATFORM_INPUT
-		float h = CrossPlatformInput.GetAxis("Horizontal");
-		float v = CrossPlatformInput.GetAxis("Vertical");
-		bool jump = CrossPlatformInput.GetButton("Jump");
-#else
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
-		bool jump = Input.GetButton("Jump");
-#endif
-
-#if !MOBILE_INPUT
-		
-		// On standalone builds, walk/run speed is modified by a key press.
-		// We select appropriate speed based on whether we're walking by default, and whether the walk/run toggle button is pressed:
-		bool walkOrRun =  Input.GetKey(KeyCode.LeftShift);
-		speed = walkByDefault ? (walkOrRun ? runSpeed : walkSpeed) : (walkOrRun ? walkSpeed : runSpeed);
-		
-		// On mobile, it's controlled in analogue fashion by the v input value, and therefore needs no special handling.
-		
-
-#endif
-		
-		input = new Vector2( h, v );
-
-		// normalize input if it exceeds 1 in combined length:
-		if (input.sqrMagnitude > 1) input.Normalize();
-		
-		// Get a vector which is desired move as a world-relative direction, including speeds
-		Vector3 desiredMove = transform.forward * input.y * speed + transform.right * input.x * strafeSpeed;
-		
-		// preserving current y velocity (for falling, gravity)
-		float yv = rigidbody.velocity.y;
-		
-		// add jump power
-		if (grounded && jump) {
-			yv += jumpPower;
-			grounded = false;
-		}
-		
-		// Set the rigidbody's velocity according to the ground angle and desired move
-		rigidbody.velocity = desiredMove + Vector3.up * yv;
-		
-		// Use low/high friction depending on whether we're moving or not
-		if (desiredMove.magnitude > 0 || !grounded)
+		if (PersistantGlobalScript.movementEnabled)
 		{
-			collider.material = advanced.zeroFrictionMaterial;
-		} else {
-			collider.material = advanced.highFrictionMaterial;
-		}
-
-		
-		// Ground Check:
-		
-		// Create a ray that points down from the centre of the character.
-		Ray ray = new Ray(transform.position, -transform.up);
-		
-		// Raycast slightly further than the capsule (as determined by jumpRayLength)
-		RaycastHit[] hits = Physics.RaycastAll(ray, capsule.height * jumpRayLength );
-		System.Array.Sort (hits, rayHitComparer);
-		
-		
-		if (grounded || rigidbody.velocity.y < jumpPower * .5f)
-		{
-			// Default value if nothing is detected:
-			grounded = false;
-			// Check every collider hit by the ray
-			for (int i = 0; i < hits.Length; i++)
+			float speed = runSpeed;
+			
+			// Read input
+			#if CROSS_PLATFORM_INPUT
+			float h = CrossPlatformInput.GetAxis("Horizontal");
+			float v = CrossPlatformInput.GetAxis("Vertical");
+			bool jump = CrossPlatformInput.GetButton("Jump");
+			#else
+			float h = Input.GetAxis("Horizontal");
+			float v = Input.GetAxis("Vertical");
+			bool jump = Input.GetButton("Jump");
+			#endif
+			
+			#if !MOBILE_INPUT
+			
+			// On standalone builds, walk/run speed is modified by a key press.
+			// We select appropriate speed based on whether we're walking by default, and whether the walk/run toggle button is pressed:
+			bool walkOrRun =  Input.GetKey(KeyCode.LeftShift);
+			speed = walkByDefault ? (walkOrRun ? runSpeed : walkSpeed) : (walkOrRun ? walkSpeed : runSpeed);
+			
+			// On mobile, it's controlled in analogue fashion by the v input value, and therefore needs no special handling.
+			
+			
+			#endif
+			
+			input = new Vector2( h, v );
+			
+			// normalize input if it exceeds 1 in combined length:
+			if (input.sqrMagnitude > 1) input.Normalize();
+			
+			// Get a vector which is desired move as a world-relative direction, including speeds
+			Vector3 desiredMove = transform.forward * input.y * speed + transform.right * input.x * strafeSpeed;
+			
+			// preserving current y velocity (for falling, gravity)
+			float yv = rigidbody.velocity.y;
+			
+			// add jump power
+			if (grounded && jump) {
+				yv += jumpPower;
+				grounded = false;
+			}
+			
+			// Set the rigidbody's velocity according to the ground angle and desired move
+			rigidbody.velocity = desiredMove + Vector3.up * yv;
+			
+			// Use low/high friction depending on whether we're moving or not
+			if (desiredMove.magnitude > 0 || !grounded)
 			{
-				// Check it's not a trigger
-				if (!hits[i].collider.isTrigger)
+				collider.material = advanced.zeroFrictionMaterial;
+			} else {
+				collider.material = advanced.highFrictionMaterial;
+			}
+			
+			
+			// Ground Check:
+			
+			// Create a ray that points down from the centre of the character.
+			Ray ray = new Ray(transform.position, -transform.up);
+			
+			// Raycast slightly further than the capsule (as determined by jumpRayLength)
+			RaycastHit[] hits = Physics.RaycastAll(ray, capsule.height * jumpRayLength );
+			System.Array.Sort (hits, rayHitComparer);
+			
+			
+			if (grounded || rigidbody.velocity.y < jumpPower * .5f)
+			{
+				// Default value if nothing is detected:
+				grounded = false;
+				// Check every collider hit by the ray
+				for (int i = 0; i < hits.Length; i++)
 				{
-					// The character is grounded, and we store the ground angle (calculated from the normal)
-					grounded = true;
-					
-					// stick to surface - helps character stick to ground - specially when running down slopes
-					//if (rigidbody.velocity.y <= 0) {
-					rigidbody.position = Vector3.MoveTowards (rigidbody.position, hits[i].point + Vector3.up * capsule.height*.5f, Time.deltaTime * advanced.groundStickyEffect);
-					//}
-					rigidbody.velocity = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
-					break;
+					// Check it's not a trigger
+					if (!hits[i].collider.isTrigger)
+					{
+						// The character is grounded, and we store the ground angle (calculated from the normal)
+						grounded = true;
+						
+						// stick to surface - helps character stick to ground - specially when running down slopes
+						//if (rigidbody.velocity.y <= 0) {
+						rigidbody.position = Vector3.MoveTowards (rigidbody.position, hits[i].point + Vector3.up * capsule.height*.5f, Time.deltaTime * advanced.groundStickyEffect);
+						//}
+						rigidbody.velocity = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
+						break;
+					}
 				}
 			}
+			
+			Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red );
+			
+			
+			// add extra gravity
+			rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 		}
-		
-		Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red );
-
-
-		// add extra gravity
-		rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 	}
 
-	}
+	
 	//used for comparing distances
 	class RayHitComparer: IComparer
 	{

@@ -48,7 +48,8 @@ public class LifeSupportStart : MonoBehaviour {
 		minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 		PersistantGlobalScript.minigameActive = true;
 		//puzzleGUI.SetActive (true);
-		FPCscript.lockCursor = false;
+		//FPCscript.lockCursor = false;
+		FPCscript.enabled = false;
 		Screen.lockCursor = false;
 	}
 	
@@ -68,7 +69,7 @@ public class LifeSupportStart : MonoBehaviour {
 		
 		PersistantGlobalScript.minigameActive = false;
 		//puzzleGUI.SetActive (false);
-		FPCscript.lockCursor = true;
+		FPCscript.enabled = true;
 	}
 	
 }
