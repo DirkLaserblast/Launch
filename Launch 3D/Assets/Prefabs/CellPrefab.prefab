@@ -209,7 +209,7 @@ MonoBehaviour:
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
-  spriteName: generic-fill-opaque
+  spriteName: BLANK_TEXTURE
   flip: 0
   fillDirection: 0
   fillAmount: 1
@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a422ca6eafb1045618ff35f954189982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBlock: 0
+  fanRotated: 0
   light: {fileID: 11400006}
   sink: {fileID: 11400004}
   fan: {fileID: 11400008}

@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f514313262e3d141ad017b60809752a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 568b656f3c47a4352952714daeb5ce00, type: 2}
+  material: {fileID: 2100000, guid: b40720b409e314fc2a30a630846ba9f2, type: 2}
   items:
   - name: Bend
     region:
@@ -74,7 +74,7 @@ MonoBehaviour:
     textureGUID: 
     deleted: 0
     texture: {fileID: 0}
-  - name: Diagonal
+  - name: Cross
     region:
       serializedVersion: 2
       x: .5234375
@@ -91,7 +91,7 @@ MonoBehaviour:
     textureGUID: 
     deleted: 0
     texture: {fileID: 0}
-  - name: LightSegment
+  - name: Diagonal
     region:
       serializedVersion: 2
       x: .0078125
@@ -108,7 +108,7 @@ MonoBehaviour:
     textureGUID: 
     deleted: 0
     texture: {fileID: 0}
-  - name: Sink
+  - name: LightSegment
     region:
       serializedVersion: 2
       x: .265625
@@ -125,9 +125,43 @@ MonoBehaviour:
     textureGUID: 
     deleted: 0
     texture: {fileID: 0}
+  - name: Sink
+    region:
+      serializedVersion: 2
+      x: .5234375
+      y: .484375
+      width: .25
+      height: .25
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 64, y: 64}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: SinkOn
+    region:
+      serializedVersion: 2
+      x: .0078125
+      y: .2265625
+      width: .25
+      height: .25
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 64, y: 64}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
   generator: 1
-  imageFileGUID: f110bd3a0f551485293aa7df53e7f509
-  dataFileGUID: 2886f49c1e70846a79a2b869db65d693
+  imageFileGUID: 09b5012382e1348228e071ee4c0f83fa
+  dataFileGUID: f16ca8d8846b649b0aa3d3711dd9878a
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
