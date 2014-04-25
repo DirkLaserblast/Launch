@@ -457,8 +457,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 2070617869}
   locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &31387100
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -491,7 +494,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 1882164325}
   m_GameObject: {fileID: 31387098}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -818,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 1.2000000476837158
   started: 0
+  openPanel: {fileID: 0}
 --- !u!54 &58689675
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3191,9 +3195,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 56507773}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &488539459
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3226,7 +3233,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 1345237841}
   m_GameObject: {fileID: 488539457}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -4574,6 +4581,11 @@ MonoBehaviour:
   - Roger that, over and out.
   radioSound: {fileID: 8300000, guid: 8a61eceda1887492ea9ea694288b99d4, type: 3}
   read: 0
+  timer: 24
+  player: {fileID: 0}
+  voiceOver: {fileID: 0}
+  music: {fileID: 0}
+  lockPlayer: 0
 --- !u!135 &657154232
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4991,9 +5003,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 437243771}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &693987496
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5014,7 +5029,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 558489983}
   m_GameObject: {fileID: 693987493}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -5333,8 +5348,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 11887150}
   locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &775486292
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5367,7 +5385,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 1276843947}
   m_GameObject: {fileID: 775486290}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -6118,9 +6136,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 878840246}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &859155821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6153,7 +6174,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 684726039}
   m_GameObject: {fileID: 859155819}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -7911,9 +7932,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 668312324}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &1048769076
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7946,7 +7970,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 1811895173}
   m_GameObject: {fileID: 1048769074}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -8371,7 +8395,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 821765069}
   m_GameObject: {fileID: 1058949107}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -8576,9 +8600,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 2039406870}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &1073796165
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8599,7 +8626,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 958536435}
   m_GameObject: {fileID: 1073796162}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -8814,7 +8841,7 @@ Transform:
   m_GameObject: {fileID: 1079724189}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -2.83122034e-07}
   m_LocalPosition: {x: .960221171, y: -2.05963111, z: -5.02203178}
-  m_LocalScale: {x: .658978939, y: .879115164, z: .225474507}
+  m_LocalScale: {x: .717628121, y: .879115164, z: .225474507}
   m_Children:
   - {fileID: 855246569}
   m_Father: {fileID: 0}
@@ -8831,9 +8858,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 855246565}
-  locked: 0
+  locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &1079724192
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8854,7 +8884,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 633281999}
   m_GameObject: {fileID: 1079724189}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -9273,7 +9303,7 @@ Transform:
   m_GameObject: {fileID: 1149869907}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -2.83122034e-07}
   m_LocalPosition: {x: 23.0995369, y: -2.12608242, z: -32}
-  m_LocalScale: {x: .658978939, y: .879115164, z: .225474507}
+  m_LocalScale: {x: .717628121, y: .879115164, z: .225474507}
   m_Children:
   - {fileID: 1371089140}
   m_Father: {fileID: 0}
@@ -9291,8 +9321,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 1371089136}
   locked: 1
+  lowPower: 0
+  jammed: 0
   doorOpenSound: {fileID: 8300000, guid: 6b710d7ec86af415e8d21b789e23ac91, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 9e8940742bd844b59a159b04ed19b9f6, type: 3}
+  lowPowerSound: {fileID: 8300000, guid: 087cf213073db429f82100751fb6dcdc, type: 3}
 --- !u!135 &1149869910
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9313,7 +9346,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 471650891}
   m_GameObject: {fileID: 1149869907}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -10631,6 +10664,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f6d11d797ca48819d786ad32af4daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  started: 0
+  otherPlug: {fileID: 0}
+  door: {fileID: 0}
+  pluggedIn: 0
+  pluggedSound: {fileID: 0}
+  successSound: {fileID: 0}
 --- !u!54 &1414026989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10864,6 +10903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mActive: 0
+  pauseMenu: {fileID: 0}
 --- !u!114 &1453109512
 MonoBehaviour:
   m_ObjectHideFlags: 0
