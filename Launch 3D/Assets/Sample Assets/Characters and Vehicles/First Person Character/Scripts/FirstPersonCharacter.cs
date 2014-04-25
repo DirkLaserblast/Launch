@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FirstPersonCharacter : MonoBehaviour
@@ -54,7 +54,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		{
 			Screen.lockCursor = lockCursor;
 		}
-		print (lockCursor);
+		//print (lockCursor);
 	}
 	
 	
