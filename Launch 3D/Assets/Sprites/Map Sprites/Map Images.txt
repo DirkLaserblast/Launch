@@ -8,7 +8,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
 },
-"LockedRoom.png":
+"LockedCorridorBranch.png":
 {
 	"frame": {"x":68,"y":2,"w":64,"h":64},
 	"rotated": false,
@@ -16,7 +16,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
 },
-"LockedRoom2Doors.png":
+"LockedCorridorTurn.png":
 {
 	"frame": {"x":134,"y":2,"w":64,"h":64},
 	"rotated": false,
@@ -24,7 +24,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
 },
-"UnlockedCorridor.png":
+"LockedRoom.png":
 {
 	"frame": {"x":2,"y":68,"w":64,"h":64},
 	"rotated": false,
@@ -32,7 +32,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
 },
-"UnlockedRoom.png":
+"LockedRoom2Doors.png":
 {
 	"frame": {"x":68,"y":68,"w":64,"h":64},
 	"rotated": false,
@@ -40,9 +40,41 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
 },
-"UnlockedRoom2Doors.png":
+"UnlockedCorridor.png":
 {
 	"frame": {"x":134,"y":68,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"UnlockedCorridorBranch.png":
+{
+	"frame": {"x":2,"y":134,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"UnlockedCorridorTurn.png":
+{
+	"frame": {"x":68,"y":134,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"UnlockedRoom.png":
+{
+	"frame": {"x":134,"y":134,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"UnlockedRoom2Doors.png":
+{
+	"frame": {"x":2,"y":200,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -53,8 +85,8 @@
 	"version": "1.0",
 	"image": "Map Images.png",
 	"format": "RGBA8888",
-	"size": {"w":256,"h":256},
+	"size": {"w":256,"h":512},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:019e8a83aed610b5411ea6e37a433971:d81701f12a8f52fede0ab9191016b549:233da461342645004af458e97e40fa58$"
+	"smartupdate": "$TexturePacker:SmartUpdate:a371e0d39abe7c3f0d9400977a743aa3:d4ab8371d16d1737f643d3319296c9fd:233da461342645004af458e97e40fa58$"
 }
 }
