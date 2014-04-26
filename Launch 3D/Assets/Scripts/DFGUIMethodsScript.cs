@@ -61,6 +61,12 @@ public class DFGUIMethodsScript : MonoBehaviour {
 
 	public void quitGame()
 	{
+		PlayerPrefs.Save();
+		Application.Quit();
+	}
+
+	public void quitNoSave()
+	{
 		Application.Quit();
 	}
 }
