@@ -23,6 +23,7 @@ public class LifeSupportStart : MonoBehaviour {
 		if (PersistantGlobalScript.interactionEnabled) {
 			float distance = Mathf.Abs((transform.position - player.position).magnitude);
 			if (distance < maxDistance && !PersistantGlobalScript.minigameActive) {
+				print ("wot");
 				StartMinigame();
 			}
 		}
