@@ -14,14 +14,14 @@ public class LoadGameScript : MonoBehaviour {
 	// Load player and item positions
 	void Start ()
 	{
-		string closestNode = PlayerPrefs.GetString("ClosestSaveNode");
+		string latestSaveNode = PlayerPrefs.GetString("LatestSaveNode");
 
 		StartCoroutine("unlockMouseLook");
 
 		//print(closestNode);
 		try
 		{
-			GameObject node = GameObject.Find(closestNode);
+			GameObject node = GameObject.Find(latestSaveNode);
 			player.transform.position = node.transform.position;
 			player.transform.rotation = node.transform.rotation;
 		}
@@ -47,16 +47,16 @@ public class LoadGameScript : MonoBehaviour {
 //			//print ("No save data for playerRotation");
 //		}
 
-		string[] logbookArray = PlayerPrefsX.GetStringArray("Logbook");
-
-		try
-		{
-			ItemLogScript.LogArray.AddRange(logbookArray);
-		}
-		catch (System.NullReferenceException ex)
-		{
-			
-		}
+//		string[] logbookArray = PlayerPrefsX.GetStringArray("Logbook");
+//
+//		try
+//		{
+//			ItemLogScript.LogArray.AddRange(logbookArray);
+//		}
+//		catch (System.NullReferenceException ex)
+//		{
+//			
+//		}
 
 
 

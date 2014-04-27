@@ -62,6 +62,14 @@ public class RoverPuzzle : MonoBehaviour {
 
 		hit = new RaycastHit();
 		//print ("i am aliiiiiive");
+
+		//Load saved rover positions and puzzle completion
+		CuriosityRover.transform.position = PlayerPrefsX.GetVector3("CuriosityRover", CuriosityRover.transform.position);
+		SpiritRover.transform.position = PlayerPrefsX.GetVector3("SpiritRover", SpiritRover.transform.position);
+		OpportunityRover.transform.position = PlayerPrefsX.GetVector3("OpportunityRover", OpportunityRover.transform.position);
+		SojournerRover.transform.position = PlayerPrefsX.GetVector3("SojournerRover", SojournerRover.transform.position);
+		FifthRover.transform.position = PlayerPrefsX.GetVector3("FifthRover", FifthRover.transform.position);
+		YouWon = PlayerPrefsX.GetBool("RoverWin", false);
 	}
 	
 	void Update () {
@@ -152,6 +160,8 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == CuriosityRover) {
 							print ("Curiosity was moved.");
 							CuriosityRover.transform.position = hit.point;
+							//Save position
+							PlayerPrefsX.SetVector3("CuriosityRover", CuriosityRover.transform.position);
 						} 
 						else {
 							audio.PlayOneShot (incorrectSound);
@@ -172,6 +182,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (OpportunityTree + 1))
 										SpiritTree = (OpportunityTree + 1);
 									SpiritRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
 								}
 							}
@@ -181,6 +193,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (SojournerTree + 1))
 										SpiritTree = (SojournerTree + 1);
 									SpiritRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
 								}
 							}		
@@ -190,6 +204,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (FifthTree + 1))
 										SpiritTree = (FifthTree + 1);
 									SpiritRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
 								}
 							}
@@ -199,6 +215,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (CuriosityTree + 1))
 										SpiritTree = (CuriosityTree + 1);
 									SpiritRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
 								}
 							}
@@ -225,6 +243,8 @@ public class RoverPuzzle : MonoBehaviour {
 										if (OpportunityTree > (SpiritTree + 1))
 											OpportunityTree = (SpiritTree + 1);
 										OpportunityRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 										print ("Opportunity was moved and it's tree is " + OpportunityTree);
 									}
 								}
@@ -234,6 +254,8 @@ public class RoverPuzzle : MonoBehaviour {
 										if (OpportunityTree > (SojournerTree + 1))
 											OpportunityTree = (SojournerTree + 1);
 										OpportunityRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 										print ("Opportunity was moved and it's tree is " + OpportunityTree);
 									}
 								}		
@@ -243,6 +265,8 @@ public class RoverPuzzle : MonoBehaviour {
 										if (OpportunityTree > (FifthTree + 1))
 											OpportunityTree = (FifthTree + 1);
 										OpportunityRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 										print ("Opportunity was moved and it's tree is " + OpportunityTree);
 									}
 								}	
@@ -252,6 +276,8 @@ public class RoverPuzzle : MonoBehaviour {
 										if (OpportunityTree > (CuriosityTree + 1))
 											OpportunityTree = (CuriosityTree + 1);
 										OpportunityRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 										print ("Opportunity was moved and it's tree is " + OpportunityTree);
 									}
 								}
@@ -278,6 +304,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (SpiritTree + 1))
 										SojournerTree = (SpiritTree + 1);
 									SojournerRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
 								}
 							}
@@ -287,6 +315,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (OpportunityTree + 1))
 										SojournerTree = (OpportunityTree + 1);
 									SojournerRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
 								}
 							}		
@@ -296,6 +326,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (FifthTree + 1))
 										SojournerTree = (FifthTree + 1);
 									SojournerRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
 								}
 							}
@@ -305,6 +337,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (CuriosityTree + 1))
 										SojournerTree = (CuriosityTree + 1);
 									SojournerRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
 								}
 							}
@@ -331,6 +365,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (SpiritTree + 1))
 										FifthTree = (SpiritTree + 1);
 									FifthRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
 								}
 							}
@@ -340,6 +376,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (SojournerTree + 1))
 										FifthTree = (SojournerTree + 1);
 									FifthRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + OpportunityTree);
 								}
 							}		
@@ -349,6 +387,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (OpportunityTree + 1))
 										FifthTree = (OpportunityTree + 1);
 									FifthRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
 								}
 							}	
@@ -358,6 +398,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (CuriosityTree + 1))
 										FifthTree = (CuriosityTree + 1);
 									FifthRover.transform.position = hit.point;
+									//Save position
+									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
 								}
 							}
@@ -505,6 +547,8 @@ public class RoverPuzzle : MonoBehaviour {
 				audio.PlayOneShot (winSound);
 				print ("You win!");
 				YouWon = true;
+				//Save win state
+				PlayerPrefsX.SetBool("RoverWin", true);
 
 				PersistantGlobalScript.interactionEnabled = true;
 				PersistantGlobalScript.mouseLookEnabled = true;
