@@ -5,11 +5,11 @@ public class LifeSupportComplete : MonoBehaviour {
 
 	bool complete = false;
 	public dfLabel label;
-	public GameObject doors;
+	public DoorScript door;
 
 	public void PuzzleCompleted() {
 		complete = true;
-		//doors.SetActive = true;
+		door.isAirLocked = false;
 		label.Text = "All rooms now recieving air.";
 	}
 }

@@ -70,6 +70,7 @@ public class PowerLevelStart : MonoBehaviour {
 		PersistantGlobalScript.minigameActive = false;
 		puzzleGUI.SetActive (false);
 		FPCscript.lockCursor = true;
+		Screen.lockCursor = true;
 	}
 
 }

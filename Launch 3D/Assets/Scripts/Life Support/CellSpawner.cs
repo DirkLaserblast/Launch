@@ -26,7 +26,6 @@ public class CellSpawner : MonoBehaviour {
 	private List<Cell> sinks = new List<Cell>();
 	public Transform prefab;
 	public GameObject gameParent;
-	public Camera camera;
 	public LifeSupportComplete CompletionObject;
 	Cell prevCell;
 	GameObject[,] grid;

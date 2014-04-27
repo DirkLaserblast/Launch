@@ -10,7 +10,7 @@ public class LightsOut : MonoBehaviour {
 	public GameObject flashlight;
 	public GameObject pointlight;
 	public AudioClip log1;
-	public AudioClip music;
+	//public AudioClip music;
 	public float timeout;
 	public GameObject player;
 	private bool playing = false;
@@ -41,8 +41,8 @@ public class LightsOut : MonoBehaviour {
 	}
 	
 	void RedLightsOn() {
-		flashlight.SetActive (true);
-		pointlight.SetActive (true);
+		flashlight.SetActive(true);
+		pointlight.SetActive(true);
 		redLights.SetActive(true);
 		StartCoroutine("WaitToPlayLog", logtimer);
 	}
@@ -54,7 +54,7 @@ public class LightsOut : MonoBehaviour {
 	
 	void PlayLog() {
 		audio.PlayOneShot (log1);
-		audio.PlayOneShot (music);
+		//audio.PlayOneShot (music);
 		StartCoroutine("TimeOut", timeout);
 	}
 	

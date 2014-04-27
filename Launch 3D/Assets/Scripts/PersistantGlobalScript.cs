@@ -35,6 +35,7 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public dfPanel pauseMenu;
 	private static GameObject player;
+	private int count = 0;
 
 	private static float clickTime = 0.0f;
 
@@ -123,15 +124,11 @@ public class PersistantGlobalScript : MonoBehaviour
 		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
-		if (mouseLookEnabled) { //Moves the cursor to the center of the screen. Still not sure why it won't start there.
+		if (count < 5) { //Moves the cursor to the center of the screen. Still not sure why it won't start there.
 			Screen.lockCursor = false;
 			Screen.lockCursor = true;
+			count++;
 		}
-//		if(Input.GetButtonUp("Fire2") && !edgeTurnEnabled)
-//		{
-//			mouseLookEnabled = !mouseLookEnabled;
-//			
-//		}
 	}
 
 	public void MinigameEventHanlder() {
