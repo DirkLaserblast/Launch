@@ -15,11 +15,11 @@ public class PowerControl : MonoBehaviour {
 		for(int i = 0; i < Sector.Count; i++) {
 			if (Sector[i].isOn) {
 				Sector[i].ToggleOff();
-				//LockDoors();
+				LockDoors();
 				IncrementPower();
 			} else {
 				if(powerManager.CurrentPower > 0 || decrementedHere) {
-					//UnlockDoors();
+					UnlockDoors();
 					Sector[i].ToggleOn();
 					DecrementPower();
 				}
