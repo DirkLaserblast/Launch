@@ -9,7 +9,7 @@ public class carTriggerScript : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject.tag == "Player")
+		if (other.gameObject.Equals(player))
 		{
 			//Switch to car, disable player
 			carCamera.SetActive(true);

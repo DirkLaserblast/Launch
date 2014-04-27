@@ -641,7 +641,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: e773281c06b5e024db5e1a4f549afe5d, type: 2}
     - target: {fileID: 400142, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .00111111114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
       propertyPath: m_IsActive
@@ -877,7 +877,7 @@ Prefab:
       objectReference: {fileID: 1840797299}
     - target: {fileID: 400142, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .00111111114
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
@@ -12939,9 +12939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e9f6e18672b4fe485b7aef7cc9810c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carCamera: {fileID: 0}
-  player: {fileID: 0}
-  carControlScript: {fileID: 0}
+  carCamera: {fileID: 1443777948}
+  player: {fileID: 958710291}
+  carControlScript: {fileID: 1569976347}
 --- !u!135 &473232534
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12952,7 +12952,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &473232535
 Transform:
@@ -12961,7 +12961,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473232532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.8595772, y: -6.61104202, z: -38.3738098}
+  m_LocalPosition: {x: 28.3252144, y: -4.89379406, z: -38.3791962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16788,7 +16788,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.6814098
+      value: 1.31615508
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -16796,7 +16796,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -20.3573666
+      value: -5.36483383
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -16841,6 +16841,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
+      propertyPath: walkSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400010, guid: 7d246f8ae18214a819945107b6e5407e, type: 2}
@@ -24499,7 +24503,7 @@ Transform:
   m_PrefabInternal: {fileID: 651177611}
   m_GameObject: {fileID: 958710291}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 11.6814098, y: -2.07120609, z: -20.3573666}
+  m_LocalPosition: {x: 1.31615508, y: -2.07120609, z: -5.36483383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 132937437}
@@ -24587,7 +24591,7 @@ MonoBehaviour:
   strafeSpeed: 2
   jumpPower: 4
   walkByDefault: 1
-  walkSpeed: 2
+  walkSpeed: 4
   advanced:
     gravityMultiplier: 1
     zeroFrictionMaterial: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123,
@@ -26757,7 +26761,7 @@ Transform:
   m_PrefabInternal: {fileID: 31248925}
   m_GameObject: {fileID: 1029406535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080624378}
@@ -37304,7 +37308,7 @@ GameObject:
   - 114: {fileID: 1569976341}
   m_Layer: 8
   m_Name: Car
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

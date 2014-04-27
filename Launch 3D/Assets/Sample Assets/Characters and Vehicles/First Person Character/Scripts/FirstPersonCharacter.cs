@@ -54,7 +54,6 @@ public class FirstPersonCharacter : MonoBehaviour
 		{
 			Screen.lockCursor = lockCursor;
 		}
-		//print (lockCursor);
 	}
 	
 	
@@ -79,9 +78,9 @@ public class FirstPersonCharacter : MonoBehaviour
 			
 			// On standalone builds, walk/run speed is modified by a key press.
 			// We select appropriate speed based on whether we're walking by default, and whether the walk/run toggle button is pressed:
-			bool walkOrRun =  Input.GetKey(KeyCode.LeftShift);
-			speed = walkByDefault ? (walkOrRun ? runSpeed : walkSpeed) : (walkOrRun ? walkSpeed : runSpeed);
-			
+			//bool walkOrRun =  Input.GetKey(KeyCode.LeftShift);
+			//speed = walkByDefault ? (walkOrRun ? runSpeed : walkSpeed) : (walkOrRun ? walkSpeed : runSpeed);
+			speed = walkSpeed;
 			// On mobile, it's controlled in analogue fashion by the v input value, and therefore needs no special handling.
 			
 			
@@ -99,10 +98,10 @@ public class FirstPersonCharacter : MonoBehaviour
 			float yv = rigidbody.velocity.y;
 			
 			// add jump power
-			if (grounded && jump) {
-				yv += jumpPower;
-				grounded = false;
-			}
+//			if (grounded && jump) {
+//				yv += jumpPower;
+//				grounded = false;
+//			}
 			
 			// Set the rigidbody's velocity according to the ground angle and desired move
 			rigidbody.velocity = desiredMove + Vector3.up * yv;
