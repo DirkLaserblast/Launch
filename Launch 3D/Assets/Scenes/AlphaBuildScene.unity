@@ -641,7 +641,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: e773281c06b5e024db5e1a4f549afe5d, type: 2}
     - target: {fileID: 400142, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: .00111111114
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 6182b848e2abd4fb0aca579ee77ddcf3, type: 2}
       propertyPath: m_IsActive
@@ -12911,6 +12911,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSensitivity: 0
   nodeActive: 0
+--- !u!1 &473232532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473232535}
+  - 135: {fileID: 473232534}
+  - 114: {fileID: 473232533}
+  m_Layer: 0
+  m_Name: Car Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &473232533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 473232532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e9f6e18672b4fe485b7aef7cc9810c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carCamera: {fileID: 0}
+  player: {fileID: 0}
+  carControlScript: {fileID: 0}
+--- !u!135 &473232534
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 473232532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &473232535
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 473232532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.8595772, y: -6.61104202, z: -38.3738098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &475111328
 GameObject:
   m_ObjectHideFlags: 0
@@ -26703,7 +26757,7 @@ Transform:
   m_PrefabInternal: {fileID: 31248925}
   m_GameObject: {fileID: 1029406535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .00111111114, z: 0}
+  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080624378}
