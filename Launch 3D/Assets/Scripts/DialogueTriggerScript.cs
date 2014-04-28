@@ -37,7 +37,7 @@ public class DialogueTriggerScript : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Player" && !read)
+		if (other.tag == "Player" && !read && !playing)
 		{
 			audio.PlayOneShot(voiceOver);
 			if (music != null) Camera.main.audio.PlayOneShot(music);
