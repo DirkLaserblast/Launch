@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class RoverPuzzle : MonoBehaviour {
-	
+
+	public GameObject dialogue;
+	public GameObject nextLog;
 	//Curiosity
 	public GameObject CuriosityRover;
 	public GameObject CuriosityGround;
@@ -564,6 +566,8 @@ public class RoverPuzzle : MonoBehaviour {
 				RoverPuzzleScript.enabled=false;
 
 				//probably trigger some dialogue thing
+				dialogue.SetActive(true);
+				nextLog.SetActive(true);
 			}
 		}
 		//check alive and "tree" position for fifth

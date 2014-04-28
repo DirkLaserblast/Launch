@@ -4,6 +4,7 @@ using System.Collections;
 public class PuzzleComplete : MonoBehaviour {
 
 	public bool complete = false;
+	public GameObject log;
 	public GameObject obj;
 	public GameObject lights;
 	public GameObject redLights;
@@ -19,6 +20,7 @@ public class PuzzleComplete : MonoBehaviour {
 		lights.SetActive (true);
 		flashlight.SetActive (false);
 		pointlight.SetActive (false);
+		log.SetActive (true);
 
 		
 
