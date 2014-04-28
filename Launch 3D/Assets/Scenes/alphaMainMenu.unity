@@ -225,8 +225,8 @@ MonoBehaviour:
     Component: {fileID: 336360565}
     MemberName: Click
   DataTarget:
-    Component: {fileID: 336360565}
-    MemberName: BringToFront
+    Component: {fileID: 2055079103}
+    MemberName: toGame
 --- !u!1 &490067378
 GameObject:
   m_ObjectHideFlags: 0
