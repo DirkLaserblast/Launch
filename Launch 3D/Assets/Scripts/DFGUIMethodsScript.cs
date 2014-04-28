@@ -61,6 +61,11 @@ public class DFGUIMethodsScript : MonoBehaviour {
 
 	public void quitGame()
 	{
+		foreach (DoorScript door in doors.GetComponentsInChildren<DoorScript>())
+		{
+			door.Save();
+		}
+
 		PlayerPrefs.Save();
 		Application.Quit();
 	}

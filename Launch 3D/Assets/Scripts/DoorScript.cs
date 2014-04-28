@@ -19,6 +19,27 @@ public class DoorScript : MonoBehaviour {
 	public AudioClip lowPowerSound;
 	//public GameObject receptacle;
 
+	void Start()
+	{
+		//Load saved door state
+		PlayerPrefsX.GetBool(gameObject.name + "Locked", locked);
+		PlayerPrefsX.GetBool(gameObject.name + "lowPower", lowPower);
+		PlayerPrefs.GetInt(gameObject.name + "locks", locks);
+		PlayerPrefsX.GetBool(gameObject.name + "airLocked", airLocked);
+
+		doorAnimator.SetBool("Locked", locked);
+		doorAnimator.SetBool("Jammed", jammed);
+		doorAnimator.SetBool("lowPower", lowPower);
+	}
+
+	public void Save()
+	{
+		PlayerPrefsX.SetBool(gameObject.name + "Locked", locked);
+		PlayerPrefsX.SetBool(gameObject.name + "lowPower", lowPower);
+		PlayerPrefs.SetInt(gameObject.name + "locks", locks);
+		PlayerPrefsX.SetBool(gameObject.name + "airLocked", airLocked);
+	}
+
 	public bool isJammed
 	{
 		get
@@ -72,14 +93,6 @@ public class DoorScript : MonoBehaviour {
 
 	
 	private Animator anim;
-	
-
-	// Use this for initialization
-	void Start () {
-		doorAnimator.SetBool("Locked", locked);
-		doorAnimator.SetBool("Jammed", jammed);
-		doorAnimator.SetBool("lowPower", lowPower);
-	}
 
 
 	void OnTriggerExit (Collider other)
