@@ -4,6 +4,7 @@ using System.Collections;
 public class DFGUIMethodsScript : MonoBehaviour {
 
 	public GameObject player;
+	public GameObject doors;
 
 	public void stopTime()
 	{
