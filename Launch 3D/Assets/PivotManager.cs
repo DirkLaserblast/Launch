@@ -1,6 +1,8 @@
 #region Abstract
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 /// <summary>
 /// PivotManager made by Caue Rego
@@ -20,9 +22,10 @@ public class PivotManager {
 	static GameObject selectedObject;
 	static Mesh selectedObjectMesh;
 	static Vector3 selectedObjectPivot;
-	
+	#if UNITY_EDITOR
 	[MenuItem ("GameObject/Center Pivot %#&c")]
 	[MenuItem ("CONTEXT/Transform/Center Pivot %#&c")]
+	#endif
 	static void CenterPivot ()
 	{
 		RecognizeSelectedObject();
@@ -32,9 +35,11 @@ public class PivotManager {
 			CenterObjectPivot();
 		}
 	}
-	
+
+	#if UNITY_EDITOR
 	[MenuItem ("GameObject/Create Child Pivot %#&p")]
 	[MenuItem ("CONTEXT/Transform/Create Child Pivot %#&p")]
+	#endif
 	static void CreateChildPivot ()
 	{
 		RecognizeSelectedObject();
