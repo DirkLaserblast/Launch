@@ -329,7 +329,7 @@ MonoBehaviour:
   read: 0
   timer: 35
   player: {fileID: 958710291}
-  voiceOver: {fileID: 8300000, guid: 3d685b99fff544197a3f045c0d6108a8, type: 3}
+  voiceOver: {fileID: 8300000, guid: 3560feef0b4aa4674b9ee6592a30dcbc, type: 3}
   music: {fileID: 0}
   lockPlayer: 0
 --- !u!1 &4197914
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   read: 0
   timer: 35
   player: {fileID: 958710291}
-  voiceOver: {fileID: 8300000, guid: 5168b4c16d38342b5854b4f0c7c36c46, type: 3}
+  voiceOver: {fileID: 8300000, guid: b5ce79d2e8f1b45359ece05e1e12bcb1, type: 3}
   music: {fileID: 0}
   lockPlayer: 0
 --- !u!4 &69903865
@@ -32747,7 +32747,7 @@ MonoBehaviour:
   ventsPowerDown: {fileID: 8300000, guid: e409d6b0d12dc45bc84a26826408e0a8, type: 3}
   flashlight: {fileID: 2027310403}
   pointlight: {fileID: 514262986}
-  log1: {fileID: 8300000, guid: 0d0270b27857148a99d15e55085ad4f9, type: 3}
+  log1: {fileID: 8300000, guid: 06a64c17f4d5c47a1b68181eeba6e4ae, type: 3}
   timeout: 40
   player: {fileID: 958710291}
 --- !u!82 &1292266361
@@ -33188,7 +33188,7 @@ MonoBehaviour:
   read: 0
   timer: 35
   player: {fileID: 958710291}
-  voiceOver: {fileID: 8300000, guid: ea173cb3422d44ea9b89ab4f777fa5ef, type: 3}
+  voiceOver: {fileID: 8300000, guid: 52aa49bbe9e32468f836c27125d52f41, type: 3}
   music: {fileID: 0}
   lockPlayer: 0
 --- !u!1 &1313960629
@@ -38906,7 +38906,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
       propertyPath: log1
       value: 
-      objectReference: {fileID: 8300000, guid: 0d0270b27857148a99d15e55085ad4f9, type: 3}
+      objectReference: {fileID: 8300000, guid: 06a64c17f4d5c47a1b68181eeba6e4ae, type: 3}
     - target: {fileID: 11400000, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
       propertyPath: player
       value: 
@@ -39027,6 +39027,22 @@ Prefab:
       propertyPath: lockPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
+      propertyPath: voiceOver
+      value: 
+      objectReference: {fileID: 8300000, guid: 3560feef0b4aa4674b9ee6592a30dcbc, type: 3}
+    - target: {fileID: 11400004, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
+      propertyPath: voiceOver
+      value: 
+      objectReference: {fileID: 8300000, guid: 30a27ca3fc0344b6f880983dcfb3133e, type: 3}
+    - target: {fileID: 11400012, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
+      propertyPath: voiceOver
+      value: 
+      objectReference: {fileID: 8300000, guid: b5ce79d2e8f1b45359ece05e1e12bcb1, type: 3}
+    - target: {fileID: 11400014, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
+      propertyPath: voiceOver
+      value: 
+      objectReference: {fileID: 8300000, guid: 52aa49bbe9e32468f836c27125d52f41, type: 3}
     m_RemovedComponents:
     - {fileID: 11400002, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
     - {fileID: 11400008, guid: 03ff9e40076e79a4c8248d01ceb6148e, type: 2}
@@ -42267,7 +42283,7 @@ MonoBehaviour:
   read: 0
   timer: 35
   player: {fileID: 958710291}
-  voiceOver: {fileID: 8300000, guid: 73cb9f30746e648f8917c6513751d301, type: 3}
+  voiceOver: {fileID: 8300000, guid: 30a27ca3fc0344b6f880983dcfb3133e, type: 3}
   music: {fileID: 0}
   lockPlayer: 0
 --- !u!1 &1888445442
