@@ -10,44 +10,44 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Test Scene/Loading Scene.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/AI Jet Plane.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/AI Jet Plane.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/AI Propeller Plane.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/AI Propeller Plane.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Propeller Plane (4 Axis).unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Propeller Plane (4 Axis).unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/AI Car.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/AI Car.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/AI Waypoint-Based Car.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/AI Waypoint-Based Car.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Car.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Car.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/First Person Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/First Person Character.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Rolling Ball.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Rolling Ball.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/AI Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/AI Character.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Third Person Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Third Person Character.unity
   - enabled: 0
     path: Assets/LightShafts/scene-directional.unity
   - enabled: 0
     path: Assets/LightShafts/scene-spot.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Car.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Car.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/First Person Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/First Person Character.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Particles.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Particles.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/Third Person Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/Third Person Character.unity
   - enabled: 0
-    path: Assets/Sample Assets/Sample Scenes/Scenes/2D Character.unity
+    path: Assets/11111Junk/Sample Scenes/Scenes/2D Character.unity
   - enabled: 1
-    path: Assets/Scenes/alphaMainMenu.unity
+    path: Assets/Scenes/Alpha Scenes/alphaMainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/AlphaBuildScene.unity
+    path: Assets/Scenes/Alpha Scenes/AlphaBuildScene.unity

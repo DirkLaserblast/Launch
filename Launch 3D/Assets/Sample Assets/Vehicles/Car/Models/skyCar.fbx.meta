@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e6fec471c20b9d148b1f87910e67bea4
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: vehicle_skyCar_body_paintwork
     100002: vehicle_skyCar_body_parts
@@ -136,5 +136,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
-  additionalBone: 0
   userData: 
