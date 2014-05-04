@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e6fec471c20b9d148b1f87910e67bea4
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: vehicle_skyCar_body_paintwork
     100002: vehicle_skyCar_body_parts
@@ -21,6 +21,8 @@ ModelImporter:
     100030: vehicle_skyCar_headLights
     100032: vehicle_skyCar_brakeLights_glow
     100034: vehicle_skyCar_headLights_glow
+    100036: Camera
+    100038: Lamp
     400000: vehicle_skyCar_body_paintwork
     400002: vehicle_skyCar_body_parts
     400004: vehicle_skyCar_mudGuard_frontLeft
@@ -39,6 +41,8 @@ ModelImporter:
     400030: vehicle_skyCar_headLights
     400032: vehicle_skyCar_brakeLights_glow
     400034: vehicle_skyCar_headLights_glow
+    400036: Camera
+    400038: Lamp
     2300000: vehicle_skyCar_body_paintwork
     2300002: vehicle_skyCar_body_parts
     2300004: vehicle_skyCar_mudGuard_frontLeft
@@ -136,4 +140,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  additionalBone: 0
   userData: 
