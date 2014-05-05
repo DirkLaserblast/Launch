@@ -676,7 +676,7 @@ Transform:
   m_Father: {fileID: 906201367}
 --- !u!65 &36874611
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500052, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -1492,7 +1492,7 @@ MonoBehaviour:
     MemberName: Hide
 --- !u!65 &91026992
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500002, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -8741,7 +8741,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 28fb74ef866ad41bfbd5a4f9f5d348e0, type: 2}
+  - {fileID: 2100000, guid: a0b8874ca9ff4cb4e9a4a22f1726b586, type: 2}
   - {fileID: 2100000, guid: 3ef6f3120317f430eada1667087d84da, type: 2}
   - {fileID: 2100000, guid: 63e638a3b06d648d7b6c447a726bd1bd, type: 2}
   m_SubsetIndices: 
@@ -9827,7 +9827,7 @@ Transform:
   m_Father: {fileID: 815566521}
 --- !u!65 &418665069
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500010, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -20002,7 +20002,7 @@ MonoBehaviour:
     m_Bottom: 0
 --- !u!65 &815566523
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500054, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -22203,7 +22203,7 @@ MonoBehaviour:
     MemberName: Hide
 --- !u!65 &906201372
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500022, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -26184,7 +26184,7 @@ MonoBehaviour:
   doors: {fileID: 0}
 --- !u!65 &1010958831
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500040, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -26679,7 +26679,7 @@ MonoBehaviour:
   doors: {fileID: 0}
 --- !u!65 &1036207657
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500018, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -28545,7 +28545,7 @@ Transform:
   m_Father: {fileID: 1954918938}
 --- !u!65 &1069896004
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500036, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -29370,7 +29370,7 @@ MonoBehaviour:
     MemberName: Show
 --- !u!65 &1114545276
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500048, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -29806,7 +29806,7 @@ MonoBehaviour:
     position: 425
 --- !u!65 &1124828029
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500032, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -30869,7 +30869,7 @@ Transform:
   m_Father: {fileID: 906201367}
 --- !u!65 &1206303961
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500008, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -34623,7 +34623,7 @@ MonoBehaviour:
     MemberName: Hide
 --- !u!65 &1387955327
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500012, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -36939,7 +36939,7 @@ Transform:
   m_Father: {fileID: 1124828024}
 --- !u!65 &1523212462
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500016, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -41778,7 +41778,7 @@ Transform:
   m_Father: {fileID: 1954918938}
 --- !u!65 &1829225306
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500030, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -43766,7 +43766,7 @@ MonoBehaviour:
     MemberName: Disable
 --- !u!65 &1954918942
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500014, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -44028,7 +44028,7 @@ MonoBehaviour:
     MemberName: Hide
 --- !u!65 &1972047808
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500038, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -44811,7 +44811,7 @@ Transform:
   m_Father: {fileID: 906201367}
 --- !u!65 &2027803202
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500046, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
@@ -46166,7 +46166,7 @@ MonoBehaviour:
   doors: {fileID: 0}
 --- !u!65 &2099233654
 BoxCollider:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500004, guid: 4efd5272b14524f14b81a44f1de83ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1096883663}
