@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: 8301f19753f363348a0cc786c93ed13f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_001
+    100002: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_002
+    100004: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003
+    100006: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart0
+    100008: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart1
+    100010: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004
+    100012: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart0
+    100014: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart1
+    100016: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_007
+    100018: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_009
+    100020: EMU_group84_EMU_group93_EMU_group95_EMU_pPipe17_EMU_polySurface
+    100022: //RootNode
+    400000: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_001
+    400002: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_002
+    400004: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003
+    400006: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart0
+    400008: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart1
+    400010: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004
+    400012: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart0
+    400014: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart1
+    400016: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_007
+    400018: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_009
+    400020: EMU_group84_EMU_group93_EMU_group95_EMU_pPipe17_EMU_polySurface
+    400022: //RootNode
+    2300000: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_001
+    2300002: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_002
+    2300004: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart0
+    2300006: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart1
+    2300008: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart0
+    2300010: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart1
+    2300012: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_007
+    2300014: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_009
+    2300016: EMU_group84_EMU_group93_EMU_group95_EMU_pPipe17_EMU_polySurface
+    3300000: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_001
+    3300002: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_002
+    3300004: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart0
+    3300006: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart1
+    3300008: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart0
+    3300010: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart1
+    3300012: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_007
+    3300014: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_009
+    3300016: EMU_group84_EMU_group93_EMU_group95_EMU_pPipe17_EMU_polySurface
+    4300000: EMU_group84_EMU_group93_EMU_group95_EMU_pPipe17_EMU_polySurface
+    4300002: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_009
+    4300004: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_007
+    4300006: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart0
+    4300008: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_004_MeshPart1
+    4300010: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart0
+    4300012: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_003_MeshPart1
+    4300014: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_002
+    4300016: EMU_group84_EMU_group93_EMU_group95_EMU_polySurface2_EMU_po_001
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
