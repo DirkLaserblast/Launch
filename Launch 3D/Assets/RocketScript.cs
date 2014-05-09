@@ -7,12 +7,34 @@ public class RocketScript : MonoBehaviour {
 	public GameObject rocket;
 	public GameObject rocketCamera;
 	public Animator rocketAnimator;
+	public GameObject car;
+	public dfSprite crosshair;
+	public ParticleSystem particles;
 
-	//Play audio, switch cameras, start rocket launch animation
-	void OnTriggerEnter (Collider other)
+	private bool triggerFired;
+	
+	IEnumerator OnTriggerEnter (Collider other)
 	{
-		audio.PlayOneShot(liftOffSound);
-		rocketCamera.SetActive(true);
-		Camera.main.gameObject.SetActive(false);
+		if (other.tag == "Player" && !triggerFired)
+		{
+			print ("Trigger Fired");
+
+			car.SetActive(false); //Hide car
+
+			crosshair.enabled = false;
+
+			rocketCamera.SetActive(true); //Switch cameras
+
+			Camera.main.enabled = false;
+
+			rocketAnimator.SetBool("Ignition", true); //Launch rocket
+			particles.Play();
+			rocket.audio.PlayOneShot(liftOffSound);
+
+			yield return new WaitForSeconds(8);
+			//Load credits
+			Application.LoadLevel(2);
+		}
 	}
+	
 }
