@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: RoverSelected
-  m_Shader: {fileID: 4800000, guid: 7b6edef4d93020d42986060e3ba0d1b2, type: 3}
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -29,7 +29,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .691176474, g: .833874106, b: 1, a: 1}
+        second: {r: .948529422, g: .972312331, b: 1, a: 1}
       data:
         first:
           name: _OutlineColor
