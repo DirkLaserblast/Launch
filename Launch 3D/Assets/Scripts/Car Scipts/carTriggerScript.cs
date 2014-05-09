@@ -6,6 +6,7 @@ public class carTriggerScript : MonoBehaviour {
 	public GameObject carCamera;
 	public GameObject player;
 	public CarUserControl carControlScript;
+	public dfSprite crosshair;
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -15,6 +16,7 @@ public class carTriggerScript : MonoBehaviour {
 			carCamera.SetActive(true);
 			player.SetActive(false);
 			carControlScript.enabled = true;
+			crosshair.IsVisible = false;
 		}
 	}
 }
