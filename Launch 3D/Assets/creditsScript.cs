@@ -4,12 +4,17 @@ using System.Collections;
 public class creditsScript : MonoBehaviour {
 
 	// Use this for initialization
-	IEnumerator Start ()
+	void Start ()
 	{
-		PlayerPrefs.DeleteAll();
-		yield return new WaitForSeconds(10);
-		//Wipe save
-		Application.LoadLevel(0);
+		PlayerPrefs.DeleteAll(); //Wipe save
+	}
+
+	void FixedUpdate()
+	{
+		if (Input.GetMouseButtonUp(0))
+		{
+			Application.LoadLevel("alphaMainMenu");
+		}
 	}
 
 }
