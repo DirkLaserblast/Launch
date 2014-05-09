@@ -575,7 +575,7 @@ public class RoverPuzzle : MonoBehaviour {
 		if (YouWon == false ) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, FinishObj.transform.position);
 		//	print ("Checking false, distance is: " + distance);
-			if (distance > 0.7) {
+			if (distance > 0.6) {
 				audio.PlayOneShot (winSound);
 				print ("You win!");
 				YouWon = true;
@@ -593,6 +593,7 @@ public class RoverPuzzle : MonoBehaviour {
 				miniCam.SetActive(false);
 				print ("Do the thing.");
 				Screen.lockCursor = true;
+				instructions.SetActive(false);
 				RoverPuzzleScript.enabled=false;
 
 				//probably trigger some dialogue thing

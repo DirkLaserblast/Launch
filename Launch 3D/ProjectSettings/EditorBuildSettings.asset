@@ -16,13 +16,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/11111Junk/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
   - enabled: 0
-    path: Assets/11111Junk/Sample Scenes/Scenes/Propeller Plane (4 Axis).unity
-  - enabled: 0
     path: Assets/11111Junk/Sample Scenes/Scenes/AI Car.unity
   - enabled: 0
     path: Assets/11111Junk/Sample Scenes/Scenes/AI Waypoint-Based Car.unity
   - enabled: 0
     path: Assets/11111Junk/Sample Scenes/Scenes/Car.unity
+  - enabled: 0
+    path: Assets/11111Junk/Sample Scenes/Scenes/Propeller Plane (4 Axis).unity
   - enabled: 0
     path: Assets/11111Junk/Sample Scenes/Scenes/First Person Character.unity
   - enabled: 0
