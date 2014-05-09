@@ -3,6 +3,7 @@ using System.Collections;
 
 public class NextScene : MonoBehaviour {
 	public AudioSource audioSource;
+	public string Next;
 
 
 	// Use this for initialization
@@ -13,7 +14,7 @@ public class NextScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!audioSource.isPlaying) {
-			Application.LoadLevel("AlphaBuildScene");
+			Application.LoadLevel(Next);
 		}
 	}
 }

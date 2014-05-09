@@ -34,7 +34,7 @@ public class RocketScript : MonoBehaviour {
 
 			yield return new WaitForSeconds(8);
 			//Load credits
-			Application.LoadLevel("Credits");
+			Application.LoadLevel("EndingScene");
 		}
 	}
 	
