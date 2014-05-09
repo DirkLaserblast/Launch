@@ -9,6 +9,7 @@ public class PowerLevelStart : MonoBehaviour {
 	public GameObject mainCamera;
 	public GameObject minigameCamera;
 	public GameObject puzzleGUI; 
+	public DoorScript door;
 	private FirstPersonCharacter FPCscript;
 
 	void Start() {

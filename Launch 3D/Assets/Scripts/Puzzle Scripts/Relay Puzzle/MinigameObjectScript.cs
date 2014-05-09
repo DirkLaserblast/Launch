@@ -75,7 +75,6 @@ public class MinigameObjectScript : MonoBehaviour {
 				mainCamera.SetActive(false);
 				minigameCamera.SetActive(true);
 				RoverPuzzleObject.collider.enabled=false;
-				RoverPuzzleScript.enabled=true;
 
 	//			minigameCamera.transform.position = transform.position + offset;
 	//			minigameCamera.transform.rotation = transform.rotation;
@@ -90,6 +89,8 @@ public class MinigameObjectScript : MonoBehaviour {
 				FPCscript.lockCursor = false;
 				Screen.lockCursor = false;
 				PersistantGlobalScript.minigameActive = true; 
+				RoverPuzzleScript.enabled=true;
+				print("foo");
 			}
 		}
 	}

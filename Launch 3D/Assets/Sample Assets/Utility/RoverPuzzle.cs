@@ -59,6 +59,8 @@ public class RoverPuzzle : MonoBehaviour {
 	private FirstPersonCharacter FPCscript;
 	public GameObject RoverPuzzleObject;
 	private RoverPuzzle RoverPuzzleScript;
+
+	public DoorScript finalDoor;
 	
 	void Start() {
 		PlayerPrefs.DeleteAll ();
@@ -596,6 +598,7 @@ public class RoverPuzzle : MonoBehaviour {
 				instructions.SetActive(false);
 				RoverPuzzleScript.enabled=false;
 
+				finalDoor.isAirLocked = false;
 				//probably trigger some dialogue thing
 				dialogue.SetActive(true);
 				nextLog.SetActive(true);

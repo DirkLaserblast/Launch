@@ -13,10 +13,11 @@ public class carTriggerScript : MonoBehaviour {
 		if (other.gameObject.Equals(player))
 		{
 			//Switch to car, disable player
-			carCamera.SetActive(true);
 			player.SetActive(false);
+			carCamera.SetActive(true);
 			carControlScript.enabled = true;
 			crosshair.IsVisible = false;
+
 		}
 	}
 }

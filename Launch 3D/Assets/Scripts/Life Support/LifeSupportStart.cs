@@ -11,6 +11,7 @@ public class LifeSupportStart : MonoBehaviour {
 	public GameObject reticle;
 	public GameObject instructions;
 	public DoorScript door;
+	public GameObject LSobj;
 	private FirstPersonCharacter FPCscript;
 	
 	void Start() {
@@ -63,8 +64,8 @@ public class LifeSupportStart : MonoBehaviour {
 		{
 			mouseLookScript.enabled = true;
 		}
-
-		door.airLocked = false;
+		LSobj.SetActive (false);
+		door.isAirLocked = false;
 		mainCamera.SetActive(true);
 		minigameCamera.SetActive(false);
 		reticle.SetActive (true);
