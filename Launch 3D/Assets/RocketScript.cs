@@ -10,12 +10,13 @@ public class RocketScript : MonoBehaviour {
 	public GameObject car;
 	public dfSprite crosshair;
 	public ParticleSystem particles;
+	public bool triggerUnlocked = false;
 
-	private bool triggerFired;
+	private bool triggerFired = false;
 	
 	IEnumerator OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Player" && !triggerFired)
+		if (other.tag == "Player" && !triggerFired && triggerUnlocked)
 		{
 			print ("Trigger Fired");
 
