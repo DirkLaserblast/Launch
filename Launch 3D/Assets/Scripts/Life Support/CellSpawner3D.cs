@@ -18,11 +18,11 @@ public class CellSpawner3D : MonoBehaviour {
 	public const int HEIGHT = 10;
 	private Vector3 origin; //Top-Left-Front corner of the backdrop
 	private Vector2 airStart = new Vector2(19, 7);
-	private List<Cell3D> sinks = new List<Cell3D>();
+	private List<Vector2> sinks = new List<Vector2>();
 	private bool changed = false;
 	public Transform prefab;
 	public GameObject backdrop;
-	public LifeSupportComplete CompletionObject;
+	public LifeSupportStart CompletionObject;
 	Cell prevCell;
 	GameObject[,] grid;
 	
@@ -66,14 +66,14 @@ public class CellSpawner3D : MonoBehaviour {
 		//7 = Air Source
 		int[,] level = {
 			{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-			{1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 0, 1},
+			{1, 0, 0, 0, 4, 0, 8, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 8, 0, 1},
 			{1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
-			{1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
-			{1, 5, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
-			{1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 4, 0, 0, 0, 0, 0, 5, 1},
-			{1, 1, 1, 1, 1, 0, 5, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1},
-			{7, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-			{1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
+			{1, 0, 1, 1, 1, 1, 0, 0, 0, 2, 8, 3, 0, 1, 1, 1, 1, 0, 0, 1},
+			{1, 5, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
+			{1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 4, 0, 8, 0, 0, 0, 5, 1},
+			{1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1},
+			{7, 0, 0, 5, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+			{1, 0, 0, 3, 8, 4, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1},
 			{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 		};
 		for (int i = 0; i < WIDTH; i++) {
@@ -81,30 +81,30 @@ public class CellSpawner3D : MonoBehaviour {
 				Cell3D cell = grid[WIDTH-i-1, j].GetComponent<Cell3D>();
 				switch(level[j,i]) {
 				case 0:
-					cell.SetType(Cell3D.TYPE.BLANK);
+					cell.SetType(Cell3D.TYPE.BLANK, Direction.LEFT);
 					break;
 				case 1:
-					cell.SetType(Cell3D.TYPE.BLOCK);
+					cell.SetType(Cell3D.TYPE.BLOCK, Direction.LEFT);
 					break;
 				case 2:
-					cell.SetType(Cell3D.TYPE.FAN);
-					cell.setRotation(Direction.LEFT);
+					cell.SetType(Cell3D.TYPE.FAN, Direction.LEFT);
 					break;
 				case 3:
-					cell.SetType(Cell3D.TYPE.FAN);
-					cell.setRotation(Direction.DOWN);
+					cell.SetType(Cell3D.TYPE.FAN, Direction.DOWN);
 					break;
 				case 4:
-					cell.SetType(Cell3D.TYPE.FAN);
-					cell.setRotation(Direction.RIGHT);
+					cell.SetType(Cell3D.TYPE.FAN, Direction.RIGHT);
 					break;
 				case 5:
-					cell.SetType(Cell3D.TYPE.FAN);
-					cell.setRotation(Direction.UP);
+					cell.SetType(Cell3D.TYPE.FAN, Direction.UP);
 					break;
 				case 7:
-					sinks.Add(cell);
-					cell.SetType(Cell3D.TYPE.AIR);
+					cell.SetType(Cell3D.TYPE.AIR, Direction.LEFT);
+					break;
+				case 8:
+					sinks.Add(new Vector2(WIDTH-i-1, j));
+					cell.spawnSink();
+					cell.SetType(Cell3D.TYPE.BLANK, Direction.LEFT);
 					break;
 				}
 			}
@@ -128,55 +128,73 @@ public class CellSpawner3D : MonoBehaviour {
 			ClearAir();
 		}
 		CalculateAir((int) airStart.x, (int) airStart.y, Direction.RIGHT);
-		//if(CompletionCheck ()) {
-		//	CompletionObject.PuzzleCompleted();
-		//}
+		if(CompletionCheck()) {
+			CompletionObject.EndMinigame();
+		}
 	}
 
-//	bool CompletionCheck() {
-//		bool complete = true;
-//		foreach (Cell3D cell in sinks) {
-//			if(!cell.HasLight) {
-//				complete = false;
-//				cell.SinkOff();
-//			} else {
-//				cell.SinkOn();
-//			}
-//		}
-//		return complete;
-//	}
+	bool CompletionCheck() {
+		bool complete = true;
+		foreach (Vector2 pos in sinks) {
+			GameObject obj = grid[(int) pos.x, (int) pos.y];
+			Cell3D cell = obj.GetComponent<Cell3D>();
+			if(!cell.hasAir) {
+				complete = false;
+			} 
+		}
+		return complete;
+	}
 
 
 	//Add checks
 	void CalculateAir(int x, int y, Direction dir) {
 		Cell3D cell = grid [x, y].GetComponent<Cell3D> ();
-		if(cell.type == Cell3D.TYPE.FAN) {
-			Direction newdir = cell.direction;
-			cell.EnableWind();
-			if(newdir == Direction.RIGHT) {
-				CalculateAir(x-1, y, newdir);
-			}
-			if(newdir == Direction.LEFT) {
-				CalculateAir(x+1, y, newdir);
-			}
-			if(newdir == Direction.UP) {
-				CalculateAir(x, y-1, newdir);
-			}
-			if(newdir == Direction.DOWN) {
-				CalculateAir(x, y+1, newdir);
-			}
-		} else {
-			if(dir == Direction.RIGHT) {
-				CalculateAir(x-1, y, dir);
-			}
-			if(dir == Direction.LEFT) {
-				CalculateAir(x+1, y, dir);
-			}
-			if(dir == Direction.UP) {
-				CalculateAir(x, y-1, dir);
-			}
-			if(dir == Direction.DOWN) {
-				CalculateAir(x, y+1, dir);
+		if(!cell.hasAir) {
+			cell.hasAir = true;
+			if(cell.type == Cell3D.TYPE.FAN) {
+				Direction newdir = cell.direction;
+				cell.EnableWind();
+				if(newdir == Direction.RIGHT) {
+					if(x-1 > 0) {
+						CalculateAir(x-1, y, newdir);
+					}
+				}
+				if(newdir == Direction.LEFT) {
+					if(x+1 < WIDTH-1) {
+						CalculateAir(x+1, y, newdir);
+					}
+				}
+				if(newdir == Direction.UP) {
+					if(y-1 > 0) {
+						CalculateAir(x, y-1, newdir);
+				}
+				}
+				if(newdir == Direction.DOWN) {
+					if(y+1 < HEIGHT-1) {
+						CalculateAir(x, y+1, newdir);
+					}
+				}
+			} else if(cell.type != Cell3D.TYPE.BLOCK) {
+				if(dir == Direction.RIGHT) {
+					if(x-1 > 0) {
+						CalculateAir(x-1, y, dir);
+					}
+				}
+				if(dir == Direction.LEFT) {
+					if(x+1 < WIDTH-1) {
+						CalculateAir(x+1, y, dir);
+					}
+				}
+				if(dir == Direction.UP) {
+					if(y-1 > 0) {
+						CalculateAir(x, y-1, dir);
+					}
+				}
+				if(dir == Direction.DOWN) {
+					if(y+1 < HEIGHT-1) {
+						CalculateAir(x, y+1, dir);
+					}
+				}
 			}
 		}
 	}
@@ -186,6 +204,7 @@ public class CellSpawner3D : MonoBehaviour {
 		for(int i = 0; i < WIDTH; i++) {
 			for(int j = 0; j < HEIGHT; j++) {
 				cell = grid[i,j].GetComponent<Cell3D>();
+				cell.hasAir = false;
 				if(cell.type == Cell3D.TYPE.FAN) {
 					cell.DisableWind();
 				}

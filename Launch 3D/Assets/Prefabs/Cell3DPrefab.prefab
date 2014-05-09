@@ -81,10 +81,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e121a40481364213aa22cacf3d81d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  x: 0
+  y: 0
+  direction: 0
   windPrefab: {fileID: 400004, guid: 5f30a2c3f2b044c4aa9c44cd35b65a02, type: 2}
+  fanPrefab: {fileID: 400006, guid: 5979da77489cd4cdcbaf13d390f471fb, type: 2}
+  ventPrefab: {fileID: 400000, guid: 849d2c4ed0cd04b49875b4450a0bb638, type: 2}
   hasAir: 0
-  fanMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   nonBlockMaterial: {fileID: 2100000, guid: e34418e76dc7e4f4284f87b747043984, type: 2}
+  spawner: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

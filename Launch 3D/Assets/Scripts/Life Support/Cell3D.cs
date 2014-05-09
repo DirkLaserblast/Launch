@@ -3,24 +3,30 @@ using System.Collections;
 
 public class Cell3D : MonoBehaviour {
 
-	public enum TYPE {FAN, ROTATEDFAN, BLOCK, SINK, BLANK, AIR};
+	public enum TYPE {FAN, ROTATEDFAN, BLOCK, BLANK, AIR};
 	
 	public TYPE type;
 	private bool mouseover = false;
 	private Transform wind;
+	private Transform fan;
 	private Vector3 mousePosition;
 	public int x = 0;
 	public int y = 0;
 	public CellSpawner3D.Direction direction;
 	public Transform windPrefab;
+	public Transform fanPrefab;
+	public Transform ventPrefab;
 	public bool hasAir = false;
-	public Mesh fanMesh;
 	public Material nonBlockMaterial;
 	public CellSpawner3D spawner;
 
 	void Start() { }
 
-	void Update() { }
+	void Update() { 
+		if (type == TYPE.FAN) {
+			fan.Rotate(0, 3, 0);
+		}
+	}
 
 	public void EnableWind() {
 		if(type == TYPE.FAN) {
@@ -41,7 +47,7 @@ public class Cell3D : MonoBehaviour {
 		transform.position = new Vector3 (origin.x, origin.y - scale.y*y - scale.y/2, origin.z + scale.z*x + scale.z/2);
 	}
 
-	public void SetType(TYPE type) {
+	public void SetType(TYPE type, CellSpawner3D.Direction direction) {
 		this.type = type;
 		MeshRenderer renderer = transform.GetComponent<MeshRenderer>();
 		Vector3 pos = new Vector3 (transform.position.x - 0.005f, transform.position.y, transform.position.z);
@@ -58,13 +64,15 @@ public class Cell3D : MonoBehaviour {
 		case TYPE.BLOCK: 
 			break;
 		case TYPE.FAN:
-			EnableRenderer();
-			renderer.material = nonBlockMaterial;
+			renderer.enabled = false;
 			wind = (Transform) Instantiate(windPrefab, pos, transform.rotation);
 			wind.parent = this.transform;
+			setRotation(direction);
+			pos.x = pos.x - 0.03f;
+			fan = (Transform) Instantiate(fanPrefab, pos, transform.rotation);
+			fan.parent = this.transform;
+			RotateFan();
 			wind.gameObject.SetActive(false);
-			break;
-		case TYPE.SINK: 
 			break;
 		}
 	}
@@ -82,6 +90,22 @@ public class Cell3D : MonoBehaviour {
 		}
 		if (direction == CellSpawner3D.Direction.UP) {
 			transform.Rotate(270, 0, 0);
+		}
+	}
+
+	public void RotateFan() {
+		fan.Rotate(90, 0, 0);
+		if (direction == CellSpawner3D.Direction.UP) {
+			//No rotation
+		}
+		if (direction == CellSpawner3D.Direction.LEFT) {
+			//fan.Rotate(90, 0, 0);
+		}
+		if (direction == CellSpawner3D.Direction.DOWN) {
+			//fan.Rotate(180, 0, 0);
+		}
+		if (direction == CellSpawner3D.Direction.RIGHT) {
+			//fan.Rotate(270, 0, 0);
 		}
 	}
 
@@ -128,6 +152,11 @@ public class Cell3D : MonoBehaviour {
 			}
 		}
 		return dir;
+	}
+
+	public void spawnSink() {
+		Vector3 pos = new Vector3 (transform.position.x - 0.598f, transform.position.y + 0.16f, transform.position.z - 0.23f);
+		Instantiate (ventPrefab, pos, transform.rotation);
 	}
 
 	void OnMouseOver() {
