@@ -51,3 +51,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha Scenes/alphaMainMenu.unity
   - enabled: 1
     path: Assets/Scenes/Alpha Scenes/AlphaBuildScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Alpha Scenes/StartScene.unity

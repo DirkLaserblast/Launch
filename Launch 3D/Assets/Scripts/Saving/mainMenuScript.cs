@@ -24,7 +24,7 @@ public class mainMenuScript : MonoBehaviour {
 	public void toGame()
 	{
 		//Load the main game
-		Application.LoadLevel(1);
+		Application.LoadLevel("StartScene");
 	}
 
 	public void deleteSave()
