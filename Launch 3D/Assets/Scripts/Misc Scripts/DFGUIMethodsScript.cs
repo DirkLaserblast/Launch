@@ -68,11 +68,11 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		}
 
 		PlayerPrefs.Save();
-		Application.Quit();
+		Application.LoadLevel(0);
 	}
 
 	public void quitNoSave()
 	{
-		Application.Quit();
+		Application.LoadLevel(0);
 	}
 }
