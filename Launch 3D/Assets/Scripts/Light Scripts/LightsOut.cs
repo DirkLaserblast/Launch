@@ -13,10 +13,18 @@ public class LightsOut : MonoBehaviour {
 	//public AudioClip music;
 	public float timeout;
 	public GameObject player;
+
+	public bool triggered = false;
+
 	private bool playing = false;
 	private float timer = 1f;
 	private float logtimer = 4f;
-	
+
+	void Start()
+	{
+		PlayerPrefsX.GetBool("LightsOutTriggered", false);
+	}
+
 	void Update() {
 		if (playing) {
 			transform.position = player.transform.position;
@@ -24,15 +32,23 @@ public class LightsOut : MonoBehaviour {
 	}
 
 	void OnTriggerEnter() {
-		playing = true;
-		lights.SetActive (false);
-		audio.PlayOneShot(ventsPowerDown);
-		Ventillation.SetActive(false);
-		foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
+
+		if (!triggered)
 		{
-			dscript.lowPower = true;
+			triggered = true;
+			//Save triggered state
+			PlayerPrefsX.SetBool("LightsOutTriggered", true);
+			playing = true;
+			lights.SetActive (false);
+			audio.PlayOneShot(ventsPowerDown);
+			Ventillation.SetActive(false);
+			foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
+			{
+				dscript.lowPower = true;
+			}
+			StartCoroutine("TurnOn", timer);
 		}
-		StartCoroutine("TurnOn", timer);
+
 	}
 	
 	IEnumerator TurnOn(float t) {
