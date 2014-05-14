@@ -24,6 +24,8 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool dragEnabled = true;
 
 	public bool mActive = false;
+
+	public dfSprite crosshair;
 	
 	public static float dragThreshold = 0.3f;
 	/// <summary>
@@ -97,38 +99,57 @@ public class PersistantGlobalScript : MonoBehaviour
 
 		//print ("Interaction: " + interactionEnabled);
 
-		if (Input.GetKeyDown(KeyCode.Tab))
+		if (pauseMenu.IsVisible)
 		{
-			//print ("Pause Menu Open");
-			pauseMenu.IsVisible = true;
-//			movementEnabled = false;
-//			mouseLookEnabled = false;
-//			interactionEnabled = false;
-			PersistantGlobalScript.FreezeWorldForMenu = true;
+			Screen.showCursor = true;
+			Screen.lockCursor = false;
+			crosshair.IsVisible = false;
 		}
-
-		if(Input.GetMouseButtonUp(0))
-		{
-			if (clickTime > dragThreshold)
-			{
-				interactionEnabled = false;
-				//print ("Click timeout");
-			}
-			clickTime = 0.0f;
-		}
-		else if(Input.GetMouseButton(0))
-		{
-			interactionEnabled = true; //Disabled to make minigames work
-			clickTime += Time.deltaTime;
-			//print ("Clicktime: " + clickTime);
-		}
-		mActive = minigameActive; //Silliness to deal with DFGUI
-
-		if (count < 5) { //Moves the cursor to the center of the screen. Still not sure why it won't start there.
+		else if (count < 5)
+		{ //Moves the cursor to the center of the screen. Still not sure why it won't start there.
 			Screen.lockCursor = false;
 			Screen.lockCursor = true;
 			count++;
 		}
+
+
+		if (Input.GetKeyDown(KeyCode.Tab))
+		{
+			//print ("Pause Menu Open");
+
+			if (pauseMenu.IsVisible)
+			{
+				PersistantGlobalScript.FreezeWorldForMenu = false;
+			}
+
+			pauseMenu.IsVisible = !pauseMenu.IsVisible;
+//			movementEnabled = false;
+//			mouseLookEnabled = false;
+//			interactionEnabled = false;
+			if (pauseMenu.IsVisible)
+			{
+				PersistantGlobalScript.FreezeWorldForMenu = true;
+			}
+		}
+
+//		if(Input.GetMouseButtonUp(0))
+//		{
+//			if (clickTime > dragThreshold)
+//			{
+//				interactionEnabled = false;
+//				//print ("Click timeout");
+//			}
+//			clickTime = 0.0f;
+//		}
+//		else if(Input.GetMouseButton(0))
+//		{
+//			interactionEnabled = true; //Disabled to make minigames work
+//			clickTime += Time.deltaTime;
+//			//print ("Clicktime: " + clickTime);
+//		}
+		mActive = minigameActive; //Silliness to deal with DFGUI
+
+
 	}
 
 	public void MinigameEventHanlder() {

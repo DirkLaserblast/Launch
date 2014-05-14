@@ -67,6 +67,8 @@ public class DFGUIMethodsScript : MonoBehaviour {
 			door.Save();
 		}
 
+		saveGame();
+
 		PlayerPrefs.Save();
 		Application.LoadLevel(0);
 	}

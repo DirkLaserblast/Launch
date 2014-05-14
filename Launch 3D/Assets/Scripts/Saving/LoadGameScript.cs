@@ -14,7 +14,7 @@ public class LoadGameScript : MonoBehaviour {
 	// Load player and item positions
 	void Start ()
 	{
-		string latestSaveNode = PlayerPrefs.GetString("LatestSaveNode");
+		string latestSaveNode = PlayerPrefs.GetString("ClosestSaveNode");
 
 		StartCoroutine("unlockMouseLook");
 
@@ -27,7 +27,7 @@ public class LoadGameScript : MonoBehaviour {
 		}
 		catch (System.NullReferenceException ex)
 		{
-	
+			print ("No save node");
 		}
 
 
