@@ -27,7 +27,7 @@ public class LoadGameScript : MonoBehaviour {
 		}
 		catch (System.NullReferenceException ex)
 		{
-	
+			print ("No save node");
 		}
 
 

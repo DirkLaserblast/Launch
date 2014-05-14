@@ -100,11 +100,20 @@ public class PersistantGlobalScript : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
 			//print ("Pause Menu Open");
-			pauseMenu.IsVisible = true;
+
+			if (pauseMenu.IsVisible)
+			{
+				PersistantGlobalScript.FreezeWorldForMenu = false;
+			}
+
+			pauseMenu.IsVisible = !pauseMenu.IsVisible;
 //			movementEnabled = false;
 //			mouseLookEnabled = false;
 //			interactionEnabled = false;
-			PersistantGlobalScript.FreezeWorldForMenu = true;
+			if (pauseMenu.IsVisible)
+			{
+				PersistantGlobalScript.FreezeWorldForMenu = true;
+			}
 		}
 
 		if(Input.GetMouseButtonUp(0))
