@@ -5,6 +5,7 @@ public class DFGUIMethodsScript : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject doors;
+	public dfListbox logList;
 
 	public void stopTime()
 	{
@@ -50,8 +51,11 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		print ("Rotation saved: " + player.transform.eulerAngles.x + " " + player.transform.eulerAngles.y + " " + player.transform.eulerAngles.z);
 
 		//Save logbook
-		string[] itemLogStringArray = (string[])ItemLogScript.LogArray.ToArray(typeof(string));
-		PlayerPrefsX.SetStringArray("Logbook", itemLogStringArray);
+		PlayerPrefsX.SetStringArray("Logbook", logList.Items);
+
+
+//		string[] itemLogStringArray = (string[])ItemLogScript.LogArray.ToArray(typeof(string));
+//		PlayerPrefsX.SetStringArray("Logbook", itemLogStringArray);
 
 		//Save inventory
 //		string[] invetoryStringArray = (string[])Inventory.inventoryObjects.ToArray(typeof(string));
