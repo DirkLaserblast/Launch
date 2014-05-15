@@ -21,6 +21,8 @@ public class MinigameObjectScript : MonoBehaviour {
 	public GameObject minigameCamera;
 	private FirstPersonCharacter FPCscript;
 
+	public GameObject reticle;
+
 	public GameObject RoverPuzzleObject;
 	private RoverPuzzle RoverPuzzleScript;
 
@@ -45,6 +47,7 @@ public class MinigameObjectScript : MonoBehaviour {
 			}
 
 			print ("This should not be happening after change camera.");
+	
 			RoverPuzzleObject.collider.enabled=true;
 			RoverPuzzleScript.enabled=false;
 			mainCamera.SetActive(true);
@@ -70,10 +73,12 @@ public class MinigameObjectScript : MonoBehaviour {
 	//				mouseLookScript.enabled = false;
 	//			}
 
-
+				reticle.SetActive(false);
 				print ("Changing cameras.");
 				mainCamera.SetActive(false);
 				minigameCamera.SetActive(true);
+
+				player.gameObject.SetActive(false);
 				RoverPuzzleObject.collider.enabled=false;
 
 	//			minigameCamera.transform.position = transform.position + offset;

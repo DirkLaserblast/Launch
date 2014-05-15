@@ -10,6 +10,7 @@ public class PowerLevelStart : MonoBehaviour {
 	public GameObject minigameCamera;
 	public GameObject puzzleGUI; 
 	public DoorScript door;
+	public GameObject reticle;
 	private FirstPersonCharacter FPCscript;
 
 	void Start() {
@@ -36,7 +37,7 @@ public class PowerLevelStart : MonoBehaviour {
 		PersistantGlobalScript.mouseLookEnabled = false;
 		PersistantGlobalScript.movementEnabled = false; 
 		PersistantGlobalScript.minigameMouseover = true;
-		
+
 		SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
 		foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
 		{
@@ -45,12 +46,14 @@ public class PowerLevelStart : MonoBehaviour {
 		
 		mainCamera.SetActive(false);
 		minigameCamera.SetActive(true);
-		
+		reticle.SetActive (false);
+
 		minigameCamera.transform.position = transform.position + offset;
 		minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 		PersistantGlobalScript.minigameActive = true;
 		puzzleGUI.SetActive (true);
 		FPCscript.lockCursor = false;
+		player.gameObject.SetActive (false);
 		Screen.lockCursor = false;
 	}
 
@@ -67,7 +70,9 @@ public class PowerLevelStart : MonoBehaviour {
 		
 		mainCamera.SetActive(true);
 		minigameCamera.SetActive(false);
-		
+		reticle.SetActive (true);
+		player.gameObject.SetActive (true);
+
 		PersistantGlobalScript.minigameActive = false;
 		puzzleGUI.SetActive (false);
 		FPCscript.lockCursor = true;

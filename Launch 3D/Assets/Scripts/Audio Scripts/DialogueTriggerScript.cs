@@ -3,14 +3,14 @@ using System.Collections;
 
 public class DialogueTriggerScript : MonoBehaviour {
 
-	public dfPanel window;
-	public dfLabel title;
-	public dfLabel name;
-	public dfLabel content;
-
-	public string[] titles;
-	public string[] names;
-	public string[] contents;
+//	public dfPanel window;
+//	public dfLabel title;
+//	public dfLabel name;
+//	public dfLabel content;
+//
+//	public string[] titles;
+//	public string[] names;
+//	public string[] contents;
 
 	public AudioClip radioSound;
 
@@ -21,17 +21,21 @@ public class DialogueTriggerScript : MonoBehaviour {
 	private bool playing = false;
 	public GameObject player;
 	private Rigidbody playerRB;
+	public bool ActivateOnStart;
 	public AudioClip voiceOver;
 	public AudioClip music;
 	public bool lockPlayer;
 
 	void Start() {
 		playerRB = player.GetComponent<Rigidbody>();
+		if (ActivateOnStart) {
+			playLog ();
+		}
 	}
 
 	void Update() {
 		if (playing) {
-			transform.position = player.transform.position;
+			//transform.position = camera.transform.position;
 		}
 	}
 
@@ -39,23 +43,27 @@ public class DialogueTriggerScript : MonoBehaviour {
 	{
 		if (other.tag == "Player" && !read && !playing)
 		{
-			audio.PlayOneShot(voiceOver);
-			if (music != null) Camera.main.audio.PlayOneShot(music);
-			//PersistantGlobalScript.FreezeWorldForMenu = true;
+			playLog ();
+		}
+	}
 
-			/*window.IsVisible = true;
+	public void playLog() {
+		audio.PlayOneShot(voiceOver);
+		if (music != null) Camera.main.audio.PlayOneShot(music);
+		//PersistantGlobalScript.FreezeWorldForMenu = true;
+		
+		/*window.IsVisible = true;
 			title.Text = titles[0];
 			name.Text = names[0];
 			content.Text = contents[0];*/
-			//audio.PlayOneShot(radioSound);
-			playing = true;
-			if(lockPlayer) {
-				PersistantGlobalScript.mouseLookEnabled = false;
-				PersistantGlobalScript.movementEnabled = false;
-				playerRB.velocity = Vector3.zero;
-			}
-			StartCoroutine("TurnOff", timer);
+		//audio.PlayOneShot(radioSound);
+		playing = true;
+		if(lockPlayer) {
+			PersistantGlobalScript.mouseLookEnabled = false;
+			PersistantGlobalScript.movementEnabled = false;
+			playerRB.velocity = Vector3.zero;
 		}
+		StartCoroutine("TurnOff", timer);
 	}
 
 	void EndVoice ()
