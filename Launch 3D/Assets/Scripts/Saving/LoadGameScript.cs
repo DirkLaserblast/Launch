@@ -4,6 +4,7 @@ using System.Collections;
 public class LoadGameScript : MonoBehaviour {
 
 	public GameObject player;
+	public dfListbox logList;
 
 	IEnumerator unlockMouseLook ()
 	{
@@ -14,7 +15,7 @@ public class LoadGameScript : MonoBehaviour {
 	// Load player and item positions
 	void Start ()
 	{
-		string latestSaveNode = PlayerPrefs.GetString("LatestSaveNode");
+		string latestSaveNode = PlayerPrefs.GetString("ClosestSaveNode");
 
 		StartCoroutine("unlockMouseLook");
 
@@ -27,9 +28,10 @@ public class LoadGameScript : MonoBehaviour {
 		}
 		catch (System.NullReferenceException ex)
 		{
-	
+			print ("No save node");
 		}
 
+		logList.Items = PlayerPrefsX.GetStringArray("LogBook", "", 1);
 
 //		Vector3 playerRotation = PlayerPrefsX.GetVector3("PlayerRotation");
 //
