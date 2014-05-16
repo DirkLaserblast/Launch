@@ -49,8 +49,9 @@ public class LifeSupportStart : MonoBehaviour {
 		minigameCamera.SetActive(true);
 		reticle.SetActive (false);
 		instructions.SetActive (true);
-		PersistantGlobalScript.minigameActive = true;
+		player.gameObject.SetActive (false);
 		FPCscript.lockCursor = false;
+		PersistantGlobalScript.minigameActive = true;
 		Screen.lockCursor = false;
 	}
 	
@@ -70,6 +71,7 @@ public class LifeSupportStart : MonoBehaviour {
 		reticle.SetActive (true);
 		instructions.SetActive (false);
 		PersistantGlobalScript.minigameActive = false;
+		player.gameObject.SetActive (true);
 		FPCscript.lockCursor = true;
 		Screen.lockCursor = true;
 	}
