@@ -47,7 +47,7 @@ public class PowerLevelStart : MonoBehaviour {
 		mainCamera.SetActive(false);
 		minigameCamera.SetActive(true);
 		reticle.SetActive (false);
-
+		//
 		minigameCamera.transform.position = transform.position + offset;
 		minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 		PersistantGlobalScript.minigameActive = true;
@@ -55,6 +55,7 @@ public class PowerLevelStart : MonoBehaviour {
 		FPCscript.lockCursor = false;
 		player.gameObject.SetActive (false);
 		Screen.lockCursor = false;
+		Screen.showCursor = true;
 	}
 
 	public void EndMinigame() {

@@ -90,7 +90,7 @@ public class MinigameObjectScript : MonoBehaviour {
 	//			oldCameraDirection = Camera.main.transform.rotation;
 	//			Camera.main.transform.position = newCameraPosition;
 	//			Camera.main.transform.LookAt (this.transform.position);
-
+				Screen.showCursor = true;
 				FPCscript.lockCursor = false;
 				Screen.lockCursor = false;
 				PersistantGlobalScript.minigameActive = true; 
