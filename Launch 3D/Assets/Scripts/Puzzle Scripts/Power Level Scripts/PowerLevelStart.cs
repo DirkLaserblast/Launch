@@ -47,7 +47,6 @@ public class PowerLevelStart : MonoBehaviour {
 		mainCamera.SetActive(false);
 		minigameCamera.SetActive(true);
 		reticle.SetActive (false);
-		print ("stuff");
 		minigameCamera.transform.position = transform.position + offset;
 		minigameCamera.transform.LookAt(transform.position + new Vector3(0, offset.y, 0));
 		PersistantGlobalScript.minigameActive = true;
