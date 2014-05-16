@@ -79,7 +79,6 @@ public class RoverPuzzle : MonoBehaviour {
 		FPCscript.lockCursor = false;
 		Screen.lockCursor = false;
 
-		instructions.SetActive (true);
 	//	FPCscript = player.GetComponent<FirstPersonCharacter> ();
 		RoverPuzzleScript = RoverPuzzleObject.GetComponent<RoverPuzzle> ();
 		CuScript = CuriosityRover.GetComponent<CircleScript> ();
@@ -467,20 +466,25 @@ public class RoverPuzzle : MonoBehaviour {
 				}
 				//if it isn't a rover and isn't valid ground and it isn't invalid ground then it's offscreen
 				else {
-					if (SelectedRover != null) {
+					//if (SelectedRover != null) {
+						print ("Do the thing.");
+
 						PersistantGlobalScript.interactionEnabled = true;
 						PersistantGlobalScript.mouseLookEnabled = true;
 						PersistantGlobalScript.movementEnabled = true;
-					
+						player.gameObject.SetActive(true);
+						instructions.SetActive(false);
+
+						
+						reticle.SetActive(true);
 						FPCscript.lockCursor = true;
 						PersistantGlobalScript.minigameActive = false;
 						RoverPuzzleObject.collider.enabled=true;
 						mainCamera.SetActive(true);
 						miniCam.SetActive(false);
-						//print ("Do the thing.");
 						Screen.lockCursor = true;
 						RoverPuzzleScript.enabled=false;
-					}
+					//}
 				}
 			}
 		}
@@ -627,8 +631,9 @@ public class RoverPuzzle : MonoBehaviour {
 		}
 		if (YouWon == false ) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, FinishObj.transform.position);
-		//	print ("Checking false, distance is: " + distance);
-			if (distance < 0.75) {
+			bool dist = (distance < 0.45);
+			print ("Checking false, distance is: " + distance + ", " + dist);
+			if (distance < 0.58) {
 				audio.PlayOneShot (winSound);
 				print ("You win!");
 				YouWon = true;
@@ -646,7 +651,6 @@ public class RoverPuzzle : MonoBehaviour {
 				player.gameObject.SetActive(true);
 				FPCscript.lockCursor = true;
 
-				print ("Do the thing.");
 				Screen.lockCursor = true;
 				instructions.SetActive(false);
 				RoverPuzzleScript.enabled=false;
