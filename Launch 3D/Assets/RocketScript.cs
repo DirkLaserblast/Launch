@@ -6,6 +6,7 @@ public class RocketScript : MonoBehaviour {
 	public AudioClip liftOffSound;
 	public GameObject rocket;
 	public GameObject rocketCamera;
+	public GameObject carCamera;
 	public Animator rocketAnimator;
 	public GameObject car;
 	public dfSprite crosshair;
@@ -24,9 +25,9 @@ public class RocketScript : MonoBehaviour {
 
 			crosshair.enabled = false;
 
-			rocketCamera.SetActive(true); //Switch cameras
+			carCamera.SetActive(false);
 
-			Camera.main.enabled = false;
+			rocketCamera.SetActive(true); //Switch cameras
 
 			rocketAnimator.SetBool("Ignition", true); //Launch rocket
 			particles.Play();
