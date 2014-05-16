@@ -95,7 +95,7 @@ public class MinigameObjectScript : MonoBehaviour {
 				Screen.lockCursor = false;
 				PersistantGlobalScript.minigameActive = true; 
 				RoverPuzzleScript.enabled=true;
-				print("foo");
+				//print("foo");
 			}
 		}
 	}
