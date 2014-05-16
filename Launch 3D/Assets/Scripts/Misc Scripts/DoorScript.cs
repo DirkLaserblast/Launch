@@ -120,7 +120,6 @@ public class DoorScript : MonoBehaviour {
 			doorAnimator.SetBool("Open", true);
 			if (!locked && !airLocked)
 			{
-				JournalScript.addItem("Door Opened");
 				audio.Stop();
 				if (!lowPower) audio.PlayOneShot(doorOpenSound);
 				else audio.PlayOneShot(lowPowerSound);

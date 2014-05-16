@@ -11,6 +11,9 @@ public class LifeSupportStart : MonoBehaviour {
 	public GameObject reticle;
 	public GameObject instructions;
 	public DoorScript door;
+	public string journalEntry;
+	public string journalEntry2;
+	public string journalEntry3;
 	public GameObject LSobj;
 	private FirstPersonCharacter FPCscript;
 	
@@ -65,6 +68,12 @@ public class LifeSupportStart : MonoBehaviour {
 		{
 			mouseLookScript.enabled = true;
 		}
+
+		JournalScript.addItem(journalEntry);
+		JournalScript.addItem(journalEntry2);
+		JournalScript.addItem(journalEntry3);
+
+
 		LSobj.SetActive (false);
 		mainCamera.SetActive(true);
 		minigameCamera.SetActive(false);
