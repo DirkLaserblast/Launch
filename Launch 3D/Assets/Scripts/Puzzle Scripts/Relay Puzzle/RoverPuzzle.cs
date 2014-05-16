@@ -104,6 +104,26 @@ public class RoverPuzzle : MonoBehaviour {
 		Alive ();
 		Selecting ();
 	}
+
+	public void Exit() {
+		print ("Do the thing.");
+		
+		PersistantGlobalScript.interactionEnabled = true;
+		PersistantGlobalScript.mouseLookEnabled = true;
+		PersistantGlobalScript.movementEnabled = true;
+		player.gameObject.SetActive(true);
+		instructions.SetActive(false);
+		
+		
+		reticle.SetActive(true);
+		FPCscript.lockCursor = true;
+		PersistantGlobalScript.minigameActive = false;
+		RoverPuzzleObject.collider.enabled=true;
+		mainCamera.SetActive(true);
+		miniCam.SetActive(false);
+		Screen.lockCursor = true;
+		RoverPuzzleScript.enabled=false;
+	}
 	
 	void Selecting() {
 	//void OnMouseUp() {
@@ -467,23 +487,23 @@ public class RoverPuzzle : MonoBehaviour {
 				//if it isn't a rover and isn't valid ground and it isn't invalid ground then it's offscreen
 				else {
 					//if (SelectedRover != null) {
-						print ("Do the thing.");
-
-						PersistantGlobalScript.interactionEnabled = true;
-						PersistantGlobalScript.mouseLookEnabled = true;
-						PersistantGlobalScript.movementEnabled = true;
-						player.gameObject.SetActive(true);
-						instructions.SetActive(false);
-
-						
-						reticle.SetActive(true);
-						FPCscript.lockCursor = true;
-						PersistantGlobalScript.minigameActive = false;
-						RoverPuzzleObject.collider.enabled=true;
-						mainCamera.SetActive(true);
-						miniCam.SetActive(false);
-						Screen.lockCursor = true;
-						RoverPuzzleScript.enabled=false;
+//						print ("Do the thing.");
+//
+//						PersistantGlobalScript.interactionEnabled = true;
+//						PersistantGlobalScript.mouseLookEnabled = true;
+//						PersistantGlobalScript.movementEnabled = true;
+//						player.gameObject.SetActive(true);
+//						instructions.SetActive(false);
+//
+//						
+//						reticle.SetActive(true);
+//						FPCscript.lockCursor = true;
+//						PersistantGlobalScript.minigameActive = false;
+//						RoverPuzzleObject.collider.enabled=true;
+//						mainCamera.SetActive(true);
+//						miniCam.SetActive(false);
+//						Screen.lockCursor = true;
+//						RoverPuzzleScript.enabled=false;
 					//}
 				}
 			}
@@ -640,22 +660,23 @@ public class RoverPuzzle : MonoBehaviour {
 				//Save win state
 				PlayerPrefsX.SetBool("RoverWin", true);
 
-				PersistantGlobalScript.interactionEnabled = true;
-				PersistantGlobalScript.mouseLookEnabled = true;
-				PersistantGlobalScript.movementEnabled = true;
-
-				PersistantGlobalScript.minigameActive = false;
-				RoverPuzzleObject.collider.enabled=true;
-				mainCamera.SetActive(true);
-				miniCam.SetActive(false);
-				player.gameObject.SetActive(true);
-				FPCscript.lockCursor = true;
-
-				Screen.lockCursor = true;
-				instructions.SetActive(false);
-				RoverPuzzleScript.enabled=false;
-
-				reticle.SetActive(true);
+//				PersistantGlobalScript.interactionEnabled = true;
+//				PersistantGlobalScript.mouseLookEnabled = true;
+//				PersistantGlobalScript.movementEnabled = true;
+//
+//				PersistantGlobalScript.minigameActive = false;
+//				RoverPuzzleObject.collider.enabled=true;
+//				mainCamera.SetActive(true);
+//				miniCam.SetActive(false);
+//				player.gameObject.SetActive(true);
+//				FPCscript.lockCursor = true;
+//
+//				Screen.lockCursor = true;
+//				instructions.SetActive(false);
+//				RoverPuzzleScript.enabled=false;
+//
+//				reticle.SetActive(true);
+				//Exit ();
 				finalDoor.isAirLocked = false;
 				//probably trigger some dialogue thing
 				dialogue.SetActive(true);
