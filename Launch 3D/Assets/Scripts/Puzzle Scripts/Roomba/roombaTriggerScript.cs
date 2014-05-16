@@ -4,6 +4,7 @@ using System.Collections;
 public class roombaTriggerScript : MonoBehaviour {
 
 	public Animator doorAnimator;
+	public GameObject jammer;
 
 	void Start()
 	{
@@ -18,6 +19,8 @@ public class roombaTriggerScript : MonoBehaviour {
 		{
 			doorAnimator.SetBool("Jammed", false);
 			doorAnimator.SetBool("Locked", false);
+			//Fling the jamming object away
+			jammer.rigidbody.AddForce(0,0,10);
 		}
 	}
 }
