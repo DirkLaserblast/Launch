@@ -4,6 +4,7 @@ using System.Collections;
 public class PowerPlantTrigger : MonoBehaviour {
 
 	public GameObject powerSceneCamera;
+	public GameObject pickUpFriends;
 	public Animator cameraAnimator;
 	public CarUserControl carControl;
 	public GameObject carCamera;
@@ -16,6 +17,8 @@ public class PowerPlantTrigger : MonoBehaviour {
 		if (Other.tag == "Player" && !triggerFired)
 		{
 			triggerFired = true;
+
+			pickUpFriends.SetActive(true);
 
 			powerSceneCamera.SetActive(true);
 			carCamera.SetActive(false);
