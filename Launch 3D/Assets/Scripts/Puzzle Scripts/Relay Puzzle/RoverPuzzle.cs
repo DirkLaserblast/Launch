@@ -36,8 +36,8 @@ public class RoverPuzzle : MonoBehaviour {
 	public bool SelectedAlive = false;
 	public int SelectedTree = 7;
 	//TempSelected
-	public GameObject TempRover;
-	public GameObject TempGround;
+	private GameObject TempRover;
+	private GameObject TempGround;
 	public bool TempAlive = false;
 	public int TempTree = 7;
 	public GameObject InvalidGround;
@@ -51,6 +51,9 @@ public class RoverPuzzle : MonoBehaviour {
 	public Material RoverColor;
 	public Material RoverSelected;
 	public Material RoverAlive;
+	public Material FinWin;
+
+	public GameObject FinObj;
 
 	public Transform player;
 	public GameObject mainCamera;
@@ -656,6 +659,7 @@ public class RoverPuzzle : MonoBehaviour {
 			print ("Checking false, distance is: " + distance + ", " + dist);
 			if (distance < 0.58) {
 				audio.PlayOneShot (winSound);
+				FinObj.renderer.material = FinWin;
 				print ("You win!");
 				YouWon = true;
 				//Save win state
