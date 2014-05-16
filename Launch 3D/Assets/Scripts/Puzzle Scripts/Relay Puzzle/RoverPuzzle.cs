@@ -51,6 +51,7 @@ public class RoverPuzzle : MonoBehaviour {
 	public Material RoverColor;
 	public Material RoverSelected;
 	public Material RoverAlive;
+	public Material FinWin;
 
 	public Transform player;
 	public GameObject mainCamera;
@@ -655,6 +656,7 @@ public class RoverPuzzle : MonoBehaviour {
 			print ("Checking false, distance is: " + distance + ", " + dist);
 			if (distance < 0.58) {
 				audio.PlayOneShot (winSound);
+				FinishObj.renderer.material = FinWin;
 				print ("You win!");
 				YouWon = true;
 				//Save win state
