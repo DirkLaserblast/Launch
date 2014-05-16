@@ -50,10 +50,11 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
-		if (Input.GetMouseButtonUp(0))
-		{
-			Screen.lockCursor = lockCursor;
-		}
+		//WHY IS THIS HERE?!
+//		if (Input.GetMouseButtonUp(0))
+//		{
+//			Screen.lockCursor = lockCursor;
+//		}
 	}
 	
 	

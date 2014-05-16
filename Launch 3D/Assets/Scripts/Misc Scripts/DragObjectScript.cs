@@ -89,14 +89,14 @@ public class DragObjectScript : MonoBehaviour
 		float elapsedTime = 0.0f;
 		while(Input.GetMouseButton(0))
 		{
-			if (Screen.lockCursor)
-			{
+//			if (Screen.lockCursor)
+//			{
 				ray = cam.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 0f));
-			}
-			else
-			{
-				ray = cam.ScreenPointToRay(Input.mousePosition);
-			}
+//			}
+//			else
+//			{
+//				ray = cam.ScreenPointToRay(Input.mousePosition);
+//			}
 			springJoint.transform.position = ray.GetPoint(distance);
 			draggedObject.rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 

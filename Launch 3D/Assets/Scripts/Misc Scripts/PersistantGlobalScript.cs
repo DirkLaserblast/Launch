@@ -99,17 +99,18 @@ public class PersistantGlobalScript : MonoBehaviour
 
 		//print ("Interaction: " + interactionEnabled);
 
-		if (pauseMenu.IsVisible)
-		{
-			Screen.showCursor = true;
-			Screen.lockCursor = false;
-			crosshair.IsVisible = false;
-		}
-		else if (count < 5)
+//		if (pauseMenu.IsVisible)
+//		{
+//			PersistantGlobalScript.FreezeWorldForMenu = true;
+//			crosshair.IsVisible = false;
+//		}
+
+		if (count < 5)
 		{ //Moves the cursor to the center of the screen. Still not sure why it won't start there.
 			Screen.lockCursor = false;
 			Screen.lockCursor = true;
 			count++;
+			crosshair.IsVisible = true;
 		}
 
 
@@ -120,15 +121,14 @@ public class PersistantGlobalScript : MonoBehaviour
 			if (pauseMenu.IsVisible)
 			{
 				PersistantGlobalScript.FreezeWorldForMenu = false;
+				pauseMenu.IsVisible = false;
+				crosshair.IsVisible = true;
 			}
-
-			pauseMenu.IsVisible = !pauseMenu.IsVisible;
-//			movementEnabled = false;
-//			mouseLookEnabled = false;
-//			interactionEnabled = false;
-			if (pauseMenu.IsVisible)
+			else 
 			{
 				PersistantGlobalScript.FreezeWorldForMenu = true;
+				pauseMenu.IsVisible = true;
+				crosshair.IsVisible = false;
 			}
 		}
 
