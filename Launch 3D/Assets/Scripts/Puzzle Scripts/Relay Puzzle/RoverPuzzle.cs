@@ -628,7 +628,7 @@ public class RoverPuzzle : MonoBehaviour {
 		if (YouWon == false ) {
 			float distance = Vector3.Distance (SojournerRover.transform.position, FinishObj.transform.position);
 		//	print ("Checking false, distance is: " + distance);
-			if (distance < 0.6) {
+			if (distance < 0.75) {
 				audio.PlayOneShot (winSound);
 				print ("You win!");
 				YouWon = true;
