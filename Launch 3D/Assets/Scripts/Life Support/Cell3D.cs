@@ -19,12 +19,13 @@ public class Cell3D : MonoBehaviour {
 	public bool hasAir = false;
 	public Material nonBlockMaterial;
 	public CellSpawner3D spawner;
+	public Camera myCamera;
 
 	void Start() { }
 
 	void Update() { 
 		if (type == TYPE.FAN) {
-			fan.Rotate(0, 3, 0);
+			fan.Rotate(0, 8, 0);
 		}
 	}
 
@@ -160,7 +161,6 @@ public class Cell3D : MonoBehaviour {
 	}
 
 	void OnMouseOver() {
-		mousePosition = Input.mousePosition;
 		mouseover = true;
 	}
 
@@ -170,26 +170,39 @@ public class Cell3D : MonoBehaviour {
 
 	void OnMouseDrag() {
 		if (!mouseover && (type == TYPE.FAN || type == TYPE.ROTATEDFAN)) {
-			Cell3D other;
-			Vector2 positionDifference = new Vector2(mousePosition.x - Input.mousePosition.x, mousePosition.y - Input.mousePosition.y);
+			Cell3D other = null;
+			Vector3 currentPosition = myCamera.WorldToScreenPoint(transform.position);
+			Vector2 positionDifference = new Vector2(currentPosition.x - Input.mousePosition.x, currentPosition.y - Input.mousePosition.y);
 			if(Mathf.Abs(positionDifference.x) > Mathf.Abs(positionDifference.y)) { //Check if the difference is larger in Y or in X
 				if(positionDifference.x > 0) {
-					other = spawner.getCell(x+1, y);
+					if(Mathf.Abs(positionDifference.x) > 30) {
+						other = spawner.getCell(x+1, y);
+					}
 				} else {
-					other = spawner.getCell(x-1, y);
+					if(Mathf.Abs(positionDifference.x) > 30) {
+						other = spawner.getCell(x-1, y);
+					}
 				}
 			} else {
 				if(positionDifference.y > 0) {
-					other = spawner.getCell(x, y+1);
+					if(Mathf.Abs(positionDifference.y) > 30) {
+						other = spawner.getCell(x, y+1);
+					}
 				} else {
-					other = spawner.getCell(x, y-1);
+					if(Mathf.Abs(positionDifference.y) > 30) {
+						other = spawner.getCell(x, y-1);
+					}
 				}
+			}
+			if(other == null) {
+				other = GetComponent<Cell3D>();
 			}
 			if(other.type == TYPE.BLANK) {
 				spawner.SwapCells(GetComponent<Cell3D>(), other);
 			}
+			
 			mousePosition = Input.mousePosition;
-			mouseover = true;
+			//mouseover = true;
 		}
 	}
 	

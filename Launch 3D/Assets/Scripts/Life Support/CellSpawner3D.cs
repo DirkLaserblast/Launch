@@ -20,9 +20,12 @@ public class CellSpawner3D : MonoBehaviour {
 	private Vector2 airStart = new Vector2(19, 7);
 	private List<Vector2> sinks = new List<Vector2>();
 	private bool changed = false;
+	public Camera myCamera;
 	public Transform prefab;
 	public GameObject backdrop;
 	public LifeSupportStart CompletionObject;
+	public dfLabel instructions;
+	public DoorScript door;
 	Cell prevCell;
 	GameObject[,] grid;
 	
@@ -79,6 +82,7 @@ public class CellSpawner3D : MonoBehaviour {
 		for (int i = 0; i < WIDTH; i++) {
 			for(int j = 0; j < HEIGHT; j++) {
 				Cell3D cell = grid[WIDTH-i-1, j].GetComponent<Cell3D>();
+				cell.myCamera = myCamera;
 				switch(level[j,i]) {
 				case 0:
 					cell.SetType(Cell3D.TYPE.BLANK, Direction.LEFT);
@@ -129,7 +133,8 @@ public class CellSpawner3D : MonoBehaviour {
 		}
 		CalculateAir((int) airStart.x, (int) airStart.y, Direction.RIGHT);
 		if(CompletionCheck()) {
-			CompletionObject.EndMinigame();
+			instructions.Text = "Air now flowing to all rooms. Communications room is now accessible.";
+			door.isAirLocked = false;
 		}
 	}
 

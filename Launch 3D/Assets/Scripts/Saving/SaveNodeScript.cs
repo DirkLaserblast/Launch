@@ -13,7 +13,7 @@ public class SaveNodeScript : MonoBehaviour {
 	{
 		if(objectCollided.tag == "Player")
 		{
-			PlayerPrefs.SetString ("LatestSaveNode", gameObject.name);
+			nodeActive = true;
 		}
 	}
 }

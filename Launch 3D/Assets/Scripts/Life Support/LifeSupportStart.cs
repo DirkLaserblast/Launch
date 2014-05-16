@@ -44,7 +44,7 @@ public class LifeSupportStart : MonoBehaviour {
 		{
 			mouseLookScript.enabled = false;
 		}
-		
+		LSobj.SetActive (true);
 		mainCamera.SetActive(false);
 		minigameCamera.SetActive(true);
 		reticle.SetActive (false);
@@ -65,7 +65,6 @@ public class LifeSupportStart : MonoBehaviour {
 			mouseLookScript.enabled = true;
 		}
 		LSobj.SetActive (false);
-		door.isAirLocked = false;
 		mainCamera.SetActive(true);
 		minigameCamera.SetActive(false);
 		reticle.SetActive (true);

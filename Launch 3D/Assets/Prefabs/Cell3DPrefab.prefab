@@ -42,7 +42,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e219d3141e59f4184be4b5abdfe4d8a9, type: 2}
+  - {fileID: 2100000, guid: c2e995f9001af43c3b196bb2558f8820, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91,6 +91,7 @@ MonoBehaviour:
   hasAir: 0
   nonBlockMaterial: {fileID: 2100000, guid: e34418e76dc7e4f4284f87b747043984, type: 2}
   spawner: {fileID: 0}
+  myCamera: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

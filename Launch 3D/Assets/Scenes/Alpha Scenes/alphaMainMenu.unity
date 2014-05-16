@@ -340,7 +340,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490067378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .00111111114, y: .00111111114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2055079102}
@@ -698,7 +698,7 @@ GameObject:
   - 65: {fileID: 1040317387}
   - 114: {fileID: 1040317389}
   m_Layer: 0
-  m_Name: Quit
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,7 +711,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1040317385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.83555603, y: -.595550537, z: 0}
+  m_LocalPosition: {x: -.725547791, y: -.596664429, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2055079102}
@@ -725,7 +725,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .306666672, y: .193333343, z: .00100000005}
+  m_Size: {x: .526666701, y: .193333343, z: .00100000005}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1040317388
 MonoBehaviour:
@@ -751,7 +751,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 138, y: 87}
+  size: {x: 237, y: 87}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
     margins:
       left: .190972224
       top: .75
-      right: .28680557
+      right: .355555564
       bottom: .846666694
     owner: {fileID: 1040317388}
   renderOrder: 3
@@ -777,7 +777,7 @@ MonoBehaviour:
   pressedSprite: button-disabled
   state: 0
   group: {fileID: 0}
-  text: Quit
+  text: Settings
   textAlign: 0
   vertAlign: 1
   normalColor:
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1040317385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec4b6d41893ad6e499d2ffcefa532575, type: 3}
   m_Name: 
@@ -1094,7 +1094,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e773281c06b5e024db5e1a4f549afe5d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

@@ -67,6 +67,7 @@ public class RoverPuzzle : MonoBehaviour {
 	private CircleScript FtScript;
 
 	public DoorScript finalDoor;
+	public GameObject reticle;
 	
 	void Start() {
 		PlayerPrefs.DeleteAll ();
@@ -638,16 +639,19 @@ public class RoverPuzzle : MonoBehaviour {
 				PersistantGlobalScript.mouseLookEnabled = true;
 				PersistantGlobalScript.movementEnabled = true;
 
-				FPCscript.lockCursor = true;
 				PersistantGlobalScript.minigameActive = false;
 				RoverPuzzleObject.collider.enabled=true;
 				mainCamera.SetActive(true);
 				miniCam.SetActive(false);
+				player.gameObject.SetActive(true);
+				FPCscript.lockCursor = true;
+
 				print ("Do the thing.");
 				Screen.lockCursor = true;
 				instructions.SetActive(false);
 				RoverPuzzleScript.enabled=false;
 
+				reticle.SetActive(true);
 				finalDoor.isAirLocked = false;
 				//probably trigger some dialogue thing
 				dialogue.SetActive(true);
