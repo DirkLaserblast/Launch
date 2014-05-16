@@ -28,6 +28,8 @@ public class CellSpawner3D : MonoBehaviour {
 	public DoorScript door;
 	Cell prevCell;
 	GameObject[,] grid;
+	public AudioClip winning;
+	bool StopWinning = false;
 	
 	void Start () { 
 		origin = backdrop.transform.position;
@@ -133,6 +135,10 @@ public class CellSpawner3D : MonoBehaviour {
 		}
 		CalculateAir((int) airStart.x, (int) airStart.y, Direction.RIGHT);
 		if(CompletionCheck()) {
+			if (StopWinning == false) {
+				StopWinning = true;
+				audio.PlayOneShot(winning);
+			}
 			instructions.Text = "Air now flowing to all rooms. Communications room is now accessible.";
 			door.isAirLocked = false;
 		}

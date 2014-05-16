@@ -114,7 +114,7 @@ public class CarAudio : MonoBehaviour {
 				// for 1 channel engine sound, it's oh so simple:
                 highAccel.pitch = pitch*pitchMultiplier*highPitchMultiplier;
 				highAccel.dopplerLevel = useDoppler ? dopplerLevel : 0;
-				highAccel.volume = 1;
+				highAccel.volume = 0.5f;
 			} else {
 
                 // for 4 channel engine sound, it's a little more complex:
@@ -153,7 +153,7 @@ public class CarAudio : MonoBehaviour {
 			}
 
             // adjust the skid source based on the cars current skidding state
-			skidSource.volume = Mathf.Clamp01(carController.AvgSkid * 3 - 1);
+			skidSource.volume = Mathf.Clamp01(carController.AvgSkid * 2 - 1);
 			skidSource.pitch = Mathf.Lerp (0.8f, 1.3f, carController.SpeedFactor);
 			skidSource.dopplerLevel = useDoppler ? dopplerLevel : 0;
 		}
