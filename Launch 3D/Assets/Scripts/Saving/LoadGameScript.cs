@@ -6,9 +6,10 @@ public class LoadGameScript : MonoBehaviour {
 	public GameObject player;
 	public dfListbox logList;
 
-	IEnumerator unlockMouseLook ()
+	void unlockMouseLook ()
 	{
-		yield return new WaitForSeconds(1.0f);
+		//yield return new WaitForSeconds(1.0f);
+		PersistantGlobalScript.FreezeWorldForMenu = false;
 		player.GetComponent<SimpleMouseRotator>().enabled = true;
 	}
 
