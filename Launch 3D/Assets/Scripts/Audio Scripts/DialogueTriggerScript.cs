@@ -27,6 +27,10 @@ public class DialogueTriggerScript : MonoBehaviour {
 	public bool lockPlayer;
 
 	void Start() {
+
+		//Load saved state
+		gameObject.SetActive(PlayerPrefsX.GetBool(gameObject.name, true));
+		
 		playerRB = player.GetComponent<Rigidbody>();
 		if (ActivateOnStart) {
 			playLog ();
@@ -80,11 +84,12 @@ public class DialogueTriggerScript : MonoBehaviour {
 		{*/
 			//window.IsVisible = false;
 			//PersistantGlobalScript.FreezeWorldForMenu = false;
-			read = true;
-			if(lockPlayer) {
-				PersistantGlobalScript.mouseLookEnabled = true;
-				PersistantGlobalScript.movementEnabled = true;
-			}
+		read = true;
+		if(lockPlayer) {
+			PersistantGlobalScript.mouseLookEnabled = true;
+			PersistantGlobalScript.movementEnabled = true;
+		}
+		PlayerPrefsX.SetBool(gameObject.name, false);
 			gameObject.SetActive(false);
 		//}
 	}
