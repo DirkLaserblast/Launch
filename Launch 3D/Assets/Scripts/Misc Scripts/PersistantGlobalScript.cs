@@ -120,15 +120,11 @@ public class PersistantGlobalScript : MonoBehaviour
 
 			if (pauseMenu.IsVisible)
 			{
-				PersistantGlobalScript.FreezeWorldForMenu = false;
-				pauseMenu.IsVisible = false;
-				crosshair.IsVisible = true;
+				closeMenu();
 			}
 			else 
 			{
-				PersistantGlobalScript.FreezeWorldForMenu = true;
-				pauseMenu.IsVisible = true;
-				crosshair.IsVisible = false;
+				openMenu();
 			}
 		}
 
@@ -150,6 +146,22 @@ public class PersistantGlobalScript : MonoBehaviour
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
 
+	}
+
+	public void closeMenu() {
+		PersistantGlobalScript.FreezeWorldForMenu = false;
+		pauseMenu.IsVisible = false;
+		crosshair.IsVisible = true;
+		if (minigameActive) {
+			Screen.showCursor = true;
+			Screen.lockCursor = false;
+		}
+	}
+
+	public void openMenu() {
+		PersistantGlobalScript.FreezeWorldForMenu = true;
+		pauseMenu.IsVisible = true;
+		crosshair.IsVisible = false;
 	}
 
 	public void MinigameEventHanlder() {
