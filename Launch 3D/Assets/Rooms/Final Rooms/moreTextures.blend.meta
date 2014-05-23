@@ -4,11 +4,22 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: VBSP_Object_model_0
+    100004: VBSP_Object_model_0_001
     400000: //RootNode
+    400002: VBSP_Object_model_0
+    400004: VBSP_Object_model_0_001
     2300000: //RootNode
+    2300002: VBSP_Object_model_0
+    2300004: VBSP_Object_model_0_001
     3300000: //RootNode
+    3300002: VBSP_Object_model_0
+    3300004: VBSP_Object_model_0_001
     4300000: VBSP_Object_model_0
+    4300002: VBSP_Object_model_0_001
     6400000: //RootNode
+    6400002: VBSP_Object_model_0
+    6400004: VBSP_Object_model_0_001
     7400000: Default Take
     9500000: //RootNode
   materials:
