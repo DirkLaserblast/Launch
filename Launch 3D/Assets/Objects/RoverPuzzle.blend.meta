@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c03e5c0df2aa4c24d91c852cf2ba376b
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: CuriosityGround
     100002: CuriosityRover
@@ -16,6 +16,12 @@ ModelImporter:
     100020: RandomRover
     100022: RandomRoverGround
     100024: Finish
+    100026: CuriosityPing
+    100028: FinishPing
+    100030: OpportunityPing
+    100032: RandomPing
+    100034: SojournerPing
+    100036: SpiritPing
     400000: CuriosityGround
     400002: CuriosityRover
     400004: InvalidGround
@@ -29,6 +35,12 @@ ModelImporter:
     400020: RandomRover
     400022: RandomRoverGround
     400024: Finish
+    400026: CuriosityPing
+    400028: FinishPing
+    400030: OpportunityPing
+    400032: RandomPing
+    400034: SojournerPing
+    400036: SpiritPing
     2300000: CuriosityGround
     2300002: CuriosityRover
     2300004: InvalidGround
@@ -41,6 +53,12 @@ ModelImporter:
     2300018: RandomRover
     2300020: RandomRoverGround
     2300022: Finish
+    2300024: CuriosityPing
+    2300026: FinishPing
+    2300028: OpportunityPing
+    2300030: RandomPing
+    2300032: SojournerPing
+    2300034: SpiritPing
     3300000: CuriosityGround
     3300002: CuriosityRover
     3300004: InvalidGround
@@ -53,6 +71,12 @@ ModelImporter:
     3300018: RandomRover
     3300020: RandomRoverGround
     3300022: Finish
+    3300024: CuriosityPing
+    3300026: FinishPing
+    3300028: OpportunityPing
+    3300030: RandomPing
+    3300032: SojournerPing
+    3300034: SpiritPing
     4300000: SojournerRover
     4300002: OpportunityRover
     4300004: SpiritRover
@@ -65,6 +89,12 @@ ModelImporter:
     4300018: RandomRover
     4300020: RandomRoverGround
     4300022: Finish
+    4300024: FinishPing
+    4300026: RandomPing
+    4300028: SojournerPing
+    4300030: OpportunityPing
+    4300032: SpiritPing
+    4300034: CuriosityPing
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -118,4 +148,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
