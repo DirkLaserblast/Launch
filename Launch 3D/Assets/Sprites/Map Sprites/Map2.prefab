@@ -1,0 +1,482 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Map2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f514313262e3d141ad017b60809752a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 58e35caf9c08a498d99d4ca6116127eb, type: 2}
+  items:
+  - name: bedroom
+    region:
+      serializedVersion: 2
+      x: .760742188
+      y: .935058594
+      width: .166992188
+      height: .0639648438
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 342, y: 131}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: bedroomOff
+    region:
+      serializedVersion: 2
+      x: .0009765625
+      y: .870117188
+      width: .166992188
+      height: .0639648438
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 342, y: 131}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: bedroomOn
+    region:
+      serializedVersion: 2
+      x: .592773438
+      y: .935058594
+      width: .166992188
+      height: .0639648438
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 342, y: 131}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommonRoom
+    region:
+      serializedVersion: 2
+      x: .280273438
+      y: .520996094
+      width: .165527344
+      height: .296875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 339, y: 608}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommonRoomOff
+    region:
+      serializedVersion: 2
+      x: .446777344
+      y: .520996094
+      width: .165527344
+      height: .296875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 339, y: 608}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommonRoomOn
+    region:
+      serializedVersion: 2
+      x: .113769531
+      y: .520996094
+      width: .165527344
+      height: .296875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 339, y: 608}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommRoom
+    region:
+      serializedVersion: 2
+      x: .624511719
+      y: .818847656
+      width: .120605469
+      height: .115234375
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 247, y: 236}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommRoomOff
+    region:
+      serializedVersion: 2
+      x: .74609375
+      y: .818847656
+      width: .120605469
+      height: .115234375
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 247, y: 236}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CommRoomOn
+    region:
+      serializedVersion: 2
+      x: .867675781
+      y: .818847656
+      width: .120605469
+      height: .115234375
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 247, y: 236}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: DiagnosticsRoom
+    region:
+      serializedVersion: 2
+      x: .578613281
+      y: .833007812
+      width: .044921875
+      height: .101074219
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 92, y: 207}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: DiagnosticsRoomOff
+    region:
+      serializedVersion: 2
+      x: .486816406
+      y: .833007812
+      width: .044921875
+      height: .101074219
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 92, y: 207}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: DiagnosticsRoomOn
+    region:
+      serializedVersion: 2
+      x: .532714844
+      y: .833007812
+      width: .044921875
+      height: .101074219
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 92, y: 207}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallA
+    region:
+      serializedVersion: 2
+      x: .259765625
+      y: .959472656
+      width: .128417969
+      height: .0395507812
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 263, y: 81}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallAOff
+    region:
+      serializedVersion: 2
+      x: .0009765625
+      y: .959472656
+      width: .128417969
+      height: .0395507812
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 263, y: 81}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallAOn
+    region:
+      serializedVersion: 2
+      x: .130371094
+      y: .959472656
+      width: .128417969
+      height: .0395507812
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 263, y: 81}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallB
+    region:
+      serializedVersion: 2
+      x: .0385742188
+      y: .579589844
+      width: .0366210938
+      height: .23828125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 75, y: 488}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallBOff
+    region:
+      serializedVersion: 2
+      x: .076171875
+      y: .579589844
+      width: .0366210938
+      height: .23828125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 75, y: 488}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: HallBOn
+    region:
+      serializedVersion: 2
+      x: .0009765625
+      y: .579589844
+      width: .0366210938
+      height: .23828125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 75, y: 488}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: LifeSupport
+    region:
+      serializedVersion: 2
+      x: .524902344
+      y: .94921875
+      width: .0668945312
+      height: .0498046875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 137, y: 102}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: LifeSupportOff
+    region:
+      serializedVersion: 2
+      x: .389160156
+      y: .94921875
+      width: .0668945312
+      height: .0498046875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 137, y: 102}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: LifeSupportOn
+    region:
+      serializedVersion: 2
+      x: .45703125
+      y: .94921875
+      width: .0668945312
+      height: .0498046875
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 137, y: 102}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: Map
+    region:
+      serializedVersion: 2
+      x: .0009765625
+      y: .103515625
+      width: .46875
+      height: .416503906
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 960, y: 853}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: SurfaceAccess
+    region:
+      serializedVersion: 2
+      x: .274902344
+      y: .852050781
+      width: .104980469
+      height: .08203125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 215, y: 168}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: SurfaceAccessOff
+    region:
+      serializedVersion: 2
+      x: .168945312
+      y: .852050781
+      width: .104980469
+      height: .08203125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 215, y: 168}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  - name: SurfaceAccessOn
+    region:
+      serializedVersion: 2
+      x: .380859375
+      y: .852050781
+      width: .104980469
+      height: .08203125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 215, y: 168}
+    textureGUID: 
+    deleted: 0
+    texture: {fileID: 0}
+  generator: 1
+  imageFileGUID: 55e967f176b8740219b60c7363bee690
+  dataFileGUID: 5862f9c6a34f845f381267f6011f3ef7
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

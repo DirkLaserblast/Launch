@@ -7,6 +7,7 @@ public class ActivateObjectOnStart : MonoBehaviour {
 
 	void Start () {
 		obj.SetActive(true);
+		print ("yup");
 	}
 
 }

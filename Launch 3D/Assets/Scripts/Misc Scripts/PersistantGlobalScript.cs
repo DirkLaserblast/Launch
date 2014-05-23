@@ -35,7 +35,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool edgeTurnEnabled = false;
 	//How long the left mouse button has been held down
 
-	public dfPanel pauseMenu;
+	public GameObject pauseMenu;
 	private static GameObject player;
 	private int count = 0;
 
@@ -118,7 +118,7 @@ public class PersistantGlobalScript : MonoBehaviour
 		{
 			//print ("Pause Menu Open");
 
-			if (pauseMenu.IsVisible)
+			if (pauseMenu.active)
 			{
 				closeMenu();
 			}
@@ -150,7 +150,7 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public void closeMenu() {
 		PersistantGlobalScript.FreezeWorldForMenu = false;
-		pauseMenu.IsVisible = false;
+		pauseMenu.SetActive(false);
 		crosshair.IsVisible = true;
 		if (minigameActive) {
 			Screen.showCursor = true;
@@ -160,7 +160,7 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public void openMenu() {
 		PersistantGlobalScript.FreezeWorldForMenu = true;
-		pauseMenu.IsVisible = true;
+		pauseMenu.SetActive (true);
 		crosshair.IsVisible = false;
 	}
 

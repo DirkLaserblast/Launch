@@ -16,7 +16,7 @@ public class JournalScript : MonoBehaviour {
 	//Adds an item to the journal
 	public static void addItem(string description)
 	{
-		journal.GetComponent<dfListbox>().AddItem(description);
+		//journal.GetComponent<dfListbox>().AddItem(description);
 	}
 
 

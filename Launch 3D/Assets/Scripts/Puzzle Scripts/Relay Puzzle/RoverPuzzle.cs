@@ -69,7 +69,7 @@ public class RoverPuzzle : MonoBehaviour {
 	private CircleScript OpScript;
 	private CircleScript FtScript;
 
-	public string journalEntry;
+	public GameObject journalEntry;
 	public DoorScript finalDoor;
 	public GameObject reticle;
 	
@@ -682,7 +682,7 @@ public class RoverPuzzle : MonoBehaviour {
 //
 //				reticle.SetActive(true);
 				//Exit ();
-				JournalScript.addItem(journalEntry);
+				journalEntry.SetActive(true);
 				finalDoor.isAirLocked = false;
 				//probably trigger some dialogue thing
 				dialogue.SetActive(true);

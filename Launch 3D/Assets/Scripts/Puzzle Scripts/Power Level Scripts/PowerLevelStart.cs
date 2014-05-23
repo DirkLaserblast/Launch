@@ -11,8 +11,7 @@ public class PowerLevelStart : MonoBehaviour {
 	public GameObject puzzleGUI; 
 	public DoorScript door;
 	public GameObject reticle;
-	public string journalEntry;
-	public string journalEntry2;
+	public GameObject journalObject;
 	private FirstPersonCharacter FPCscript;
 
 	void Start() {
@@ -69,9 +68,9 @@ public class PowerLevelStart : MonoBehaviour {
 		{
 			mouseLookScript.enabled = true;
 		}
-
-		JournalScript.addItem(journalEntry);
-		JournalScript.addItem(journalEntry2);
+		if(journalObject != null) {
+			journalObject.SetActive (true);
+		}
 
 		mainCamera.SetActive(true);
 		minigameCamera.SetActive(false);

@@ -29,7 +29,7 @@ public class DialogueTriggerScript : MonoBehaviour {
 	void Start() {
 
 		//Load saved state
-		gameObject.SetActive(PlayerPrefsX.GetBool(gameObject.name, true));
+		//gameObject.SetActive(PlayerPrefsX.GetBool(gameObject.name, true));
 		
 		playerRB = player.GetComponent<Rigidbody>();
 		if (ActivateOnStart) {

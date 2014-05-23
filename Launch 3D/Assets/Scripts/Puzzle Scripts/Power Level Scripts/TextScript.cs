@@ -7,8 +7,8 @@ public class TextScript : MonoBehaviour {
 	public string trail;
 	public GameObject Complete;
 	private string trailBase;
-	private int timerMax = 45;
-	private int timer = 45;
+	private int timerMax = 35;
+	private int timer = 35;
 	private int count = 0;
 	public int fullCount = 0;
 	private dfLabel dfLabelScript;
