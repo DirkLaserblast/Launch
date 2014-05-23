@@ -101,6 +101,7 @@ public class RoverPuzzle : MonoBehaviour {
 	}
 	
 	void Update () {
+		Screen.showCursor = true;
 		Alive ();
 		Selecting ();
 	}
@@ -212,6 +213,8 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == CuriosityRover) {
 							print ("Curiosity was moved.");
 							CuriosityRover.transform.position = hit.point;
+							CuriosityRover.transform.position = new Vector3(CuriosityRover.transform.position.x, CuriosityRover.transform.position.y, CuriosityRover.transform.position.z + 0.02f);
+							CuriosityPing.transform.position = CuriosityRover.transform.position;
 							//Save position
 							PlayerPrefsX.SetVector3("CuriosityRover", CuriosityRover.transform.position);
 						} 
@@ -235,6 +238,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (OpportunityTree + 1))
 										SpiritTree = (OpportunityTree + 1);
 									SpiritRover.transform.position = hit.point;
+									SpiritRover.transform.position = new Vector3(SpiritRover.transform.position.x, SpiritRover.transform.position.y, SpiritRover.transform.position.z + 0.02f);
+									SpiritPing.transform.position = SpiritRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
@@ -247,6 +252,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (SojournerTree + 1))
 										SpiritTree = (SojournerTree + 1);
 									SpiritRover.transform.position = hit.point;
+									SpiritRover.transform.position = new Vector3(SpiritRover.transform.position.x, SpiritRover.transform.position.y, SpiritRover.transform.position.z + 0.02f);
+									SpiritPing.transform.position = SpiritRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
@@ -259,6 +266,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (FifthTree + 1))
 										SpiritTree = (FifthTree + 1);
 									SpiritRover.transform.position = hit.point;
+									SpiritRover.transform.position = new Vector3(SpiritRover.transform.position.x, SpiritRover.transform.position.y, SpiritRover.transform.position.z + 0.02f);
+									SpiritPing.transform.position = SpiritRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
@@ -271,6 +280,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SpiritTree > (CuriosityTree + 1))
 										SpiritTree = (CuriosityTree + 1);
 									SpiritRover.transform.position = hit.point;
+									SpiritRover.transform.position = new Vector3(SpiritRover.transform.position.x, SpiritRover.transform.position.y, SpiritRover.transform.position.z + 0.02f);
+									SpiritPing.transform.position = SpiritRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SpiritRover", SpiritRover.transform.position);
 									print ("Spirit was moved and it's tree is " + SpiritTree);
@@ -300,6 +311,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (OpportunityTree > (SpiritTree + 1))
 										OpportunityTree = (SpiritTree + 1);
 									OpportunityRover.transform.position = hit.point;
+									OpportunityRover.transform.position = new Vector3(OpportunityRover.transform.position.x, OpportunityRover.transform.position.y, OpportunityRover.transform.position.z + 0.02f);
+									OpportunityPing.transform.position = OpportunityRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 									print ("Opportunity was moved and it's tree is " + OpportunityTree);
@@ -312,6 +325,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (OpportunityTree > (SojournerTree + 1))
 										OpportunityTree = (SojournerTree + 1);
 									OpportunityRover.transform.position = hit.point;
+									OpportunityRover.transform.position = new Vector3(OpportunityRover.transform.position.x, OpportunityRover.transform.position.y, OpportunityRover.transform.position.z + 0.02f);
+									OpportunityPing.transform.position = OpportunityRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 									print ("Opportunity was moved and it's tree is " + OpportunityTree);
@@ -324,6 +339,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (OpportunityTree > (FifthTree + 1))
 										OpportunityTree = (FifthTree + 1);
 									OpportunityRover.transform.position = hit.point;
+									OpportunityRover.transform.position = new Vector3(OpportunityRover.transform.position.x, OpportunityRover.transform.position.y, OpportunityRover.transform.position.z + 0.02f);
+									OpportunityPing.transform.position = OpportunityRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 									print ("Opportunity was moved and it's tree is " + OpportunityTree);
@@ -336,6 +353,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (OpportunityTree > (CuriosityTree + 1))
 										OpportunityTree = (CuriosityTree + 1);
 									OpportunityRover.transform.position = hit.point;
+									OpportunityRover.transform.position = new Vector3(OpportunityRover.transform.position.x, OpportunityRover.transform.position.y, OpportunityRover.transform.position.z + 0.02f);
+									OpportunityPing.transform.position = OpportunityRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("OpportunityRover", OpportunityRover.transform.position);
 									print ("Opportunity was moved and it's tree is " + OpportunityTree);
@@ -365,6 +384,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (SpiritTree + 1))
 										SojournerTree = (SpiritTree + 1);
 									SojournerRover.transform.position = hit.point;
+									SojournerRover.transform.position = new Vector3(SojournerRover.transform.position.x, SojournerRover.transform.position.y, SojournerRover.transform.position.z + 0.02f);
+									SojournerPing.transform.position = SojournerRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
@@ -377,6 +398,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (OpportunityTree + 1))
 										SojournerTree = (OpportunityTree + 1);
 									SojournerRover.transform.position = hit.point;
+									SojournerRover.transform.position = new Vector3(SojournerRover.transform.position.x, SojournerRover.transform.position.y, SojournerRover.transform.position.z + 0.02f);
+									SojournerPing.transform.position = SojournerRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
@@ -389,6 +412,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (FifthTree + 1))
 										SojournerTree = (FifthTree + 1);
 									SojournerRover.transform.position = hit.point;
+									SojournerRover.transform.position = new Vector3(SojournerRover.transform.position.x, SojournerRover.transform.position.y, SojournerRover.transform.position.z + 0.02f);
+									SojournerPing.transform.position = SojournerRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
@@ -401,6 +426,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (SojournerTree > (CuriosityTree + 1))
 										SojournerTree = (CuriosityTree + 1);
 									SojournerRover.transform.position = hit.point;
+									SojournerRover.transform.position = new Vector3(SojournerRover.transform.position.x, SojournerRover.transform.position.y, SojournerRover.transform.position.z + 0.02f);
+									SojournerPing.transform.position = SojournerRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("SojournerRover", SojournerRover.transform.position);
 									print ("Sojourner was moved and it's tree is " + SojournerTree);
@@ -430,6 +457,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (SpiritTree + 1))
 										FifthTree = (SpiritTree + 1);
 									FifthRover.transform.position = hit.point;
+									FifthRover.transform.position = new Vector3(FifthRover.transform.position.x, FifthRover.transform.position.y, FifthRover.transform.position.z + 0.02f);
+									FifthPing.transform.position = FifthRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
@@ -442,6 +471,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (SojournerTree + 1))
 										FifthTree = (SojournerTree + 1);
 									FifthRover.transform.position = hit.point;
+									FifthRover.transform.position = new Vector3(FifthRover.transform.position.x, FifthRover.transform.position.y, FifthRover.transform.position.z + 0.02f);
+									FifthPing.transform.position = FifthRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + OpportunityTree);
@@ -454,6 +485,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (OpportunityTree + 1))
 										FifthTree = (OpportunityTree + 1);
 									FifthRover.transform.position = hit.point;
+									FifthRover.transform.position = new Vector3(FifthRover.transform.position.x, FifthRover.transform.position.y, FifthRover.transform.position.z + 0.02f);
+									FifthPing.transform.position = FifthRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
@@ -466,6 +499,8 @@ public class RoverPuzzle : MonoBehaviour {
 									if (FifthTree > (CuriosityTree + 1))
 										FifthTree = (CuriosityTree + 1);
 									FifthRover.transform.position = hit.point;
+									FifthRover.transform.position = new Vector3(FifthRover.transform.position.x, FifthRover.transform.position.y, FifthRover.transform.position.z + 0.02f);
+									FifthPing.transform.position = FifthRover.transform.position;
 									//Save position
 									PlayerPrefsX.SetVector3("FifthRover", FifthRover.transform.position);
 									print ("Fifth was moved and it's tree is " + FifthTree);
