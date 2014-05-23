@@ -63,11 +63,12 @@ public class RoverPuzzle : MonoBehaviour {
 	public GameObject RoverPuzzleObject;
 	private RoverPuzzle RoverPuzzleScript;
 
-	private CircleScript CuScript; 
-	private CircleScript SpScript;
-	private CircleScript SjScript;
-	private CircleScript OpScript;
-	private CircleScript FtScript;
+	public GameObject CuriosityPing;
+	public GameObject SpiritPing;
+	public GameObject OpportunityPing;
+	public GameObject SojournerPing;
+	public GameObject FifthPing;
+	public GameObject FinalPing;
 
 	public string journalEntry;
 	public DoorScript finalDoor;
@@ -85,11 +86,6 @@ public class RoverPuzzle : MonoBehaviour {
 
 	//	FPCscript = player.GetComponent<FirstPersonCharacter> ();
 		RoverPuzzleScript = RoverPuzzleObject.GetComponent<RoverPuzzle> ();
-		CuScript = CuriosityRover.GetComponent<CircleScript> ();
-		SpScript = SpiritRover.GetComponent<CircleScript> ();
-		SjScript = SojournerRover.GetComponent<CircleScript> ();
-		OpScript = OpportunityRover.GetComponent<CircleScript> ();
-		FtScript = FifthRover.GetComponent<CircleScript> ();
 
 
 		hit = new RaycastHit();
@@ -117,7 +113,12 @@ public class RoverPuzzle : MonoBehaviour {
 		PersistantGlobalScript.movementEnabled = true;
 		player.gameObject.SetActive(true);
 		instructions.SetActive(false);
-		
+		CuriosityPing.SetActive(false);
+		OpportunityPing.SetActive(false);
+		SpiritPing.SetActive(false);
+		SojournerPing.SetActive(false);
+		FifthPing.SetActive(false);
+		FinalPing.SetActive (false);
 		
 		reticle.SetActive(true);
 		FPCscript.lockCursor = true;
@@ -211,8 +212,6 @@ public class RoverPuzzle : MonoBehaviour {
 						if (SelectedRover == CuriosityRover) {
 							print ("Curiosity was moved.");
 							CuriosityRover.transform.position = hit.point;
-							CuScript.enabled = false;
-							CuScript.enabled = true;
 							//Save position
 							PlayerPrefsX.SetVector3("CuriosityRover", CuriosityRover.transform.position);
 						} 
@@ -521,7 +520,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SpiritRover.transform.position, OpportunityRover.transform.position);
 			if (distance < 0.45) {
 				SpiritAlive = true;
-				SpScript.enabled = true;
+				SpiritPing.SetActive(true);
 				if (SelectedRover != SpiritRover)
 					SpiritRover.renderer.material = RoverAlive;
 				if(SpiritTree > (OpportunityTree+1))
@@ -532,7 +531,7 @@ public class RoverPuzzle : MonoBehaviour {
  			float distance = Vector3.Distance (SpiritRover.transform.position, SojournerRover.transform.position);
 			if (distance <0.45) {
 				SpiritAlive = true;
-				SpScript.enabled = true;
+				SpiritPing.SetActive(true);
 				if (SelectedRover != SpiritRover)
 					SpiritRover.renderer.material = RoverAlive;
 				if(SpiritTree > (SojournerTree+1))
@@ -543,7 +542,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SpiritRover.transform.position, CuriosityRover.transform.position);
 			if (distance <0.45) {;
 				SpiritAlive = true;
-				SpScript.enabled = true;
+				SpiritPing.SetActive(true);
 				if (SelectedRover != SpiritRover)
 					SpiritRover.renderer.material = RoverAlive;
 				if(SpiritTree > (CuriosityTree+1))
@@ -554,12 +553,17 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SpiritRover.transform.position, FifthRover.transform.position);
 			if (distance <0.45) {
 				SpiritAlive = true;
-				SpScript.enabled = true;
+				SpiritPing.SetActive(true);
 				if (SelectedRover != SpiritRover)
 					SpiritRover.renderer.material = RoverAlive;
 				if(SpiritTree > (FifthTree+1))
 					SpiritTree = (FifthTree+1);
 			}
+		}
+		if (SpiritTree == 7) {
+			SpiritAlive = false;
+			SpiritPing.SetActive(false);
+			SpiritRover.renderer.material = RoverColor;
 		}
 		//check alive and "tree" position for opportunity 
 		OpportunityTree = 7;
@@ -567,7 +571,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, SpiritRover.transform.position);
 			if (distance <0.45) {
 				OpportunityAlive = true;
-				OpScript.enabled = true;
+				OpportunityPing.SetActive(true);
 				if (SelectedRover != OpportunityRover)
 					OpportunityRover.renderer.material = RoverAlive;
 				if(OpportunityTree > (SpiritTree+1))
@@ -578,7 +582,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, SojournerRover.transform.position);
 			if (distance <0.45) {
 				OpportunityAlive = true;
-				OpScript.enabled = true;
+				OpportunityPing.SetActive(true);
 				if (SelectedRover != OpportunityRover)
 					OpportunityRover.renderer.material = RoverAlive;
 				if(OpportunityTree > (SojournerTree+1))
@@ -589,7 +593,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, CuriosityRover.transform.position);
 			if (distance <0.45) {
 				OpportunityAlive = true;
-				OpScript.enabled = true;
+				OpportunityPing.SetActive(true);
 				if (SelectedRover != OpportunityRover)
 					OpportunityRover.renderer.material = RoverAlive;
 				if(OpportunityTree > (CuriosityTree+1))
@@ -600,12 +604,17 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (OpportunityRover.transform.position, FifthRover.transform.position);
 			if (distance <0.45) {
 				OpportunityAlive = true;
-				OpScript.enabled = true;
+				OpportunityPing.SetActive(true);
 				if (SelectedRover != OpportunityRover)
 					OpportunityRover.renderer.material = RoverAlive;
 				if(OpportunityTree > (FifthTree+1))
 					OpportunityTree = (FifthTree+1);
 			}
+		}
+		if (OpportunityTree == 7) {
+			OpportunityAlive = false;
+			OpportunityPing.SetActive(false);
+			OpportunityRover.renderer.material = RoverColor;
 		}
 		SojournerTree = 7;
 		//check alive and "tree" position and win condition for sojourner
@@ -613,7 +622,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SojournerRover.transform.position, SpiritRover.transform.position);
 			if (distance <0.45) {
 				SojournerAlive = true;
-				SjScript.enabled = true;
+				SojournerPing.SetActive(true);
 				if (SelectedRover != SojournerRover)
 					SojournerRover.renderer.material = RoverAlive;
 				if(SojournerTree > (SpiritTree + 1))
@@ -624,7 +633,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SojournerRover.transform.position, OpportunityRover.transform.position);
 			if (distance <0.45) {
 				SojournerAlive = true;
-				SjScript.enabled = true;
+				SojournerPing.SetActive(true);
 				if (SelectedRover != SojournerRover)
 					SojournerRover.renderer.material = RoverAlive;
 				if(SojournerTree > (OpportunityTree + 1))
@@ -635,7 +644,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SojournerRover.transform.position, CuriosityRover.transform.position);
 			if (distance <0.45) {
 				SojournerAlive = true;
-				SjScript.enabled = true;
+				SojournerPing.SetActive(true);
 				if (SelectedRover != SojournerRover)
 					SojournerRover.renderer.material = RoverAlive;
 				if(SojournerTree > (CuriosityTree + 1))
@@ -646,7 +655,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (SojournerRover.transform.position, FifthRover.transform.position);
 			if (distance <0.45) {
 				SojournerAlive = true;
-				SjScript.enabled = true;
+				SojournerPing.SetActive(true);
 				if (SelectedRover != SojournerRover)
 					SojournerRover.renderer.material = RoverAlive;
 				if(SojournerTree > (FifthTree+1))
@@ -689,13 +698,18 @@ public class RoverPuzzle : MonoBehaviour {
 				nextLog.SetActive(true);
 			}
 		}
+		if (SojournerTree == 7) {
+			SojournerAlive = false;
+			SojournerPing.SetActive(false);
+			SojournerRover.renderer.material = RoverColor;
+		}
 		//check alive and "tree" position for fifth
 		FifthTree = 7;
 		if (SpiritAlive == true && SpiritTree <= FifthTree) {
 			float distance = Vector3.Distance (FifthRover.transform.position, SpiritRover.transform.position);
 			if (distance <0.45) {
 				FifthAlive = true;
-				FtScript.enabled = true;
+				FifthPing.SetActive(true);
 				if (SelectedRover != FifthRover)
 					FifthRover.renderer.material = RoverAlive;
 				if(FifthTree > (SpiritTree + 1))
@@ -706,7 +720,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (FifthRover.transform.position, OpportunityRover.transform.position);
 			if (distance <0.45) {
 				FifthAlive = true;
-				FtScript.enabled = true;
+				FifthPing.SetActive(true);
 				if (SelectedRover != FifthRover)
 					FifthRover.renderer.material = RoverAlive;
 				if(FifthTree > (OpportunityTree + 1))
@@ -717,7 +731,7 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (FifthRover.transform.position, CuriosityRover.transform.position);
 			if (distance <0.45) {
 				FifthAlive = true;
-				FtScript.enabled = true;
+				FifthPing.SetActive(true);
 				if (SelectedRover != FifthRover)
 					FifthRover.renderer.material = RoverAlive;
 				if(FifthTree > (CuriosityTree + 1))
@@ -728,12 +742,17 @@ public class RoverPuzzle : MonoBehaviour {
 			float distance = Vector3.Distance (FifthRover.transform.position, SojournerRover.transform.position);
 			if (distance <0.45) {
 				FifthAlive = true;
-				FtScript.enabled = true;
+				FifthPing.SetActive(true);
 				if (SelectedRover != FifthRover)
 					FifthRover.renderer.material = RoverAlive;
 				if(FifthTree > (SojournerTree+1))
 					FifthTree = (SojournerTree+1);
 			}
+		}
+		if (FifthTree == 7) {
+			FifthAlive = false;
+			FifthPing.SetActive(false);
+			FifthRover.renderer.material = RoverColor;
 		}
 		//no need to check for curiosity as it is alwasy root
 	}

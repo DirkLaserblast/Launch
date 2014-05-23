@@ -26,6 +26,8 @@ public class MinigameObjectScript : MonoBehaviour {
 
 	public GameObject RoverPuzzleObject;
 	private RoverPuzzle RoverPuzzleScript;
+	public GameObject CuriosityPing;
+	public GameObject FinalPing;
 
 	void Start() {
 		//print ("Starting up MinigameObj script.");
@@ -97,7 +99,9 @@ public class MinigameObjectScript : MonoBehaviour {
 				Screen.showCursor = true;
 				FPCscript.lockCursor = false;
 				Screen.lockCursor = false;
-				PersistantGlobalScript.minigameActive = true; 
+				PersistantGlobalScript.minigameActive = true;
+				CuriosityPing.SetActive(true);
+				FinalPing.SetActive(true);
 				RoverPuzzleScript.enabled=true;
 				//print("foo");
 			}
