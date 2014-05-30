@@ -11,7 +11,9 @@ public class DragObjectScript : MonoBehaviour
 	public float angularDrag = 5.0f;
 	public float distance = 0.2f;
 	public bool attachToCenterOfMass = false;
-	
+
+	private bool clickLocked = false;
+
 	private SpringJoint springJoint;
 	private GameObject draggedObject;
 	/// <summary>
@@ -21,8 +23,16 @@ public class DragObjectScript : MonoBehaviour
 	
 	void Update()
 	{
+
 		if(!Input.GetMouseButtonDown(0))
+		{
 			return;
+		}
+		else if (clickLocked)
+		{
+			clickLocked = false;
+			return;
+		}
 
 		if (!PersistantGlobalScript.dragEnabled) {
 			return;
@@ -45,7 +55,10 @@ public class DragObjectScript : MonoBehaviour
 
 		if(!hit.rigidbody || hit.rigidbody.isKinematic)
 			return;
-		
+
+		//We're dragging an object, lock on
+		clickLocked = true;
+
 		if(!springJoint)
 		{
 			GameObject go = new GameObject("Rigidbody dragger");
@@ -87,7 +100,7 @@ public class DragObjectScript : MonoBehaviour
 		
 
 		float elapsedTime = 0.0f;
-		while(Input.GetMouseButton(0))
+		while(clickLocked)
 		{
 //			if (Screen.lockCursor)
 //			{
