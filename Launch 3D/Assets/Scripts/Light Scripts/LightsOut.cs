@@ -4,7 +4,7 @@ using System.Collections;
 public class LightsOut : MonoBehaviour {
 	public GameObject lights;
 	public GameObject redLights;
-	public GameObject Ventillation;
+	public GameObject VentillationAudio;
 	public GameObject doors;
 	public AudioClip ventsPowerDown;
 	public GameObject flashlight;
@@ -41,7 +41,7 @@ public class LightsOut : MonoBehaviour {
 			playing = true;
 			lights.SetActive (false);
 			audio.PlayOneShot(ventsPowerDown);
-			Ventillation.SetActive(false);
+			VentillationAudio.SetActive(false);
 			foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
 			{
 				dscript.lowPower = true;

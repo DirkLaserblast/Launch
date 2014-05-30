@@ -26,6 +26,7 @@ public class CellSpawner3D : MonoBehaviour {
 	public LifeSupportStart CompletionObject;
 	public dfLabel instructions;
 	public DoorScript door;
+	public GameObject ventillationAudio;
 	Cell prevCell;
 	GameObject[,] grid;
 	public AudioClip winning;
@@ -140,6 +141,8 @@ public class CellSpawner3D : MonoBehaviour {
 				audio.PlayOneShot(winning);
 			}
 			instructions.Text = "Air now flowing to all rooms. Communications room is now accessible.";
+			ventillationAudio.SetActive(true);
+			PlayerPrefsX.SetBool("VentillationAudio", true);
 			door.isAirLocked = false;
 		}
 	}

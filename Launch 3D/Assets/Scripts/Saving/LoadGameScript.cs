@@ -30,7 +30,7 @@ public class LoadGameScript : MonoBehaviour {
 		{
 			print ("No save node");
 		}
-
+	
 
 //		Vector3 playerRotation = PlayerPrefsX.GetVector3("PlayerRotation");
 //
