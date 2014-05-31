@@ -8,7 +8,6 @@ public class ActivateObjectOnTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Player") {
 			logEntry.SetActive(true);
-			gameObject.SetActive(false);
 		}
 	}
 }
