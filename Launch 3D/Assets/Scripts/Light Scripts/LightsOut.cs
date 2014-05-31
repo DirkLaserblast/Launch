@@ -46,7 +46,7 @@ public class LightsOut : MonoBehaviour {
 			{
 				dscript.lowPower = true;
 			}
-			StartCoroutine("TurnOn", timer);
+			StartCoroutine("TurnOn", 1f);
 		}
 
 	}

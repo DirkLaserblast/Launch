@@ -1,0 +1,20 @@
+{"frames": {
+
+"HandModified.png":
+{
+	"frame": {"x":2,"y":2,"w":207,"h":191},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":207,"h":191},
+	"sourceSize": {"w":207,"h":191}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "HandReticle.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":256},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:65653ea0699a2d04c5f932a9ed0db3af:9a12c5a428d540407f4b73683f9e46c4:71df4120e5c9b9a8a07337813065fe44$"
+}
+}
