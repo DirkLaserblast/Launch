@@ -11,6 +11,7 @@ public class PuzzleComplete : MonoBehaviour {
 	public GameObject flashlight;
 	public GameObject pointlight;
 	public GameObject doors;
+	public GameObject ambientBeepSounds;
 	
 	// Update is called once per frame
 	void Awake () {
@@ -21,8 +22,8 @@ public class PuzzleComplete : MonoBehaviour {
 		flashlight.SetActive (false);
 		pointlight.SetActive (false);
 		log.SetActive (true);
-
-		
+		ambientBeepSounds.SetActive(true);
+		PlayerPrefsX.SetBool("BeepSounds", true);
 
 		foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
 		{
