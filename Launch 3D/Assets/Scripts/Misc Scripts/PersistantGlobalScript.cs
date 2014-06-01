@@ -21,11 +21,15 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool minigameActive = false;
 	public static bool minigameMouseover = false;
 
+	public FreeLookCam thirdPerson;
+
 	public static bool dragEnabled = true;
 
 	public bool mActive = false;
 
 	public dfSprite crosshair;
+
+	private bool enabled;
 	
 	public static float dragThreshold = 0.3f;
 	/// <summary>
@@ -149,6 +153,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	}
 
 	public void closeMenu() {
+		thirdPerson.enabled = enabled;
 		PersistantGlobalScript.FreezeWorldForMenu = false;
 		crosshair.IsVisible = true;
 		if (minigameActive) {
@@ -160,6 +165,8 @@ public class PersistantGlobalScript : MonoBehaviour
 	}
 
 	public void openMenu() {
+		enabled = thirdPerson.enabled;
+		thirdPerson.enabled = false;
 		PersistantGlobalScript.FreezeWorldForMenu = true;
 		pauseMenu.SetActive (true);
 		crosshair.IsVisible = false;

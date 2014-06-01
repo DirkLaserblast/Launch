@@ -907,7 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lights: {fileID: 0}
   redLights: {fileID: 0}
-  Ventillation: {fileID: 0}
+  VentillationAudio: {fileID: 0}
   doors: {fileID: 0}
   ventsPowerDown: {fileID: 8300000, guid: e409d6b0d12dc45bc84a26826408e0a8, type: 3}
   flashlight: {fileID: 0}

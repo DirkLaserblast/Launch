@@ -19,7 +19,10 @@ public class CellSpawner3D : MonoBehaviour {
 	private Vector3 origin; //Top-Left-Front corner of the backdrop
 	private Vector2 airStart = new Vector2(19, 7);
 	private List<Vector2> sinks = new List<Vector2>();
+	private Transform[,] sinkObjects;
 	private bool changed = false;
+	public Material normalMaterial;
+	public Material airMaterial;
 	public Camera myCamera;
 	public Transform prefab;
 	public GameObject backdrop;
@@ -45,6 +48,7 @@ public class CellSpawner3D : MonoBehaviour {
 			Instantiate(prefab, origin, transform.rotation).GetInstanceID();
 		}
 		grid = new GameObject[WIDTH, HEIGHT];
+		sinkObjects = new Transform[WIDTH, HEIGHT];
 		GameObject[] cells = GameObject.FindGameObjectsWithTag("LS");
 		for(int i = 0; i < WIDTH; ++i){
 			for(int j = 0; j < HEIGHT; j++) {
@@ -110,7 +114,7 @@ public class CellSpawner3D : MonoBehaviour {
 					break;
 				case 8:
 					sinks.Add(new Vector2(WIDTH-i-1, j));
-					cell.spawnSink();
+					sinkObjects[WIDTH-i-1, j] = cell.spawnSink();
 					cell.SetType(Cell3D.TYPE.BLANK, Direction.LEFT);
 					break;
 				}
@@ -151,10 +155,15 @@ public class CellSpawner3D : MonoBehaviour {
 		bool complete = true;
 		foreach (Vector2 pos in sinks) {
 			GameObject obj = grid[(int) pos.x, (int) pos.y];
+			MeshRenderer sink = sinkObjects[(int) pos.x, (int) pos.y].GetComponent<MeshRenderer>();
 			Cell3D cell = obj.GetComponent<Cell3D>();
 			if(!cell.hasAir) {
 				complete = false;
-			} 
+				sink.material = normalMaterial;
+			} else {
+				sink.material = airMaterial;
+				print(sink.material);
+			}
 		}
 		return complete;
 	}

@@ -5,7 +5,7 @@ public class SettingsControl : MonoBehaviour {
 
 	public dfDropdown AADropDown;
 	public dfDropdown QualityDropDown;
-	public dfCheckbox Vsync;
+	public dfSprite Vsync;
 	public dfSlider Volume;
 
 
@@ -13,9 +13,9 @@ public class SettingsControl : MonoBehaviour {
 		QualityDropDown.SelectedIndex = QualitySettings.GetQualityLevel ();
 		AADropDown.SelectedValue = "x" + QualitySettings.antiAliasing;
 		if (QualitySettings.vSyncCount == 0) {
-			Vsync.IsChecked = false;
+			Vsync.IsVisible = false;
 		} else {
-			Vsync.IsChecked = true;
+			Vsync.IsVisible = true;
 		}
 		Volume.Value = (int) (AudioListener.volume * 100);
 	}
@@ -29,7 +29,7 @@ public class SettingsControl : MonoBehaviour {
 	}
 
 	public void UpdateVsync() {
-		if(Vsync.IsChecked) {
+		if(Vsync.IsVisible) {
 			QualitySettings.vSyncCount = 1;
 		} else {
 			QualitySettings.vSyncCount = 0;

@@ -155,9 +155,9 @@ public class Cell3D : MonoBehaviour {
 		return dir;
 	}
 
-	public void spawnSink() {
+	public Transform spawnSink() {
 		Vector3 pos = new Vector3 (transform.position.x - 0.598f, transform.position.y + 0.16f, transform.position.z - 0.23f);
-		Instantiate (ventPrefab, pos, transform.rotation);
+		return (Transform) Instantiate (ventPrefab, pos, transform.rotation);
 	}
 
 	void OnMouseOver() {
