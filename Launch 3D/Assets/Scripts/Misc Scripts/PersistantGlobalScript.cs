@@ -150,12 +150,13 @@ public class PersistantGlobalScript : MonoBehaviour
 
 	public void closeMenu() {
 		PersistantGlobalScript.FreezeWorldForMenu = false;
-		pauseMenu.SetActive(false);
 		crosshair.IsVisible = true;
 		if (minigameActive) {
+			Screen.lockCursor = true;
 			Screen.showCursor = true;
 			Screen.lockCursor = false;
 		}
+		pauseMenu.SetActive(false);
 	}
 
 	public void openMenu() {
