@@ -111,19 +111,19 @@ public class DoorScript : MonoBehaviour {
 		
 	}
 	
-	void OnTriggerEnter (Collider other)
+	void OnTriggerStay (Collider other)
 	{
 		
 		if (other.tag == "Player") 
 		{
 			doorAnimator.SetBool("lowPower", lowPower);
-			doorAnimator.SetBool("Open", true);
-			if (!locked && !airLocked)
+			if (!locked && !airLocked && (doorAnimator.GetBool("Open") == false))
 			{
 				audio.Stop();
 				if (!lowPower) audio.PlayOneShot(doorOpenSound);
 				else audio.PlayOneShot(lowPowerSound);
 			}
+			doorAnimator.SetBool("Open", true);
 		}
 	}
 }

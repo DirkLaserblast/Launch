@@ -17,6 +17,7 @@ public class roombaTriggerScript : MonoBehaviour {
 	{
 		if (other.name == "Roomba")
 		{
+			audio.Play();
 			doorAnimator.SetBool("Jammed", false);
 			doorAnimator.SetBool("Locked", false);
 			//Fling the jamming object away
