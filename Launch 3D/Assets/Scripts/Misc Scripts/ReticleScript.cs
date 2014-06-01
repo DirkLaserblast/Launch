@@ -9,6 +9,7 @@ public class ReticleScript : MonoBehaviour {
 
 	void OnMouseOver() {
 		float distance = Mathf.Abs ((transform.position - player.position).magnitude);
+		print (distance);
 		if (distance < maxDistance && !PersistantGlobalScript.minigameActive) {
 			hand.SetActive(true);
 			crosshair.SetActive (false);
