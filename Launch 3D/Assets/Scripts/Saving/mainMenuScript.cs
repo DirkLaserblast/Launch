@@ -9,9 +9,8 @@ public class mainMenuScript : MonoBehaviour {
 
 	void Start()
 	{
-		currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
 		//Saved game exists
-		if (currentLevel > 0)
+		if (PlayerPrefsX.GetBool("Saved", false))
 		{
 			playContinueButton.Text = "Continue";
 		}
@@ -23,12 +22,16 @@ public class mainMenuScript : MonoBehaviour {
 
 	public void toGame()
 	{
-		//Load the main game
-		Application.LoadLevel("StartScene");
+		if (PlayerPrefsX.GetBool("Saved", false))
+		{
+			Application.LoadLevel("alphaBuildScene");
+		}
+		else Application.LoadLevel("StartScene");
 	}
 
 	public void deleteSave()
 	{
+		playContinueButton.Text = "Play";
 		PlayerPrefs.DeleteAll();
 	}
 

@@ -45,13 +45,16 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		}
 
 		//print (closestNode.name);
+		PlayerPrefsX.SetBool("Saved", true);
 		PlayerPrefs.SetString("ClosestSaveNode", closestNode.name);
 		PlayerPrefsX.SetVector3("PlayerPosition", player.transform.position);
 		PlayerPrefsX.SetVector3("PlayerRotation", player.transform.eulerAngles);
-		print ("Rotation saved: " + player.transform.eulerAngles.x + " " + player.transform.eulerAngles.y + " " + player.transform.eulerAngles.z);
+		//print ("Rotation saved: " + player.transform.eulerAngles.x + " " + player.transform.eulerAngles.y + " " + player.transform.eulerAngles.z);
+
+
 
 		//Save logbook
-		PlayerPrefsX.SetStringArray("Logbook", logList.Items);
+		//PlayerPrefsX.SetStringArray("Logbook", logList.Items);
 
 
 //		string[] itemLogStringArray = (string[])ItemLogScript.LogArray.ToArray(typeof(string));
@@ -74,11 +77,11 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		saveGame();
 
 		PlayerPrefs.Save();
-		Application.LoadLevel(0);
+		Application.LoadLevel("alphaMainMenu");
 	}
 
 	public void quitNoSave()
 	{
-		Application.LoadLevel(0);
+		Application.LoadLevel("alphaMainMenu");
 	}
 }

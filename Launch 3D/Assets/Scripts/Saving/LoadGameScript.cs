@@ -15,6 +15,7 @@ public class LoadGameScript : MonoBehaviour {
 	// Load player and item positions
 	void Start ()
 	{
+		print ("Loading Save");
 		string latestSaveNode = PlayerPrefs.GetString("ClosestSaveNode");
 
 		StartCoroutine("unlockMouseLook");
