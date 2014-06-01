@@ -465,7 +465,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: .151111111, y: .0666666701, z: .00100000005}
+  m_Size: {x: .131111115, y: .0577777773, z: .00100000005}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &386640016
 MonoBehaviour:
@@ -491,7 +491,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 68, y: 30}
+  size: {x: 59, y: 26}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -500,10 +500,10 @@ MonoBehaviour:
   layout:
     anchorStyle: 261
     margins:
-      left: .57177031
-      top: .5
-      right: .734449744
-      bottom: .840909064
+      left: .582535863
+      top: .522727251
+      right: .723684192
+      bottom: .818181813
     owner: {fileID: 386640016}
   renderOrder: 4
   isLocalized: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   hoverSprite: button-hilite
   disabledSprite: 
   focusSprite: 
-  font: {fileID: 11400000, guid: fca14cda3e3e58245af2a8772760ca99, type: 2}
+  font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: button-disabled
   state: 0
   group: {fileID: 0}
@@ -632,7 +632,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490067378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .00111111114, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2055079102}
@@ -1884,7 +1884,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131476634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.379999995, y: .0930555612, z: 0}
+  m_LocalPosition: {x: -.398888886, y: .089618057, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 719394619}
@@ -1898,8 +1898,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: .76222223, y: .0577777773, z: .00100000005}
-  m_Center: {x: .381111115, y: -.0288888887, z: 0}
+  m_Size: {x: .797777772, y: .0533333346, z: .00100000005}
+  m_Center: {x: .398888886, y: -.0266666673, z: 0}
 --- !u!114 &1131476637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 343, y: 26}
+  size: {x: 359, y: 24}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -1933,16 +1933,16 @@ MonoBehaviour:
   layout:
     anchorStyle: 65
     margins:
-      left: 38
-      top: 2.125
-      right: 37
-      bottom: 59.875
+      left: 29.5
+      top: 3.67578125
+      right: 29.5
+      bottom: 60.3242188
     owner: {fileID: 1131476637}
   renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
-  font: {fileID: 11400000, guid: 5a5e0c230ac62a04f8a31145e6ab7bc0, type: 2}
+  font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   backgroundSprite: 
   backgroundColor:
     serializedVersion: 2
@@ -1956,7 +1956,7 @@ MonoBehaviour:
     rgba: 4294967295
   align: 1
   vertAlign: 1
-  textScale: 1
+  textScale: 1.5
   textScaleMode: 0
   charSpacing: 0
   colorizeSymbols: 0
@@ -2288,7 +2288,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1246303869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.138888896, y: -.0333333351, z: 0}
+  m_LocalPosition: {x: -.138885498, y: -.0333328247, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 719394619}
@@ -2319,7 +2319,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: .144444451, y: .0666666701, z: .00100000005}
+  m_Size: {x: .12888889, y: .0577777773, z: .00100000005}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1246303873
 MonoBehaviour:
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 65, y: 30}
+  size: {x: 58, y: 26}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -2354,10 +2354,10 @@ MonoBehaviour:
   layout:
     anchorStyle: 261
     margins:
-      left: .272736609
-      top: .5
-      right: .428239018
-      bottom: .840909064
+      left: .28110981
+      top: .522727251
+      right: .419865817
+      bottom: .818181813
     owner: {fileID: 1246303873}
   renderOrder: 5
   isLocalized: 0
@@ -2367,7 +2367,7 @@ MonoBehaviour:
   hoverSprite: button-hilite
   disabledSprite: 
   focusSprite: 
-  font: {fileID: 11400000, guid: fca14cda3e3e58245af2a8772760ca99, type: 2}
+  font: {fileID: 11400000, guid: 1bd74a2245f6f9546a7b717a474a36c2, type: 2}
   pressedSprite: button-disabled
   state: 0
   group: {fileID: 0}

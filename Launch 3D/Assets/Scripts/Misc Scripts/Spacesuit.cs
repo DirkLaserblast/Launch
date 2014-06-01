@@ -10,16 +10,29 @@ public class Spacesuit : MonoBehaviour {
 	public DoorScript lockDoor;
 	public Collider collider;
 	public AudioSource doorAudio;
+	public int maxDistance;
+	public Transform player;
+	public GameObject hand;
+	public GameObject reticle;
 
-	void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player") {
-			doorAudio.Play();
-			carTrigger.SetActive(true);
-			gameObject.SetActive(false);
-			doorLeft.SetActive(false);
-			doorRight.SetActive(false);
-			collider.enabled = false;
-			lockDoor.locked = true;
+	void OnMouseUp() {			
+		float distance = Mathf.Abs((transform.position - player.position).magnitude);
+		if (distance < maxDistance) {
+			TakeSpacesuit();
 		}
+	}
+
+
+
+	void TakeSpacesuit() {
+		doorAudio.Play();
+		carTrigger.SetActive(true);
+		gameObject.SetActive(false);
+		doorLeft.SetActive(false);
+		doorRight.SetActive(false);
+		reticle.SetActive (true);
+		hand.SetActive (false);
+		collider.enabled = false;
+		lockDoor.locked = true;
 	}
 }
