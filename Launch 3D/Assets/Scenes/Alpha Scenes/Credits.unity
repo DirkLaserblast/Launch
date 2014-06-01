@@ -460,13 +460,13 @@ Transform:
   m_LocalPosition: {x: -1.55555725, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1286566884}
   - {fileID: 148210079}
-  - {fileID: 1842130771}
-  - {fileID: 1387659162}
-  - {fileID: 2109443894}
+  - {fileID: 1286566884}
   - {fileID: 1365099386}
+  - {fileID: 1387659162}
+  - {fileID: 1842130771}
   - {fileID: 2042066316}
+  - {fileID: 2109443894}
   m_Father: {fileID: 1215776343}
 --- !u!1 &1215776342
 GameObject:
@@ -548,7 +548,7 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 061b63b910d71734eb8a953efb83a358, type: 2}
   defaultFont: {fileID: 11400000, guid: 5a5e0c230ac62a04f8a31145e6ab7bc0, type: 2}
   mergeMaterials: 0
-  pixelPerfectMode: 1
+  pixelPerfectMode: 0
   renderCamera: {fileID: 1660682333}
   generateNormals: 0
   consumeMouseEvents: 1
