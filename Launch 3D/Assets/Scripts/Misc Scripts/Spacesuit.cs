@@ -7,6 +7,7 @@ public class Spacesuit : MonoBehaviour {
 	public GameObject door;
 	public GameObject doorLeft;
 	public GameObject doorRight;
+	public DoorScript lockDoor;
 	public Collider collider;
 	public AudioSource doorAudio;
 
@@ -18,6 +19,7 @@ public class Spacesuit : MonoBehaviour {
 			doorLeft.SetActive(false);
 			doorRight.SetActive(false);
 			collider.enabled = false;
+			lockDoor.locked = true;
 		}
 	}
 }
