@@ -12,6 +12,7 @@ public class RocketScript : MonoBehaviour {
 	public dfSprite crosshair;
 	public ParticleSystem particles;
 	public bool triggerUnlocked = false;
+	public AudioSource musicSource;
 
 	private bool triggerFired = false;
 	
@@ -32,8 +33,9 @@ public class RocketScript : MonoBehaviour {
 			rocketAnimator.SetBool("Ignition", true); //Launch rocket
 			particles.Play();
 			rocket.audio.PlayOneShot(liftOffSound);
+			musicSource.Stop();
 
-			yield return new WaitForSeconds(8);
+			yield return new WaitForSeconds(15);
 			//Load credits
 			Application.LoadLevel("EndingScene");
 		}
