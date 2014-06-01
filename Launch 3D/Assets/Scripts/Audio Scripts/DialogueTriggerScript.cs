@@ -24,7 +24,6 @@ public class DialogueTriggerScript : MonoBehaviour {
 	public bool ActivateOnStart;
 	public AudioClip voiceOver;
 	public AudioClip music;
-	public bool lockPlayer;
 
 	void Start() {
 
@@ -62,11 +61,7 @@ public class DialogueTriggerScript : MonoBehaviour {
 			content.Text = contents[0];*/
 		//audio.PlayOneShot(radioSound);
 		playing = true;
-		if(lockPlayer) {
-			PersistantGlobalScript.mouseLookEnabled = false;
-			PersistantGlobalScript.movementEnabled = false;
-			playerRB.velocity = Vector3.zero;
-		}
+
 		StartCoroutine("TurnOff", timer);
 	}
 
@@ -85,10 +80,7 @@ public class DialogueTriggerScript : MonoBehaviour {
 			//window.IsVisible = false;
 			//PersistantGlobalScript.FreezeWorldForMenu = false;
 		read = true;
-		if(lockPlayer) {
-			PersistantGlobalScript.mouseLookEnabled = true;
-			PersistantGlobalScript.movementEnabled = true;
-		}
+
 		PlayerPrefsX.SetBool(gameObject.name, false);
 			gameObject.SetActive(false);
 		//}

@@ -757,7 +757,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: 05774e76038cc4e3dbdf18bb8899fbca, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,7 +787,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: a02935ce57fe4436787de355eba744cc, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -819,7 +817,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: c999cafff733e457bbef03cd7ce9f36a, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -862,7 +859,6 @@ MonoBehaviour:
   ActivateOnStart: 1
   voiceOver: {fileID: 8300000, guid: c824ecaac19e4400082c739975329b9d, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,7 +877,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: 96309844fad3d425aa286b4d0790cf06, type: 3}
   music: {fileID: 0}
-  lockPlayer: 1
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -958,7 +953,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: b22057eb081024ea583d951a226ccd2e, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -989,7 +983,6 @@ MonoBehaviour:
   ActivateOnStart: 0
   voiceOver: {fileID: 8300000, guid: 734be529e2c8c467a9c28fb709d73502, type: 3}
   music: {fileID: 0}
-  lockPlayer: 0
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
