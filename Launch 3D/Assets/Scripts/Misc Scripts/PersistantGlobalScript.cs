@@ -93,7 +93,7 @@ public class PersistantGlobalScript : MonoBehaviour
 
 		//Prevent the Global Script object from being deleted when you leave the main menu
 		//Object.DontDestroyOnLoad(this.gameObject);
-
+		Application.runInBackground = true;
 		player = GameObject.FindWithTag("Player");
 	}
 
