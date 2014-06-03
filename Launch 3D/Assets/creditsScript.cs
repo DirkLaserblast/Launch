@@ -3,6 +3,7 @@ using System.Collections;
 
 public class creditsScript : MonoBehaviour {
 
+	public string nextScene;
 	// Use this for initialization
 	void Start ()
 	{
@@ -13,7 +14,7 @@ public class creditsScript : MonoBehaviour {
 	{
 		if (Input.GetMouseButtonUp(0))
 		{
-			Application.LoadLevel("alphaMainMenu");
+			Application.LoadLevel(nextScene);
 		}
 	}
 

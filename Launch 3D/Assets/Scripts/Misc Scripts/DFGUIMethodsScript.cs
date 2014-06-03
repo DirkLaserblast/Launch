@@ -77,11 +77,19 @@ public class DFGUIMethodsScript : MonoBehaviour {
 		saveGame();
 
 		PlayerPrefs.Save();
+		Screen.lockCursor = true;
+		Screen.showCursor = true;
+		Screen.lockCursor = false;
+		PersistantGlobalScript.FreezeWorldForMenu = false;
 		Application.LoadLevel("alphaMainMenu");
 	}
 
 	public void quitNoSave()
 	{
+		Screen.lockCursor = true;
+		Screen.showCursor = true;
+		Screen.lockCursor = false;
+		PersistantGlobalScript.FreezeWorldForMenu = false;
 		Application.LoadLevel("alphaMainMenu");
 	}
 }

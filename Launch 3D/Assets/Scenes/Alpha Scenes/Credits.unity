@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24695b818743d4ed19b6d673889a2018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: JustMarsSpinning
 --- !u!4 &19921399
 Transform:
   m_ObjectHideFlags: 0

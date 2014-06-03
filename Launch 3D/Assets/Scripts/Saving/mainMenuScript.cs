@@ -9,6 +9,9 @@ public class mainMenuScript : MonoBehaviour {
 
 	void Start()
 	{
+		Screen.lockCursor = true;
+		Screen.showCursor = true;
+		Screen.lockCursor = false;
 		//Saved game exists
 		if (PlayerPrefsX.GetBool("Saved", false))
 		{
