@@ -5,10 +5,9 @@ public class Spacesuit : MonoBehaviour {
 
 	public GameObject carTrigger;
 	public GameObject door;
-	public GameObject doorLeft;
-	public GameObject doorRight;
+	public Animator doorAnimation;
 	public DoorScript lockDoor;
-	public Collider collider;
+//	public Collider collider;
 	public AudioSource doorAudio;
 	public int maxDistance;
 	public Transform player;
@@ -28,11 +27,10 @@ public class Spacesuit : MonoBehaviour {
 		doorAudio.Play();
 		carTrigger.SetActive(true);
 		gameObject.SetActive(false);
-		doorLeft.SetActive(false);
-		doorRight.SetActive(false);
+		doorAnimation.SetBool("Open", true);
 		reticle.SetActive (true);
 		hand.SetActive (false);
-		collider.enabled = false;
+//		collider.enabled = false;
 		lockDoor.locked = true;
 	}
 }
