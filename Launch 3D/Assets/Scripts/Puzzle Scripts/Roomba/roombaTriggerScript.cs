@@ -6,6 +6,8 @@ public class roombaTriggerScript : MonoBehaviour {
 	public Animator doorAnimator;
 	public Animator blockerAnimator;
 
+	private bool triggered = false;
+
 	void Start()
 	{
 		//Load saved status of Roomba Puzzle
@@ -15,8 +17,9 @@ public class roombaTriggerScript : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.name == "Roomba")
+		if (other.name == "Roomba" && !triggered)
 		{
+			triggered = true;
 			audio.Play();
 			doorAnimator.SetBool("Jammed", false);
 			doorAnimator.SetBool("Locked", false);
