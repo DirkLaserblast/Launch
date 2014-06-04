@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: adcb21d2568a64060bf4d967a514afbc
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Coke_Can_6-Pack_01
+    100002: Coke_Can_6-Pack_02
+    100004: Coke_Can_6-Pack_03
+    100006: Coke_Can_6-Pack_04
+    100008: Coke_Can_6-Pack_05
+    100010: Coke_Can_6-Pack_06
+    100012: Coke_Can_6-Pack_07
+    100014: Coke_Can_6-Pack_08
+    100016: Crate
+    100018: //RootNode
+    400000: Coke_Can_6-Pack_01
+    400002: Coke_Can_6-Pack_02
+    400004: Coke_Can_6-Pack_03
+    400006: Coke_Can_6-Pack_04
+    400008: Coke_Can_6-Pack_05
+    400010: Coke_Can_6-Pack_06
+    400012: Coke_Can_6-Pack_07
+    400014: Coke_Can_6-Pack_08
+    400016: Crate
+    400018: //RootNode
+    2300000: Coke_Can_6-Pack_01
+    2300002: Coke_Can_6-Pack_02
+    2300004: Coke_Can_6-Pack_03
+    2300006: Coke_Can_6-Pack_04
+    2300008: Coke_Can_6-Pack_05
+    2300010: Coke_Can_6-Pack_06
+    2300012: Coke_Can_6-Pack_07
+    2300014: Coke_Can_6-Pack_08
+    2300016: Crate
+    3300000: Coke_Can_6-Pack_01
+    3300002: Coke_Can_6-Pack_02
+    3300004: Coke_Can_6-Pack_03
+    3300006: Coke_Can_6-Pack_04
+    3300008: Coke_Can_6-Pack_05
+    3300010: Coke_Can_6-Pack_06
+    3300012: Coke_Can_6-Pack_07
+    3300014: Coke_Can_6-Pack_08
+    3300016: Crate
+    4300000: Coke_Can_6-Pack_08
+    4300002: Coke_Can_6-Pack_07
+    4300004: Coke_Can_6-Pack_05
+    4300006: Coke_Can_6-Pack_06
+    4300008: Coke_Can_6-Pack_04
+    4300010: Coke_Can_6-Pack_03
+    4300012: Coke_Can_6-Pack_02
+    4300014: Crate
+    4300016: Coke_Can_6-Pack_01
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0500000007
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
