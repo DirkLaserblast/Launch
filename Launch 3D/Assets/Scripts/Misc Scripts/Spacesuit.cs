@@ -31,6 +31,6 @@ public class Spacesuit : MonoBehaviour {
 		reticle.SetActive (true);
 		hand.SetActive (false);
 //		collider.enabled = false;
-		lockDoor.locked = true;
+		lockDoor.isLocked = true;
 	}
 }
