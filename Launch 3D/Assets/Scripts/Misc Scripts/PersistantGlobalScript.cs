@@ -141,12 +141,10 @@ public class PersistantGlobalScript : MonoBehaviour
 //			}
 //			clickTime = 0.0f;
 //		}
-//		else if(Input.GetMouseButton(0))
-//		{
-//			interactionEnabled = true; //Disabled to make minigames work
-//			clickTime += Time.deltaTime;
-//			//print ("Clicktime: " + clickTime);
-//		}
+		if(Input.GetMouseButton(0) && !minigameActive) {
+			Screen.lockCursor = false;
+			Screen.lockCursor = true;
+		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
 

@@ -41,6 +41,7 @@ public class MinigameObjectScript : MonoBehaviour {
 			PersistantGlobalScript.interactionEnabled = true;
 			PersistantGlobalScript.mouseLookEnabled = true;
 			PersistantGlobalScript.movementEnabled = true;
+			PersistantGlobalScript.minigameActive = false;
 			//Camera.main.transform.position = oldCameraPosition;
 			//Camera.main.transform.rotation = oldCameraDirection;
 			
@@ -70,6 +71,7 @@ public class MinigameObjectScript : MonoBehaviour {
 				PersistantGlobalScript.interactionEnabled = false;
 				PersistantGlobalScript.mouseLookEnabled = false;
 				PersistantGlobalScript.movementEnabled = false; 
+				PersistantGlobalScript.minigameActive = true;
 				
 				//			SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
 				//			foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
