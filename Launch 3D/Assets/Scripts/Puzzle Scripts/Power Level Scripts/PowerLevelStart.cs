@@ -38,6 +38,7 @@ public class PowerLevelStart : MonoBehaviour {
 		PersistantGlobalScript.mouseLookEnabled = false;
 		PersistantGlobalScript.movementEnabled = false; 
 		PersistantGlobalScript.minigameMouseover = true;
+		PersistantGlobalScript.minigameActive = true;
 
 		SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
 		foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
@@ -62,7 +63,8 @@ public class PowerLevelStart : MonoBehaviour {
 		PersistantGlobalScript.interactionEnabled = true;
 		PersistantGlobalScript.mouseLookEnabled = true;
 		PersistantGlobalScript.movementEnabled = true;
-		
+		PersistantGlobalScript.minigameActive = false;
+
 		SimpleMouseRotator[] mouseLookScripts = GetComponents<SimpleMouseRotator>();
 		foreach (SimpleMouseRotator mouseLookScript in mouseLookScripts)
 		{

@@ -57,3 +57,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha Scenes/Credits.unity
   - enabled: 1
     path: Assets/Scenes/Alpha Scenes/EndingScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Alpha Scenes/JustMarsSpinning.unity

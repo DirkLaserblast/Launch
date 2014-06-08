@@ -19,6 +19,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	public static bool movementEnabled = true;
 
 	public static bool minigameActive = false;
+	public static bool pauseActive = false;
 	public static bool minigameMouseover = false;
 
 	public FreeLookCam thirdPerson;
@@ -141,18 +142,17 @@ public class PersistantGlobalScript : MonoBehaviour
 //			}
 //			clickTime = 0.0f;
 //		}
-//		else if(Input.GetMouseButton(0))
-//		{
-//			interactionEnabled = true; //Disabled to make minigames work
-//			clickTime += Time.deltaTime;
-//			//print ("Clicktime: " + clickTime);
-//		}
+		if(Input.GetMouseButton(0) && !minigameActive && !pauseActive) {
+			Screen.lockCursor = false;
+			Screen.lockCursor = true;
+		}
 		mActive = minigameActive; //Silliness to deal with DFGUI
 
 
 	}
 
 	public void closeMenu() {
+		PersistantGlobalScript.pauseActive = false;
 		thirdPerson.enabled = enabled;
 		PersistantGlobalScript.FreezeWorldForMenu = false;
 		crosshair.IsVisible = true;
@@ -165,6 +165,7 @@ public class PersistantGlobalScript : MonoBehaviour
 	}
 
 	public void openMenu() {
+		PersistantGlobalScript.pauseActive = true;
 		enabled = thirdPerson.enabled;
 		thirdPerson.enabled = false;
 		PersistantGlobalScript.FreezeWorldForMenu = true;

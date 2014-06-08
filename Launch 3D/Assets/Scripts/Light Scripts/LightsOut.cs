@@ -5,6 +5,7 @@ public class LightsOut : MonoBehaviour {
 	public GameObject lights;
 	public GameObject redLights;
 	public GameObject VentillationAudio;
+	public GameObject BeepsAudio;
 	public GameObject doors;
 	public AudioClip ventsPowerDown;
 	public GameObject flashlight;
@@ -42,6 +43,7 @@ public class LightsOut : MonoBehaviour {
 			lights.SetActive (false);
 			audio.PlayOneShot(ventsPowerDown);
 			VentillationAudio.SetActive(false);
+			BeepsAudio.SetActive(false);
 			foreach (DoorScript dscript in doors.GetComponentsInChildren<DoorScript>())
 			{
 				dscript.lowPower = true;
