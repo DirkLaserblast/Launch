@@ -1,0 +1,103 @@
+fileFormatVersion: 2
+guid: a814dc8f73aab474dac814d408f9c311
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Crowbar
+    100002: Duct_Tape
+    100004: Duct_Tape__Thin_
+    100006: ROOMB
+    100008: //RootNode
+    100010: VBSP_Object_model_0
+    100012: Wrench__Large_
+    100014: Wrench__Medium_
+    100016: Wrench__Small_
+    400000: Crowbar
+    400002: Duct_Tape
+    400004: Duct_Tape__Thin_
+    400006: ROOMB
+    400008: //RootNode
+    400010: VBSP_Object_model_0
+    400012: Wrench__Large_
+    400014: Wrench__Medium_
+    400016: Wrench__Small_
+    2300000: Crowbar
+    2300002: Duct_Tape
+    2300004: Duct_Tape__Thin_
+    2300006: ROOMB
+    2300008: VBSP_Object_model_0
+    2300010: Wrench__Large_
+    2300012: Wrench__Medium_
+    2300014: Wrench__Small_
+    3300000: Crowbar
+    3300002: Duct_Tape
+    3300004: Duct_Tape__Thin_
+    3300006: ROOMB
+    3300008: VBSP_Object_model_0
+    3300010: Wrench__Large_
+    3300012: Wrench__Medium_
+    3300014: Wrench__Small_
+    4300000: Duct_Tape__Thin_
+    4300002: Wrench__Medium_
+    4300004: Wrench__Small_
+    4300006: Crowbar
+    4300008: Wrench__Large_
+    4300010: Duct_Tape
+    4300012: VBSP_Object_model_0
+    4300014: ROOMB
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0299999993
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

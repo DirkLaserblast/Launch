@@ -10,6 +10,7 @@ public class DragObjectScript : MonoBehaviour
 	public float drag = 10.0f;
 	public float angularDrag = 5.0f;
 	public float distance = 0.2f;
+	public float maxMass = 10.0f;
 	public bool attachToCenterOfMass = false;
 
 	private bool clickLocked = false;
@@ -53,7 +54,7 @@ public class DragObjectScript : MonoBehaviour
 				return;
 		}
 
-		if(!hit.rigidbody || hit.rigidbody.isKinematic)
+		if(!hit.rigidbody || hit.rigidbody.isKinematic || hit.rigidbody.mass > maxMass)
 			return;
 
 		//We're dragging an object, lock on
