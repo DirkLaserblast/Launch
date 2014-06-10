@@ -10,6 +10,15 @@ ModelImporter:
     100008: VBSP_Object_model_0_001_MeshPart1
     100010: VBSP_Object_model_0_001_MeshPart2
     100012: VBSP_Object_model_0_001_MeshPart3
+    100014: VBSP_Object_model_0_000
+    100016: VBSP_Object_model_0_000_MeshPart0
+    100018: VBSP_Object_model_0_000_MeshPart1
+    100020: VBSP_Object_model_0_001
+    100022: VBSP_Object_model_0_002
+    100024: VBSP_Object_model_0_003
+    100026: VBSP_Object_model_0_004
+    100028: VBSP_Object_model_0_002_MeshPart0
+    100030: VBSP_Object_model_0_002_MeshPart1
     400000: //RootNode
     400002: VBSP_Object_model_0_MeshPart0
     400004: VBSP_Object_model_0_MeshPart1
@@ -17,30 +26,74 @@ ModelImporter:
     400008: VBSP_Object_model_0_001_MeshPart1
     400010: VBSP_Object_model_0_001_MeshPart2
     400012: VBSP_Object_model_0_001_MeshPart3
+    400014: VBSP_Object_model_0_000
+    400016: VBSP_Object_model_0_000_MeshPart0
+    400018: VBSP_Object_model_0_000_MeshPart1
+    400020: VBSP_Object_model_0_001
+    400022: VBSP_Object_model_0_002
+    400024: VBSP_Object_model_0_003
+    400026: VBSP_Object_model_0_004
+    400028: VBSP_Object_model_0_002_MeshPart0
+    400030: VBSP_Object_model_0_002_MeshPart1
     2300000: VBSP_Object_model_0_MeshPart0
     2300002: VBSP_Object_model_0_MeshPart1
     2300004: VBSP_Object_model_0_001_MeshPart0
     2300006: VBSP_Object_model_0_001_MeshPart1
     2300008: VBSP_Object_model_0_001_MeshPart2
     2300010: VBSP_Object_model_0_001_MeshPart3
+    2300012: VBSP_Object_model_0_000_MeshPart0
+    2300014: VBSP_Object_model_0_000_MeshPart1
+    2300016: VBSP_Object_model_0_001
+    2300018: VBSP_Object_model_0_002
+    2300020: VBSP_Object_model_0_003
+    2300022: VBSP_Object_model_0_004
+    2300024: VBSP_Object_model_0_000
+    2300026: VBSP_Object_model_0_002_MeshPart0
+    2300028: VBSP_Object_model_0_002_MeshPart1
     3300000: VBSP_Object_model_0_MeshPart0
     3300002: VBSP_Object_model_0_MeshPart1
     3300004: VBSP_Object_model_0_001_MeshPart0
     3300006: VBSP_Object_model_0_001_MeshPart1
     3300008: VBSP_Object_model_0_001_MeshPart2
     3300010: VBSP_Object_model_0_001_MeshPart3
+    3300012: VBSP_Object_model_0_000_MeshPart0
+    3300014: VBSP_Object_model_0_000_MeshPart1
+    3300016: VBSP_Object_model_0_001
+    3300018: VBSP_Object_model_0_002
+    3300020: VBSP_Object_model_0_003
+    3300022: VBSP_Object_model_0_004
+    3300024: VBSP_Object_model_0_000
+    3300026: VBSP_Object_model_0_002_MeshPart0
+    3300028: VBSP_Object_model_0_002_MeshPart1
     4300000: VBSP_Object_model_0_MeshPart0
     4300002: VBSP_Object_model_0_MeshPart1
     4300004: VBSP_Object_model_0_001_MeshPart0
     4300006: VBSP_Object_model_0_001_MeshPart1
     4300008: VBSP_Object_model_0_001_MeshPart2
     4300010: VBSP_Object_model_0_001_MeshPart3
+    4300012: VBSP_Object_model_0_004
+    4300014: VBSP_Object_model_0_003
+    4300016: VBSP_Object_model_0_002
+    4300018: VBSP_Object_model_0_000_MeshPart0
+    4300020: VBSP_Object_model_0_000_MeshPart1
+    4300022: VBSP_Object_model_0_002_MeshPart0
+    4300024: VBSP_Object_model_0_002_MeshPart1
+    4300026: VBSP_Object_model_0_000
     6400000: VBSP_Object_model_0_MeshPart0
     6400002: VBSP_Object_model_0_MeshPart1
     6400004: VBSP_Object_model_0_001_MeshPart0
     6400006: VBSP_Object_model_0_001_MeshPart1
     6400008: VBSP_Object_model_0_001_MeshPart2
     6400010: VBSP_Object_model_0_001_MeshPart3
+    6400012: VBSP_Object_model_0_000_MeshPart0
+    6400014: VBSP_Object_model_0_000_MeshPart1
+    6400016: VBSP_Object_model_0_001
+    6400018: VBSP_Object_model_0_002
+    6400020: VBSP_Object_model_0_003
+    6400022: VBSP_Object_model_0_004
+    6400024: VBSP_Object_model_0_000
+    6400026: VBSP_Object_model_0_002_MeshPart0
+    6400028: VBSP_Object_model_0_002_MeshPart1
     7400000: Default Take
     9500000: //RootNode
   materials:
