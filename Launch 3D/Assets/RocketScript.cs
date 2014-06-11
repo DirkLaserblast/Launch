@@ -9,6 +9,7 @@ public class RocketScript : MonoBehaviour {
 	public GameObject carCamera;
 	public Animator rocketAnimator;
 	public GameObject car;
+	public GameObject finalCar; //Stationary car for final cutscene
 	public dfSprite crosshair;
 	public ParticleSystem particles;
 	public bool triggerUnlocked = false;
@@ -23,6 +24,7 @@ public class RocketScript : MonoBehaviour {
 			print ("Trigger Fired");
 
 			car.SetActive(false); //Hide car
+			finalCar.SetActive(true); //Show stationary car
 
 			crosshair.enabled = false;
 
