@@ -6,20 +6,62 @@ ModelImporter:
     100000: //RootNode
     100002: VBSP_Object_model_0
     100004: VBSP_Object_model_0_001
+    100006: VBSP_Object_model_0_002
+    100008: VBSP_Object_model_0_003
+    100010: VBSP_Object_model_0_004
+    100012: VBSP_Object_model_0_005
+    100014: VBSP_Object_model_0_006
+    100016: VBSP_Object_model_0_007
+    100018: VBSP_Object_model_0_008
     400000: //RootNode
     400002: VBSP_Object_model_0
     400004: VBSP_Object_model_0_001
+    400006: VBSP_Object_model_0_002
+    400008: VBSP_Object_model_0_003
+    400010: VBSP_Object_model_0_004
+    400012: VBSP_Object_model_0_005
+    400014: VBSP_Object_model_0_006
+    400016: VBSP_Object_model_0_007
+    400018: VBSP_Object_model_0_008
     2300000: //RootNode
     2300002: VBSP_Object_model_0
     2300004: VBSP_Object_model_0_001
+    2300006: VBSP_Object_model_0_002
+    2300008: VBSP_Object_model_0_003
+    2300010: VBSP_Object_model_0_004
+    2300012: VBSP_Object_model_0_005
+    2300014: VBSP_Object_model_0_006
+    2300016: VBSP_Object_model_0_007
+    2300018: VBSP_Object_model_0_008
     3300000: //RootNode
     3300002: VBSP_Object_model_0
     3300004: VBSP_Object_model_0_001
+    3300006: VBSP_Object_model_0_002
+    3300008: VBSP_Object_model_0_003
+    3300010: VBSP_Object_model_0_004
+    3300012: VBSP_Object_model_0_005
+    3300014: VBSP_Object_model_0_006
+    3300016: VBSP_Object_model_0_007
+    3300018: VBSP_Object_model_0_008
     4300000: VBSP_Object_model_0
     4300002: VBSP_Object_model_0_001
+    4300004: VBSP_Object_model_0_003
+    4300006: VBSP_Object_model_0_002
+    4300008: VBSP_Object_model_0_004
+    4300010: VBSP_Object_model_0_005
+    4300012: VBSP_Object_model_0_006
+    4300014: VBSP_Object_model_0_008
+    4300016: VBSP_Object_model_0_007
     6400000: //RootNode
     6400002: VBSP_Object_model_0
     6400004: VBSP_Object_model_0_001
+    6400006: VBSP_Object_model_0_002
+    6400008: VBSP_Object_model_0_003
+    6400010: VBSP_Object_model_0_004
+    6400012: VBSP_Object_model_0_005
+    6400014: VBSP_Object_model_0_006
+    6400016: VBSP_Object_model_0_007
+    6400018: VBSP_Object_model_0_008
     7400000: Default Take
     9500000: //RootNode
   materials:
